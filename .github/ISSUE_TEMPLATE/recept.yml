@@ -1,0 +1,44 @@
+name: Recept toevoegen
+description: Plak een recept dat je tegenkwam, dan verschijnt het op de site.
+title: "Recept: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Plak het recept hieronder zoals je het gevonden hebt. Rommelig mag,
+        het wordt toch herschreven in de kookboekstijl.
+
+  - type: textarea
+    id: recept
+    attributes:
+      label: Het recept
+      description: Ingrediënten en bereiding. Een link erbij mag ook.
+      placeholder: |
+        Ingrediënten
+        - 400 g ...
+
+        Bereiding
+        1. ...
+    validations:
+      required: true
+
+  - type: input
+    id: porties
+    attributes:
+      label: Voor hoeveel personen
+      description: Het aantal waarop de hoeveelheden kloppen. Zonder dit klopt de omrekenknop niet.
+      placeholder: "4"
+
+  - type: input
+    id: categorie
+    attributes:
+      label: Categorie
+      description: Wordt een filterknop op de overzichtspagina. Bestaande categorieën hergebruiken mag.
+      placeholder: Ovenschotel
+
+  - type: textarea
+    id: opmerkingen
+    attributes:
+      label: Iets dat erbij hoort
+      description: Van wie het komt, wanneer je het maakt, waar het misging de vorige keer.
+      placeholder: Optioneel.
