@@ -1,0 +1,61 @@
+{
+  "slug": "zalm-orzo-uit-de-oven",
+  "titel": "Zalm-orzo uit de oven",
+  "kicker": "Ovenschotel · Vis uit de oven",
+  "categorie": "Ovenschotel",
+  "trefwoorden": ["zalm", "orzo", "oven", "boursin", "snel", "vis"],
+  "intro": "Orzo die rauw de ovenschaal in gaat en gaar kookt in groentebouillon, met de zalm die er bovenop meegaart. De boursin ligt in één stuk op de orzo en zakt tijdens het bakken naar beneden, zodat je op het einde alleen nog moet doorroeren. Twintig minuten in de oven en er staat een romige schotel op tafel die je in één schaal hebt gemaakt.",
+  "porties": 4,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "In de oven", "waarde": "18 tot 20 min op 220 °C" },
+    { "label": "Bereiding", "waarde": "Alles in één schaal" },
+    { "label": "Niveau", "waarde": "Makkelijk" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "275 g", "naam": "orzo" },
+    { "hoeveelheid": "400 g", "naam": "zalm" },
+    { "hoeveelheid": "650 ml", "naam": "groentebouillon" },
+    { "hoeveelheid": "200 g", "naam": "kastanjechampignons, in plakjes" },
+    { "hoeveelheid": "75 g", "naam": "zongedroogde tomaten, in blokjes" },
+    { "hoeveelheid": "1 verpakking", "naam": "boursin" },
+    { "hoeveelheid": "40 g", "naam": "parmezaanse kaas" },
+    { "hoeveelheid": "1", "naam": "handje verse basilicum" },
+    { "hoeveelheid": "", "naam": "peper en zout" }
+  ],
+  "stappen": [
+    {
+      "kop": "Droge boel in de schaal",
+      "tekst": "Verwarm de oven voor op 220 °C. Doe de orzo in een ovenschaal en voeg de champignons en de zongedroogde tomaten toe. Verdeel ze in één laag, zodat de bouillon straks overal bij kan."
+    },
+    {
+      "kop": "Bouillon erbij",
+      "tekst": "Giet de groentebouillon erover en roer alles even door. De orzo gaat rauw de oven in en drinkt precies dat vocht op, dus meet af in plaats van te gokken."
+    },
+    {
+      "kop": "Boursin en zalm erop",
+      "tekst": "Leg de boursin in één stuk bovenop en de zalm daar weer op. Kruid met peper en zout. Niet doorroeren: de boursin zakt tijdens het bakken vanzelf naar beneden en de zalm gaart in de stoom die eronder blijft hangen."
+    },
+    {
+      "kop": "Afgedekt bakken",
+      "tekst": "Dek de schaal af met aluminiumfolie en zet hem 18 tot 20 minuten in de oven. Die folie sluit de stoom op, en zonder die stoom blijft de orzo hard in plaats van gaar."
+    },
+    {
+      "kop": "Losprakken en afwerken",
+      "tekst": "Prak de zalm los met een vork en roer alles goed door elkaar, tot de boursin door de orzo verdeeld is. Meng er dan de parmezaan en de fijngesneden basilicum door."
+    }
+  ],
+  "tip": "Parmezaan en basilicum gaan er pas ná de oven in. Basilicum verkleurt in de hitte en verliest zijn geur, en de parmezaan wordt draderig in plaats van romig.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Zalm met vel",
+      "tekst": "Werk je met een stuk met vel, leg het dan met het vel naar boven. Bij het losprakken haal je het er in één beweging af."
+    },
+    {
+      "kop": "Nog te nat",
+      "tekst": "Blijft er bouillon achter na het roeren, laat de schaal dan een paar minuten zonder folie staan. De orzo trekt door en dikt verder in."
+    }
+  ],
+  "voet": "Eén ovenschaal, van rauwe orzo tot bord in twintig minuten.",
+  "pdf": "zalm-orzo-uit-de-oven.pdf"
+}

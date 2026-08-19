@@ -1,0 +1,67 @@
+{
+  "slug": "adana-kebab-van-de-bakplaat",
+  "titel": "Adana kebab van de bakplaat",
+  "kicker": "Hoofdgerecht · Turks",
+  "categorie": "Hoofdgerecht",
+  "trefwoorden": ["lamsgehakt", "grill", "turks", "tahini", "sumak", "bakplaat"],
+  "intro": "Zes kebabs van gekruid lamsgehakt, gevormd op één bakplaat en in tien minuten onder de grill. Paprika, ui en knoflook gaan eerst door de keukenmachine tot een fijne salsa die je laat uitlekken, zodat het gehakt zijn vorm houdt. Het vocht dat eruit loopt gooi je niet weg, dat lepel je vlak voor het serveren over de kebabs.",
+  "porties": 6,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "Onder de grill", "waarde": "8 à 10 min" },
+    { "label": "Bereiding", "waarde": "Eén bakplaat" },
+    { "label": "Niveau", "waarde": "Makkelijk" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "750 g", "naam": "lamsgehakt, 20% vet" },
+    { "hoeveelheid": "1", "naam": "rode paprika, grof gesneden" },
+    { "hoeveelheid": "1", "naam": "rode ui, grof gesneden" },
+    { "hoeveelheid": "4", "naam": "teentjes knoflook" },
+    { "hoeveelheid": "2 el", "naam": "tomatenpuree of paprikapuree" },
+    { "hoeveelheid": "3 tl", "naam": "granaatappelmelasse" },
+    { "hoeveelheid": "6 tl", "naam": "Turkse pepervlokken (pul biber)" },
+    { "hoeveelheid": "2 tl", "naam": "sumak" },
+    { "hoeveelheid": "2 tl", "naam": "versgemalen zwarte peper" },
+    { "hoeveelheid": "", "naam": "zout" },
+    { "hoeveelheid": "100 ml", "naam": "tahini, voor de saus" },
+    { "hoeveelheid": "100 ml", "naam": "water, voor de saus" },
+    { "hoeveelheid": "0,5", "naam": "citroen, alleen het sap" },
+    { "hoeveelheid": "1", "naam": "teentje knoflook voor de saus, geplet" },
+    { "hoeveelheid": "", "naam": "platbrood en salade, om erbij te serveren" }
+  ],
+  "stappen": [
+    {
+      "kop": "Salsa maken en laten uitlekken",
+      "tekst": "Doe de paprika, de ui en de knoflook in de keukenmachine en draai tot een fijne salsa. Schep die in een zeef boven een kom, roer even door en laat vijf minuten uitlekken. Vang het vocht op, dat heb je op het einde nog nodig."
+    },
+    {
+      "kop": "Alles door het gehakt",
+      "tekst": "Zet de grill op de hoogste stand. Meng het lamsgehakt met de uitgelekte groenten, de tomatenpuree, de granaatappelmelasse, de pepervlokken, de sumak, de zwarte peper en een flinke snuf zout. Kneed goed door, tot de kruiden overal zitten."
+    },
+    {
+      "kop": "Zes kebabs vormen",
+      "tekst": "Bekleed een bakplaat van ongeveer 24 bij 32 centimeter en vet hem in. Spreid het gehakt gelijkmatig uit en vorm er zes kebabs van, met een kleine ruimte ertussen. Die ruimte laat de hitte erlangs, zodat de zijkanten kleuren in plaats van te stoven."
+    },
+    {
+      "kop": "Onder de grill en saus kloppen",
+      "tekst": "Zet de plaat 8 à 10 minuten onder de grill, tot het vlees gaar is en bovenop gekleurd. Klop ondertussen de tahini, het water, het citroensap, de geplette knoflook en een snuf zout tot een romige saus."
+    },
+    {
+      "kop": "Vocht erover en opdienen",
+      "tekst": "Lepel het opgevangen groentevocht over de kebabs, vlak voor je ze op tafel zet. Serveer met platbrood, salade en ruim tahinisaus."
+    }
+  ],
+  "tip": "Gooi het vocht uit de zeef niet weg. Door het gehakt zou het je kebabs doen uitzakken, maar eroverheen gelepeld is het geconcentreerde smaak die ze sappig maakt.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Geen granaatappelmelasse",
+      "tekst": "Het geeft zuur en zoet tegelijk. Zonder wordt het vlakker, en een scheutje citroen vult maar de helft van dat gat op."
+    },
+    {
+      "kop": "Op de barbecue",
+      "tekst": "Hetzelfde mengsel werkt op spiesen boven kolen. Druk het stevig aan rond de spies, anders valt het eraf zodra het vet smelt."
+    }
+  ],
+  "voet": "Zes kebabs van één bakplaat, met platbrood en tahinisaus.",
+  "pdf": "adana-kebab-van-de-bakplaat.pdf"
+}
