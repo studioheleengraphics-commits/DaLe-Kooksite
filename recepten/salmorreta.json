@@ -1,0 +1,58 @@
+{
+  "slug": "salmorreta",
+  "titel": "Salmorreta",
+  "kicker": "Basisbereiding · Uit de Spaanse Levant",
+  "categorie": "Basisbereiding",
+  "trefwoorden": ["paella", "saus", "spaans", "invriezen"],
+  "intro": "De Alicantijnse sofrito die je paella zijn ziel geeft. Een dieprode pasta van gedroogde ñora-pepers, knoflook en tomaat, ooit door scheepskoks aan wal bereid zodat er op zee alleen nog rijst en vis aan te pas hoefde te komen. Maak hem één keer zelf en je begrijpt waarom hij nooit meer uit je vriezer verdwijnt.",
+  "porties": 4,
+  "portie_eenheid": "personen",
+  "meta": [
+    { "label": "Handen uit de mouwen", "waarde": "± 15 min" },
+    { "label": "Op het vuur", "waarde": "30 tot 40 min" },
+    { "label": "Houdbaar", "waarde": "1 week, 2 mnd vriezer" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "3", "naam": "gedroogde ñora-pepers" },
+    { "hoeveelheid": "6", "naam": "teentjes knoflook" },
+    { "hoeveelheid": "2", "naam": "rijpe tomaten" },
+    { "hoeveelheid": "120 ml", "naam": "extra vierge olijfolie" },
+    { "hoeveelheid": "", "naam": "snuf zout, naar smaak" },
+    { "hoeveelheid": "", "naam": "optioneel: bosje platte peterselie" }
+  ],
+  "stappen": [
+    {
+      "kop": "Maak de ñora's schoon",
+      "tekst": "Verwijder steel en zaadjes en snijd het vruchtvlees in kleine stukjes. Even wellen in warm water geeft het mooiste resultaat. Werk je met poeder, dan mag je deze stap overslaan."
+    },
+    {
+      "kop": "Bak de knoflook goudbruin",
+      "tekst": "Pel en halveer de knoflook. Verhit de olijfolie op middelhoog vuur en bak de knoflook in enkele minuten goudbruin. Voeg dan de ñora toe en laat de olie de smaak opnemen. Wie durft, bakt een bosje peterselie mee."
+    },
+    {
+      "kop": "Laat de tomaat inkoken",
+      "tekst": "Blend de tomaten glad en giet de purée bij de pan. Laat 30 tot 40 minuten zachtjes pruttelen met een snuf zout, tot al het tomatenvocht verdampt is. Geduld is hier het echte ingrediënt."
+    },
+    {
+      "kop": "Blend tot rode zijde",
+      "tekst": "Mix alles glad, zonder klontjes. De textuur moet doen denken aan rode mayonaise. Klaar: dit is de basis voor je paella of arroz a banda."
+    }
+  ],
+  "tip": "Geen hele ñora's gevonden? Ñorapoeder werkt ook, 30 seconden meeroeren in de olie volstaat.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Vijzel in plaats van pan",
+      "tekst": "Stamp droge ñora met knoflook en olie tot een pasta voor je begint. Donkerder van kleur, maar dieper van smaak."
+    },
+    {
+      "kop": "Vries in blokjes in",
+      "tekst": "Een ijsblokjesvorm maakt van je salmorreta perfecte porties: tot twee maanden houdbaar en altijd afgestemd op je aantal eters."
+    },
+    {
+      "kop": "Donkerder dan verwacht?",
+      "tekst": "Geen paniek. Meer ñora of droog gebakken ñora kleurt dieper. De smaak vaart er wel bij."
+    }
+  ],
+  "voet": "Basisbereiding voor paella en Alicantijnse rijstgerechten.",
+  "pdf": "salmorreta.pdf"
+}

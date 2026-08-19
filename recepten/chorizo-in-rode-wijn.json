@@ -1,0 +1,85 @@
+{
+  "slug": "chorizo-in-rode-wijn",
+  "titel": "Chorizo in rode wijn",
+  "kicker": "Tapas · Spanje",
+  "categorie": "Tapas",
+  "trefwoorden": [
+    "spaans",
+    "borrel",
+    "worst",
+    "snel"
+  ],
+  "intro": "Pittige worst die zacht ligt te sudderen tot de wijn indikt tot een kleverige, donkere saus. Nog geen kwartier werk, en je keuken ruikt als een Spaanse bar op zondagavond.",
+  "porties": 4,
+  "portie_eenheid": "personen",
+  "meta": [
+    {
+      "label": "Tijd",
+      "waarde": "15 minuten"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    },
+    {
+      "label": "Serveer met",
+      "waarde": "Stevig brood"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "400 g",
+      "naam": "verse chorizo (bakworst)"
+    },
+    {
+      "hoeveelheid": "250 ml",
+      "naam": "stevige rode wijn, Rioja of Tempranillo"
+    },
+    {
+      "hoeveelheid": "2",
+      "naam": "teentjes knoflook, geplet"
+    },
+    {
+      "hoeveelheid": "1 el",
+      "naam": "olijfolie"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "laurierblad",
+      "schaal": false
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "honing"
+    },
+    {
+      "hoeveelheid": "2 el",
+      "naam": "verse peterselie, gehakt"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Chorizo snijden",
+      "tekst": "Snijd de chorizo in schuine plakjes van ongeveer een centimeter dik. Zo hebben ze meer oppervlak om mooi te kleuren."
+    },
+    {
+      "kop": "Aanbakken",
+      "tekst": "Verhit de olijfolie op middelhoog vuur. Bak de chorizo met de geplette knoflook in twee tot drie minuten aan beide kanten goudbruin. De rode olie die vrijkomt laat je in de pan."
+    },
+    {
+      "kop": "Wijn toevoegen",
+      "tekst": "Giet de rode wijn erbij, voeg laurier en honing toe. Roer even door zodat alle aanbaksels van de bodem loskomen."
+    },
+    {
+      "kop": "Laten sudderen",
+      "tekst": "Laat op laag tot middelhoog vuur inkoken tot de wijn dik en siroopachtig wordt en de chorizo omhult, zo'n acht tot tien minuten. Hoe langer, hoe intenser."
+    },
+    {
+      "kop": "Afwerken en serveren",
+      "tekst": "Vis het laurierblad eruit, strooi de peterselie erover en serveer meteen met stevig brood om de saus mee op te vegen."
+    }
+  ],
+  "tip": "Laat die rode olie gewoon in de pan. Dat is puur goud voor je saus!",
+  "voet": "Serveer lauwwarm met een glas van dezelfde wijn.",
+  "pdf": "chorizo-in-rode-wijn.pdf"
+}
