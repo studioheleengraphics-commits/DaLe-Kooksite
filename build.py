@@ -268,8 +268,11 @@ def bouw_recept(r):
     if r.get("tip"):
         tip = f'<div class="tip"><span class="pen">&#9998;</span><p>{html.escape(r["tip"])}</p></div>'
 
+    # Elke receptpagina krijgt een printknop. Is er een A4, dan opent die;
+    # zonder A4 print de browser de pagina zelf, met de printstijl onderaan de CSS.
     pdf_knop = (f'<a href="pdf/{r["pdf"]}" target="_blank">A4 printen</a>'
-                if r.get("pdf") else "")
+                if r.get("pdf")
+                else '<button onclick="window.print()">Pagina printen</button>')
 
     inhoud = f"""
 <main class="wrap">

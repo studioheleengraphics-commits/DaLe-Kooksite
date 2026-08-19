@@ -48,7 +48,8 @@ Aandachtspunten:
 - Zet de hoeveelheid vooraan in het veld `hoeveelheid`, niet in `naam`, anders kan
   de omrekening er niet bij.
 - `meta` bevat twee tot vier velden. Meer past niet netjes op een smal scherm.
-- `pdf` mag weg als er geen A4 bestaat. De printknop verdwijnt dan vanzelf.
+- `pdf` mag weg als er geen A4 bestaat. Elke receptpagina houdt een printknop:
+  met een A4 opent die de PDF, zonder A4 print de browser de pagina zelf.
 
 ## Schrijfregels
 

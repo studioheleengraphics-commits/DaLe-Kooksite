@@ -3,27 +3,76 @@
   "titel": "Ovenpasta met kip en fajita",
   "kicker": "Ovenschotel · Voor drukke dagen",
   "categorie": "Ovenschotel",
-  "trefwoorden": ["kip", "pasta", "oven", "fajita", "eiwitrijk", "voorbereiden"],
+  "trefwoorden": [
+    "kip",
+    "pasta",
+    "oven",
+    "fajita",
+    "eiwitrijk",
+    "voorbereiden"
+  ],
   "intro": "Een ovenschotel die je in tien minuten in elkaar gooit en daarna een uur alleen laat. De pasta gaat rauw de schaal in en kookt gaar in de tomatensaus, samen met de kip, de paprika en een zakje fajitakruiden. Tegen dat de folie eraf gaat en de mozzarella bruin kleurt, is de keuken al een uur opgeruimd.",
   "porties": 4,
   "portie_eenheid": "personen",
   "meta": [
-    { "label": "Handen uit de mouwen", "waarde": "± 10 min" },
-    { "label": "In de oven", "waarde": "55 min op 190 °C" },
-    { "label": "Per portie", "waarde": "557 kcal, 57 g eiwit" }
+    {
+      "label": "Handen uit de mouwen",
+      "waarde": "± 10 min"
+    },
+    {
+      "label": "In de oven",
+      "waarde": "55 min op 190 °C"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "557 kcal, 57 g eiwit"
+    }
   ],
   "ingredienten": [
-    { "hoeveelheid": "200 g", "naam": "korte droge pasta, zoals penne of fusilli" },
-    { "hoeveelheid": "650 g", "naam": "kipfilet" },
-    { "hoeveelheid": "1", "naam": "ui" },
-    { "hoeveelheid": "2", "naam": "paprika" },
-    { "hoeveelheid": "200 g", "naam": "light roomkaas" },
-    { "hoeveelheid": "1 blik", "naam": "tomatenblokjes (400 g)" },
-    { "hoeveelheid": "100 ml", "naam": "water" },
-    { "hoeveelheid": "4 tl", "naam": "knoflook uit een potje, of verse teentjes" },
-    { "hoeveelheid": "1 zakje", "naam": "fajitakruiden" },
-    { "hoeveelheid": "80 g", "naam": "geraspte mozzarella" },
-    { "hoeveelheid": "", "naam": "zout en peper" }
+    {
+      "hoeveelheid": "200 g",
+      "naam": "korte droge pasta, zoals penne of fusilli"
+    },
+    {
+      "hoeveelheid": "650 g",
+      "naam": "kipfilet"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "ui"
+    },
+    {
+      "hoeveelheid": "2",
+      "naam": "paprika"
+    },
+    {
+      "hoeveelheid": "200 g",
+      "naam": "light roomkaas"
+    },
+    {
+      "hoeveelheid": "1 blik",
+      "naam": "tomatenblokjes (400 g)"
+    },
+    {
+      "hoeveelheid": "100 ml",
+      "naam": "water"
+    },
+    {
+      "hoeveelheid": "4 tl",
+      "naam": "knoflook uit een potje, of verse teentjes"
+    },
+    {
+      "hoeveelheid": "1 zakje",
+      "naam": "fajitakruiden"
+    },
+    {
+      "hoeveelheid": "80 g",
+      "naam": "geraspte mozzarella"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "zout en peper"
+    }
   ],
   "stappen": [
     {
@@ -66,5 +115,6 @@
       "tekst": "Courgette of champignons mogen mee de schaal in. Snijd ze wat grover, ze geven vocht af en vallen anders uit elkaar."
     }
   ],
-  "voet": "Eén ovenschaal, geen pan om af te wassen."
+  "voet": "Eén ovenschaal, geen pan om af te wassen.",
+  "pdf": "ovenpasta-kip-fajita.pdf"
 }

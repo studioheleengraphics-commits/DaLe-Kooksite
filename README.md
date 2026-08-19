@@ -32,7 +32,7 @@ Velden die niet vanzelf spreken:
 | `porties` | Het aantal waarop de ingrediënten kloppen. Hierop rekent de site om. |
 | `schaal: false` | Zet dit bij een ingrediënt dat niet mag meeschalen, zoals één laurierblad of een snuf zout |
 | `uit_de_praktijk` | Optioneel blok met extra tips onderaan |
-| `pdf` | Bestandsnaam in `pdf/`. Laat weg en de printknop verdwijnt vanzelf. |
+| `pdf` | Bestandsnaam in `pdf/`. Laat weg en de printknop print de webpagina zelf. |
 
 ## Wat de familie krijgt
 
@@ -42,7 +42,7 @@ Velden die niet vanzelf spreken:
 - Porties omrekenen van 4 naar 6 of naar 2, hoeveelheden passen zich live aan
 - Ingrediënten aantikken tijdens het uitpakken, stappen aantikken tijdens het koken
 - Een knop die het scherm aan houdt, zodat je niet met deegvingers hoeft te swipen
-- De A4-PDF achter een printknop, voor wie liever papier heeft
+- Een printknop op elke receptpagina, met de A4-PDF erachter waar die bestaat
 
 Er is geen login en er wordt niets opgeslagen. Iedereen met de link kan lezen en
 koken, niemand kan per ongeluk iets stukmaken.
