@@ -11,7 +11,7 @@
   ],
   "intro": "Pittige worst die zacht ligt te sudderen tot de wijn indikt tot een kleverige, donkere saus. Nog geen kwartier werk, en je keuken ruikt als een Spaanse bar op zondagavond.",
   "porties": 4,
-  "portie_eenheid": "personen",
+  "portie_eenheid": "persoon|personen",
   "meta": [
     {
       "label": "Tijd",

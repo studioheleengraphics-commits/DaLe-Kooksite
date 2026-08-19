@@ -13,7 +13,7 @@
   ],
   "intro": "Een ovenschotel die je in tien minuten in elkaar gooit en daarna een uur alleen laat. De pasta gaat rauw de schaal in en kookt gaar in de tomatensaus, samen met de kip, de paprika en een zakje fajitakruiden. Tegen dat de folie eraf gaat en de mozzarella bruin kleurt, is de keuken al een uur opgeruimd.",
   "porties": 4,
-  "portie_eenheid": "personen",
+  "portie_eenheid": "persoon|personen",
   "meta": [
     {
       "label": "Handen uit de mouwen",

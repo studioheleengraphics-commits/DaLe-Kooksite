@@ -13,7 +13,7 @@
   ],
   "intro": "Gyoza's zonder deeg te maken: twee rijstvellen op elkaar, vulling ertussen, en de airfryer doet de rest. De vulling is gesmoorde witte kool met gemalen scampi, opgefrist met limoen en sojasaus. Uit de airfryer zijn ze glasachtig krokant aan de buitenkant en nog zacht vanbinnen.",
   "porties": 2,
-  "portie_eenheid": "personen",
+  "portie_eenheid": "persoon|personen",
   "meta": [
     {
       "label": "Levert",

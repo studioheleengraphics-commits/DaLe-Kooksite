@@ -25,7 +25,7 @@ Alleen lezen en koken: geen login, geen formulieren, niets dat kapot kan.
   "trefwoorden": ["spaans", "snel", "garnalen"],
   "intro": "Drie zinnen. Zie schrijfregels hieronder.",
   "porties": 4,
-  "portie_eenheid": "personen",
+  "portie_eenheid": "persoon|personen",
   "meta": [{ "label": "Tijd", "waarde": "15 minuten" }],
   "ingredienten": [
     { "hoeveelheid": "400 g", "naam": "gepelde garnalen" },
@@ -43,6 +43,8 @@ Aandachtspunten:
 
 - `slug` bepaalt de bestandsnaam en de URL: kleine letters, streepjes, geen accenten.
 - `porties` is het aantal waarop de hoeveelheden kloppen. De site rekent hierop om.
+- `portie_eenheid` schrijf je als `enkelvoud|meervoud`, zodat "Voor 1 portie" bij het
+  omrekenen "Voor 2 porties" wordt. Eén woord mag ook, dat blijft dan onveranderd.
 - `schaal: false` bij alles wat niet mag meeschalen: één laurierblad, een snuf zout,
   een scheutje olie om in te bakken.
 - Zet de hoeveelheid vooraan in het veld `hoeveelheid`, niet in `naam`, anders kan

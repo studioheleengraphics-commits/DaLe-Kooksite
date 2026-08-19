@@ -149,7 +149,7 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 
     <h3 class="blokkop">Ingredi&#235;nten</h3>
     <div class="porties">
-      <div class="tekst">Voor <b id="lbl">4</b> personen</div>
+      <div class="tekst">Voor <b id="lbl">4</b> <span id="eenheid">personen</span></div>
       <button id="min" aria-label="minder">&#8722;</button>
       <div class="aantal" id="aantal">4</div>
       <button id="plus" aria-label="meer">+</button>
@@ -169,12 +169,14 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 </div>
 
 <script>
+const ENK="persoon", MV="personen";
 const basis=4; let nu=basis;
 const items=[...document.querySelectorAll('#ing li')];
 function toon(n){
   const f=n/basis;
   document.getElementById('aantal').textContent=n;
   document.getElementById('lbl').textContent=n;
+  document.getElementById('eenheid').textContent=(n===1)?ENK:MV;
   items.forEach(li=>{
     const h=li.dataset.h||'';
     if(li.dataset.vast){li.querySelector('.hv').textContent=h;return;}

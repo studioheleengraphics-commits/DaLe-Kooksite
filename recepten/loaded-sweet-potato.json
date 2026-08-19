@@ -1,0 +1,108 @@
+{
+  "slug": "loaded-sweet-potato",
+  "titel": "Loaded sweet potato",
+  "kicker": "Mealprep · Uit de oven",
+  "categorie": "Ovenschotel",
+  "trefwoorden": [
+    "zoete aardappel",
+    "americain",
+    "oven",
+    "mealprep",
+    "eiwitrijk",
+    "spinazie"
+  ],
+  "intro": "Een hele zoete aardappel uit de oven, opengelegd en volgeladen met gekruid gehakt in passata. De aardappel bakt een uur op zichzelf terwijl je in die tijd de vulling maakt, dus het is vooral wachtwerk. Een halve aardappel per persoon is al een bord vol, en dat is precies het punt.",
+  "porties": 2,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    {
+      "label": "In de oven",
+      "waarde": "45 tot 60 min op 200 °C"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "660 kcal, 64 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "1",
+      "naam": "grote zoete aardappel (± 540 g)"
+    },
+    {
+      "hoeveelheid": "400 g",
+      "naam": "americain natuur"
+    },
+    {
+      "hoeveelheid": "200 g",
+      "naam": "passata"
+    },
+    {
+      "hoeveelheid": "100 g",
+      "naam": "geraspte mozzarella"
+    },
+    {
+      "hoeveelheid": "0,5",
+      "naam": "rode ui"
+    },
+    {
+      "hoeveelheid": "3",
+      "naam": "teentjes look"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "handvol spinazie"
+    },
+    {
+      "hoeveelheid": "2 el",
+      "naam": "paprikapoeder"
+    },
+    {
+      "hoeveelheid": "2 el",
+      "naam": "Italiaanse kruiden"
+    },
+    {
+      "hoeveelheid": "1 el",
+      "naam": "chilipoeder"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Aardappel de oven in",
+      "tekst": "Prik met een vork gaatjes over de hele zoete aardappel en zet hem 45 tot 60 minuten in de oven op 200 °C. Die gaatjes zijn geen ritueel: zonder ontsnappingsweg bouwt de stoom binnenin druk op en barst hij open."
+    },
+    {
+      "kop": "Vlees en kruiden bakken",
+      "tekst": "Snipper de ui en de look en bak ze samen met de americain gaar. Roer het paprikapoeder, de Italiaanse kruiden en het chilipoeder erdoor en laat ze even meebakken in het vet, want droge kruiden geven pas smaak af als ze warm worden."
+    },
+    {
+      "kop": "Passata en spinazie erbij",
+      "tekst": "Voeg de passata en de spinazie toe en laat sudderen tot de saus is ingedikt. Neem hier de tijd: een natte vulling loopt van de aardappel af in plaats van erop te blijven liggen."
+    },
+    {
+      "kop": "Openen en pletten",
+      "tekst": "Snijd de aardappel in de lengte open en plet het vruchtvlees lichtjes met een vork. Zo maak je een bedje waar de vulling in blijft zitten, en meng je meteen wat aardappel door de saus."
+    },
+    {
+      "kop": "Kaas erop en afwerken",
+      "tekst": "Verdeel het vleesmengsel over de aardappel en werk af met de mozzarella. Nog 5 tot 10 minuten terug de oven in tot de kaas gesmolten is."
+    }
+  ],
+  "tip": "Knijp in de aardappel voor je hem opensnijdt: hij moet volledig meegeven. Eentje die nog weerstand geeft, gaart onder de vulling niet verder en dat merk je pas aan tafel.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Sneller klaar",
+      "tekst": "Een kleinere aardappel is sneller gaar. Twee kleine in plaats van één grote scheelt makkelijk een kwartier, en het verdelen gaat vanzelf."
+    },
+    {
+      "kop": "Vulling op voorhand",
+      "tekst": "Het vleesmengsel kan een dag vooruit. Dan hoef je enkel de aardappel te bakken en heb je in tien minuten een bord klaar."
+    }
+  ],
+  "voet": "Een halve zoete aardappel per persoon, en dat is al een vol bord.",
+  "pdf": "loaded-sweet-potato.pdf"
+}

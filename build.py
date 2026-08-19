@@ -274,6 +274,13 @@ def bouw_recept(r):
                 if r.get("pdf")
                 else '<button onclick="window.print()">Pagina printen</button>')
 
+    # De eenheid mag als "enkelvoud|meervoud" staan, zodat "Voor 1 portie"
+    # bij het omrekenen "Voor 2 porties" wordt en niet "Voor 2 portie".
+    eenheid = r.get("portie_eenheid", "personen")
+    enkelvoud, _, meervoud = eenheid.partition("|")
+    meervoud = meervoud or enkelvoud
+    eenheid_nu = enkelvoud if r["porties"] == 1 else meervoud
+
     inhoud = f"""
 <main class="wrap">
   <a class="terug" href="index.html">&#8592; Alle recepten</a>
@@ -285,7 +292,7 @@ def bouw_recept(r):
 
     <h3 class="blokkop">Ingredi&#235;nten</h3>
     <div class="porties">
-      <div class="tekst">Voor <b id="lbl">{r['porties']}</b> {html.escape(r.get('portie_eenheid','personen'))}</div>
+      <div class="tekst">Voor <b id="lbl">{r['porties']}</b> <span id="eenheid">{html.escape(eenheid_nu)}</span></div>
       <button id="min" aria-label="minder">&#8722;</button>
       <div class="aantal" id="aantal">{r['porties']}</div>
       <button id="plus" aria-label="meer">+</button>
@@ -306,12 +313,14 @@ def bouw_recept(r):
 """
 
     js = """
+const ENK=%s, MV=%s;
 const basis=%d; let nu=basis;
 const items=[...document.querySelectorAll('#ing li')];
 function toon(n){
   const f=n/basis;
   document.getElementById('aantal').textContent=n;
   document.getElementById('lbl').textContent=n;
+  document.getElementById('eenheid').textContent=(n===1)?ENK:MV;
   items.forEach(li=>{
     const h=li.dataset.h||'';
     if(li.dataset.vast){li.querySelector('.hv').textContent=h;return;}
@@ -340,7 +349,7 @@ knop.onclick=async()=>{
         knop.textContent='Scherm aan houden';});}
   }catch(e){knop.textContent='Lukt niet op dit toestel';}
 };
-""" % r["porties"]
+""" % (json.dumps(enkelvoud), json.dumps(meervoud), r["porties"])
 
     return pagina(f"{r['titel']} · {SITE_TITEL}", inhoud, js)
 

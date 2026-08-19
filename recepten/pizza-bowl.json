@@ -13,7 +13,7 @@
   ],
   "intro": "Alles wat je van een pizza wil, in een ovenschaal die op maandag klaarstaat voor de hele week. Kip, rijst en tomaat gaan samen de oven in, de mozzarella en pepperoni komen pas op het einde. Eén schaal, één keer afwassen, en toch die draad kaas.",
   "porties": 4,
-  "portie_eenheid": "personen",
+  "portie_eenheid": "persoon|personen",
   "meta": [
     {
       "label": "Handen uit de mouwen",

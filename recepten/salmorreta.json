@@ -3,22 +3,54 @@
   "titel": "Salmorreta",
   "kicker": "Basisbereiding · Uit de Spaanse Levant",
   "categorie": "Basisbereiding",
-  "trefwoorden": ["paella", "saus", "spaans", "invriezen"],
+  "trefwoorden": [
+    "paella",
+    "saus",
+    "spaans",
+    "invriezen"
+  ],
   "intro": "De Alicantijnse sofrito die je paella zijn ziel geeft. Een dieprode pasta van gedroogde ñora-pepers, knoflook en tomaat, ooit door scheepskoks aan wal bereid zodat er op zee alleen nog rijst en vis aan te pas hoefde te komen. Maak hem één keer zelf en je begrijpt waarom hij nooit meer uit je vriezer verdwijnt.",
   "porties": 4,
-  "portie_eenheid": "personen",
+  "portie_eenheid": "persoon|personen",
   "meta": [
-    { "label": "Handen uit de mouwen", "waarde": "± 15 min" },
-    { "label": "Op het vuur", "waarde": "30 tot 40 min" },
-    { "label": "Houdbaar", "waarde": "1 week, 2 mnd vriezer" }
+    {
+      "label": "Handen uit de mouwen",
+      "waarde": "± 15 min"
+    },
+    {
+      "label": "Op het vuur",
+      "waarde": "30 tot 40 min"
+    },
+    {
+      "label": "Houdbaar",
+      "waarde": "1 week, 2 mnd vriezer"
+    }
   ],
   "ingredienten": [
-    { "hoeveelheid": "3", "naam": "gedroogde ñora-pepers" },
-    { "hoeveelheid": "6", "naam": "teentjes knoflook" },
-    { "hoeveelheid": "2", "naam": "rijpe tomaten" },
-    { "hoeveelheid": "120 ml", "naam": "extra vierge olijfolie" },
-    { "hoeveelheid": "", "naam": "snuf zout, naar smaak" },
-    { "hoeveelheid": "", "naam": "optioneel: bosje platte peterselie" }
+    {
+      "hoeveelheid": "3",
+      "naam": "gedroogde ñora-pepers"
+    },
+    {
+      "hoeveelheid": "6",
+      "naam": "teentjes knoflook"
+    },
+    {
+      "hoeveelheid": "2",
+      "naam": "rijpe tomaten"
+    },
+    {
+      "hoeveelheid": "120 ml",
+      "naam": "extra vierge olijfolie"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "snuf zout, naar smaak"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "optioneel: bosje platte peterselie"
+    }
   ],
   "stappen": [
     {

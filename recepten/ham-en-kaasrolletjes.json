@@ -1,0 +1,88 @@
+{
+  "slug": "ham-en-kaasrolletjes",
+  "titel": "Ham-en-kaasrolletjes",
+  "kicker": "Snack · Uit de pan",
+  "categorie": "Hapjes",
+  "trefwoorden": [
+    "tortilla",
+    "ham",
+    "mozzarella",
+    "snack",
+    "eiwitrijk",
+    "airfryer"
+  ],
+  "intro": "Een tortilla met passata, ham en mozzarella, strak opgerold en in rolletjes gesneden. In de pan met een deksel erop smelt de kaas bovenop terwijl de onderkant goudbruin bakt. Vijf ingrediënten en één pan, voor wanneer je zin hebt in iets dat naar afhaal smaakt.",
+  "porties": 1,
+  "portie_eenheid": "portie|porties",
+  "meta": [
+    {
+      "label": "Bakken",
+      "waarde": "Pan met deksel"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "± 531 kcal, ± 42 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Heel makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "1",
+      "naam": "high protein tortilla"
+    },
+    {
+      "hoeveelheid": "60 g",
+      "naam": "passata"
+    },
+    {
+      "hoeveelheid": "50 g",
+      "naam": "yorkham"
+    },
+    {
+      "hoeveelheid": "60 g",
+      "naam": "mozzarella in sneetjes"
+    },
+    {
+      "hoeveelheid": "30 g",
+      "naam": "geraspte mozzarella"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Tortilla besmeren",
+      "tekst": "Smeer de passata in een dunne, gelijkmatige laag uit over de tortilla. Hou de buitenste centimeter vrij, anders wordt de rand glibberig en krijg je hem straks niet dicht."
+    },
+    {
+      "kop": "Beleggen en oprollen",
+      "tekst": "Verdeel de yorkham en de mozzarellasneetjes over de tortilla en rol hem zo strak mogelijk op. Strak is hier het hele punt: een losse rol valt bij het snijden uit elkaar."
+    },
+    {
+      "kop": "In rolletjes snijden",
+      "tekst": "Snijd de rol in kleine rolletjes en zet ze rechtop in de pan, met de snijkant naar boven. Zo blijft de vulling zitten in plaats van eruit te lopen."
+    },
+    {
+      "kop": "Kaas erover",
+      "tekst": "Strooi de geraspte mozzarella over de rolletjes. Die laag wordt straks de korst, dus wees niet zuinig met de bovenkant."
+    },
+    {
+      "kop": "Deksel erop en bakken",
+      "tekst": "Bak met het deksel op de pan tot de kaas volledig gesmolten en goudbruin is. Dat deksel is geen detail: het houdt de warmte vast zodat de bovenkant meesmelt, anders is de onderkant klaar voor de kaas iets doet. In de airfryer of de oven werkt het net zo goed."
+    }
+  ],
+  "tip": "Rol zo strak als je kan. Een losse rol valt bij het snijden uit elkaar, en dan bak je losse stukken ham in plaats van rolletjes.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Airfryer of oven",
+      "tekst": "Beide werken, en je hebt er geen deksel voor nodig omdat de warmte er toch van alle kanten komt. Hou ze wel in het oog, want de kaas kleurt snel."
+    },
+    {
+      "kop": "Niet te veel passata",
+      "tekst": "Een dikke laag maakt de tortilla week en dan scheurt hij bij het rollen. Dun uitsmeren geeft evenveel smaak en veel minder gedoe."
+    }
+  ],
+  "voet": "Uit de pan eten, want koud verliezen ze hun korst.",
+  "pdf": "ham-en-kaasrolletjes.pdf"
+}

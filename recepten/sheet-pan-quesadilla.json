@@ -13,7 +13,7 @@
   ],
   "intro": "Zes tortilla's, één ovenschaal, en je hebt een quesadilla ter grootte van de schaal. De randen hangen over de rand en worden op het einde over de vulling dichtgevouwen, als een pakket. Snijd hem in vier en je hebt de lunch voor de rest van de week klaar.",
   "porties": 4,
-  "portie_eenheid": "porties",
+  "portie_eenheid": "portie|porties",
   "meta": [
     {
       "label": "In de oven",
