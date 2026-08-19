@@ -1,0 +1,70 @@
+{
+  "slug": "ovenpasta-kip-fajita",
+  "titel": "Ovenpasta met kip en fajita",
+  "kicker": "Ovenschotel · Voor drukke dagen",
+  "categorie": "Ovenschotel",
+  "trefwoorden": ["kip", "pasta", "oven", "fajita", "eiwitrijk", "voorbereiden"],
+  "intro": "Een ovenschotel die je in tien minuten in elkaar gooit en daarna een uur alleen laat. De pasta gaat rauw de schaal in en kookt gaar in de tomatensaus, samen met de kip, de paprika en een zakje fajitakruiden. Tegen dat de folie eraf gaat en de mozzarella bruin kleurt, is de keuken al een uur opgeruimd.",
+  "porties": 4,
+  "portie_eenheid": "personen",
+  "meta": [
+    { "label": "Handen uit de mouwen", "waarde": "± 10 min" },
+    { "label": "In de oven", "waarde": "55 min op 190 °C" },
+    { "label": "Per portie", "waarde": "557 kcal, 57 g eiwit" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "200 g", "naam": "korte droge pasta, zoals penne of fusilli" },
+    { "hoeveelheid": "650 g", "naam": "kipfilet" },
+    { "hoeveelheid": "1", "naam": "ui" },
+    { "hoeveelheid": "2", "naam": "paprika" },
+    { "hoeveelheid": "200 g", "naam": "light roomkaas" },
+    { "hoeveelheid": "1 blik", "naam": "tomatenblokjes (400 g)" },
+    { "hoeveelheid": "100 ml", "naam": "water" },
+    { "hoeveelheid": "4 tl", "naam": "knoflook uit een potje, of verse teentjes" },
+    { "hoeveelheid": "1 zakje", "naam": "fajitakruiden" },
+    { "hoeveelheid": "80 g", "naam": "geraspte mozzarella" },
+    { "hoeveelheid": "", "naam": "zout en peper" }
+  ],
+  "stappen": [
+    {
+      "kop": "Oven aan en snijwerk",
+      "tekst": "Verwarm de oven voor op 190 °C. Snijd de kipfilet in blokjes, snipper de ui en snijd de paprika's in reepjes. Hou de stukken ongeveer even groot, anders is de kip al droog voor de paprika zacht is."
+    },
+    {
+      "kop": "Alles in de schaal",
+      "tekst": "Doe de pasta, de kip, de ui, de paprika, de roomkaas, de knoflook, de fajitakruiden en de tomatenblokjes in een grote ovenschaal. Kruid met zout en peper. De mozzarella blijft nog even opzij."
+    },
+    {
+      "kop": "Blik naspoelen",
+      "tekst": "Spoel het lege tomatenblik om met 100 ml water en giet dat mee in de schaal. Dat water is geen detail: de pasta gaat rauw de oven in en heeft precies dat vocht nodig om gaar te worden."
+    },
+    {
+      "kop": "Mengen tot alles nat is",
+      "tekst": "Meng goed door elkaar tot elk stuk pasta onder de saus zit. Wat droog boven het vocht uitsteekt, wordt hard in plaats van gaar. Strooi daarna de mozzarella over het geheel."
+    },
+    {
+      "kop": "Afgedekt bakken",
+      "tekst": "Dek de schaal af met aluminiumfolie en zet hem 50 minuten in de oven. De folie houdt de stoom binnen, en het is die stoom die je pasta kookt. Zonder folie droogt de schotel uit."
+    },
+    {
+      "kop": "Kaaslaag en rusten",
+      "tekst": "Haal de folie eraf en bak nog 5 minuten tot de mozzarella goudbruin kleurt. Laat de schotel daarna 5 tot 10 minuten staan voor je opdient, zodat de saus kan indikken. Recht uit de oven is hij nog te nat."
+    }
+  ],
+  "tip": "Neem korte pasta zoals penne of fusilli, want die blijft vanzelf onder de saus liggen. Lange slierten steken boven het vocht uit en drogen op tot harde punten.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Geen zakje fajitakruiden",
+      "tekst": "Fajitakruiden zijn vooral paprikapoeder, komijn, oregano en wat chili. Met die vier uit je eigen kast kom je een heel eind."
+    },
+    {
+      "kop": "Op voorhand maken",
+      "tekst": "Vier gelijke porties, dus dit is een schotel om vooruit te werken. Warm op met een scheutje water erbij, want de pasta drinkt de saus verder op."
+    },
+    {
+      "kop": "Meer groen erin",
+      "tekst": "Courgette of champignons mogen mee de schaal in. Snijd ze wat grover, ze geven vocht af en vallen anders uit elkaar."
+    }
+  ],
+  "voet": "Eén ovenschaal, geen pan om af te wassen."
+}
