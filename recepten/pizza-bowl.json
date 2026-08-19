@@ -1,0 +1,116 @@
+{
+  "slug": "pizza-bowl",
+  "titel": "Pizza bowl",
+  "kicker": "Mealprep · Uit de oven",
+  "categorie": "Ovenschotel",
+  "trefwoorden": [
+    "kip",
+    "rijst",
+    "oven",
+    "mealprep",
+    "eiwitrijk",
+    "pepperoni"
+  ],
+  "intro": "Alles wat je van een pizza wil, in een ovenschaal die op maandag klaarstaat voor de hele week. Kip, rijst en tomaat gaan samen de oven in, de mozzarella en pepperoni komen pas op het einde. Eén schaal, één keer afwassen, en toch die draad kaas.",
+  "porties": 4,
+  "portie_eenheid": "personen",
+  "meta": [
+    {
+      "label": "Handen uit de mouwen",
+      "waarde": "± 10 min"
+    },
+    {
+      "label": "In de oven",
+      "waarde": "45 tot 50 min"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "601 kcal, 58 g eiwit"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "750 g",
+      "naam": "kipfilet"
+    },
+    {
+      "hoeveelheid": "180 g",
+      "naam": "ongekookte witte rijst"
+    },
+    {
+      "hoeveelheid": "600 ml",
+      "naam": "kippenbouillon"
+    },
+    {
+      "hoeveelheid": "160 g",
+      "naam": "kerstomaten"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "rode paprika"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "rode ui"
+    },
+    {
+      "hoeveelheid": "75 g",
+      "naam": "diepvrieserwten"
+    },
+    {
+      "hoeveelheid": "4 el",
+      "naam": "tomatenpuree"
+    },
+    {
+      "hoeveelheid": "2 tl",
+      "naam": "fijngesneden look"
+    },
+    {
+      "hoeveelheid": "100 g",
+      "naam": "geraspte mozzarella"
+    },
+    {
+      "hoeveelheid": "60 g",
+      "naam": "pepperoni"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peper, zout, oregano, uienpoeder"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Oven aan, alles in blokjes",
+      "tekst": "Verwarm de oven voor op 180 °C. Snijd de kip, ui, paprika en kerstomaten in blokjes van ongeveer gelijke grootte, zodat alles op hetzelfde moment gaar is. Verdeel over vier ovenschalen."
+    },
+    {
+      "kop": "De rest erbij en goed mengen",
+      "tekst": "Voeg de rijst, erwten, look, tomatenpuree, kippenbouillon en de kruiden toe. Meng grondig door, tot de tomatenpuree helemaal is opgelost in de bouillon en geen enkele rijstkorrel nog droog aan de rand ligt."
+    },
+    {
+      "kop": "Afdekken en 35 minuten bakken",
+      "tekst": "Dek elke schaal strak af met aluminiumfolie en zet 35 minuten in de oven op 180 °C. Niet tussendoor kijken: elke keer dat je de folie optilt, ontsnapt het vocht dat je rijst nodig heeft."
+    },
+    {
+      "kop": "Kaas en pepperoni erop",
+      "tekst": "Haal de schalen eruit, trek de folie eraf en verdeel de mozzarella en de pepperoni over het geheel. Terug de oven in, nu zonder folie, 10 à 15 minuten tot de kaas volledig gesmolten is en de pepperoni aan de randen omkrult."
+    },
+    {
+      "kop": "Vijf minuten laten staan",
+      "tekst": "Even rusten voor je erin gaat: de laatste bouillon trekt in de rijst en de kaas wordt hanteerbaar. Wat je niet meteen opeet, gaat gekoeld drie tot vier dagen mee en warmt perfect op in de microgolf."
+    }
+  ],
+  "tip": "Laat de folie erop tot de rijst gaar is. Die stoom doet al het werk, en zonder folie krijg je krokante korrels in plaats van zachte rijst.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Eén grote schaal mag ook",
+      "tekst": "Vier aparte schalen zijn handig voor de week, maar in één grote schaal werkt het net zo goed. Reken dan wat extra tijd, want de laag is dikker."
+    },
+    {
+      "kop": "Bouillon is geen detail",
+      "tekst": "De rijst gaat rauw de oven in en drinkt precies die 600 ml op. Minder bouillon geeft harde korrels, meer geeft pap."
+    }
+  ],
+  "voet": "Gekoeld drie tot vier dagen houdbaar, warmt op in de microgolf.",
+  "pdf": "pizza-bowl.pdf"
+}

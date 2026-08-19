@@ -1,0 +1,96 @@
+{
+  "slug": "sheet-pan-quesadilla",
+  "titel": "Sheet pan quesadilla",
+  "kicker": "Mealprep · Mexicaans",
+  "categorie": "Ovenschotel",
+  "trefwoorden": [
+    "gehakt",
+    "tortilla",
+    "oven",
+    "mealprep",
+    "eiwitrijk",
+    "taco"
+  ],
+  "intro": "Zes tortilla's, één ovenschaal, en je hebt een quesadilla ter grootte van de schaal. De randen hangen over de rand en worden op het einde over de vulling dichtgevouwen, als een pakket. Snijd hem in vier en je hebt de lunch voor de rest van de week klaar.",
+  "porties": 4,
+  "portie_eenheid": "porties",
+  "meta": [
+    {
+      "label": "In de oven",
+      "waarde": "20 min op 190 °C"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "650 kcal, 47 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "6",
+      "naam": "tortilla's"
+    },
+    {
+      "hoeveelheid": "500 g",
+      "naam": "mager rundergehakt (5%)"
+    },
+    {
+      "hoeveelheid": "1 zakje",
+      "naam": "tacokruiden"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "ui"
+    },
+    {
+      "hoeveelheid": "2",
+      "naam": "paprika"
+    },
+    {
+      "hoeveelheid": "230 g",
+      "naam": "salsa"
+    },
+    {
+      "hoeveelheid": "150 g",
+      "naam": "geraspte mozzarella"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Gehakt en groenten bakken",
+      "tekst": "Verwarm de oven voor op 190 °C. Bak het rundergehakt rul en roer de tacokruiden erdoor. Snijd de ui en de paprika en bak ze kort mee, niet langer: ze garen straks verder in de oven en te zacht gebakken groenten geven vocht af."
+    },
+    {
+      "kop": "Tortilla's als bodem",
+      "tekst": "Leg vijf tortilla's overlappend in de ovenschaal, met de randen over de zijkanten heen. Die overhang is geen slordigheid maar het sluitwerk: daarmee vouw je het pakket straks dicht."
+    },
+    {
+      "kop": "Vullen in lagen",
+      "tekst": "Verdeel eerst het gehakt over de bodem, dan de ui en paprika, dan de salsa in een gelijkmatige laag. Strooi de mozzarella over de volle breedte. Hou de salsa weg bij de overhangende randen, anders weken die door en scheuren ze bij het vouwen."
+    },
+    {
+      "kop": "Dichtvouwen en verzwaren",
+      "tekst": "Leg de zesde tortilla in het midden en vouw de overhangende randen er één voor één overheen. Zet er een tweede ovenschaal bovenop als gewicht. Dat drukt de lagen samen tot één geheel in plaats van een losse stapel."
+    },
+    {
+      "kop": "Bakken en snijden",
+      "tekst": "Bak 20 minuten op 190 °C. Laat hem daarna even staan voor je hem aansnijdt, zodat de kaas kan opstijven. Snijd in vier gelijke porties."
+    }
+  ],
+  "tip": "Snijd hem niet meteen aan. Recht uit de oven is de kaas nog vloeibaar en valt je quesadilla open bij het eerste mes. Een paar minuten wachten en hij blijft netjes in vieren.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Geen tweede ovenschaal",
+      "tekst": "Een vel bakpapier met iets zwaars erop werkt ook. Het gaat om het gewicht, niet om de schaal."
+    },
+    {
+      "kop": "Mealprep",
+      "tekst": "De vier porties warmen goed op. In de airfryer of een droge pan worden ze weer krokant, in de microgolf blijven ze zacht."
+    }
+  ],
+  "voet": "Vier porties uit één schaal, koud of opgewarmd.",
+  "pdf": "sheet-pan-quesadilla.pdf"
+}

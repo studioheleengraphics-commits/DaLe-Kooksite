@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#AD2C2C">
-<title>Het kookboek</title>
+<title>Pizza bowl · Het kookboek</title>
 <link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600&family=Caveat:wght@500&display=swap' rel='stylesheet'>
 <style>
 :root{
@@ -139,85 +139,70 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 </head>
 <body>
 
-<header class="kop"><div class="wrap">
-  <h1>Het <span>kookboek</span></h1>
-  <p>Studio HeLeen · uit de keuken</p>
-</div></header>
 <main class="wrap">
-  <input class="zoek" id="zoek" type="search" placeholder="Zoek op gerecht of ingredi&#235;nt...">
-  <div class="chips">
-    <button class="chip aan" data-cat="">Alles</button><button class="chip" data-cat="Basisbereiding">Basisbereiding</button><button class="chip" data-cat="Hapjes">Hapjes</button><button class="chip" data-cat="Ovenschotel">Ovenschotel</button><button class="chip" data-cat="Tapas">Tapas</button>
-  </div>
-  <div class="kaarten" id="lijst">
-    <a class="kaart" href="chorizo-in-rode-wijn.html"
-       data-zoek="chorizo in rode wijn tapas spaans borrel worst snel verse chorizo (bakworst) stevige rode wijn, rioja of tempranillo teentjes knoflook, geplet olijfolie laurierblad honing verse peterselie, gehakt"
-       data-cat="Tapas">
-      <div class="kicker">Tapas · Spanje</div>
-      <h2>Chorizo in rode wijn</h2>
-      <p>Pittige worst die zacht ligt te sudderen tot de wijn indikt tot een kleverige, donkere saus. Nog geen kwartier...</p>
-      <div class="regel">15 minuten · Makkelijk</div>
-    </a>
-    <a class="kaart" href="krokante-gyozas-van-rijstvel.html"
-       data-zoek="krokante gyoza&#x27;s van rijstvel hapjes scampi airfryer rijstvel aziatisch eiwitrijk gyoza rijstvellen scampi&#x27;s witte kool ui teentjes knoflook verse gember boter sojasaus, verdeeld over twee stappen limoen, alleen het sap peterselie piri piri, naar smaak scheutje water, en een kom om in te dopen"
-       data-cat="Hapjes">
-      <div class="kicker">Hapje · Uit de airfryer</div>
-      <h2>Krokante gyoza&#x27;s van rijstvel</h2>
-      <p>Gyoza&#x27;s zonder deeg te maken: twee rijstvellen op elkaar, vulling ertussen, en de airfryer doet de rest. De vu...</p>
-      <div class="regel">16 gyoza&#x27;s · 8 à 10 min op 180 °C</div>
-    </a>
-    <a class="kaart" href="ovenpasta-kip-fajita.html"
-       data-zoek="ovenpasta met kip en fajita ovenschotel kip pasta oven fajita eiwitrijk voorbereiden korte droge pasta, zoals penne of fusilli kipfilet ui paprika light roomkaas tomatenblokjes (400 g) water knoflook uit een potje, of verse teentjes fajitakruiden geraspte mozzarella zout en peper"
-       data-cat="Ovenschotel">
-      <div class="kicker">Ovenschotel · Voor drukke dagen</div>
-      <h2>Ovenpasta met kip en fajita</h2>
-      <p>Een ovenschotel die je in tien minuten in elkaar gooit en daarna een uur alleen laat. De pasta gaat rauw de sc...</p>
-      <div class="regel">± 10 min · 55 min op 190 °C</div>
-    </a>
-    <a class="kaart" href="pizza-bowl.html"
-       data-zoek="pizza bowl ovenschotel kip rijst oven mealprep eiwitrijk pepperoni kipfilet ongekookte witte rijst kippenbouillon kerstomaten rode paprika rode ui diepvrieserwten tomatenpuree fijngesneden look geraspte mozzarella pepperoni peper, zout, oregano, uienpoeder"
-       data-cat="Ovenschotel">
-      <div class="kicker">Mealprep · Uit de oven</div>
-      <h2>Pizza bowl</h2>
-      <p>Alles wat je van een pizza wil, in een ovenschaal die op maandag klaarstaat voor de hele week. Kip, rijst en t...</p>
-      <div class="regel">± 10 min · 45 tot 50 min</div>
-    </a>
-    <a class="kaart" href="salmorreta.html"
-       data-zoek="salmorreta basisbereiding paella saus spaans invriezen gedroogde ñora-pepers teentjes knoflook rijpe tomaten extra vierge olijfolie snuf zout, naar smaak optioneel: bosje platte peterselie"
-       data-cat="Basisbereiding">
-      <div class="kicker">Basisbereiding · Uit de Spaanse Levant</div>
-      <h2>Salmorreta</h2>
-      <p>De Alicantijnse sofrito die je paella zijn ziel geeft. Een dieprode pasta van gedroogde ñora-pepers, knoflook ...</p>
-      <div class="regel">± 15 min · 30 tot 40 min</div>
-    </a>
-    <a class="kaart" href="sheet-pan-quesadilla.html"
-       data-zoek="sheet pan quesadilla ovenschotel gehakt tortilla oven mealprep eiwitrijk taco tortilla&#x27;s mager rundergehakt (5%) tacokruiden ui paprika salsa geraspte mozzarella"
-       data-cat="Ovenschotel">
-      <div class="kicker">Mealprep · Mexicaans</div>
-      <h2>Sheet pan quesadilla</h2>
-      <p>Zes tortilla&#x27;s, één ovenschaal, en je hebt een quesadilla ter grootte van de schaal. De randen hangen over de ...</p>
-      <div class="regel">20 min op 190 °C · 650 kcal, 47 g eiwit</div>
-    </a></div>
-  <p class="leeg" id="leeg" style="display:none">Niets gevonden. Andere zoekterm proberen?</p>
+  <a class="terug" href="index.html">&#8592; Alle recepten</a>
+  <article class="recept">
+    <div class="kicker">Mealprep · Uit de oven</div>
+    <h1>Pizza bowl</h1>
+    <p class="intro">Alles wat je van een pizza wil, in een ovenschaal die op maandag klaarstaat voor de hele week. Kip, rijst en tomaat gaan samen de oven in, de mozzarella en pepperoni komen pas op het einde. Eén schaal, één keer afwassen, en toch die draad kaas.</p>
+    <div class="meta"><div><span>Handen uit de mouwen</span><b>± 10 min</b></div><div><span>In de oven</span><b>45 tot 50 min</b></div><div><span>Per portie</span><b>601 kcal, 58 g eiwit</b></div></div>
+
+    <h3 class="blokkop">Ingredi&#235;nten</h3>
+    <div class="porties">
+      <div class="tekst">Voor <b id="lbl">4</b> personen</div>
+      <button id="min" aria-label="minder">&#8722;</button>
+      <div class="aantal" id="aantal">4</div>
+      <button id="plus" aria-label="meer">+</button>
+    </div>
+    <ul class="ing" id="ing"><li data-h="750 g" data-vast=""><b class="hv">750 g</b> kipfilet</li><li data-h="180 g" data-vast=""><b class="hv">180 g</b> ongekookte witte rijst</li><li data-h="600 ml" data-vast=""><b class="hv">600 ml</b> kippenbouillon</li><li data-h="160 g" data-vast=""><b class="hv">160 g</b> kerstomaten</li><li data-h="1" data-vast=""><b class="hv">1</b> rode paprika</li><li data-h="1" data-vast=""><b class="hv">1</b> rode ui</li><li data-h="75 g" data-vast=""><b class="hv">75 g</b> diepvrieserwten</li><li data-h="4 el" data-vast=""><b class="hv">4 el</b> tomatenpuree</li><li data-h="2 tl" data-vast=""><b class="hv">2 tl</b> fijngesneden look</li><li data-h="100 g" data-vast=""><b class="hv">100 g</b> geraspte mozzarella</li><li data-h="60 g" data-vast=""><b class="hv">60 g</b> pepperoni</li><li data-h="" data-vast=""><b class="hv"></b> peper, zout, oregano, uienpoeder</li></ul>
+
+    <h3 class="blokkop">Zo maak je het</h3>
+    <div class="stap"><div class="nr">1</div><div><h4>Oven aan, alles in blokjes</h4><p>Verwarm de oven voor op 180 °C. Snijd de kip, ui, paprika en kerstomaten in blokjes van ongeveer gelijke grootte, zodat alles op hetzelfde moment gaar is. Verdeel over vier ovenschalen.</p></div></div><div class="stap"><div class="nr">2</div><div><h4>De rest erbij en goed mengen</h4><p>Voeg de rijst, erwten, look, tomatenpuree, kippenbouillon en de kruiden toe. Meng grondig door, tot de tomatenpuree helemaal is opgelost in de bouillon en geen enkele rijstkorrel nog droog aan de rand ligt.</p></div></div><div class="stap"><div class="nr">3</div><div><h4>Afdekken en 35 minuten bakken</h4><p>Dek elke schaal strak af met aluminiumfolie en zet 35 minuten in de oven op 180 °C. Niet tussendoor kijken: elke keer dat je de folie optilt, ontsnapt het vocht dat je rijst nodig heeft.</p></div></div><div class="stap"><div class="nr">4</div><div><h4>Kaas en pepperoni erop</h4><p>Haal de schalen eruit, trek de folie eraf en verdeel de mozzarella en de pepperoni over het geheel. Terug de oven in, nu zonder folie, 10 à 15 minuten tot de kaas volledig gesmolten is en de pepperoni aan de randen omkrult.</p></div></div><div class="stap"><div class="nr">5</div><div><h4>Vijf minuten laten staan</h4><p>Even rusten voor je erin gaat: de laatste bouillon trekt in de rijst en de kaas wordt hanteerbaar. Wat je niet meteen opeet, gaat gekoeld drie tot vier dagen mee en warmt perfect op in de microgolf.</p></div></div>
+    <div class="tip"><span class="pen">&#9998;</span><p>Laat de folie erop tot de rijst gaar is. Die stoom doet al het werk, en zonder folie krijg je krokante korrels in plaats van zachte rijst.</p></div>
+    <h3 class="blokkop">Uit de praktijk</h3><div class="praktijk"><div><h4>Eén grote schaal mag ook</h4><p>Vier aparte schalen zijn handig voor de week, maar in één grote schaal werkt het net zo goed. Reken dan wat extra tijd, want de laag is dikker.</p></div><div><h4>Bouillon is geen detail</h4><p>De rijst gaat rauw de oven in en drinkt precies die 600 ml op. Minder bouillon geeft harde korrels, meer geeft pap.</p></div></div>
+  </article>
+  <footer class="voet">Gekoeld drie tot vier dagen houdbaar, warmt op in de microgolf.</footer>
 </main>
-<footer class="voet">6 recepten · Studio HeLeen</footer>
+<div class="balk">
+  <button id="wakker">Scherm aan houden</button>
+  <a href="pdf/pizza-bowl.pdf" target="_blank">A4 printen</a>
+</div>
 
 <script>
-const zoek=document.getElementById('zoek');
-const kaarten=[...document.querySelectorAll('.kaart')];
-let cat='';
-function filter(){
-  const t=zoek.value.toLowerCase().trim(); let n=0;
-  kaarten.forEach(k=>{
-    const ok=(!t||k.dataset.zoek.includes(t))&&(!cat||k.dataset.cat===cat);
-    k.style.display=ok?'block':'none'; if(ok)n++;
+const basis=4; let nu=basis;
+const items=[...document.querySelectorAll('#ing li')];
+function toon(n){
+  const f=n/basis;
+  document.getElementById('aantal').textContent=n;
+  document.getElementById('lbl').textContent=n;
+  items.forEach(li=>{
+    const h=li.dataset.h||'';
+    if(li.dataset.vast){li.querySelector('.hv').textContent=h;return;}
+    const m=h.match(/^(\d+(?:[.,]\d+)?)(.*)$/);
+    if(!m){li.querySelector('.hv').textContent=h;return;}
+    let w=parseFloat(m[1].replace(',','.'))*f;
+    w=Math.round(w*100)/100;
+    let s=(Math.abs(w-Math.round(w))<0.01)?String(Math.round(w)):String(w).replace('.',',');
+    li.querySelector('.hv').textContent=s+m[2];
   });
-  document.getElementById('leeg').style.display=n?'none':'block';
 }
-zoek.addEventListener('input',filter);
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
-  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('aan'));
-  c.classList.add('aan'); cat=c.dataset.cat; filter();
-}));
+document.getElementById('plus').onclick=()=>{nu++;toon(nu);};
+document.getElementById('min').onclick=()=>{if(nu>1){nu--;toon(nu);}};
+items.forEach(li=>li.onclick=()=>li.classList.toggle('af'));
+document.querySelectorAll('.stap').forEach(s=>s.onclick=()=>s.classList.toggle('af'));
+
+let lock=null;
+const knop=document.getElementById('wakker');
+knop.onclick=async()=>{
+  try{
+    if(lock){await lock.release();lock=null;knop.classList.remove('aan');
+      knop.textContent='Scherm aan houden';}
+    else{lock=await navigator.wakeLock.request('screen');knop.classList.add('aan');
+      knop.textContent='Scherm blijft aan';
+      lock.addEventListener('release',()=>{lock=null;knop.classList.remove('aan');
+        knop.textContent='Scherm aan houden';});}
+  }catch(e){knop.textContent='Lukt niet op dit toestel';}
+};
 </script>
 </body>
 </html>

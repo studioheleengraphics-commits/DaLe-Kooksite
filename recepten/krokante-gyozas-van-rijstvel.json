@@ -1,0 +1,116 @@
+{
+  "slug": "krokante-gyozas-van-rijstvel",
+  "titel": "Krokante gyoza's van rijstvel",
+  "kicker": "Hapje · Uit de airfryer",
+  "categorie": "Hapjes",
+  "trefwoorden": [
+    "scampi",
+    "airfryer",
+    "rijstvel",
+    "aziatisch",
+    "eiwitrijk",
+    "gyoza"
+  ],
+  "intro": "Gyoza's zonder deeg te maken: twee rijstvellen op elkaar, vulling ertussen, en de airfryer doet de rest. De vulling is gesmoorde witte kool met gemalen scampi, opgefrist met limoen en sojasaus. Uit de airfryer zijn ze glasachtig krokant aan de buitenkant en nog zacht vanbinnen.",
+  "porties": 2,
+  "portie_eenheid": "personen",
+  "meta": [
+    {
+      "label": "Levert",
+      "waarde": "16 gyoza's"
+    },
+    {
+      "label": "In de airfryer",
+      "waarde": "8 à 10 min op 180 °C"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "360 kcal, 34 g eiwit"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "8",
+      "naam": "rijstvellen"
+    },
+    {
+      "hoeveelheid": "300 g",
+      "naam": "scampi's"
+    },
+    {
+      "hoeveelheid": "150 g",
+      "naam": "witte kool"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "ui"
+    },
+    {
+      "hoeveelheid": "2",
+      "naam": "teentjes knoflook"
+    },
+    {
+      "hoeveelheid": "10 g",
+      "naam": "verse gember"
+    },
+    {
+      "hoeveelheid": "15 g",
+      "naam": "boter"
+    },
+    {
+      "hoeveelheid": "2 el",
+      "naam": "sojasaus, verdeeld over twee stappen"
+    },
+    {
+      "hoeveelheid": "0,5",
+      "naam": "limoen, alleen het sap"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peterselie"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "piri piri, naar smaak"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "scheutje water, en een kom om in te dopen"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Alles fijnsnijden",
+      "tekst": "Snipper de ui, de knoflook en de gember zo fijn mogelijk. Snijd de witte kool in dunne reepjes. Grove stukken prikken later door het rijstvel heen, dus neem hier je tijd."
+    },
+    {
+      "kop": "De groenten smoren",
+      "tekst": "Smelt de boter en fruit de ui, de knoflook en de gember tot ze geuren. Voeg de kool toe, daarna de helft van de sojasaus, een scheutje water en piri piri naar smaak. Laat garen tot de kool geslonken is en het vocht zo goed als verdampt."
+    },
+    {
+      "kop": "Scampi's erdoor",
+      "tekst": "Blend de scampi's met de rest van de sojasaus, het limoensap en de peterselie tot een grove pasta. Meng die onder de groenten. Laat de vulling afkoelen voor je verder gaat, want warme vulling maakt het rijstvel week en dan scheurt het bij het vouwen."
+    },
+    {
+      "kop": "Vouwen in kruisvorm",
+      "tekst": "Dompel een rijstvel kort in water en leg er vier hoopjes vulling op, netjes uit elkaar. Leg een tweede rijstvel erover en druk zachtjes aan rond elk hoopje. Snijd in een kruis, zodat je vier pakketjes hebt, en duw de randen goed dicht."
+    },
+    {
+      "kop": "De airfryer in",
+      "tekst": "Bak 8 à 10 minuten op 180 °C tot ze goudbruin en krokant zijn. Leg ze naast elkaar en niet op elkaar, want waar ze raken blijven ze zacht en plakken ze aan elkaar vast."
+    }
+  ],
+  "tip": "Dompel het rijstvel maar een tel of twee onder. Het voelt dan nog stug aan, maar het wordt vanzelf soepel terwijl je de vulling erop legt. Laat je het langer weken, dan plakt het aan zichzelf en scheurt het bij het snijden.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Vulling zo droog mogelijk",
+      "tekst": "Nat beslag is de vijand van rijstvel. Blijft er vocht in de pan achter, laat het dan nog even verdampen voor je de scampi's erdoor mengt."
+    },
+    {
+      "kop": "Zonder airfryer",
+      "tekst": "In een pan met een dun laagje olie werkt het ook. Bak ze dan om en om, en hou ze in het oog, want rijstvel kleurt sneller dan deeg."
+    }
+  ],
+  "voet": "Zestien stuks, goed voor twee porties van acht.",
+  "pdf": "krokante-gyozas-van-rijstvel.pdf"
+}
