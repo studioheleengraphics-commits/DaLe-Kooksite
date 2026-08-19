@@ -24,7 +24,21 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      # Zolang het secret niet klaarstaat, doet deze workflow niets. Zo krijg
+      # je geen mislukte runs op elke issue die je aanmaakt.
+      - id: sleutel
+        env:
+          TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then
+            echo "klaar=ja" >> "$GITHUB_OUTPUT"
+          else
+            echo "klaar=nee" >> "$GITHUB_OUTPUT"
+            echo "Secret CLAUDE_CODE_OAUTH_TOKEN ontbreekt, deze run stopt hier."
+          fi
+
       - uses: actions/checkout@v6
+        if: steps.sleutel.outputs.klaar == 'ja'
         with:
           ref: main
 
@@ -32,6 +46,7 @@ jobs:
       # issue mag aanhalingstekens en regeleindes bevatten zonder dat de
       # workflow erover struikelt.
       - name: Recept in een bestand zetten
+        if: steps.sleutel.outputs.klaar == 'ja'
         env:
           TITEL: ${{ github.event.issue.title }}
           BODY: ${{ github.event.issue.body }}
@@ -43,11 +58,11 @@ jobs:
           } > .recept-inbox.md
 
       - uses: anthropics/claude-code-action@v1
+        if: steps.sleutel.outputs.klaar == 'ja'
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Liever je Claude-abonnement dan API-tegoed? Vervang de regel
-          # hierboven door de volgende, en zet het bijbehorende secret klaar:
-          # claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Draait op je Claude-abonnement, dus zonder API-kosten.
+          # Het secret maak je met: claude setup-token
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             In .recept-inbox.md staat een recept dat Leen ergens tegenkwam.
             Zet het om naar een receptpagina op deze site.
@@ -84,7 +99,7 @@ jobs:
             --max-turns 30
 
       - name: Melden dat het gelukt is
-        if: success()
+        if: success() && steps.sleutel.outputs.klaar == 'ja'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -97,7 +112,7 @@ jobs:
           gh issue close "${{ github.event.issue.number }}"
 
       - name: Melden dat het misliep
-        if: failure()
+        if: failure() && steps.sleutel.outputs.klaar == 'ja'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
