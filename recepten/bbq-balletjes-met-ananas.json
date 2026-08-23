@@ -1,26 +1,66 @@
 {
   "slug": "bbq-balletjes-met-ananas",
   "titel": "BBQ-balletjes met ananas",
-  "kicker": "Snack · Uit de airfryer",
+  "kicker": "Hapjes · Uit de airfryer",
   "categorie": "Hapjes",
-  "trefwoorden": ["gehaktballetjes", "airfryer", "ananas", "bbq", "snel", "snack"],
+  "trefwoorden": [
+    "gehaktballetjes",
+    "airfryer",
+    "ananas",
+    "bbq",
+    "snel",
+    "snack"
+  ],
   "intro": "Gehaktballetjes die eerst kaal krokant worden in de airfryer en daarna een tweede beurt krijgen in BBQ-saus met ananas. In die tweede ronde kookt de saus in tot een kleverige laag die zich om elk balletje legt. Twee keer de airfryer aan, en verder komt er alleen een lepel aan te pas.",
   "porties": 4,
   "portie_eenheid": "persoon|personen",
   "meta": [
-    { "label": "In de airfryer", "waarde": "8 à 10 min, dan 5 à 7 min" },
-    { "label": "Temperatuur", "waarde": "190 °C" },
-    { "label": "Niveau", "waarde": "Heel makkelijk" }
+    {
+      "label": "In de airfryer",
+      "waarde": "8 à 10 min, dan 5 à 7 min"
+    },
+    {
+      "label": "Temperatuur",
+      "waarde": "190 °C"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Heel makkelijk"
+    }
   ],
   "ingredienten": [
-    { "hoeveelheid": "450 g", "naam": "gehaktballetjes, diepvries of zelfgemaakt" },
-    { "hoeveelheid": "240 ml", "naam": "BBQ-saus" },
-    { "hoeveelheid": "150 g", "naam": "ananasstukjes, vers of uit blik en uitgelekt" },
-    { "hoeveelheid": "1 el", "naam": "sojasaus, optioneel" },
-    { "hoeveelheid": "1 tl", "naam": "knoflookpoeder" },
-    { "hoeveelheid": "0,5 tl", "naam": "zwarte peper" },
-    { "hoeveelheid": "", "naam": "bosuitjes, om te garneren" },
-    { "hoeveelheid": "", "naam": "sesamzaadjes, om te garneren" }
+    {
+      "hoeveelheid": "450 g",
+      "naam": "gehaktballetjes, diepvries of zelfgemaakt"
+    },
+    {
+      "hoeveelheid": "240 ml",
+      "naam": "BBQ-saus"
+    },
+    {
+      "hoeveelheid": "150 g",
+      "naam": "ananasstukjes, vers of uit blik en uitgelekt"
+    },
+    {
+      "hoeveelheid": "1 el",
+      "naam": "sojasaus, optioneel"
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "knoflookpoeder"
+    },
+    {
+      "hoeveelheid": "0,5 tl",
+      "naam": "zwarte peper"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "bosuitjes, om te garneren"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "sesamzaadjes, om te garneren"
+    }
   ],
   "stappen": [
     {

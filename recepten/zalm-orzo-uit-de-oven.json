@@ -1,27 +1,70 @@
 {
   "slug": "zalm-orzo-uit-de-oven",
   "titel": "Zalm-orzo uit de oven",
-  "kicker": "Ovenschotel · Vis uit de oven",
-  "categorie": "Ovenschotel",
-  "trefwoorden": ["zalm", "orzo", "oven", "boursin", "snel", "vis"],
+  "kicker": "Snel op tafel · Vis uit de oven",
+  "categorie": "Snel op tafel",
+  "trefwoorden": [
+    "zalm",
+    "orzo",
+    "oven",
+    "boursin",
+    "snel",
+    "vis"
+  ],
   "intro": "Orzo die rauw de ovenschaal in gaat en gaar kookt in groentebouillon, met de zalm die er bovenop meegaart. De boursin ligt in één stuk op de orzo en zakt tijdens het bakken naar beneden, zodat je op het einde alleen nog moet doorroeren. Twintig minuten in de oven en er staat een romige schotel op tafel die je in één schaal hebt gemaakt.",
   "porties": 4,
   "portie_eenheid": "persoon|personen",
   "meta": [
-    { "label": "In de oven", "waarde": "18 tot 20 min op 220 °C" },
-    { "label": "Bereiding", "waarde": "Alles in één schaal" },
-    { "label": "Niveau", "waarde": "Makkelijk" }
+    {
+      "label": "In de oven",
+      "waarde": "18 tot 20 min op 220 °C"
+    },
+    {
+      "label": "Bereiding",
+      "waarde": "Alles in één schaal"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
   ],
   "ingredienten": [
-    { "hoeveelheid": "275 g", "naam": "orzo" },
-    { "hoeveelheid": "400 g", "naam": "zalm" },
-    { "hoeveelheid": "650 ml", "naam": "groentebouillon" },
-    { "hoeveelheid": "200 g", "naam": "kastanjechampignons, in plakjes" },
-    { "hoeveelheid": "75 g", "naam": "zongedroogde tomaten, in blokjes" },
-    { "hoeveelheid": "1 verpakking", "naam": "boursin" },
-    { "hoeveelheid": "40 g", "naam": "parmezaanse kaas" },
-    { "hoeveelheid": "1", "naam": "handje verse basilicum" },
-    { "hoeveelheid": "", "naam": "peper en zout" }
+    {
+      "hoeveelheid": "275 g",
+      "naam": "orzo"
+    },
+    {
+      "hoeveelheid": "400 g",
+      "naam": "zalm"
+    },
+    {
+      "hoeveelheid": "650 ml",
+      "naam": "groentebouillon"
+    },
+    {
+      "hoeveelheid": "200 g",
+      "naam": "kastanjechampignons, in plakjes"
+    },
+    {
+      "hoeveelheid": "75 g",
+      "naam": "zongedroogde tomaten, in blokjes"
+    },
+    {
+      "hoeveelheid": "1 verpakking",
+      "naam": "boursin"
+    },
+    {
+      "hoeveelheid": "40 g",
+      "naam": "parmezaanse kaas"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "handje verse basilicum"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peper en zout"
+    }
   ],
   "stappen": [
     {
