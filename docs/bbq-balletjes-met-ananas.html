@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD2C2C">
+<title>BBQ-balletjes met ananas · Het kookboek</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600&family=Caveat:wght@500&display=swap' rel='stylesheet'>
+<style>
+:root{
+  --rood:#AD2C2C; --zeegroen:#77968E; --inkt:#1F1D1A;
+  --inkt-zacht:#7B7777; --inkt-licht:#ADA7A7;
+  --papier:#F0EEEB; --wit:#FFFFFF; --kaart:#FAFAFA; --lijn:#E8E8E8;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--papier); color:var(--inkt);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:17px; line-height:1.6; padding-bottom:64px;
+}
+.wrap{max-width:760px; margin:0 auto; padding:0 20px;}
+a{color:var(--rood); text-decoration:none;}
+
+/* kop van de site */
+.kop{background:var(--wit); border-bottom:1px solid var(--lijn); padding:28px 0 24px;}
+.kop h1{
+  font-family:'DM Sans',sans-serif; font-weight:700; font-size:30px;
+  margin:0; letter-spacing:-.4px;
+}
+.kop h1 span{color:var(--rood);}
+.kop p{margin:4px 0 0; color:var(--inkt-zacht); font-size:13px;
+  letter-spacing:1.4px; text-transform:uppercase;}
+
+/* zoeken en filters */
+.zoek{width:100%; padding:13px 16px; border:1px solid var(--lijn);
+  border-radius:10px; background:var(--wit); font-size:16px;
+  font-family:inherit; color:var(--inkt); margin:22px 0 12px;}
+.zoek:focus{outline:none; border-color:var(--zeegroen);}
+.chips{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px;}
+.chip{border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  padding:7px 14px; border-radius:999px; font-size:13px; font-family:inherit;
+  cursor:pointer; letter-spacing:.3px;}
+.chip.aan{background:var(--rood); border-color:var(--rood); color:var(--wit);}
+
+/* receptkaarten */
+.kaarten{display:grid; gap:14px; padding-bottom:40px;}
+.kaart{display:block; background:var(--wit); border:1px solid var(--lijn);
+  border-radius:12px; padding:20px 22px; color:var(--inkt);}
+.kaart .kicker{font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.8px; text-transform:uppercase; color:var(--rood);}
+.kaart h2{font-family:'DM Sans',sans-serif; font-size:23px; font-weight:700;
+  margin:6px 0 6px; letter-spacing:-.3px;}
+.kaart p{margin:0; color:var(--inkt-zacht); font-size:15px;}
+.kaart .regel{margin-top:12px; font-size:12px; color:var(--inkt-licht);
+  letter-spacing:.4px;}
+.leeg{color:var(--inkt-zacht); text-align:center; padding:40px 0;}
+
+/* receptpagina */
+.terug{display:inline-block; margin:22px 0 6px; font-size:14px; color:var(--inkt-zacht);}
+.recept{background:var(--wit); border:1px solid var(--lijn); border-radius:12px;
+  padding:30px 26px 34px; margin-bottom:30px;}
+.recept .kicker{font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:2px; text-transform:uppercase; color:var(--rood);}
+.recept h1{font-family:'DM Sans',sans-serif; font-size:36px; font-weight:700;
+  line-height:1.1; margin:10px 0 14px; letter-spacing:-.8px; color:var(--rood);}
+.intro{color:var(--inkt-zacht); font-size:16px; margin:0 0 24px;}
+
+.meta{display:flex; flex-wrap:wrap; gap:22px; padding:16px 0;
+  border-top:1px solid var(--lijn); border-bottom:1px solid var(--lijn);}
+.meta div span{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
+.meta div b{font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;}
+
+h3.blokkop{font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--rood); margin:30px 0 14px;}
+
+/* porties */
+.porties{display:flex; align-items:center; gap:14px; background:var(--papier);
+  border-radius:10px; padding:12px 16px; margin-bottom:16px;}
+.porties .tekst{font-size:14px; color:var(--inkt-zacht); flex:1;}
+.porties button{width:36px; height:36px; border-radius:9px; border:1px solid var(--lijn);
+  background:var(--wit); font-size:20px; color:var(--rood); cursor:pointer;
+  line-height:1; font-family:inherit;}
+.porties .aantal{font-family:'DM Sans',sans-serif; font-weight:700; font-size:19px;
+  min-width:26px; text-align:center;}
+
+/* ingredienten */
+ul.ing{list-style:none; padding:0; margin:0;}
+ul.ing li{padding:11px 0 11px 30px; border-bottom:1px solid var(--lijn);
+  position:relative; cursor:pointer; font-size:16px;}
+ul.ing li:before{content:""; position:absolute; left:0; top:15px; width:16px;
+  height:16px; border:1.5px solid var(--inkt-licht); border-radius:4px;}
+ul.ing li.af{color:var(--inkt-licht); text-decoration:line-through;}
+ul.ing li.af:before{background:var(--zeegroen); border-color:var(--zeegroen);}
+ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
+
+/* stappen */
+.stap{display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--lijn);
+  cursor:pointer;}
+.stap .nr{font-family:'DM Sans',sans-serif; font-weight:700; font-size:20px;
+  color:var(--rood); min-width:26px;}
+.stap h4{font-family:'DM Sans',sans-serif; font-size:17px; margin:0 0 4px;}
+.stap p{margin:0; font-size:16px; color:var(--inkt);}
+.stap.af{opacity:.4;}
+.stap.af .nr{color:var(--zeegroen);}
+
+/* tip */
+.tip{background:var(--papier); border-left:3px solid var(--rood); border-radius:0 10px 10px 0;
+  padding:16px 20px; margin:26px 0 0;}
+.tip p{font-family:'Caveat',cursive; font-size:22px; line-height:1.35; margin:0;}
+.tip .pen{color:var(--rood); font-size:15px;}
+
+/* praktijk */
+.praktijk{display:grid; gap:12px;}
+.praktijk div{background:var(--kaart); border:1px solid var(--lijn);
+  border-radius:10px; padding:14px 18px;}
+.praktijk h4{font-family:'DM Sans',sans-serif; font-size:15px; margin:0 0 4px;
+  color:var(--zeegroen);}
+.praktijk p{margin:0; font-size:15px; color:var(--inkt-zacht);}
+
+/* voet en balk */
+.voet{text-align:center; color:var(--inkt-licht); font-size:12px;
+  letter-spacing:.6px; padding:10px 0 30px;}
+.balk{position:fixed; left:0; right:0; bottom:0; background:var(--wit);
+  border-top:1px solid var(--lijn); display:flex; gap:10px; padding:10px 16px;
+  justify-content:center; z-index:9;}
+.balk button, .balk a{flex:1; max-width:220px; text-align:center; padding:11px 8px;
+  border-radius:10px; border:1px solid var(--lijn); background:var(--wit);
+  color:var(--inkt); font-size:14px; font-family:inherit; cursor:pointer;}
+.balk button.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
+
+@media print{
+  .balk,.terug,.porties button{display:none;}
+  body{background:var(--wit); padding:0;}
+  .recept{border:none; padding:0;}
+}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <a class="terug" href="index.html">&#8592; Alle recepten</a>
+  <article class="recept">
+    <div class="kicker">Snack · Uit de airfryer</div>
+    <h1>BBQ-balletjes met ananas</h1>
+    <p class="intro">Gehaktballetjes die eerst kaal krokant worden in de airfryer en daarna een tweede beurt krijgen in BBQ-saus met ananas. In die tweede ronde kookt de saus in tot een kleverige laag die zich om elk balletje legt. Twee keer de airfryer aan, en verder komt er alleen een lepel aan te pas.</p>
+    <div class="meta"><div><span>In de airfryer</span><b>8 à 10 min, dan 5 à 7 min</b></div><div><span>Temperatuur</span><b>190 °C</b></div><div><span>Niveau</span><b>Heel makkelijk</b></div></div>
+
+    <h3 class="blokkop">Ingredi&#235;nten</h3>
+    <div class="porties">
+      <div class="tekst">Voor <b id="lbl">4</b> <span id="eenheid">personen</span></div>
+      <button id="min" aria-label="minder">&#8722;</button>
+      <div class="aantal" id="aantal">4</div>
+      <button id="plus" aria-label="meer">+</button>
+    </div>
+    <ul class="ing" id="ing"><li data-h="450 g" data-vast=""><b class="hv">450 g</b> gehaktballetjes, diepvries of zelfgemaakt</li><li data-h="240 ml" data-vast=""><b class="hv">240 ml</b> BBQ-saus</li><li data-h="150 g" data-vast=""><b class="hv">150 g</b> ananasstukjes, vers of uit blik en uitgelekt</li><li data-h="1 el" data-vast=""><b class="hv">1 el</b> sojasaus, optioneel</li><li data-h="1 tl" data-vast=""><b class="hv">1 tl</b> knoflookpoeder</li><li data-h="0,5 tl" data-vast=""><b class="hv">0,5 tl</b> zwarte peper</li><li data-h="" data-vast=""><b class="hv"></b> bosuitjes, om te garneren</li><li data-h="" data-vast=""><b class="hv"></b> sesamzaadjes, om te garneren</li></ul>
+
+    <h3 class="blokkop">Zo maak je het</h3>
+    <div class="stap"><div class="nr">1</div><div><h4>Balletjes kaal voorbakken</h4><p>Leg de gehaktballetjes in één laag in de airfryer en bak ze 8 à 10 minuten op 190 °C. Schud het mandje halverwege. Die ene laag is belangrijk: opgestapeld stomen ze in hun eigen vocht in plaats van te kleuren.</p></div></div><div class="stap"><div class="nr">2</div><div><h4>Saus en ananas erbij</h4><p>Voeg de BBQ-saus, de ananasstukjes, de sojasaus, het knoflookpoeder en de zwarte peper toe. Meng tot elk balletje helemaal onder de saus zit. Werk je met ananas uit blik, laat die dan goed uitlekken, anders verdunt het sap je saus tot ze niet meer indikt.</p></div></div><div class="stap"><div class="nr">3</div><div><h4>Tweede beurt in de airfryer</h4><p>Bak nog 5 à 7 minuten op 190 °C en schud opnieuw halverwege. De saus kookt in en karameliseert, en dat is waar dit gerecht zijn kleverigheid vandaan haalt.</p></div></div><div class="stap"><div class="nr">4</div><div><h4>Afwerken</h4><p>Strooi er fijngesneden bosuitjes en sesamzaadjes over. Het frisse en het knapperige breken de zoete saus, dus sla dit niet over als je ze in huis hebt.</p></div></div>
+    <div class="tip"><span class="pen">&#9998;</span><p>BBQ-saus zit vol suiker en die kleurt snel bij 190 graden. Kijk na een minuut of vier al eens, want tussen gekarameliseerd en verbrand zit hier maar weinig tijd.</p></div>
+    <h3 class="blokkop">Uit de praktijk</h3><div class="praktijk"><div><h4>Als hoofdgerecht</h4><p>Met witte rijst erbij wordt dit een bord in plaats van een hapje. De saus die overblijft is precies genoeg om door de rijst te scheppen.</p></div><div><h4>Zelfgemaakte balletjes</h4><p>Die hebben in de eerste beurt wat meer tijd nodig dan diepvriesballetjes. Snijd er eentje open voor je de saus toevoegt.</p></div></div>
+  </article>
+  <footer class="voet">Als hapje of met rijst, het lekkerst zolang de saus nog kleeft.</footer>
+</main>
+<div class="balk">
+  <button id="wakker">Scherm aan houden</button>
+  <a href="pdf/bbq-balletjes-met-ananas.pdf" target="_blank">A4 printen</a>
+</div>
+
+<script>
+const ENK="persoon", MV="personen";
+const basis=4; let nu=basis;
+const items=[...document.querySelectorAll('#ing li')];
+function toon(n){
+  const f=n/basis;
+  document.getElementById('aantal').textContent=n;
+  document.getElementById('lbl').textContent=n;
+  document.getElementById('eenheid').textContent=(n===1)?ENK:MV;
+  items.forEach(li=>{
+    const h=li.dataset.h||'';
+    if(li.dataset.vast){li.querySelector('.hv').textContent=h;return;}
+    const m=h.match(/^(\d+(?:[.,]\d+)?)(.*)$/);
+    if(!m){li.querySelector('.hv').textContent=h;return;}
+    let w=parseFloat(m[1].replace(',','.'))*f;
+    // Grof afronden waar het kan: 133 ml leest beter dan 133,33 ml, en
+    // niemand weegt een derde gram af.
+    w=(w>=100)?Math.round(w):((w>=10)?Math.round(w*10)/10:Math.round(w*100)/100);
+    let s=(Math.abs(w-Math.round(w))<0.005)?String(Math.round(w)):String(w).replace('.',',');
+    li.querySelector('.hv').textContent=s+m[2];
+  });
+}
+document.getElementById('plus').onclick=()=>{nu++;toon(nu);};
+document.getElementById('min').onclick=()=>{if(nu>1){nu--;toon(nu);}};
+items.forEach(li=>li.onclick=()=>li.classList.toggle('af'));
+document.querySelectorAll('.stap').forEach(s=>s.onclick=()=>s.classList.toggle('af'));
+
+let lock=null;
+const knop=document.getElementById('wakker');
+knop.onclick=async()=>{
+  try{
+    if(lock){await lock.release();lock=null;knop.classList.remove('aan');
+      knop.textContent='Scherm aan houden';}
+    else{lock=await navigator.wakeLock.request('screen');knop.classList.add('aan');
+      knop.textContent='Scherm blijft aan';
+      lock.addEventListener('release',()=>{lock=null;knop.classList.remove('aan');
+        knop.textContent='Scherm aan houden';});}
+  }catch(e){knop.textContent='Lukt niet op dit toestel';}
+};
+</script>
+</body>
+</html>

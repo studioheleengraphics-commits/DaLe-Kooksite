@@ -1,0 +1,56 @@
+{
+  "slug": "bbq-balletjes-met-ananas",
+  "titel": "BBQ-balletjes met ananas",
+  "kicker": "Snack · Uit de airfryer",
+  "categorie": "Hapjes",
+  "trefwoorden": ["gehaktballetjes", "airfryer", "ananas", "bbq", "snel", "snack"],
+  "intro": "Gehaktballetjes die eerst kaal krokant worden in de airfryer en daarna een tweede beurt krijgen in BBQ-saus met ananas. In die tweede ronde kookt de saus in tot een kleverige laag die zich om elk balletje legt. Twee keer de airfryer aan, en verder komt er alleen een lepel aan te pas.",
+  "porties": 4,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "In de airfryer", "waarde": "8 à 10 min, dan 5 à 7 min" },
+    { "label": "Temperatuur", "waarde": "190 °C" },
+    { "label": "Niveau", "waarde": "Heel makkelijk" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "450 g", "naam": "gehaktballetjes, diepvries of zelfgemaakt" },
+    { "hoeveelheid": "240 ml", "naam": "BBQ-saus" },
+    { "hoeveelheid": "150 g", "naam": "ananasstukjes, vers of uit blik en uitgelekt" },
+    { "hoeveelheid": "1 el", "naam": "sojasaus, optioneel" },
+    { "hoeveelheid": "1 tl", "naam": "knoflookpoeder" },
+    { "hoeveelheid": "0,5 tl", "naam": "zwarte peper" },
+    { "hoeveelheid": "", "naam": "bosuitjes, om te garneren" },
+    { "hoeveelheid": "", "naam": "sesamzaadjes, om te garneren" }
+  ],
+  "stappen": [
+    {
+      "kop": "Balletjes kaal voorbakken",
+      "tekst": "Leg de gehaktballetjes in één laag in de airfryer en bak ze 8 à 10 minuten op 190 °C. Schud het mandje halverwege. Die ene laag is belangrijk: opgestapeld stomen ze in hun eigen vocht in plaats van te kleuren."
+    },
+    {
+      "kop": "Saus en ananas erbij",
+      "tekst": "Voeg de BBQ-saus, de ananasstukjes, de sojasaus, het knoflookpoeder en de zwarte peper toe. Meng tot elk balletje helemaal onder de saus zit. Werk je met ananas uit blik, laat die dan goed uitlekken, anders verdunt het sap je saus tot ze niet meer indikt."
+    },
+    {
+      "kop": "Tweede beurt in de airfryer",
+      "tekst": "Bak nog 5 à 7 minuten op 190 °C en schud opnieuw halverwege. De saus kookt in en karameliseert, en dat is waar dit gerecht zijn kleverigheid vandaan haalt."
+    },
+    {
+      "kop": "Afwerken",
+      "tekst": "Strooi er fijngesneden bosuitjes en sesamzaadjes over. Het frisse en het knapperige breken de zoete saus, dus sla dit niet over als je ze in huis hebt."
+    }
+  ],
+  "tip": "BBQ-saus zit vol suiker en die kleurt snel bij 190 graden. Kijk na een minuut of vier al eens, want tussen gekarameliseerd en verbrand zit hier maar weinig tijd.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Als hoofdgerecht",
+      "tekst": "Met witte rijst erbij wordt dit een bord in plaats van een hapje. De saus die overblijft is precies genoeg om door de rijst te scheppen."
+    },
+    {
+      "kop": "Zelfgemaakte balletjes",
+      "tekst": "Die hebben in de eerste beurt wat meer tijd nodig dan diepvriesballetjes. Snijd er eentje open voor je de saus toevoegt."
+    }
+  ],
+  "voet": "Als hapje of met rijst, het lekkerst zolang de saus nog kleeft.",
+  "pdf": "bbq-balletjes-met-ananas.pdf"
+}
