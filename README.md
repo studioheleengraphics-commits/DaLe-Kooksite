@@ -109,9 +109,38 @@ publiceren. En de titel van een airfryertijd moet met `Airfryertijd:` beginnen,
 want daaraan wordt het onderscheid met een recept gemaakt. Het formulier vult
 dat vanzelf voor je in.
 
-Dit werkt alleen als het secret `CLAUDE_CODE_OAUTH_TOKEN` klaarstaat in
-Settings, Secrets and variables, Actions. Maak het aan met `claude setup-token`.
-Ontbreekt het, dan stoppen de workflows meteen in plaats van rood te lopen.
+### Over die token
+
+De workflows draaien op de servers van GitHub, niet op jouw computer. Wanneer
+iemand het formulier verstuurt, moet GitHub daar Claude kunnen starten, en dan
+is er iets nodig dat zegt: dit mag, en het gaat op de rekening van Leen. Dat
+is de token. Een sleutel, meer niet.
+
+Hij loopt op je Claude-abonnement, dus er komt geen aparte factuur van de API
+bij. En omdat deze repository publiek staat, rekent GitHub ook de minuten van
+Actions niet aan.
+
+Aanmaken doe je zo:
+
+1. Zorg dat Claude Code op je eigen computer staat, en meld je aan.
+2. Draai in de terminal `claude setup-token`. Je krijgt een lange tekenreeks
+   terug. Die is de token.
+3. Ga in de repository naar Settings, Secrets and variables, Actions, en klik
+   New repository secret.
+4. Naam: `CLAUDE_CODE_OAUTH_TOKEN`. Waarde: die tekenreeks. Bewaren.
+
+Het kan ook in één beweging: draai `/install-github-app` in Claude Code op je
+computer. Dat installeert de Claude GitHub App op de repository en zet de token
+er meteen bij. Daarvoor moet de GitHub CLI geïnstalleerd zijn.
+
+Plak de token nergens anders. Niet in een bestand in de repository, niet in
+een issue. Een secret is de enige plek waar hij hoort, want daar kan niemand
+hem nog uitlezen, ook jij niet.
+
+Zolang hij ontbreekt, stoppen de workflows meteen en netjes, zonder rode
+kruisjes op elke issue die je opent. Beginnen ze later te klagen over
+authenticatie, dan is de token verlopen of ingetrokken en maak je op dezelfde
+manier een nieuwe.
 
 ## Online zetten met GitHub Pages
 
