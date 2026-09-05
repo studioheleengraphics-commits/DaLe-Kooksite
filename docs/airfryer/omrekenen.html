@@ -122,10 +122,56 @@ ol.stappen li .functie{border:1px solid var(--zeegroen); color:var(--zeegroen);}
 .ptip .pen{color:var(--rood); font-size:14px; line-height:1.6;}
 .ptip p{font-family:'Caveat',cursive; font-size:20px; line-height:1.3; margin:0;}
 .volnoot{margin:12px 0 0; font-size:13px; color:var(--zeegroen);}
-.timerknop{width:100%; margin-top:16px; padding:13px; border-radius:10px;
+.timerknop:active{background:var(--rood); color:var(--wit);}
+
+.paneelknoppen{display:flex; gap:8px; margin-top:16px;}
+.timerknop{flex:2; margin:0; padding:13px; border-radius:10px;
   border:1px solid var(--rood); background:var(--wit); color:var(--rood);
   font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px; cursor:pointer;}
-.timerknop:active{background:var(--rood); color:var(--wit);}
+.pasaan{flex:1; padding:13px 6px; border-radius:10px; border:1px solid var(--lijn);
+  background:var(--wit); color:var(--inkt-zacht); font-family:inherit;
+  font-size:14px; cursor:pointer;}
+.eigenrij:empty{display:none;}
+.eigennoot{margin:16px 0 8px; font-size:13.5px; color:var(--zeegroen);}
+.voorgoed{flex:2; text-align:center; padding:13px 6px; border-radius:10px;
+  border:1px solid var(--zeegroen); background:var(--zeegroen); color:var(--wit);
+  font-family:'DM Sans',sans-serif; font-weight:500; font-size:14px;}
+.terugzet{flex:1; padding:13px 6px; border-radius:10px; border:1px solid var(--lijn);
+  background:var(--wit); color:var(--inkt-zacht); font-family:inherit;
+  font-size:14px; cursor:pointer;}
+.rij .hier{display:inline-block; margin-left:7px; padding:1px 8px; border-radius:999px;
+  border:1px solid var(--inkt-licht); color:var(--inkt-licht);
+  font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:.6px;
+  vertical-align:1px;}
+.item.eigen{border-color:var(--zeegroen);}
+.balk button.nieuw{border-color:var(--rood); color:var(--rood);
+  font-family:'DM Sans',sans-serif; font-weight:500;}
+
+/* het venster om iets toe te voegen of bij te stellen */
+.venster{position:fixed; inset:0; z-index:20; background:rgba(31,29,26,.55);
+  display:flex; align-items:flex-end; justify-content:center;}
+.venster-kaart{background:var(--wit); width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto; border-radius:16px 16px 0 0;
+  padding:22px 20px 24px;}
+.venster-kaart h3{font-family:'DM Sans',sans-serif; font-size:20px; margin:0 0 18px;
+  color:var(--rood);}
+.venster-kaart .veld{margin-bottom:14px;}
+.venster-kaart select, .venster-kaart textarea{width:100%; padding:12px 14px;
+  border:1px solid var(--lijn); border-radius:10px; font-size:16px;
+  font-family:inherit; color:var(--inkt); background:var(--wit);}
+.venster-kaart textarea{resize:vertical;}
+.venster-kaart .ronde{background:var(--kaart); border-radius:10px;
+  padding:14px 14px 2px; margin-bottom:12px;}
+.vink{display:flex; align-items:center; gap:10px; margin:0 0 14px;
+  font-size:15px; color:var(--inkt);}
+.vink input{width:20px; height:20px; accent-color:var(--zeegroen);}
+.vensternoot{font-size:13px; color:var(--inkt-zacht); margin:0 0 16px;}
+.venster-knoppen{display:flex; gap:10px;}
+.venster-knoppen button{flex:1; padding:14px; border-radius:10px;
+  border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  font-family:inherit; font-size:15px; cursor:pointer;}
+.venster-knoppen button.hoofd{background:var(--rood); border-color:var(--rood);
+  color:var(--wit); font-family:'DM Sans',sans-serif; font-weight:500;}
 
 .leeg{color:var(--inkt-zacht); text-align:center; padding:30px 0;}
 .voet{text-align:center; color:var(--inkt-licht); font-size:12px;
@@ -135,9 +181,10 @@ ol.stappen li .functie{border:1px solid var(--zeegroen); color:var(--zeegroen);}
 .balk{position:fixed; left:0; right:0; bottom:0; background:var(--wit);
   border-top:1px solid var(--lijn); display:flex; gap:10px; padding:10px 16px;
   justify-content:center; z-index:9;}
-.balk button, .balk a{flex:1; max-width:220px; text-align:center; padding:11px 8px;
+.balk button, .balk a{flex:1; max-width:180px; text-align:center; padding:11px 4px;
   border-radius:10px; border:1px solid var(--lijn); background:var(--wit);
-  color:var(--inkt); font-size:14px; font-family:inherit; cursor:pointer;}
+  color:var(--inkt); font-size:13.5px; font-family:inherit; cursor:pointer;
+  white-space:nowrap;}
 .balk button.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
 
 /* timerbalk, zweeft boven de vaste balk */

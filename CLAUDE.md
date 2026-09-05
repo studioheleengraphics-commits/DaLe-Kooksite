@@ -76,6 +76,14 @@ gegenereerd door `build_airfryer.py`, dat vanzelf meedraait met `build.py`.
 - `volgorde` bepaalt waar de categorie in de lijst komt.
 - Foto's komen in `airfryer/fotos/` en worden meegekopieerd. Zet de bestandsnaam
   in het veld `foto` van het product. Zonder foto blijft de rij gewoon smaller.
+- De pagina draagt alle brongegevens mee in een constante `BRON`, zodat de
+  knoppen Toevoegen en Aanpassen een rij opnieuw kunnen opbouwen. Wat daar
+  bewaard wordt, staat in `localStorage` onder `crispy-dale-eigen-v1` en dus
+  alleen op dat ene toestel. De bron in `airfryer/*.json` blijft de waarheid.
+- **Let op bij het aanpassen van een rij:** `maakItemHtml` in de JavaScript
+  bouwt precies dezelfde opmaak als `bouw_item` in Python. Verander je de vorm
+  van een rij, verander die dan op allebei de plekken, anders ziet een zelf
+  toegevoegd product er anders uit dan de rest.
 
 ```json
 {

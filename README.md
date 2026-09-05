@@ -65,6 +65,8 @@ Wat hij doet:
   moet veranderen
 - Een knop voor een volle mand, die overal ongeveer een vijfde tijd bijtelt
 - Een rode ster bij alles wat thuis is uitgetest, met een knop die daarop filtert
+- Een knop Toevoegen, en een knop Aanpassen bij elk product, zodat je aan de
+  airfryer meteen kan noteren wat werkte
 - Een aparte pagina die oven en airfryer in twee richtingen omrekent, met de
   kerntemperaturen en de vuistregels die er echt toe doen
 
@@ -78,9 +80,27 @@ telefoon in plaats van in het geheugen van één app.
 
 ## Iets toevoegen zonder JSON aan te raken
 
-Op de site zelf kan niemand iets toevoegen, en dat is bewust: geen server, geen
-login, dus ook niets dat stuk kan. Toevoegen gaat via GitHub, met een formulier
-in plaats van met accolades.
+Er is geen server en geen login, dus er is ook geen plek waar de site zelf iets
+kan bewaren voor iedereen. Daarom zijn er twee wegen, en ze sluiten op elkaar aan.
+
+### Meteen, op de telefoon in je hand
+
+Onderaan de airfryersite staat **+ Toevoegen**, en in elk opengeklapt product
+staat **Aanpassen**. Je vult een naam, graden en minuten in, eventueel een
+tweede ronde en een stand, en je bewaart. Het staat er meteen, doet mee met
+zoeken en met de timer, en overleeft het sluiten van de browser.
+
+Dat bewaren gebeurt in de browser van dat ene toestel. Niemand anders ziet het,
+en een nieuwe telefoon begint weer blanco. Zulke producten dragen daarom het
+label *deze telefoon*, en een bijgestelde tijd het label *aangepast*, met een
+zeegroene rand eromheen. Zo weet je altijd wat van de site komt en wat van jou.
+
+Bij elk van die twee staat een knop **Voorgoed op de site**. Die opent het
+GitHub-formulier hieronder, al ingevuld met wat je net noteerde. Eén keer
+versturen en het staat vast voor iedereen. Naast elke knop staat *Zet terug*
+of *Verwijderen*, voor als het toch niet klopte.
+
+### Voorgoed, voor iedereen
 
 Ga naar het tabblad Issues, klik New issue en kies:
 
@@ -167,8 +187,6 @@ De volgorde die het minste werk oplevert:
 2. Een boodschappenlijst. Kan volledig in de browser, met `localStorage`, dus nog
    altijd zonder server.
 3. Een weekmenu, dat bouwt voort op diezelfde lijst.
-4. Een eigen tijd per product bewaren op de telefoon zelf, naast de richttijd.
-   Handig om iets uit te proberen voor je het definitief in de JSON zet.
 
 Pas als de familie zelf recepten wil kunnen toevoegen, heb je een echte app nodig.
 Tot dan is dit lichter, sneller en zo goed als onverwoestbaar.

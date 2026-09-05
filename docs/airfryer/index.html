@@ -122,10 +122,56 @@ ol.stappen li .functie{border:1px solid var(--zeegroen); color:var(--zeegroen);}
 .ptip .pen{color:var(--rood); font-size:14px; line-height:1.6;}
 .ptip p{font-family:'Caveat',cursive; font-size:20px; line-height:1.3; margin:0;}
 .volnoot{margin:12px 0 0; font-size:13px; color:var(--zeegroen);}
-.timerknop{width:100%; margin-top:16px; padding:13px; border-radius:10px;
+.timerknop:active{background:var(--rood); color:var(--wit);}
+
+.paneelknoppen{display:flex; gap:8px; margin-top:16px;}
+.timerknop{flex:2; margin:0; padding:13px; border-radius:10px;
   border:1px solid var(--rood); background:var(--wit); color:var(--rood);
   font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px; cursor:pointer;}
-.timerknop:active{background:var(--rood); color:var(--wit);}
+.pasaan{flex:1; padding:13px 6px; border-radius:10px; border:1px solid var(--lijn);
+  background:var(--wit); color:var(--inkt-zacht); font-family:inherit;
+  font-size:14px; cursor:pointer;}
+.eigenrij:empty{display:none;}
+.eigennoot{margin:16px 0 8px; font-size:13.5px; color:var(--zeegroen);}
+.voorgoed{flex:2; text-align:center; padding:13px 6px; border-radius:10px;
+  border:1px solid var(--zeegroen); background:var(--zeegroen); color:var(--wit);
+  font-family:'DM Sans',sans-serif; font-weight:500; font-size:14px;}
+.terugzet{flex:1; padding:13px 6px; border-radius:10px; border:1px solid var(--lijn);
+  background:var(--wit); color:var(--inkt-zacht); font-family:inherit;
+  font-size:14px; cursor:pointer;}
+.rij .hier{display:inline-block; margin-left:7px; padding:1px 8px; border-radius:999px;
+  border:1px solid var(--inkt-licht); color:var(--inkt-licht);
+  font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:.6px;
+  vertical-align:1px;}
+.item.eigen{border-color:var(--zeegroen);}
+.balk button.nieuw{border-color:var(--rood); color:var(--rood);
+  font-family:'DM Sans',sans-serif; font-weight:500;}
+
+/* het venster om iets toe te voegen of bij te stellen */
+.venster{position:fixed; inset:0; z-index:20; background:rgba(31,29,26,.55);
+  display:flex; align-items:flex-end; justify-content:center;}
+.venster-kaart{background:var(--wit); width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto; border-radius:16px 16px 0 0;
+  padding:22px 20px 24px;}
+.venster-kaart h3{font-family:'DM Sans',sans-serif; font-size:20px; margin:0 0 18px;
+  color:var(--rood);}
+.venster-kaart .veld{margin-bottom:14px;}
+.venster-kaart select, .venster-kaart textarea{width:100%; padding:12px 14px;
+  border:1px solid var(--lijn); border-radius:10px; font-size:16px;
+  font-family:inherit; color:var(--inkt); background:var(--wit);}
+.venster-kaart textarea{resize:vertical;}
+.venster-kaart .ronde{background:var(--kaart); border-radius:10px;
+  padding:14px 14px 2px; margin-bottom:12px;}
+.vink{display:flex; align-items:center; gap:10px; margin:0 0 14px;
+  font-size:15px; color:var(--inkt);}
+.vink input{width:20px; height:20px; accent-color:var(--zeegroen);}
+.vensternoot{font-size:13px; color:var(--inkt-zacht); margin:0 0 16px;}
+.venster-knoppen{display:flex; gap:10px;}
+.venster-knoppen button{flex:1; padding:14px; border-radius:10px;
+  border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  font-family:inherit; font-size:15px; cursor:pointer;}
+.venster-knoppen button.hoofd{background:var(--rood); border-color:var(--rood);
+  color:var(--wit); font-family:'DM Sans',sans-serif; font-weight:500;}
 
 .leeg{color:var(--inkt-zacht); text-align:center; padding:30px 0;}
 .voet{text-align:center; color:var(--inkt-licht); font-size:12px;
@@ -135,9 +181,10 @@ ol.stappen li .functie{border:1px solid var(--zeegroen); color:var(--zeegroen);}
 .balk{position:fixed; left:0; right:0; bottom:0; background:var(--wit);
   border-top:1px solid var(--lijn); display:flex; gap:10px; padding:10px 16px;
   justify-content:center; z-index:9;}
-.balk button, .balk a{flex:1; max-width:220px; text-align:center; padding:11px 8px;
+.balk button, .balk a{flex:1; max-width:180px; text-align:center; padding:11px 4px;
   border-radius:10px; border:1px solid var(--lijn); background:var(--wit);
-  color:var(--inkt); font-size:14px; font-family:inherit; cursor:pointer;}
+  color:var(--inkt); font-size:13.5px; font-family:inherit; cursor:pointer;
+  white-space:nowrap;}
 .balk button.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
 
 /* timerbalk, zweeft boven de vaste balk */
@@ -246,7 +293,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>De laatste vijf minuten op Max Crisp maken het verschil tussen bleek en knapperig.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="frieten uit de diepvries friet patat frietjes"
@@ -270,7 +321,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Schud minstens twee keer. Doe je dat niet, dan bakken de onderste donker terwijl de bovenste bleek blijven.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="steakfrieten dikke frieten steakhouse"
@@ -294,7 +349,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 18 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 18 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="aardappelkroketten kroket kroketjes"
@@ -318,7 +377,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="bitterballen borrelhapje bitterbal"
@@ -342,7 +405,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="vleeskroketten of kaaskroketten kaaskroket garnaalkroket"
@@ -366,7 +433,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Keer ze halverwege voorzichtig met een tang. Schudden laat ze barsten en dan loopt de vulling eruit.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="frikandel"
@@ -390,7 +461,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kipnuggets nuggets kip"
@@ -414,7 +489,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="loempia&#x27;s, klein loempia mini loempia"
@@ -438,7 +517,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="vissticks vis sticks"
@@ -462,7 +545,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="mozzarellasticks mozzarella kaas"
@@ -486,7 +573,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Blijf erbij vanaf minuut zes. Een minuut te veel en de kaas ligt in de mand.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 6 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 6 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="diepvriespizza, kleine pizza pizzette"
@@ -510,7 +601,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -539,7 +634,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Spoel de gesneden frieten tot het water helder blijft en dep ze kurkdroog. Twee keer bakken is het hele geheim: eerst zacht garen, dan hard afbakken.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="aardappelblokjes blokjes gebakken aardappel"
@@ -563,7 +662,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="krieltjes, gehalveerd krielaardappel krieltjes"
@@ -587,7 +690,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 18 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 18 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="aardappelpartjes wedges partjes"
@@ -611,7 +718,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 20 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 20 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="zoete aardappelfrieten zoete aardappel patat douce"
@@ -635,7 +746,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Zoete aardappel bevat meer suiker en kleurt dus sneller donker. Ga liever op kleur af dan op de klok.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="gepofte aardappel, heel pofaardappel jacket potato"
@@ -659,7 +774,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 35 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 35 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="rösti of aardappelschijven rosti hash brown"
@@ -683,7 +802,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -712,7 +835,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="bloemkoolroosjes bloemkool"
@@ -736,7 +863,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="spruitjes, gehalveerd spruiten spruitjes"
@@ -760,7 +891,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Die verbrande buitenblaadjes zijn het lekkerste stuk. Haal ze er niet af.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="wortelen in staafjes wortel peen"
@@ -784,7 +919,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="courgette in plakken courgette zucchini"
@@ -808,7 +947,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="aubergine in blokjes aubergine melanzane"
@@ -832,7 +975,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Aubergine drinkt olie op als een spons. Meng de olie erdoor in een kom voor ze de mand in gaan, dan verdeelt hij zich eerlijk.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="paprika in repen paprika"
@@ -856,7 +1003,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="champignons, gehalveerd champignon paddenstoel"
@@ -880,7 +1031,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Zout pas na het bakken. Zout trekt vocht naar buiten en dan stoven ze in plaats van bakken.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="groene asperges asperge asperges"
@@ -904,7 +1059,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 6 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 6 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="groene boontjes boontjes prinsessenboon"
@@ -928,7 +1087,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="pompoenblokjes pompoen butternut"
@@ -952,7 +1115,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="ui in ringen ui ajuin"
@@ -976,7 +1143,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kikkererwten uit blik kikkererwt chickpeas snack"
@@ -1000,7 +1171,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Kruid ze pas na het bakken. Paprikapoeder verbrandt en wordt bitter.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="maïskolf mais maiskolf"
@@ -1024,7 +1199,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -1053,7 +1232,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Laat de filet vijf minuten rusten voor je snijdt. Snijd je meteen, dan loopt al het vocht op je plank in plaats van in het vlees te blijven.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 18 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 18 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kipfilet in blokjes kipblokjes kip"
@@ -1077,7 +1260,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kipdijfilet dijfilet kip bovenbeen"
@@ -1101,7 +1288,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kippenbouten bout drumstick kip"
@@ -1125,7 +1316,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 25 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 25 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kippenvleugels wings vleugel kip"
@@ -1149,7 +1344,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Doe de saus er pas de laatste drie minuten bij. Suiker in barbecuesaus verbrandt zwart als hij er van bij het begin op zit.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="hele kip braadkip kip"
@@ -1173,7 +1372,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Keer hem halverwege om zodat de borst niet uitdroogt. Meet altijd, want het gewicht van je kip bepaalt de tijd meer dan deze tabel.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 45 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 45 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="gehaktballetjes balletjes gehakt vleesballetjes"
@@ -1197,7 +1400,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Eerst hard, dan zachter. Op één temperatuur zijn ze vanbuiten donker voor het midden gaar is.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="hamburger burger hamburger gehakt"
@@ -1221,7 +1428,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Leg de kaas er de laatste minuut op, met de mand al uit het toestel als het even kan. Anders blaast de ventilator hem tegen het verwarmingselement.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="braadworst of chipolata worst chipolata braadworst"
@@ -1245,7 +1456,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="varkenshaasje varkenshaas varken filet mignon"
@@ -1269,7 +1484,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 18 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 18 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="biefstuk steak rund biefstuk"
@@ -1293,7 +1512,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Haal het vlees een half uur voor het bakken uit de koelkast. Koud vlees uit de frigo wordt vanbuiten grijs voor het vanbinnen warm is.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="spek of ontbijtspek spek bacon"
@@ -1317,7 +1540,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Er komt veel vet uit. Giet de lade leeg voor je iets anders bakt, anders rookt je keuken.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 6 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 6 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="spareribs, voorgegaard ribs ribbetjes spareribs"
@@ -1341,7 +1568,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="curryworst curryworst worst snack"
@@ -1365,7 +1596,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kalkoenrollade kalkoen rollade gebraad feest"
@@ -1389,7 +1624,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Ontdooid de mand in, anders klopt die vijftig minuten niet. Laat hem daarna tien minuten rusten onder folie voor je snijdt.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 50 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 50 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kalkoenblokjes kalkoen blokjes gevogelte"
@@ -1413,7 +1652,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer starten</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer starten</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -1442,7 +1685,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="verse kabeljauwburgers kabeljauw visburger burger vis vers double stack pro"
@@ -1466,7 +1713,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Met Double Stack Pro aan, zodat de bovenste laag van het mandje extra warmte krijgt en de burgers boven en onder even ver staan. Zelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="zalmmoot zalm salmon"
@@ -1490,7 +1741,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Laat het vel eraan. Het beschermt de onderkant tegen de hete lucht en komt er na het bakken vanzelf af.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="witte visfilet kabeljauw koolvis pangasius vis"
@@ -1514,7 +1769,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="garnalen, rauw en gepeld garnaal scampi gamba"
@@ -1538,7 +1797,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 6 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 6 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="gepaneerde inktvisringen calamares inktvis pijlinktvis"
@@ -1562,7 +1825,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="hele forel forel vis"
@@ -1586,7 +1853,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="mosselen of scheermessen gratineren mossel gratineren schelpdier"
@@ -1610,7 +1881,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 5 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 5 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -1639,7 +1914,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 15 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 15 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="bladerdeeghapjes bladerdeeg worstenbrood hapje"
@@ -1663,7 +1942,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Bestrijk met ei voor de kleur, maar hou de rand vrij. Ei op de snijkant plakt de laagjes dicht en dan rijst het deeg niet.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="gyoza uit de diepvries gyoza dumpling dim sum"
@@ -1687,7 +1970,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="halloumi in plakken halloumi kaas"
@@ -1711,7 +1998,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="tofu in blokjes tofu vegetarisch"
@@ -1735,7 +2026,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Pers de tofu een half uur onder een zwaar bord. Al dat vocht dat eruit loopt is precies wat anders verhindert dat hij krokant wordt.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="falafel uit de diepvries falafel vegetarisch"
@@ -1759,7 +2054,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="geroosterde noten noten amandel cashew"
@@ -1783,7 +2082,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Blijf erbij en schud vaak. Van goudbruin naar verbrand duurt bij noten nog geen minuut.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 5 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 5 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="kaas- en hamrolletjes rolletjes ham kaas hapje"
@@ -1807,7 +2110,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -1836,7 +2143,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Uitgetest op de broodjes van de Aldi. Bij een volle mand een minuutje erbij.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="croissants, afbak croissant koffiekoek"
@@ -1860,7 +2171,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 6 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 6 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="geroosterd brood toast brood roosteren"
@@ -1884,7 +2199,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 3 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 3 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="croque monsieur croque tosti"
@@ -1908,7 +2227,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Zet er een prikker door of leg er een klein rooster op. De ventilator blaast anders het bovenste sneetje eraf.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="appelflappen of bladerdeegkoeken appelflap gebak"
@@ -1932,7 +2255,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="muffins muffin cupcake"
@@ -1956,7 +2283,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="koekjes koekjes cookies"
@@ -1980,7 +2311,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 8 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 8 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="cake in een vorm cake taart"
@@ -2004,7 +2339,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Leg er na een kwartier los een velletje folie over als de bovenkant al bruin is. Onderin heeft hij dan nog tijd zonder dat de kruin verbrandt.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 25 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 25 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="speltbroodjes spelt broodje afbak"
@@ -2028,7 +2367,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 7 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 7 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="keizerbroodjes keizer broodje kaiser"
@@ -2052,7 +2395,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 5 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 5 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="bruine broodjes bruin broodje aldi afbak"
@@ -2076,7 +2423,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           <div class="ptip"><span class="pen">&#9998;</span><p>Uitgetest op de bruine broodjes van de Aldi. Lager en langer dan de witte, anders is de korst hard voor het midden warm is.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 12 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 12 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="mini koffiekoeken koffiekoek mini afbak viennoiserie"
@@ -2100,7 +2451,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 10 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 10 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -2129,7 +2484,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 4 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 4 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="pizzapunt pizza opwarmen restjes"
@@ -2153,7 +2512,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 3 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 3 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="gebraden kip of vlees kip opwarmen restjes vlees"
@@ -2177,7 +2540,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 5 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 5 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="brood of stokbrood brood opwarmen stokbrood"
@@ -2201,7 +2568,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 3 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 3 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
       <div class="item" data-zoek="gepaneerde restjes schnitzel kroket opwarmen restjes"
@@ -2225,7 +2596,11 @@ ul.regelset li:last-child{margin-bottom:0;}
           
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
-          <button class="timerknop" type="button">Timer op 5 min</button>
+          <div class="paneelknoppen">
+            <button class="timerknop" type="button">Timer op 5 min</button>
+            <button class="pasaan" type="button">Aanpassen</button>
+          </div>
+          <div class="eigenrij"></div>
         </div>
       </div>
     </section>
@@ -2244,14 +2619,85 @@ ul.regelset li:last-child{margin-bottom:0;}
   </div>
 </div>
 <div class="balk">
-  <button id="wakker" type="button">Scherm aan houden</button>
-  <a href="omrekenen.html">Oven omrekenen</a>
+  <button id="v-nieuw" class="nieuw" type="button">+ Toevoegen</button>
+  <button id="wakker" type="button">Scherm aan</button>
+  <a href="omrekenen.html">Omrekenen</a>
 </div>
 
-<script>
+<div class="venster" id="venster" hidden>
+  <div class="venster-kaart">
+    <h3 id="v-kop">Nieuw product</h3>
+    <div class="veld"><label for="v-naam">Wat bak je</label>
+      <input id="v-naam" type="text" placeholder="Koteletten"></div>
+    <div class="veld" id="v-catveld"><label for="v-cat">Waar hoort het thuis</label>
+      <select id="v-cat"><option>Diepvries</option><option>Aardappel</option><option>Groenten</option><option>Vlees en gevogelte</option><option>Vis</option><option>Hapjes</option><option>Brood en bakken</option><option>Opwarmen</option></select></div>
+
+    <div class="ronde">
+      <div class="velden">
+        <div class="veld"><label for="v-g1">Graden</label>
+          <input id="v-g1" type="number" inputmode="numeric" placeholder="180"></div>
+        <div class="veld"><label for="v-m1">Minuten</label>
+          <input id="v-m1" type="number" inputmode="numeric" placeholder="15"></div>
+      </div>
+      <div class="veld"><label for="v-s1">Stand, als je er een gebruikt</label>
+        <input id="v-s1" type="text" placeholder="Max Crisp"></div>
+    </div>
+
+    <label class="vink"><input type="checkbox" id="v-tweede"> Er komt een tweede ronde</label>
+    <div class="ronde" id="v-ronde2" hidden>
+      <div class="velden">
+        <div class="veld"><label for="v-g2">Graden</label>
+          <input id="v-g2" type="number" inputmode="numeric" placeholder="240"></div>
+        <div class="veld"><label for="v-m2">Minuten</label>
+          <input id="v-m2" type="number" inputmode="numeric" placeholder="5"></div>
+      </div>
+      <div class="veld"><label for="v-s2">Stand, als je er een gebruikt</label>
+        <input id="v-s2" type="text" placeholder="Max Crisp"></div>
+    </div>
+
+    <label class="vink"><input type="checkbox" id="v-ster"> Uitgetest, geef het een ster</label>
+    <div class="veld"><label for="v-notitie">Notitie</label>
+      <textarea id="v-notitie" rows="2" placeholder="Optioneel."></textarea></div>
+
+    <p class="vensternoot">Wat je hier bewaart, staat op deze telefoon. Met de knop
+      <b>Voorgoed op de site</b> zet je het door naar iedereen.</p>
+
+    <div class="venster-knoppen">
+      <button id="v-annuleer" type="button">Annuleren</button>
+      <button id="v-bewaar" class="hoofd" type="button">Bewaren</button>
+    </div>
+  </div>
+</div>
+
+<script>const REPO="studioheleengraphics-commits/DaLe-Kooksite";
+const BRON={"Boomstammetjes": {"naam": "Boomstammetjes", "trefwoorden": ["boomstam", "snack", "diepvries"], "getest": true, "stappen": [{"wat": "Bakken", "graden": 180, "minuten": [10, 10]}, {"wat": "Afwerken", "graden": 240, "minuten": [5, 5], "stand": "Max Crisp"}], "klaar": "Rondom donker en krokant, heet tot in de kern.", "tip": "De laatste vijf minuten op Max Crisp maken het verschil tussen bleek en knapperig.", "categorie": "Diepvries"}, "Frieten uit de diepvries": {"naam": "Frieten uit de diepvries", "trefwoorden": ["friet", "patat", "frietjes"], "graden": 200, "minuten": [15, 18], "schudden": 7, "voorverwarmen": true, "portie": "400 g, hooguit twee lagen dik", "klaar": "Goudbruin en hard als je erin knijpt. Nog bleek betekent nog drie minuten.", "tip": "Schud minstens twee keer. Doe je dat niet, dan bakken de onderste donker terwijl de bovenste bleek blijven.", "categorie": "Diepvries"}, "Steakfrieten": {"naam": "Steakfrieten", "trefwoorden": ["dikke frieten", "steakhouse"], "graden": 200, "minuten": [18, 22], "schudden": 7, "voorverwarmen": true, "portie": "400 g in een losse laag", "klaar": "Buitenkant knapperig, binnenkant zacht als je er een vork in duwt.", "categorie": "Diepvries"}, "Aardappelkroketten": {"naam": "Aardappelkroketten", "trefwoorden": ["kroket", "kroketjes"], "graden": 200, "minuten": [10, 12], "schudden": 6, "voorverwarmen": true, "portie": "Een losse laag, ze mogen elkaar niet raken", "klaar": "Goudbruin en licht gebarsten aan de uiteinden.", "categorie": "Diepvries"}, "Bitterballen": {"naam": "Bitterballen", "trefwoorden": ["borrelhapje", "bitterbal"], "graden": 200, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "Acht tot tien stuks in een losse laag", "klaar": "Bruin en stevig. Barsten ze open, dan zijn ze te lang binnen gebleven.", "categorie": "Diepvries"}, "Vleeskroketten of kaaskroketten": {"naam": "Vleeskroketten of kaaskroketten", "trefwoorden": ["kaaskroket", "garnaalkroket"], "graden": 190, "minuten": [10, 12], "schudden": 0, "voorverwarmen": true, "portie": "Twee tot vier stuks, met ruimte ertussen", "klaar": "Diep goudbruin en warm tot in het midden.", "tip": "Keer ze halverwege voorzichtig met een tang. Schudden laat ze barsten en dan loopt de vulling eruit.", "categorie": "Diepvries"}, "Frikandel": {"naam": "Frikandel", "graden": 190, "minuten": [10, 12], "schudden": 6, "voorverwarmen": true, "portie": "Vier stuks naast elkaar", "kern": 75, "klaar": "Rondom bruin en heet tot in de kern.", "categorie": "Diepvries"}, "Kipnuggets": {"naam": "Kipnuggets", "trefwoorden": ["nuggets", "kip"], "graden": 200, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "Tien tot twaalf stuks in een losse laag", "kern": 75, "klaar": "Krokant korstje, geen roze binnenkant meer.", "categorie": "Diepvries"}, "Loempia's, klein": {"naam": "Loempia's, klein", "trefwoorden": ["loempia", "mini loempia"], "graden": 190, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "Acht stuks met ruimte ertussen", "klaar": "Het deeg is bruin en bladert af als je erop tikt.", "categorie": "Diepvries"}, "Vissticks": {"naam": "Vissticks", "trefwoorden": ["vis", "sticks"], "graden": 200, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "Zes tot acht stuks in een losse laag", "klaar": "Goudbruin paneermeel, de vis laat los in schilfers.", "categorie": "Diepvries"}, "Mozzarellasticks": {"naam": "Mozzarellasticks", "trefwoorden": ["mozzarella", "kaas"], "graden": 190, "minuten": [6, 8], "schudden": 0, "voorverwarmen": true, "portie": "Zes stuks, niet tegen elkaar", "klaar": "Het korstje is bruin en de kaas veert mee als je erop duwt.", "tip": "Blijf erbij vanaf minuut zes. Een minuut te veel en de kaas ligt in de mand.", "categorie": "Diepvries"}, "Diepvriespizza, kleine": {"naam": "Diepvriespizza, kleine", "trefwoorden": ["pizza", "pizzette"], "graden": 180, "minuten": [8, 12], "schudden": 0, "voorverwarmen": true, "portie": "Eén pizza die in de mand past zonder om te plooien", "klaar": "De kaas borrelt en de rand is bruin.", "categorie": "Diepvries"}, "Verse frieten": {"naam": "Verse frieten", "trefwoorden": ["friet", "zelfgesneden", "patat"], "voorverwarmen": true, "portie": "500 g gesneden aardappel met een eetlepel olie", "klaar": "Goudbruin en hard aan de buitenkant, zacht binnenin.", "tip": "Spoel de gesneden frieten tot het water helder blijft en dep ze kurkdroog. Twee keer bakken is het hele geheim: eerst zacht garen, dan hard afbakken.", "stappen": [{"wat": "Garen", "graden": 160, "minuten": [15, 15], "schudden": 5}, {"wat": "Afbakken", "graden": 200, "minuten": [8, 10], "schudden": 4}], "categorie": "Aardappel"}, "Aardappelblokjes": {"naam": "Aardappelblokjes", "trefwoorden": ["blokjes", "gebakken aardappel"], "getest": true, "stappen": [{"wat": "Garen", "graden": 180, "minuten": [16, 16]}, {"wat": "Afwerken", "graden": 170, "minuten": [6, 6]}], "portie": "500 g blokjes van twee centimeter", "klaar": "Bruine randjes, en een vork gaat er zonder weerstand door.", "categorie": "Aardappel"}, "Krieltjes, gehalveerd": {"naam": "Krieltjes, gehalveerd", "trefwoorden": ["krielaardappel", "krieltjes"], "graden": 200, "minuten": [18, 22], "schudden": 7, "voorverwarmen": true, "portie": "500 g met olie en grof zout", "klaar": "De snijkant is diep goudbruin en licht gebarsten.", "categorie": "Aardappel"}, "Aardappelpartjes": {"naam": "Aardappelpartjes", "trefwoorden": ["wedges", "partjes"], "graden": 200, "minuten": [20, 25], "schudden": 8, "voorverwarmen": true, "portie": "Vier aardappelen in acht partjes", "klaar": "De schil is gerimpeld en donker, het vlees geeft mee.", "categorie": "Aardappel"}, "Zoete aardappelfrieten": {"naam": "Zoete aardappelfrieten", "trefwoorden": ["zoete aardappel", "patat douce"], "graden": 190, "minuten": [15, 20], "schudden": 6, "voorverwarmen": true, "portie": "400 g met een eetlepel olie", "klaar": "Donkeroranje randen. Ze blijven zachter dan gewone frieten, dat hoort zo.", "tip": "Zoete aardappel bevat meer suiker en kleurt dus sneller donker. Ga liever op kleur af dan op de klok.", "categorie": "Aardappel"}, "Gepofte aardappel, heel": {"naam": "Gepofte aardappel, heel", "trefwoorden": ["pofaardappel", "jacket potato"], "graden": 200, "minuten": [35, 45], "schudden": 0, "voorverwarmen": true, "portie": "Twee middelgrote aardappelen, ingeprikt", "klaar": "Een mes glijdt zonder weerstand tot in het midden.", "categorie": "Aardappel"}, "Rösti of aardappelschijven": {"naam": "Rösti of aardappelschijven", "trefwoorden": ["rosti", "hash brown"], "graden": 200, "minuten": [10, 12], "schudden": 0, "voorverwarmen": true, "portie": "Vier stuks naast elkaar", "klaar": "Doorbakken bruin, en de randen krullen lichtjes op.", "categorie": "Aardappel"}, "Broccoliroosjes": {"naam": "Broccoliroosjes", "trefwoorden": ["broccoli"], "graden": 190, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "300 g roosjes met olie", "klaar": "De toppen zijn donker en krokant, de steel geeft mee onder een vork.", "categorie": "Groenten"}, "Bloemkoolroosjes": {"naam": "Bloemkoolroosjes", "trefwoorden": ["bloemkool"], "graden": 190, "minuten": [12, 15], "schudden": 6, "voorverwarmen": true, "portie": "300 g roosjes met olie", "klaar": "Gouden vlekken op de snijkanten, geen krak meer in het midden.", "categorie": "Groenten"}, "Spruitjes, gehalveerd": {"naam": "Spruitjes, gehalveerd", "trefwoorden": ["spruiten", "spruitjes"], "graden": 190, "minuten": [12, 15], "schudden": 6, "voorverwarmen": true, "portie": "300 g met olie, snijkant naar beneden", "klaar": "De buitenste blaadjes zijn bijna zwart en de kern is zacht.", "tip": "Die verbrande buitenblaadjes zijn het lekkerste stuk. Haal ze er niet af.", "categorie": "Groenten"}, "Wortelen in staafjes": {"naam": "Wortelen in staafjes", "trefwoorden": ["wortel", "peen"], "graden": 190, "minuten": [12, 16], "schudden": 6, "voorverwarmen": true, "portie": "300 g staafjes van een halve centimeter", "klaar": "Gerimpeld en zoet, met bruine plekken op de dikste kant.", "categorie": "Groenten"}, "Courgette in plakken": {"naam": "Courgette in plakken", "trefwoorden": ["courgette", "zucchini"], "graden": 190, "minuten": [10, 12], "schudden": 5, "voorverwarmen": true, "portie": "Eén courgette in plakken van een centimeter", "klaar": "Goudbruine randen. Dunner gesneden wordt slap, dus houd ze stevig.", "categorie": "Groenten"}, "Aubergine in blokjes": {"naam": "Aubergine in blokjes", "trefwoorden": ["aubergine", "melanzane"], "graden": 190, "minuten": [12, 15], "schudden": 6, "voorverwarmen": true, "portie": "Eén aubergine in blokjes, royaal met olie", "klaar": "Diep goudbruin en romig van binnen.", "tip": "Aubergine drinkt olie op als een spons. Meng de olie erdoor in een kom voor ze de mand in gaan, dan verdeelt hij zich eerlijk.", "categorie": "Groenten"}, "Paprika in repen": {"naam": "Paprika in repen", "trefwoorden": ["paprika"], "graden": 190, "minuten": [10, 12], "schudden": 5, "voorverwarmen": true, "portie": "Twee paprika's in brede repen", "klaar": "De velletjes blazen op en krijgen zwarte blaasjes.", "categorie": "Groenten"}, "Champignons, gehalveerd": {"naam": "Champignons, gehalveerd", "trefwoorden": ["champignon", "paddenstoel"], "graden": 180, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "250 g met olie en peper", "klaar": "Ze zijn geslonken en het vocht is verdampt.", "tip": "Zout pas na het bakken. Zout trekt vocht naar buiten en dan stoven ze in plaats van bakken.", "categorie": "Groenten"}, "Groene asperges": {"naam": "Groene asperges", "trefwoorden": ["asperge", "asperges"], "graden": 190, "minuten": [6, 9], "schudden": 4, "voorverwarmen": true, "portie": "Eén bundel in één laag", "klaar": "Fel groen met bruine puntjes, en de steel buigt nog net niet door.", "categorie": "Groenten"}, "Groene boontjes": {"naam": "Groene boontjes", "trefwoorden": ["boontjes", "prinsessenboon"], "graden": 190, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "250 g met olie", "klaar": "Blaasjes op het vel, en ze knappen nog lichtjes.", "categorie": "Groenten"}, "Pompoenblokjes": {"naam": "Pompoenblokjes", "trefwoorden": ["pompoen", "butternut"], "graden": 190, "minuten": [15, 18], "schudden": 7, "voorverwarmen": true, "portie": "400 g blokjes van twee centimeter", "klaar": "Karamelbruine randen, en een vork gaat er zonder duwen in.", "categorie": "Groenten"}, "Ui in ringen": {"naam": "Ui in ringen", "trefwoorden": ["ui", "ajuin"], "graden": 180, "minuten": [10, 12], "schudden": 5, "voorverwarmen": true, "portie": "Twee uien in dikke ringen", "klaar": "Doorschijnend met bruine punten.", "categorie": "Groenten"}, "Kikkererwten uit blik": {"naam": "Kikkererwten uit blik", "trefwoorden": ["kikkererwt", "chickpeas", "snack"], "graden": 190, "minuten": [12, 15], "schudden": 5, "voorverwarmen": true, "portie": "Eén blik, uitgelekt en kurkdroog gedept", "klaar": "Ze rammelen in de mand en kraken tussen je tanden.", "tip": "Kruid ze pas na het bakken. Paprikapoeder verbrandt en wordt bitter.", "categorie": "Groenten"}, "Maïskolf": {"naam": "Maïskolf", "trefwoorden": ["mais", "maiskolf"], "graden": 190, "minuten": [12, 15], "schudden": 6, "voorverwarmen": true, "portie": "Twee kolven met boter of olie", "klaar": "De korrels blinken en er zitten bruine plekken op.", "categorie": "Groenten"}, "Kipfilet, heel": {"naam": "Kipfilet, heel", "trefwoorden": ["kip", "kipfilet", "kippenborst"], "graden": 180, "minuten": [18, 22], "schudden": 10, "voorverwarmen": true, "portie": "Twee filets van ongeveer 150 g, naast elkaar", "kern": 75, "klaar": "Het vocht dat eruit loopt is helder, niet meer roze.", "tip": "Laat de filet vijf minuten rusten voor je snijdt. Snijd je meteen, dan loopt al het vocht op je plank in plaats van in het vlees te blijven.", "categorie": "Vlees en gevogelte"}, "Kipfilet in blokjes": {"naam": "Kipfilet in blokjes", "trefwoorden": ["kipblokjes", "kip"], "graden": 190, "minuten": [10, 14], "schudden": 5, "voorverwarmen": true, "portie": "500 g blokjes van drie centimeter", "kern": 75, "klaar": "Rondom wit met bruine randjes.", "categorie": "Vlees en gevogelte"}, "Kipdijfilet": {"naam": "Kipdijfilet", "trefwoorden": ["dijfilet", "kip", "bovenbeen"], "graden": 190, "minuten": [15, 18], "schudden": 8, "voorverwarmen": true, "portie": "Vier stuks in één laag", "kern": 75, "klaar": "Donker gekleurd en het vlees trekt van de randen weg.", "categorie": "Vlees en gevogelte"}, "Kippenbouten": {"naam": "Kippenbouten", "trefwoorden": ["bout", "drumstick", "kip"], "graden": 180, "minuten": [25, 30], "schudden": 12, "voorverwarmen": true, "portie": "Vier bouten met ruimte ertussen", "kern": 75, "klaar": "Het vel is bruin en krokant, en het vlees laat los van het bot.", "categorie": "Vlees en gevogelte"}, "Kippenvleugels": {"naam": "Kippenvleugels", "trefwoorden": ["wings", "vleugel", "kip"], "voorverwarmen": true, "portie": "600 g in één laag", "kern": 75, "klaar": "Diep gekleurd vel dat kraakt.", "tip": "Doe de saus er pas de laatste drie minuten bij. Suiker in barbecuesaus verbrandt zwart als hij er van bij het begin op zit.", "stappen": [{"wat": "Gaar laten worden", "graden": 160, "minuten": [12, 14], "schudden": 6}, {"wat": "Vel krokant maken", "graden": 200, "minuten": [6, 8], "schudden": 3}], "categorie": "Vlees en gevogelte"}, "Hele kip": {"naam": "Hele kip", "trefwoorden": ["braadkip", "kip"], "graden": 170, "minuten": [45, 60], "schudden": 25, "voorverwarmen": true, "portie": "Eén kip van ongeveer 1,2 kg, borst eerst naar beneden", "kern": 75, "klaar": "Meet in het dikste deel van de dij, tegen het bot aan. Onder de 75 graden gaat hij terug de mand in.", "tip": "Keer hem halverwege om zodat de borst niet uitdroogt. Meet altijd, want het gewicht van je kip bepaalt de tijd meer dan deze tabel.", "categorie": "Vlees en gevogelte"}, "Gehaktballetjes": {"naam": "Gehaktballetjes", "trefwoorden": ["balletjes", "gehakt", "vleesballetjes"], "getest": true, "stappen": [{"wat": "Hard aanzetten", "graden": 200, "minuten": [8, 8]}, {"wat": "Rustig gaar maken", "graden": 180, "minuten": [8, 8]}], "kern": 72, "klaar": "Rondom bruin, en binnenin nergens meer rood.", "tip": "Eerst hard, dan zachter. Op één temperatuur zijn ze vanbuiten donker voor het midden gaar is.", "categorie": "Vlees en gevogelte"}, "Hamburger": {"naam": "Hamburger", "trefwoorden": ["burger", "hamburger", "gehakt"], "graden": 190, "minuten": [10, 14], "schudden": 6, "voorverwarmen": true, "portie": "Twee burgers van 150 g, met ruimte ertussen", "kern": 72, "klaar": "Gehakt eet je doorbakken: geen roze meer in het midden.", "tip": "Leg de kaas er de laatste minuut op, met de mand al uit het toestel als het even kan. Anders blaast de ventilator hem tegen het verwarmingselement.", "categorie": "Vlees en gevogelte"}, "Braadworst of chipolata": {"naam": "Braadworst of chipolata", "trefwoorden": ["worst", "chipolata", "braadworst"], "graden": 180, "minuten": [12, 15], "schudden": 6, "voorverwarmen": true, "portie": "Vier worsten naast elkaar", "kern": 72, "klaar": "Bruin en gespannen vel. Prik niet in de worst, dan loopt het vet eruit.", "categorie": "Vlees en gevogelte"}, "Varkenshaasje": {"naam": "Varkenshaasje", "trefwoorden": ["varkenshaas", "varken", "filet mignon"], "graden": 180, "minuten": [18, 22], "schudden": 10, "voorverwarmen": true, "portie": "Eén haasje van ongeveer 400 g", "kern": 63, "klaar": "Bij 63 graden is hij net rosé. Laat hem daarna vijf minuten rusten onder folie.", "categorie": "Vlees en gevogelte"}, "Biefstuk": {"naam": "Biefstuk", "trefwoorden": ["steak", "rund", "biefstuk"], "graden": 200, "minuten": [8, 12], "schudden": 5, "voorverwarmen": true, "portie": "Twee stukken van ongeveer 2,5 cm dik", "kern": 55, "klaar": "55 graden is rosé, 60 is doorbakken. Elke graad telt hier.", "tip": "Haal het vlees een half uur voor het bakken uit de koelkast. Koud vlees uit de frigo wordt vanbuiten grijs voor het vanbinnen warm is.", "categorie": "Vlees en gevogelte"}, "Spek of ontbijtspek": {"naam": "Spek of ontbijtspek", "trefwoorden": ["spek", "bacon"], "graden": 190, "minuten": [6, 9], "schudden": 4, "voorverwarmen": false, "portie": "Zes plakken naast elkaar, niet overlappend", "klaar": "Glazig en krokant. Ze worden nog harder als ze afkoelen.", "tip": "Er komt veel vet uit. Giet de lade leeg voor je iets anders bakt, anders rookt je keuken.", "categorie": "Vlees en gevogelte"}, "Spareribs, voorgegaard": {"naam": "Spareribs, voorgegaard", "trefwoorden": ["ribs", "ribbetjes", "spareribs"], "graden": 180, "minuten": [12, 15], "schudden": 7, "voorverwarmen": true, "portie": "Eén rek in stukken gesneden", "kern": 75, "klaar": "De saus is ingedikt en plakt aan het vlees.", "categorie": "Vlees en gevogelte"}, "Curryworst": {"naam": "Curryworst", "trefwoorden": ["curryworst", "worst", "snack"], "getest": true, "stappen": [{"wat": "Garen", "graden": 180, "minuten": [6, 6]}, {"wat": "Afwerken", "graden": 200, "minuten": [2, 2]}], "kern": 72, "klaar": "Gespannen vel met bruine plekken.", "categorie": "Vlees en gevogelte"}, "Kalkoenrollade": {"naam": "Kalkoenrollade", "trefwoorden": ["kalkoen", "rollade", "gebraad", "feest"], "getest": true, "graden": 160, "minuten": [50, 50], "kern": 75, "portie": "Ontdooid, in één stuk", "klaar": "Meet in het midden van de rollade. Onder de 75 graden gaat hij terug de mand in.", "tip": "Ontdooid de mand in, anders klopt die vijftig minuten niet. Laat hem daarna tien minuten rusten onder folie voor je snijdt.", "categorie": "Vlees en gevogelte"}, "Kalkoenblokjes": {"naam": "Kalkoenblokjes", "trefwoorden": ["kalkoen", "blokjes", "gevogelte"], "getest": true, "stappen": [{"wat": "Garen", "graden": 180, "minuten": [7, 7]}, {"wat": "Afwerken", "graden": 240, "minuten": [3, 3], "stand": "Max Crisp"}], "kern": 75, "klaar": "Rondom wit met bruine randjes, geen roze meer.", "categorie": "Vlees en gevogelte"}, "Kabeljauwburgers uit de diepvries": {"naam": "Kabeljauwburgers uit de diepvries", "trefwoorden": ["kabeljauw", "visburger", "burger", "vis"], "getest": true, "graden": 180, "minuten": [15, 15], "kern": 60, "klaar": "Doorbakken bruin korstje, de vis valt uit elkaar onder een vork.", "categorie": "Vis"}, "Verse kabeljauwburgers": {"naam": "Verse kabeljauwburgers", "trefwoorden": ["kabeljauw", "visburger", "burger", "vis", "vers", "double stack pro"], "getest": true, "graden": 180, "minuten": [15, 15], "kern": 60, "klaar": "Ondoorschijnend wit tot in het midden.", "tip": "Met Double Stack Pro aan, zodat de bovenste laag van het mandje extra warmte krijgt en de burgers boven en onder even ver staan. Zelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen.", "functie": "Double Stack Pro", "categorie": "Vis"}, "Zalmmoot": {"naam": "Zalmmoot", "trefwoorden": ["zalm", "salmon"], "graden": 180, "minuten": [8, 12], "schudden": 0, "voorverwarmen": true, "portie": "Twee moten van ongeveer 150 g, vel naar beneden", "kern": 55, "klaar": "Het vlees laat los in schilfers en het midden is nog net glazig.", "tip": "Laat het vel eraan. Het beschermt de onderkant tegen de hete lucht en komt er na het bakken vanzelf af.", "categorie": "Vis"}, "Witte visfilet": {"naam": "Witte visfilet", "trefwoorden": ["kabeljauw", "koolvis", "pangasius", "vis"], "graden": 180, "minuten": [8, 10], "schudden": 0, "voorverwarmen": true, "portie": "Twee filets, op bakpapier met gaatjes", "kern": 60, "klaar": "Ondoorschijnend wit en het vlees valt uit elkaar onder een vork.", "categorie": "Vis"}, "Garnalen, rauw en gepeld": {"naam": "Garnalen, rauw en gepeld", "trefwoorden": ["garnaal", "scampi", "gamba"], "graden": 190, "minuten": [6, 8], "schudden": 3, "voorverwarmen": true, "portie": "300 g in één laag, met olie en look", "klaar": "Roze en opgekruld tot een C. Een O betekent te lang.", "categorie": "Vis"}, "Gepaneerde inktvisringen": {"naam": "Gepaneerde inktvisringen", "trefwoorden": ["calamares", "inktvis", "pijlinktvis"], "graden": 200, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "Een losse laag, uit de diepvries", "klaar": "Goudbruin paneermeel dat kraakt.", "categorie": "Vis"}, "Hele forel": {"naam": "Hele forel", "trefwoorden": ["forel", "vis"], "graden": 180, "minuten": [12, 15], "schudden": 0, "voorverwarmen": true, "portie": "Eén vis, ingesmeerd met olie", "kern": 60, "klaar": "De rugvin laat los als je eraan trekt.", "categorie": "Vis"}, "Mosselen of scheermessen gratineren": {"naam": "Mosselen of scheermessen gratineren", "trefwoorden": ["mossel", "gratineren", "schelpdier"], "graden": 180, "minuten": [5, 7], "schudden": 0, "voorverwarmen": true, "portie": "Voorgekookt, in de halve schelp met kruidenboter", "klaar": "De boter borrelt en het broodkruim is goudbruin.", "categorie": "Vis"}, "Worstenbroodjes met kruimeldeeg": {"naam": "Worstenbroodjes met kruimeldeeg", "trefwoorden": ["worstenbrood", "kruimeldeeg", "hapje", "worst"], "getest": true, "graden": 180, "minuten": [15, 15], "kern": 72, "klaar": "Het deeg is goudbruin en de onderkant is droog, niet vettig.", "categorie": "Hapjes"}, "Bladerdeeghapjes": {"naam": "Bladerdeeghapjes", "trefwoorden": ["bladerdeeg", "worstenbrood", "hapje"], "graden": 180, "minuten": [10, 12], "schudden": 0, "voorverwarmen": true, "portie": "Zes stuks op bakpapier, met ruimte om te rijzen", "klaar": "Hoog gerezen en overal goudbruin, ook aan de zijkant.", "tip": "Bestrijk met ei voor de kleur, maar hou de rand vrij. Ei op de snijkant plakt de laagjes dicht en dan rijst het deeg niet.", "categorie": "Hapjes"}, "Gyoza uit de diepvries": {"naam": "Gyoza uit de diepvries", "trefwoorden": ["gyoza", "dumpling", "dim sum"], "graden": 190, "minuten": [8, 10], "schudden": 5, "voorverwarmen": true, "portie": "Tien stuks, licht ingeolied", "klaar": "De bodem is bruin en de plooien zijn krokant.", "categorie": "Hapjes"}, "Halloumi in plakken": {"naam": "Halloumi in plakken", "trefwoorden": ["halloumi", "kaas"], "graden": 190, "minuten": [8, 10], "schudden": 4, "voorverwarmen": true, "portie": "Eén pak in plakken van een centimeter", "klaar": "Goudbruine strepen en de kaas piept tussen je tanden.", "categorie": "Hapjes"}, "Tofu in blokjes": {"naam": "Tofu in blokjes", "trefwoorden": ["tofu", "vegetarisch"], "graden": 190, "minuten": [12, 15], "schudden": 6, "voorverwarmen": true, "portie": "400 g stevige tofu, uitgeperst en met maïszetmeel bestoven", "klaar": "Aan alle kanten goudbruin en stevig.", "tip": "Pers de tofu een half uur onder een zwaar bord. Al dat vocht dat eruit loopt is precies wat anders verhindert dat hij krokant wordt.", "categorie": "Hapjes"}, "Falafel uit de diepvries": {"naam": "Falafel uit de diepvries", "trefwoorden": ["falafel", "vegetarisch"], "graden": 190, "minuten": [10, 12], "schudden": 5, "voorverwarmen": true, "portie": "Acht stuks, licht ingeolied", "klaar": "Donkerbruin korstje, warm en kruimelig binnenin.", "categorie": "Hapjes"}, "Geroosterde noten": {"naam": "Geroosterde noten", "trefwoorden": ["noten", "amandel", "cashew"], "graden": 160, "minuten": [5, 8], "schudden": 3, "voorverwarmen": false, "portie": "200 g in één laag", "klaar": "Ze ruiken naar geroosterd en zijn een tint donkerder.", "tip": "Blijf erbij en schud vaak. Van goudbruin naar verbrand duurt bij noten nog geen minuut.", "categorie": "Hapjes"}, "Kaas- en hamrolletjes": {"naam": "Kaas- en hamrolletjes", "trefwoorden": ["rolletjes", "ham", "kaas", "hapje"], "graden": 180, "minuten": [8, 10], "schudden": 0, "voorverwarmen": true, "portie": "Acht rolletjes met de naad naar beneden", "klaar": "Het deeg is bruin en de kaas komt net aan de randen naar buiten.", "categorie": "Hapjes"}, "Afbakbroodjes": {"naam": "Afbakbroodjes", "trefwoorden": ["pistolet", "broodje", "afbak", "aldi", "sandwich"], "getest": true, "graden": 170, "minuten": [10, 10], "klaar": "De korst kraakt als je erin knijpt en de onderkant klinkt hol.", "tip": "Uitgetest op de broodjes van de Aldi. Bij een volle mand een minuutje erbij.", "categorie": "Brood en bakken"}, "Croissants, afbak": {"naam": "Croissants, afbak", "trefwoorden": ["croissant", "koffiekoek"], "graden": 170, "minuten": [6, 8], "schudden": 0, "voorverwarmen": true, "portie": "Twee tot drie stuks, ze zetten nog uit", "klaar": "Diep goudbruin en de laagjes staan los van elkaar.", "categorie": "Brood en bakken"}, "Geroosterd brood": {"naam": "Geroosterd brood", "trefwoorden": ["toast", "brood roosteren"], "graden": 180, "minuten": [3, 5], "schudden": 0, "voorverwarmen": false, "portie": "Twee sneden plat in de mand", "klaar": "Goudbruin. Kijk vanaf minuut drie, dun brood gaat snel.", "categorie": "Brood en bakken"}, "Croque monsieur": {"naam": "Croque monsieur", "trefwoorden": ["croque", "tosti"], "graden": 180, "minuten": [8, 10], "schudden": 0, "voorverwarmen": true, "portie": "Twee stuks naast elkaar", "klaar": "De kaas loopt langs de zijkant en het brood is bruin.", "tip": "Zet er een prikker door of leg er een klein rooster op. De ventilator blaast anders het bovenste sneetje eraf.", "categorie": "Brood en bakken"}, "Appelflappen of bladerdeegkoeken": {"naam": "Appelflappen of bladerdeegkoeken", "trefwoorden": ["appelflap", "gebak"], "graden": 180, "minuten": [10, 12], "schudden": 0, "voorverwarmen": true, "portie": "Twee tot drie stuks op bakpapier", "klaar": "Goudbruin en gerezen. Wat vulling die eruit loopt, hoort erbij.", "categorie": "Brood en bakken"}, "Muffins": {"naam": "Muffins", "trefwoorden": ["muffin", "cupcake"], "graden": 160, "minuten": [12, 15], "schudden": 0, "voorverwarmen": true, "portie": "Vier in siliconen vormpjes", "klaar": "Een satéprikker komt er droog uit.", "categorie": "Brood en bakken"}, "Koekjes": {"naam": "Koekjes", "trefwoorden": ["koekjes", "cookies"], "graden": 160, "minuten": [8, 10], "schudden": 0, "voorverwarmen": true, "portie": "Zes op bakpapier, met ruimte ertussen", "klaar": "De randen zijn vast, het midden mag nog zacht aanvoelen.", "categorie": "Brood en bakken"}, "Cake in een vorm": {"naam": "Cake in een vorm", "trefwoorden": ["cake", "taart"], "graden": 160, "minuten": [25, 35], "schudden": 0, "voorverwarmen": true, "portie": "Eén kleine vorm die in de mand past", "klaar": "Een prikker in het midden komt er droog uit.", "tip": "Leg er na een kwartier los een velletje folie over als de bovenkant al bruin is. Onderin heeft hij dan nog tijd zonder dat de kruin verbrandt.", "categorie": "Brood en bakken"}, "Speltbroodjes": {"naam": "Speltbroodjes", "trefwoorden": ["spelt", "broodje", "afbak"], "getest": true, "graden": 190, "minuten": [7, 7], "klaar": "Bruin en hol klinkend als je op de onderkant tikt.", "categorie": "Brood en bakken"}, "Keizerbroodjes": {"naam": "Keizerbroodjes", "trefwoorden": ["keizer", "broodje", "kaiser"], "getest": true, "graden": 200, "minuten": [5, 5], "klaar": "Goudbruin. Vijf minuten volstaat, langer maakt ze hard.", "categorie": "Brood en bakken"}, "Bruine broodjes": {"naam": "Bruine broodjes", "trefwoorden": ["bruin", "broodje", "aldi", "afbak"], "getest": true, "graden": 160, "minuten": [12, 12], "klaar": "Doorbakken bruin, en de onderkant klinkt hol.", "tip": "Uitgetest op de bruine broodjes van de Aldi. Lager en langer dan de witte, anders is de korst hard voor het midden warm is.", "categorie": "Brood en bakken"}, "Mini koffiekoeken": {"naam": "Mini koffiekoeken", "trefwoorden": ["koffiekoek", "mini", "afbak", "viennoiserie"], "getest": true, "graden": 160, "minuten": [10, 10], "klaar": "Goudbruin en de laagjes staan los van elkaar.", "categorie": "Brood en bakken"}, "Frieten van gisteren": {"naam": "Frieten van gisteren", "trefwoorden": ["restjes", "friet opwarmen"], "graden": 180, "minuten": [4, 6], "schudden": 3, "voorverwarmen": false, "portie": "Een losse laag, zonder extra olie", "klaar": "Ze zijn weer hard aan de buitenkant en heet in het midden.", "categorie": "Opwarmen"}, "Pizzapunt": {"naam": "Pizzapunt", "trefwoorden": ["pizza opwarmen", "restjes"], "graden": 160, "minuten": [3, 5], "schudden": 0, "voorverwarmen": false, "portie": "Twee punten naast elkaar", "klaar": "De bodem is weer stevig en de kaas glimt.", "categorie": "Opwarmen"}, "Gebraden kip of vlees": {"naam": "Gebraden kip of vlees", "trefwoorden": ["kip opwarmen", "restjes", "vlees"], "graden": 160, "minuten": [5, 8], "schudden": 4, "voorverwarmen": false, "portie": "In stukken, niet gestapeld", "kern": 75, "klaar": "Heet tot in het midden. Warm restjes één keer op, niet twee keer.", "categorie": "Opwarmen"}, "Brood of stokbrood": {"naam": "Brood of stokbrood", "trefwoorden": ["brood opwarmen", "stokbrood"], "graden": 160, "minuten": [3, 4], "schudden": 0, "voorverwarmen": false, "portie": "Een half stokbrood of twee broodjes", "klaar": "De korst is weer krokant. Langer maakt hem hard als steen.", "categorie": "Opwarmen"}, "Gepaneerde restjes": {"naam": "Gepaneerde restjes", "trefwoorden": ["schnitzel", "kroket opwarmen", "restjes"], "graden": 170, "minuten": [5, 7], "schudden": 3, "voorverwarmen": false, "portie": "In één laag", "kern": 75, "klaar": "Het korstje kraakt weer en de kern is heet.", "categorie": "Opwarmen"}};
+
+/* ------------------------------------------------- eigen aanpassingen ---- */
+/* Alles wat je hier zelf toevoegt of bijstelt, staat in de browser van dit
+   toestel. Dat is meteen bruikbaar, maar het is niet hetzelfde als de site.
+   Met de knop "voorgoed op de site" gaat het naar GitHub en dan staat het
+   voor iedereen vast. */
+const SLEUTEL = 'crispy-dale-eigen-v1';
+let eigen = { items: [], wijzig: {} };
+
+function laadOpslag(){
+  try{
+    const rauw = localStorage.getItem(SLEUTEL);
+    if(rauw){
+      const d = JSON.parse(rauw);
+      eigen = { items: d.items || [], wijzig: d.wijzig || {} };
+    }
+  }catch(e){}
+}
+function bewaarOpslag(){
+  try{ localStorage.setItem(SLEUTEL, JSON.stringify(eigen)); }
+  catch(e){ alert('Deze telefoon wil niets bewaren. Staat privénavigatie aan?'); }
+}
+laadOpslag();
+
 /* ---------------------------------------------------------- zoeken ---- */
 const zoek=document.getElementById('zoek');
-const items=[...document.querySelectorAll('.item')];
+let items=[...document.querySelectorAll('.item')];
 const groepen=[...document.querySelectorAll('.groep')];
 let cat='';
 function filter(){
@@ -2273,12 +2719,100 @@ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
   window.scrollTo({top:0,behavior:'smooth'});
 }));
 
-/* -------------------------------------------- uitklappen en lading ---- */
+/* -------------------------------------------------------- opbouwen ---- */
 function volTijd(m){return Math.max(m+3,Math.round(m*1.2));}
 function volSchud(s){return s?Math.max(3,s-2):0;}
 function tijdTekst(l,h){return (l===h)?(l+' min'):(l+' tot '+h+' min');}
+function veilig(t){
+  return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function stappenVan(g){
+  if(g.stappen&&g.stappen.length)return g.stappen;
+  const s={graden:g.graden,minuten:g.minuten};
+  if('schudden' in g)s.schudden=g.schudden;
+  if(g.stand)s.stand=g.stand;
+  if(g.functie)s.functie=g.functie;
+  return [s];
+}
 
-items.forEach(i=>{
+/* Dezelfde opbouw als in build_airfryer.py, maar dan in de browser. Verander
+   je daar de vorm van een rij, verander hem hier dan mee. */
+function maakItemHtml(g){
+  const stappen=stappenVan(g), meer=stappen.length>1;
+  let laag=0, hoog=0;
+  stappen.forEach(s=>{laag+=s.minuten[0]; hoog+=s.minuten[s.minuten.length-1];});
+  const samen=meer?(stappen.length+' stappen · '+tijdTekst(laag,hoog))
+                  :(stappen[0].graden+'° · '+tijdTekst(laag,hoog));
+
+  const regels=stappen.map((s,n)=>{
+    const wat=s.wat||(meer?('Stap '+(n+1)):'Zet op');
+    const nr=meer?('<span class="nr">'+(n+1)+'</span>'):'';
+    let badge='';
+    if(s.stand)badge+='<span class="stand">'+veilig(s.stand)+'</span>';
+    if(s.functie)badge+='<span class="functie">'+veilig(s.functie)+' aan</span>';
+    let schud='';
+    if('schudden' in s){
+      schud='<span class="schud">'+(s.schudden?('Schudden om de '+s.schudden+' min')
+                                              :'Keren halverwege')+'</span>';
+    }
+    return '<li class="stap" data-graden="'+s.graden+'" data-lo="'+s.minuten[0]+
+      '" data-hi="'+s.minuten[s.minuten.length-1]+'" data-schud="'+(s.schudden||0)+
+      '" data-wat="'+veilig(wat)+'" data-stand="'+veilig(s.stand||'')+
+      '" data-functie="'+veilig(s.functie||'')+'">'+nr+'<div class="lijf">'+
+      '<span class="wat">'+veilig(wat)+'</span><span class="zet">'+s.graden+
+      ' °C · <b class="stijd">'+tijdTekst(s.minuten[0],s.minuten[s.minuten.length-1])+
+      '</b>'+badge+'</span>'+schud+'</div></li>';
+  }).join('');
+
+  let feiten='';
+  if('voorverwarmen' in g){
+    feiten+='<div><span>Voorverwarmen</span><b>'+
+      (g.voorverwarmen?'Ja, 3 min':'Niet nodig')+'</b></div>';
+  }
+  if(meer)feiten+='<div><span>Samen</span><b class="ttot">'+tijdTekst(laag,hoog)+'</b></div>';
+  if(g.kern)feiten+='<div class="kern"><span>Kerntemperatuur</span><b>'+g.kern+' °C</b></div>';
+
+  let tekst='';
+  if(g.portie)tekst+='<p><span>In de mand</span>'+veilig(g.portie)+'</p>';
+  if(g.klaar)tekst+='<p><span>Klaar als</span>'+veilig(g.klaar)+'</p>';
+
+  const tip=g.tip?('<div class="ptip"><span class="pen">&#9998;</span><p>'+
+    veilig(g.tip)+'</p></div>'):'';
+  const foto=g.foto?('<img class="foto" src="fotos/'+veilig(g.foto)+'" alt="" loading="lazy">'):'';
+  const ster=g.getest?' <i>&#9733;</i>':'';
+  const merk=g._eigen?'<span class="hier">deze telefoon</span>'
+            :(g._gewijzigd?'<span class="hier">aangepast</span>':'');
+  const getestregel=g.getest?
+    '<p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>':'';
+  const zoekwoorden=[g.naam].concat(g.trefwoorden||[]).join(' ').toLowerCase();
+
+  return '<div class="item'+((g._eigen||g._gewijzigd)?' eigen':'')+
+    '" data-zoek="'+veilig(zoekwoorden)+'" data-cat="'+veilig(g.categorie)+
+    '" data-naam="'+veilig(g.naam)+'" data-fav="'+(g.getest?'1':'')+'" data-vol="0">'+
+    '<button class="rij" type="button">'+foto+
+    '<span class="naam">'+veilig(g.naam)+ster+merk+'</span>'+
+    '<span class="tijd">'+samen+'</span><span class="pijl">&#9654;</span></button>'+
+    '<div class="paneel" hidden>'+
+    '<div class="lading"><button class="lknop aan" type="button" data-vol="0">Normale lading</button>'+
+    '<button class="lknop" type="button" data-vol="1">Mand goed vol</button></div>'+
+    '<ol class="stappen">'+regels+'</ol>'+getestregel+
+    '<div class="feiten">'+feiten+'</div><div class="regels">'+tekst+'</div>'+tip+
+    '<p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een vijfde ' +
+    'meer tijd. Schud vaker en kijk zeker op het einde.</p>'+
+    '<div class="paneelknoppen"><button class="timerknop" type="button">Timer</button>'+
+    '<button class="pasaan" type="button">Aanpassen</button></div>'+
+    '<div class="eigenrij"></div></div></div>';
+}
+
+function maakItemEl(g){
+  const houder=document.createElement('div');
+  houder.innerHTML=maakItemHtml(g);
+  return houder.firstChild;
+}
+
+/* ------------------------------------------------- rij aan de praat ---- */
+function koppel(i){
   const rij=i.querySelector('.rij'), paneel=i.querySelector('.paneel');
   const stappen=[...i.querySelectorAll('.stap')];
   const knop=i.querySelector('.timerknop'), noot=i.querySelector('.volnoot');
@@ -2292,8 +2826,8 @@ items.forEach(i=>{
       const hi=vol?volTijd(+s.dataset.hi):+s.dataset.hi;
       laag+=lo; hoog+=hi;
       s.querySelector('.stijd').textContent=tijdTekst(lo,hi);
-      const schud=+s.dataset.schud;
-      if(schud){s.querySelector('.schud').textContent=
+      const schud=+s.dataset.schud, regel=s.querySelector('.schud');
+      if(schud&&regel){regel.textContent=
         'Schudden om de '+(vol?volSchud(schud):schud)+' min';}
     });
     if(ttot){ttot.textContent=tijdTekst(laag,hoog);}
@@ -2328,7 +2862,187 @@ items.forEach(i=>{
     }));
     startTimer(i.dataset.naam,plan,0);
   });
+
+  i.querySelector('.pasaan').addEventListener('click',()=>opendVenster(i.dataset.naam));
+  vulEigenrij(i);
+}
+
+/* De regel onderaan het paneel bij alles wat van deze telefoon komt. */
+function vulEigenrij(i){
+  const naam=i.dataset.naam, rij=i.querySelector('.eigenrij');
+  const zelf=eigen.items.find(x=>x.naam===naam);
+  const aangepast=eigen.wijzig[naam];
+  if(!zelf&&!aangepast){rij.innerHTML=''; return;}
+  rij.innerHTML=
+    '<p class="eigennoot">'+(zelf
+      ? 'Dit product staat alleen op deze telefoon.'
+      : 'Je hebt deze tijd zelf bijgesteld, alleen op deze telefoon.')+'</p>'+
+    '<div class="paneelknoppen">'+
+    '<a class="voorgoed" target="_blank" rel="noopener">Voorgoed op de site</a>'+
+    '<button class="terugzet" type="button">'+(zelf?'Verwijderen':'Zet terug')+'</button>'+
+    '</div>';
+  rij.querySelector('.voorgoed').href=githubLink(zelf||Object.assign(
+    {}, BRON[naam]||{}, aangepast, {naam:naam}));
+  rij.querySelector('.terugzet').addEventListener('click',()=>{
+    if(zelf){eigen.items=eigen.items.filter(x=>x.naam!==naam);}
+    else{delete eigen.wijzig[naam];}
+    bewaarOpslag(); herteken(naam);
+  });
+}
+
+/* ----------------------------------------------------- herbouwen ---- */
+function gegevensVan(naam){
+  const zelf=eigen.items.find(x=>x.naam===naam);
+  if(zelf)return Object.assign({}, zelf, {_eigen:true});
+  const basis=BRON[naam];
+  if(!basis)return null;
+  const w=eigen.wijzig[naam];
+  if(!w)return Object.assign({}, basis);
+  const g=Object.assign({}, basis, {_gewijzigd:true});
+  g.stappen=w.stappen; delete g.graden; delete g.minuten;
+  delete g.schudden; delete g.stand; delete g.functie;
+  g.getest=w.getest;
+  if(w.notitie)g.tip=w.notitie;
+  return g;
+}
+
+function herteken(naam){
+  const oud=document.querySelector('.item[data-naam="'+naam.replace(/"/g,'\\"')+'"]');
+  const g=gegevensVan(naam);
+  if(!oud)return;
+  if(!g){ // eigen product weggehaald
+    const sectie=oud.closest('.groep');
+    items=items.filter(x=>x!==oud); oud.remove();
+    if(sectie)sectie.hidden=![...sectie.querySelectorAll('.item')].some(i=>!i.hidden);
+    filter(); return;
+  }
+  const nieuw=maakItemEl(g);
+  oud.replaceWith(nieuw);
+  items[items.indexOf(oud)]=nieuw;
+  koppel(nieuw);
+  filter();
+}
+
+/* Eigen producten in hun categorie zetten, bij het laden van de pagina. */
+function plaatsEigen(){
+  eigen.items.forEach(g=>{
+    if(document.querySelector('.item[data-naam="'+g.naam.replace(/"/g,'\\"')+'"]'))return;
+    const sectie=document.querySelector('.groep[data-cat="'+g.categorie.replace(/"/g,'\\"')+'"]');
+    if(!sectie)return;
+    const el=maakItemEl(Object.assign({}, g, {_eigen:true}));
+    sectie.appendChild(el); items.push(el); koppel(el);
+  });
+  Object.keys(eigen.wijzig).forEach(naam=>{
+    if(BRON[naam])herteken(naam);
+  });
+}
+
+/* ------------------------------------------------------- het venster ---- */
+const venster=document.getElementById('venster');
+let bewerkt=null;
+
+function ronde(n){
+  return {
+    graden: +document.getElementById('v-g'+n).value||0,
+    minuten: +document.getElementById('v-m'+n).value||0,
+    stand: document.getElementById('v-s'+n).value.trim()
+  };
+}
+function vulRonde(n,s){
+  document.getElementById('v-g'+n).value=s?s.graden:'';
+  document.getElementById('v-m'+n).value=s?s.minuten[0]:'';
+  document.getElementById('v-s'+n).value=(s&&s.stand)?s.stand:'';
+}
+
+function opendVenster(naam){
+  bewerkt=naam||null;
+  const g=naam?gegevensVan(naam):null;
+  document.getElementById('v-kop').textContent=g?('Aanpassen: '+g.naam):'Nieuw product';
+  document.getElementById('v-naam').value=g?g.naam:'';
+  document.getElementById('v-naam').disabled=!!g;
+  document.getElementById('v-catveld').hidden=!!g;
+  const stappen=g?stappenVan(g):[];
+  vulRonde(1,stappen[0]);
+  const tweede=stappen.length>1;
+  document.getElementById('v-tweede').checked=tweede;
+  document.getElementById('v-ronde2').hidden=!tweede;
+  vulRonde(2,tweede?stappen[1]:null);
+  document.getElementById('v-ster').checked=!!(g&&g.getest);
+  document.getElementById('v-notitie').value=(g&&g.tip)?g.tip:'';
+  venster.hidden=false;
+  document.body.style.overflow='hidden';
+}
+function sluitVenster(){
+  venster.hidden=true; document.body.style.overflow='';
+}
+
+document.getElementById('v-nieuw').addEventListener('click',()=>opendVenster(null));
+document.getElementById('v-tweede').addEventListener('change',e=>{
+  document.getElementById('v-ronde2').hidden=!e.target.checked;
 });
+document.getElementById('v-annuleer').addEventListener('click',sluitVenster);
+venster.addEventListener('click',e=>{if(e.target===venster)sluitVenster();});
+
+document.getElementById('v-bewaar').addEventListener('click',()=>{
+  const naam=bewerkt||document.getElementById('v-naam').value.trim();
+  if(!naam){alert('Geef eerst een naam.');return;}
+  const r1=ronde(1);
+  if(!r1.graden||!r1.minuten){alert('Vul graden en minuten in.');return;}
+  const stappen=[{wat:'Zet op',graden:r1.graden,minuten:[r1.minuten,r1.minuten]}];
+  if(r1.stand)stappen[0].stand=r1.stand;
+  if(document.getElementById('v-tweede').checked){
+    const r2=ronde(2);
+    if(!r2.graden||!r2.minuten){alert('Vul de tweede ronde in of vink hem uit.');return;}
+    stappen[0].wat='Eerste ronde';
+    const s2={wat:'Tweede ronde',graden:r2.graden,minuten:[r2.minuten,r2.minuten]};
+    if(r2.stand)s2.stand=r2.stand;
+    stappen.push(s2);
+  }
+  const getest=document.getElementById('v-ster').checked;
+  const notitie=document.getElementById('v-notitie').value.trim();
+
+  if(bewerkt&&BRON[bewerkt]){
+    eigen.wijzig[bewerkt]={stappen:stappen,getest:getest,notitie:notitie};
+  }else{
+    const bestaand=eigen.items.find(x=>x.naam===naam);
+    const cat=bestaand?bestaand.categorie:document.getElementById('v-cat').value;
+    const nieuw={naam:naam,categorie:cat,stappen:stappen,getest:getest,
+                 tip:notitie,trefwoorden:[]};
+    if(bestaand)Object.assign(bestaand,nieuw);
+    else eigen.items.push(nieuw);
+  }
+  bewaarOpslag();
+  sluitVenster();
+  if(document.querySelector('.item[data-naam="'+naam.replace(/"/g,'\\"')+'"]')){
+    herteken(naam);
+  }else{
+    plaatsEigen(); filter();
+  }
+  const el=document.querySelector('.item[data-naam="'+naam.replace(/"/g,'\\"')+'"]');
+  if(el)el.scrollIntoView({block:'center',behavior:'smooth'});
+});
+
+/* Het formulier op GitHub alvast ingevuld openen. */
+function githubLink(g){
+  const stappen=stappenVan(g);
+  const tijden=stappen.map(s=>s.minuten[0]+' min op '+s.graden+
+    (s.stand?(' '+s.stand):'')).join(', dan ');
+  const p=new URLSearchParams({
+    template:'airfryertijd.yml',
+    title:'Airfryertijd: '+g.naam,
+    naam:g.naam,
+    tijden:tijden,
+    ster:g.getest?'Zet er een ster bij, dit is uitgetest'
+                 :'Laat de ster zoals hij nu staat',
+    categorie:g.categorie||'Kies zelf maar',
+    extra:(g.tip||g.notitie||'')
+  });
+  return 'https://github.com/'+REPO+'/issues/new?'+p.toString();
+}
+
+items.forEach(koppel);
+plaatsEigen();
+filter();
 
 /* ----------------------------------------------------------- timer ---- */
 const balk=document.getElementById('timerbalk');
@@ -2446,9 +3160,9 @@ async function wakkerAan(){
   try{
     if(!lock&&navigator.wakeLock){
       lock=await navigator.wakeLock.request('screen');
-      wknop.classList.add('aan'); wknop.textContent='Scherm blijft aan';
+      wknop.classList.add('aan'); wknop.textContent='Blijft aan';
       lock.addEventListener('release',()=>{
-        lock=null; wknop.classList.remove('aan'); wknop.textContent='Scherm aan houden';
+        lock=null; wknop.classList.remove('aan'); wknop.textContent='Scherm aan';
       });
     }
   }catch(e){}
@@ -2456,10 +3170,10 @@ async function wakkerAan(){
 wknop.addEventListener('click',async()=>{
   try{
     if(lock){await lock.release(); lock=null;
-      wknop.classList.remove('aan'); wknop.textContent='Scherm aan houden';}
+      wknop.classList.remove('aan'); wknop.textContent='Scherm aan';}
     else{await wakkerAan();
-      if(!lock){wknop.textContent='Lukt niet op dit toestel';}}
-  }catch(e){wknop.textContent='Lukt niet op dit toestel';}
+      if(!lock){wknop.textContent='Lukt niet';}}
+  }catch(e){wknop.textContent='Lukt niet';}
 });
 document.addEventListener('visibilitychange',()=>{
   if(document.visibilityState==='visible'&&T&&!lock){wakkerAan();}
