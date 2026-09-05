@@ -4,10 +4,52 @@
   "intro": "Vis gaat in twee minuten van perfect naar droog. Zet je wekker aan de korte kant en kijk liever een keer te veel.",
   "items": [
     {
-      "naam": "Zalmmoot",
-      "trefwoorden": ["zalm", "salmon"],
+      "naam": "Kabeljauwburgers uit de diepvries",
+      "trefwoorden": [
+        "kabeljauw",
+        "visburger",
+        "burger",
+        "vis"
+      ],
+      "getest": true,
       "graden": 180,
-      "minuten": [8, 12],
+      "minuten": [
+        15,
+        15
+      ],
+      "kern": 60,
+      "klaar": "Doorbakken bruin korstje, de vis valt uit elkaar onder een vork."
+    },
+    {
+      "naam": "Verse kabeljauwburgers",
+      "trefwoorden": [
+        "kabeljauw",
+        "visburger",
+        "burger",
+        "vis",
+        "vers"
+      ],
+      "getest": true,
+      "graden": 180,
+      "minuten": [
+        15,
+        15
+      ],
+      "kern": 60,
+      "klaar": "Ondoorschijnend wit tot in het midden.",
+      "tip": "Uitgetest op de Double Stack Pro. Dezelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen."
+    },
+    {
+      "naam": "Zalmmoot",
+      "trefwoorden": [
+        "zalm",
+        "salmon"
+      ],
+      "graden": 180,
+      "minuten": [
+        8,
+        12
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Twee moten van ongeveer 150 g, vel naar beneden",
@@ -17,9 +59,17 @@
     },
     {
       "naam": "Witte visfilet",
-      "trefwoorden": ["kabeljauw", "koolvis", "pangasius", "vis"],
+      "trefwoorden": [
+        "kabeljauw",
+        "koolvis",
+        "pangasius",
+        "vis"
+      ],
       "graden": 180,
-      "minuten": [8, 10],
+      "minuten": [
+        8,
+        10
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Twee filets, op bakpapier met gaatjes",
@@ -28,9 +78,16 @@
     },
     {
       "naam": "Garnalen, rauw en gepeld",
-      "trefwoorden": ["garnaal", "scampi", "gamba"],
+      "trefwoorden": [
+        "garnaal",
+        "scampi",
+        "gamba"
+      ],
       "graden": 190,
-      "minuten": [6, 8],
+      "minuten": [
+        6,
+        8
+      ],
       "schudden": 3,
       "voorverwarmen": true,
       "portie": "300 g in één laag, met olie en look",
@@ -38,9 +95,16 @@
     },
     {
       "naam": "Gepaneerde inktvisringen",
-      "trefwoorden": ["calamares", "inktvis", "pijlinktvis"],
+      "trefwoorden": [
+        "calamares",
+        "inktvis",
+        "pijlinktvis"
+      ],
       "graden": 200,
-      "minuten": [8, 10],
+      "minuten": [
+        8,
+        10
+      ],
       "schudden": 5,
       "voorverwarmen": true,
       "portie": "Een losse laag, uit de diepvries",
@@ -48,9 +112,15 @@
     },
     {
       "naam": "Hele forel",
-      "trefwoorden": ["forel", "vis"],
+      "trefwoorden": [
+        "forel",
+        "vis"
+      ],
       "graden": 180,
-      "minuten": [12, 15],
+      "minuten": [
+        12,
+        15
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Eén vis, ingesmeerd met olie",
@@ -59,9 +129,16 @@
     },
     {
       "naam": "Mosselen of scheermessen gratineren",
-      "trefwoorden": ["mossel", "gratineren", "schelpdier"],
+      "trefwoorden": [
+        "mossel",
+        "gratineren",
+        "schelpdier"
+      ],
       "graden": 180,
-      "minuten": [5, 7],
+      "minuten": [
+        5,
+        7
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Voorgekookt, in de halve schelp met kruidenboter",

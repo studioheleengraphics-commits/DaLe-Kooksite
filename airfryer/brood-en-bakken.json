@@ -9,19 +9,17 @@
         "pistolet",
         "broodje",
         "afbak",
+        "aldi",
         "sandwich"
       ],
+      "getest": true,
       "graden": 170,
       "minuten": [
         10,
         10
       ],
-      "schudden": 0,
-      "voorverwarmen": true,
-      "portie": "Vier broodjes naast elkaar",
       "klaar": "De korst kraakt als je erin knijpt en de onderkant klinkt hol.",
-      "favoriet": true,
-      "tip": "Dit is de tijd die bij ons klopt, uitgetest tot op de minuut. Bij een volle mand een minuutje erbij."
+      "tip": "Uitgetest op de broodjes van de Aldi. Bij een volle mand een minuutje erbij."
     },
     {
       "naam": "Croissants, afbak",
@@ -136,6 +134,69 @@
       "portie": "Eén kleine vorm die in de mand past",
       "klaar": "Een prikker in het midden komt er droog uit.",
       "tip": "Leg er na een kwartier los een velletje folie over als de bovenkant al bruin is. Onderin heeft hij dan nog tijd zonder dat de kruin verbrandt."
+    },
+    {
+      "naam": "Speltbroodjes",
+      "trefwoorden": [
+        "spelt",
+        "broodje",
+        "afbak"
+      ],
+      "getest": true,
+      "graden": 190,
+      "minuten": [
+        7,
+        7
+      ],
+      "klaar": "Bruin en hol klinkend als je op de onderkant tikt."
+    },
+    {
+      "naam": "Keizerbroodjes",
+      "trefwoorden": [
+        "keizer",
+        "broodje",
+        "kaiser"
+      ],
+      "getest": true,
+      "graden": 200,
+      "minuten": [
+        5,
+        5
+      ],
+      "klaar": "Goudbruin. Vijf minuten volstaat, langer maakt ze hard."
+    },
+    {
+      "naam": "Bruine broodjes",
+      "trefwoorden": [
+        "bruin",
+        "broodje",
+        "aldi",
+        "afbak"
+      ],
+      "getest": true,
+      "graden": 160,
+      "minuten": [
+        12,
+        12
+      ],
+      "klaar": "Doorbakken bruin, en de onderkant klinkt hol.",
+      "tip": "Uitgetest op de bruine broodjes van de Aldi. Lager en langer dan de witte, anders is de korst hard voor het midden warm is."
+    },
+    {
+      "naam": "Mini koffiekoeken",
+      "trefwoorden": [
+        "koffiekoek",
+        "mini",
+        "afbak",
+        "viennoiserie"
+      ],
+      "getest": true,
+      "graden": 160,
+      "minuten": [
+        10,
+        10
+      ],
+      "klaar": "Goudbruin en de laagjes staan los van elkaar."
     }
   ]
 }

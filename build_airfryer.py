@@ -120,8 +120,10 @@ ol.stappen li .wat{display:block; font-family:'DM Sans',sans-serif; font-size:10
 ol.stappen li .zet{font-family:'DM Sans',sans-serif; font-weight:500; font-size:17px;}
 ol.stappen li .schud{display:block; font-size:13px; color:var(--zeegroen);}
 
+.getest{margin:12px 0 0; font-size:13.5px; color:var(--zeegroen);}
 .feiten{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 18px;
   padding:14px 0 16px; border-bottom:1px solid var(--lijn);}
+.feiten:empty{display:none;}
 .feiten div span{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
   letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
 .feiten div b{font-family:'DM Sans',sans-serif; font-weight:500; font-size:16px;}
@@ -251,8 +253,11 @@ def stappen_van(it):
     """Eén bakstap of meerdere, de generator behandelt ze allemaal als een lijst."""
     if it.get("stappen"):
         return it["stappen"]
-    return [{"graden": it["graden"], "minuten": it["minuten"],
-             "schudden": it.get("schudden") or 0}]
+    stap = {"graden": it["graden"], "minuten": it["minuten"]}
+    # Alleen meenemen als de bron er iets over zegt, anders zwijgt de site erover.
+    if "schudden" in it:
+        stap["schudden"] = it["schudden"]
+    return [stap]
 
 
 def tijd_tekst(laag, hoog):
@@ -291,8 +296,13 @@ def bouw_item(it):
         schud = s.get("schudden") or 0
         wat = s.get("wat") or (f"Stap {n}" if meerdere else "Zet op")
         nr = f'<span class="nr">{n}</span>' if meerdere else ""
-        schudregel = (f'<span class="schud">Schudden om de {schud} min</span>'
-                      if schud else '<span class="schud">Keren halverwege</span>')
+        # Staat er niets over schudden in de bron, dan zwijgt de site erover.
+        if "schudden" not in s:
+            schudregel = ""
+        elif schud:
+            schudregel = f'<span class="schud">Schudden om de {schud} min</span>'
+        else:
+            schudregel = '<span class="schud">Keren halverwege</span>'
         regels_stappen.append(
             f'<li class="stap" data-graden="{s["graden"]}" data-lo="{s["minuten"][0]}"'
             f' data-hi="{s["minuten"][-1]}" data-schud="{schud}"'
@@ -302,8 +312,10 @@ def bouw_item(it):
             f'<b class="stijd">{tijd_tekst(s["minuten"][0], s["minuten"][-1])}</b></span>'
             f'{schudregel}</div></li>')
 
-    feiten = ["<div><span>Voorverwarmen</span><b>{}</b></div>".format(
-        "Ja, 3 min" if it.get("voorverwarmen", True) else "Niet nodig")]
+    feiten = []
+    if "voorverwarmen" in it:
+        feiten.append("<div><span>Voorverwarmen</span><b>{}</b></div>".format(
+            "Ja, 3 min" if it["voorverwarmen"] else "Niet nodig"))
     if meerdere:
         feiten.append('<div><span>Samen</span><b class="ttot">'
                       f'{tijd_tekst(totaal_laag, totaal_hoog)}</b></div>')
@@ -327,13 +339,15 @@ def bouw_item(it):
         foto = (f'<img class="foto" src="fotos/{html.escape(it["foto"])}"'
                 f' alt="" loading="lazy">')
 
-    ster = ' <i>&#9733;</i>' if it.get("favoriet") else ""
+    ster = ' <i>&#9733;</i>' if it.get("getest") else ""
+    getestregel = ('<p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>'
+                   if it.get("getest") else "")
     knoptekst = ("Timer starten" if meerdere else f"Timer op {totaal_laag} min")
 
     return f"""
       <div class="item" data-zoek="{html.escape(zoek)}"
            data-cat="{html.escape(it['_cat'])}" data-naam="{html.escape(naam)}"
-           data-fav="{'1' if it.get('favoriet') else ''}" data-vol="0">
+           data-fav="{'1' if it.get('getest') else ''}" data-vol="0">
         <button class="rij" type="button">
           {foto}
           <span class="naam">{html.escape(naam)}{ster}</span>
@@ -346,6 +360,7 @@ def bouw_item(it):
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
           <ol class="stappen">{''.join(regels_stappen)}</ol>
+          {getestregel}
           <div class="feiten">{''.join(feiten)}</div>
           <div class="regels">{''.join(regels)}</div>
           {tip}
@@ -386,15 +401,15 @@ def bouw_index(groepen):
   <p>{SITE_ONDERTITEL}</p>
 </div></header>
 <main class="wrap">
-  <p class="noot"><b>Richttijden voor een mand van vier &agrave; vijf liter, in
-  &eacute;&eacute;n laag.</b> Elk toestel bakt anders, dus de timer springt op de
-  korte tijd. Kijk dan, en geef er gerust nog wat bij. Bij vlees telt de
-  kerntemperatuur, niet de klok.</p>
+  <p class="noot"><b>Een ster betekent: bij ons uitgetest, die tijd klopt.</b>
+  De rest zijn richttijden voor een mand van vier &agrave; vijf liter in
+  &eacute;&eacute;n laag. Daar springt de timer op de korte tijd, dus kijk dan en
+  geef er gerust nog wat bij. Bij vlees telt de kerntemperatuur, niet de klok.</p>
   <input class="zoek" id="zoek" type="search"
          placeholder="Zoek een product, bijvoorbeeld kip of frieten...">
   <div class="chips">
     <button class="chip aan" data-cat="">Alles</button>
-    <button class="chip ster" data-cat="~fav">&#9733; Favorieten</button>{chips}
+    <button class="chip ster" data-cat="~fav">&#9733; Bij ons getest</button>{chips}
   </div>
   {''.join(secties)}
   <p class="leeg" id="leeg" hidden>Niets gevonden. Andere zoekterm proberen?</p>

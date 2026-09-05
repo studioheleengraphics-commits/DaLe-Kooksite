@@ -57,23 +57,24 @@ via de knop rechtsboven daar.
 
 Wat hij doet:
 
-- Eenenzeventig producten in acht categorieën, met zoeken op naam en trefwoord
+- Tweeëntachtig producten in acht categorieën, met zoeken op naam en trefwoord
 - Uitklappen per product: temperatuur, tijd, schudmoment, kerntemperatuur en
   waaraan je ziet dat het klaar is
 - Een timer die piept en trilt op elk schudmoment. Bij een product met twee
   bakstappen loodst hij je door beide en zegt wanneer je de temperatuur
   moet veranderen
 - Een knop voor een volle mand, die overal ongeveer een vijfde tijd bijtelt
-- Favorieten achter de sterknop bovenaan
+- Een rode ster bij alles wat thuis is uitgetest, met een knop die daarop filtert
 - Een aparte pagina die oven en airfryer in twee richtingen omrekent, met de
   kerntemperaturen en de vuistregels die er echt toe doen
 
 Een product toevoegen of een tijd bijstellen doe je in `airfryer/*.json`, en
 daarna `python3 build.py`. De velden staan uitgelegd in `CLAUDE.md`.
 
-De tijden in de lijst zijn richttijden uit algemene airfryerbronnen, geen
-metingen van jouw toestel. Wat je uittest, zet je erin: dan klopt het voorgoed
-en op elke telefoon, in plaats van in het geheugen van één app.
+De veertien producten met een ster zijn thuis uitgetest en kloppen. De rest
+zijn richttijden uit algemene airfryerbronnen, bedoeld als vertrekpunt. Wat je
+uittest zet je erin, met `getest: true`, en dan klopt het voorgoed en op elke
+telefoon in plaats van in het geheugen van één app.
 
 ## Online zetten met GitHub Pages
 

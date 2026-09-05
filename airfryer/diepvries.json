@@ -4,10 +4,46 @@
   "intro": "Alles wat rechtstreeks uit de vriezer de mand in mag. Niet ontdooien, want dan wordt het slap in plaats van krokant.",
   "items": [
     {
+      "naam": "Boomstammetjes",
+      "trefwoorden": [
+        "boomstam",
+        "snack",
+        "diepvries"
+      ],
+      "getest": true,
+      "stappen": [
+        {
+          "wat": "Bakken",
+          "graden": 180,
+          "minuten": [
+            10,
+            10
+          ]
+        },
+        {
+          "wat": "Max Crisp",
+          "graden": 240,
+          "minuten": [
+            5,
+            5
+          ]
+        }
+      ],
+      "klaar": "Rondom donker en krokant, heet tot in de kern.",
+      "tip": "De laatste vijf minuten op Max Crisp maken het verschil tussen bleek en knapperig."
+    },
+    {
       "naam": "Frieten uit de diepvries",
-      "trefwoorden": ["friet", "patat", "frietjes"],
+      "trefwoorden": [
+        "friet",
+        "patat",
+        "frietjes"
+      ],
       "graden": 200,
-      "minuten": [15, 18],
+      "minuten": [
+        15,
+        18
+      ],
       "schudden": 7,
       "voorverwarmen": true,
       "portie": "400 g, hooguit twee lagen dik",
@@ -16,9 +52,15 @@
     },
     {
       "naam": "Steakfrieten",
-      "trefwoorden": ["dikke frieten", "steakhouse"],
+      "trefwoorden": [
+        "dikke frieten",
+        "steakhouse"
+      ],
       "graden": 200,
-      "minuten": [18, 22],
+      "minuten": [
+        18,
+        22
+      ],
       "schudden": 7,
       "voorverwarmen": true,
       "portie": "400 g in een losse laag",
@@ -26,9 +68,15 @@
     },
     {
       "naam": "Aardappelkroketten",
-      "trefwoorden": ["kroket", "kroketjes"],
+      "trefwoorden": [
+        "kroket",
+        "kroketjes"
+      ],
       "graden": 200,
-      "minuten": [10, 12],
+      "minuten": [
+        10,
+        12
+      ],
       "schudden": 6,
       "voorverwarmen": true,
       "portie": "Een losse laag, ze mogen elkaar niet raken",
@@ -36,9 +84,15 @@
     },
     {
       "naam": "Bitterballen",
-      "trefwoorden": ["borrelhapje", "bitterbal"],
+      "trefwoorden": [
+        "borrelhapje",
+        "bitterbal"
+      ],
       "graden": 200,
-      "minuten": [8, 10],
+      "minuten": [
+        8,
+        10
+      ],
       "schudden": 5,
       "voorverwarmen": true,
       "portie": "Acht tot tien stuks in een losse laag",
@@ -46,9 +100,15 @@
     },
     {
       "naam": "Vleeskroketten of kaaskroketten",
-      "trefwoorden": ["kaaskroket", "garnaalkroket"],
+      "trefwoorden": [
+        "kaaskroket",
+        "garnaalkroket"
+      ],
       "graden": 190,
-      "minuten": [10, 12],
+      "minuten": [
+        10,
+        12
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Twee tot vier stuks, met ruimte ertussen",
@@ -58,7 +118,10 @@
     {
       "naam": "Frikandel",
       "graden": 190,
-      "minuten": [10, 12],
+      "minuten": [
+        10,
+        12
+      ],
       "schudden": 6,
       "voorverwarmen": true,
       "portie": "Vier stuks naast elkaar",
@@ -67,9 +130,15 @@
     },
     {
       "naam": "Kipnuggets",
-      "trefwoorden": ["nuggets", "kip"],
+      "trefwoorden": [
+        "nuggets",
+        "kip"
+      ],
       "graden": 200,
-      "minuten": [8, 10],
+      "minuten": [
+        8,
+        10
+      ],
       "schudden": 5,
       "voorverwarmen": true,
       "portie": "Tien tot twaalf stuks in een losse laag",
@@ -78,9 +147,15 @@
     },
     {
       "naam": "Loempia's, klein",
-      "trefwoorden": ["loempia", "mini loempia"],
+      "trefwoorden": [
+        "loempia",
+        "mini loempia"
+      ],
       "graden": 190,
-      "minuten": [8, 10],
+      "minuten": [
+        8,
+        10
+      ],
       "schudden": 5,
       "voorverwarmen": true,
       "portie": "Acht stuks met ruimte ertussen",
@@ -88,9 +163,15 @@
     },
     {
       "naam": "Vissticks",
-      "trefwoorden": ["vis", "sticks"],
+      "trefwoorden": [
+        "vis",
+        "sticks"
+      ],
       "graden": 200,
-      "minuten": [8, 10],
+      "minuten": [
+        8,
+        10
+      ],
       "schudden": 5,
       "voorverwarmen": true,
       "portie": "Zes tot acht stuks in een losse laag",
@@ -98,9 +179,15 @@
     },
     {
       "naam": "Mozzarellasticks",
-      "trefwoorden": ["mozzarella", "kaas"],
+      "trefwoorden": [
+        "mozzarella",
+        "kaas"
+      ],
       "graden": 190,
-      "minuten": [6, 8],
+      "minuten": [
+        6,
+        8
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Zes stuks, niet tegen elkaar",
@@ -109,9 +196,15 @@
     },
     {
       "naam": "Diepvriespizza, kleine",
-      "trefwoorden": ["pizza", "pizzette"],
+      "trefwoorden": [
+        "pizza",
+        "pizzette"
+      ],
       "graden": 180,
-      "minuten": [8, 12],
+      "minuten": [
+        8,
+        12
+      ],
       "schudden": 0,
       "voorverwarmen": true,
       "portie": "Eén pizza die in de mand past zonder om te plooien",

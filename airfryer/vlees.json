@@ -133,16 +133,28 @@
         "gehakt",
         "vleesballetjes"
       ],
-      "graden": 180,
-      "minuten": [
-        12,
-        15
+      "getest": true,
+      "stappen": [
+        {
+          "wat": "Hard aanzetten",
+          "graden": 200,
+          "minuten": [
+            8,
+            8
+          ]
+        },
+        {
+          "wat": "Rustig gaar maken",
+          "graden": 180,
+          "minuten": [
+            8,
+            8
+          ]
+        }
       ],
-      "schudden": 6,
-      "voorverwarmen": true,
-      "portie": "Twaalf balletjes ter grootte van een walnoot",
       "kern": 72,
-      "klaar": "Rondom bruin, en binnenin nergens meer rood."
+      "klaar": "Rondom bruin, en binnenin nergens meer rood.",
+      "tip": "Eerst hard, dan zachter. Op één temperatuur zijn ze vanbuiten donker voor het midden gaar is."
     },
     {
       "naam": "Hamburger",
@@ -252,6 +264,83 @@
       "portie": "Eén rek in stukken gesneden",
       "kern": 75,
       "klaar": "De saus is ingedikt en plakt aan het vlees."
+    },
+    {
+      "naam": "Curryworst",
+      "trefwoorden": [
+        "curryworst",
+        "worst",
+        "snack"
+      ],
+      "getest": true,
+      "stappen": [
+        {
+          "wat": "Garen",
+          "graden": 180,
+          "minuten": [
+            6,
+            6
+          ]
+        },
+        {
+          "wat": "Afwerken",
+          "graden": 200,
+          "minuten": [
+            2,
+            2
+          ]
+        }
+      ],
+      "kern": 72,
+      "klaar": "Gespannen vel met bruine plekken."
+    },
+    {
+      "naam": "Kalkoenrollade",
+      "trefwoorden": [
+        "kalkoen",
+        "rollade",
+        "gebraad",
+        "feest"
+      ],
+      "getest": true,
+      "graden": 160,
+      "minuten": [
+        50,
+        50
+      ],
+      "kern": 75,
+      "portie": "Ontdooid, in één stuk",
+      "klaar": "Meet in het midden van de rollade. Onder de 75 graden gaat hij terug de mand in.",
+      "tip": "Ontdooid de mand in, anders klopt die vijftig minuten niet. Laat hem daarna tien minuten rusten onder folie voor je snijdt."
+    },
+    {
+      "naam": "Kalkoenblokjes",
+      "trefwoorden": [
+        "kalkoen",
+        "blokjes",
+        "gevogelte"
+      ],
+      "getest": true,
+      "stappen": [
+        {
+          "wat": "Garen",
+          "graden": 180,
+          "minuten": [
+            7,
+            7
+          ]
+        },
+        {
+          "wat": "Max Crisp",
+          "graden": 240,
+          "minuten": [
+            3,
+            3
+          ]
+        }
+      ],
+      "kern": 75,
+      "klaar": "Rondom wit met bruine randjes, geen roze meer."
     }
   ]
 }

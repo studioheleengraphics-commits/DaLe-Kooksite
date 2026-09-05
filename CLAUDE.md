@@ -80,7 +80,7 @@ gegenereerd door `build_airfryer.py`, dat vanzelf meedraait met `build.py`.
     {
       "naam": "Frieten uit de diepvries",
       "trefwoorden": ["friet", "patat"],
-      "favoriet": true,
+      "getest": true,
       "foto": "frieten.jpg",
       "graden": 200,
       "minuten": [15, 18],
@@ -101,10 +101,15 @@ Aandachtspunten:
   neemt de korte, want dan ga je kijken. Is er maar één tijd, schrijf dan
   `[10, 10]`.
 - `schudden` is het aantal minuten tussen twee schudmomenten. De timer piept
-  dan. Zet `0` bij alles wat je één keer keert of helemaal niet aanraakt.
+  dan. Zet `0` bij alles wat je één keer keert. Laat het veld weg als je het
+  niet weet, dan zegt de site er niets over in plaats van iets te verzinnen.
+  Hetzelfde geldt voor `voorverwarmen`.
 - `kern` alleen bij vlees en vis, in graden. Die staat in het rood, want daar
   hangt meer van af dan van de klok.
-- `favoriet: true` zet het product achter de sterknop bovenaan.
+- `getest: true` is het belangrijkste veld van de hele site: het betekent dat
+  die tijd thuis is uitgeprobeerd en klopt. Het product krijgt een rode ster en
+  komt achter de sterknop bovenaan. Zet het alleen bij wat echt gemeten is.
+  Een uitgeteste tijd vervangt de richttijd, er komt geen tweede regel bij.
 - Meerdere bakstappen na elkaar, zoals frieten die eerst garen en dan afbakken,
   schrijf je als `stappen` in plaats van `graden` en `minuten`. De timer loodst
   je er dan doorheen en zegt wanneer je de temperatuur moet veranderen:

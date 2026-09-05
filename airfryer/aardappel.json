@@ -14,7 +14,6 @@
       "portie": "500 g gesneden aardappel met een eetlepel olie",
       "klaar": "Goudbruin en hard aan de buitenkant, zacht binnenin.",
       "tip": "Spoel de gesneden frieten tot het water helder blijft en dep ze kurkdroog. Twee keer bakken is het hele geheim: eerst zacht garen, dan hard afbakken.",
-      "favoriet": true,
       "stappen": [
         {
           "wat": "Garen",
@@ -42,13 +41,25 @@
         "blokjes",
         "gebakken aardappel"
       ],
-      "graden": 200,
-      "minuten": [
-        15,
-        20
+      "getest": true,
+      "stappen": [
+        {
+          "wat": "Garen",
+          "graden": 180,
+          "minuten": [
+            16,
+            16
+          ]
+        },
+        {
+          "wat": "Afwerken",
+          "graden": 170,
+          "minuten": [
+            6,
+            6
+          ]
+        }
       ],
-      "schudden": 6,
-      "voorverwarmen": true,
       "portie": "500 g blokjes van twee centimeter",
       "klaar": "Bruine randjes, en een vork gaat er zonder weerstand door."
     },
