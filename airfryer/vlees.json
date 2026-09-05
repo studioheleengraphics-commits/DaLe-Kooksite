@@ -1,0 +1,257 @@
+{
+  "categorie": "Vlees en gevogelte",
+  "volgorde": 4,
+  "intro": "Hier telt de kerntemperatuur zwaarder dan de klok. Een thermometer van tien euro maakt het verschil tussen droge kip en goede kip.",
+  "items": [
+    {
+      "naam": "Kipfilet, heel",
+      "trefwoorden": [
+        "kip",
+        "kipfilet",
+        "kippenborst"
+      ],
+      "graden": 180,
+      "minuten": [
+        18,
+        22
+      ],
+      "schudden": 10,
+      "voorverwarmen": true,
+      "portie": "Twee filets van ongeveer 150 g, naast elkaar",
+      "kern": 75,
+      "klaar": "Het vocht dat eruit loopt is helder, niet meer roze.",
+      "tip": "Laat de filet vijf minuten rusten voor je snijdt. Snijd je meteen, dan loopt al het vocht op je plank in plaats van in het vlees te blijven."
+    },
+    {
+      "naam": "Kipfilet in blokjes",
+      "trefwoorden": [
+        "kipblokjes",
+        "kip"
+      ],
+      "graden": 190,
+      "minuten": [
+        10,
+        14
+      ],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "500 g blokjes van drie centimeter",
+      "kern": 75,
+      "klaar": "Rondom wit met bruine randjes."
+    },
+    {
+      "naam": "Kipdijfilet",
+      "trefwoorden": [
+        "dijfilet",
+        "kip",
+        "bovenbeen"
+      ],
+      "graden": 190,
+      "minuten": [
+        15,
+        18
+      ],
+      "schudden": 8,
+      "voorverwarmen": true,
+      "portie": "Vier stuks in één laag",
+      "kern": 75,
+      "klaar": "Donker gekleurd en het vlees trekt van de randen weg."
+    },
+    {
+      "naam": "Kippenbouten",
+      "trefwoorden": [
+        "bout",
+        "drumstick",
+        "kip"
+      ],
+      "graden": 180,
+      "minuten": [
+        25,
+        30
+      ],
+      "schudden": 12,
+      "voorverwarmen": true,
+      "portie": "Vier bouten met ruimte ertussen",
+      "kern": 75,
+      "klaar": "Het vel is bruin en krokant, en het vlees laat los van het bot."
+    },
+    {
+      "naam": "Kippenvleugels",
+      "trefwoorden": [
+        "wings",
+        "vleugel",
+        "kip"
+      ],
+      "voorverwarmen": true,
+      "portie": "600 g in één laag",
+      "kern": 75,
+      "klaar": "Diep gekleurd vel dat kraakt.",
+      "tip": "Doe de saus er pas de laatste drie minuten bij. Suiker in barbecuesaus verbrandt zwart als hij er van bij het begin op zit.",
+      "stappen": [
+        {
+          "wat": "Gaar laten worden",
+          "graden": 160,
+          "minuten": [
+            12,
+            14
+          ],
+          "schudden": 6
+        },
+        {
+          "wat": "Vel krokant maken",
+          "graden": 200,
+          "minuten": [
+            6,
+            8
+          ],
+          "schudden": 3
+        }
+      ]
+    },
+    {
+      "naam": "Hele kip",
+      "trefwoorden": [
+        "braadkip",
+        "kip"
+      ],
+      "graden": 170,
+      "minuten": [
+        45,
+        60
+      ],
+      "schudden": 25,
+      "voorverwarmen": true,
+      "portie": "Eén kip van ongeveer 1,2 kg, borst eerst naar beneden",
+      "kern": 75,
+      "klaar": "Meet in het dikste deel van de dij, tegen het bot aan. Onder de 75 graden gaat hij terug de mand in.",
+      "tip": "Keer hem halverwege om zodat de borst niet uitdroogt. Meet altijd, want het gewicht van je kip bepaalt de tijd meer dan deze tabel."
+    },
+    {
+      "naam": "Gehaktballetjes",
+      "trefwoorden": [
+        "balletjes",
+        "gehakt",
+        "vleesballetjes"
+      ],
+      "graden": 180,
+      "minuten": [
+        12,
+        15
+      ],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Twaalf balletjes ter grootte van een walnoot",
+      "kern": 72,
+      "klaar": "Rondom bruin, en binnenin nergens meer rood."
+    },
+    {
+      "naam": "Hamburger",
+      "trefwoorden": [
+        "burger",
+        "hamburger",
+        "gehakt"
+      ],
+      "graden": 190,
+      "minuten": [
+        10,
+        14
+      ],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Twee burgers van 150 g, met ruimte ertussen",
+      "kern": 72,
+      "klaar": "Gehakt eet je doorbakken: geen roze meer in het midden.",
+      "tip": "Leg de kaas er de laatste minuut op, met de mand al uit het toestel als het even kan. Anders blaast de ventilator hem tegen het verwarmingselement."
+    },
+    {
+      "naam": "Braadworst of chipolata",
+      "trefwoorden": [
+        "worst",
+        "chipolata",
+        "braadworst"
+      ],
+      "graden": 180,
+      "minuten": [
+        12,
+        15
+      ],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Vier worsten naast elkaar",
+      "kern": 72,
+      "klaar": "Bruin en gespannen vel. Prik niet in de worst, dan loopt het vet eruit."
+    },
+    {
+      "naam": "Varkenshaasje",
+      "trefwoorden": [
+        "varkenshaas",
+        "varken",
+        "filet mignon"
+      ],
+      "graden": 180,
+      "minuten": [
+        18,
+        22
+      ],
+      "schudden": 10,
+      "voorverwarmen": true,
+      "portie": "Eén haasje van ongeveer 400 g",
+      "kern": 63,
+      "klaar": "Bij 63 graden is hij net rosé. Laat hem daarna vijf minuten rusten onder folie."
+    },
+    {
+      "naam": "Biefstuk",
+      "trefwoorden": [
+        "steak",
+        "rund",
+        "biefstuk"
+      ],
+      "graden": 200,
+      "minuten": [
+        8,
+        12
+      ],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Twee stukken van ongeveer 2,5 cm dik",
+      "kern": 55,
+      "klaar": "55 graden is rosé, 60 is doorbakken. Elke graad telt hier.",
+      "tip": "Haal het vlees een half uur voor het bakken uit de koelkast. Koud vlees uit de frigo wordt vanbuiten grijs voor het vanbinnen warm is."
+    },
+    {
+      "naam": "Spek of ontbijtspek",
+      "trefwoorden": [
+        "spek",
+        "bacon"
+      ],
+      "graden": 190,
+      "minuten": [
+        6,
+        9
+      ],
+      "schudden": 4,
+      "voorverwarmen": false,
+      "portie": "Zes plakken naast elkaar, niet overlappend",
+      "klaar": "Glazig en krokant. Ze worden nog harder als ze afkoelen.",
+      "tip": "Er komt veel vet uit. Giet de lade leeg voor je iets anders bakt, anders rookt je keuken."
+    },
+    {
+      "naam": "Spareribs, voorgegaard",
+      "trefwoorden": [
+        "ribs",
+        "ribbetjes",
+        "spareribs"
+      ],
+      "graden": 180,
+      "minuten": [
+        12,
+        15
+      ],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "Eén rek in stukken gesneden",
+      "kern": 75,
+      "klaar": "De saus is ingedikt en plakt aan het vlees."
+    }
+  ]
+}

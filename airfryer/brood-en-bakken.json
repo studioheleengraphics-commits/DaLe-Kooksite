@@ -1,0 +1,141 @@
+{
+  "categorie": "Brood en bakken",
+  "volgorde": 7,
+  "intro": "Werkt beter dan je denkt, zolang je de temperatuur laag genoeg houdt. De ventilator kleurt de bovenkant sneller dan een oven dat doet.",
+  "items": [
+    {
+      "naam": "Afbakbroodjes",
+      "trefwoorden": [
+        "pistolet",
+        "broodje",
+        "afbak",
+        "sandwich"
+      ],
+      "graden": 170,
+      "minuten": [
+        10,
+        10
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Vier broodjes naast elkaar",
+      "klaar": "De korst kraakt als je erin knijpt en de onderkant klinkt hol.",
+      "favoriet": true,
+      "tip": "Dit is de tijd die bij ons klopt, uitgetest tot op de minuut. Bij een volle mand een minuutje erbij."
+    },
+    {
+      "naam": "Croissants, afbak",
+      "trefwoorden": [
+        "croissant",
+        "koffiekoek"
+      ],
+      "graden": 170,
+      "minuten": [
+        6,
+        8
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee tot drie stuks, ze zetten nog uit",
+      "klaar": "Diep goudbruin en de laagjes staan los van elkaar."
+    },
+    {
+      "naam": "Geroosterd brood",
+      "trefwoorden": [
+        "toast",
+        "brood roosteren"
+      ],
+      "graden": 180,
+      "minuten": [
+        3,
+        5
+      ],
+      "schudden": 0,
+      "voorverwarmen": false,
+      "portie": "Twee sneden plat in de mand",
+      "klaar": "Goudbruin. Kijk vanaf minuut drie, dun brood gaat snel."
+    },
+    {
+      "naam": "Croque monsieur",
+      "trefwoorden": [
+        "croque",
+        "tosti"
+      ],
+      "graden": 180,
+      "minuten": [
+        8,
+        10
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee stuks naast elkaar",
+      "klaar": "De kaas loopt langs de zijkant en het brood is bruin.",
+      "tip": "Zet er een prikker door of leg er een klein rooster op. De ventilator blaast anders het bovenste sneetje eraf."
+    },
+    {
+      "naam": "Appelflappen of bladerdeegkoeken",
+      "trefwoorden": [
+        "appelflap",
+        "gebak"
+      ],
+      "graden": 180,
+      "minuten": [
+        10,
+        12
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee tot drie stuks op bakpapier",
+      "klaar": "Goudbruin en gerezen. Wat vulling die eruit loopt, hoort erbij."
+    },
+    {
+      "naam": "Muffins",
+      "trefwoorden": [
+        "muffin",
+        "cupcake"
+      ],
+      "graden": 160,
+      "minuten": [
+        12,
+        15
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Vier in siliconen vormpjes",
+      "klaar": "Een satéprikker komt er droog uit."
+    },
+    {
+      "naam": "Koekjes",
+      "trefwoorden": [
+        "koekjes",
+        "cookies"
+      ],
+      "graden": 160,
+      "minuten": [
+        8,
+        10
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Zes op bakpapier, met ruimte ertussen",
+      "klaar": "De randen zijn vast, het midden mag nog zacht aanvoelen."
+    },
+    {
+      "naam": "Cake in een vorm",
+      "trefwoorden": [
+        "cake",
+        "taart"
+      ],
+      "graden": 160,
+      "minuten": [
+        25,
+        35
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Eén kleine vorm die in de mand past",
+      "klaar": "Een prikker in het midden komt er droog uit.",
+      "tip": "Leg er na een kwartier los een velletje folie over als de bovenkant al bruin is. Onderin heeft hij dan nog tijd zonder dat de kruin verbrandt."
+    }
+  ]
+}

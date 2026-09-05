@@ -1,0 +1,137 @@
+{
+  "categorie": "Aardappel",
+  "volgorde": 2,
+  "intro": "De reden dat dit toestel op je aanrecht staat. Droog deppen is hier het halve werk.",
+  "items": [
+    {
+      "naam": "Verse frieten",
+      "trefwoorden": [
+        "friet",
+        "zelfgesneden",
+        "patat"
+      ],
+      "voorverwarmen": true,
+      "portie": "500 g gesneden aardappel met een eetlepel olie",
+      "klaar": "Goudbruin en hard aan de buitenkant, zacht binnenin.",
+      "tip": "Spoel de gesneden frieten tot het water helder blijft en dep ze kurkdroog. Twee keer bakken is het hele geheim: eerst zacht garen, dan hard afbakken.",
+      "favoriet": true,
+      "stappen": [
+        {
+          "wat": "Garen",
+          "graden": 160,
+          "minuten": [
+            15,
+            15
+          ],
+          "schudden": 5
+        },
+        {
+          "wat": "Afbakken",
+          "graden": 200,
+          "minuten": [
+            8,
+            10
+          ],
+          "schudden": 4
+        }
+      ]
+    },
+    {
+      "naam": "Aardappelblokjes",
+      "trefwoorden": [
+        "blokjes",
+        "gebakken aardappel"
+      ],
+      "graden": 200,
+      "minuten": [
+        15,
+        20
+      ],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "500 g blokjes van twee centimeter",
+      "klaar": "Bruine randjes, en een vork gaat er zonder weerstand door."
+    },
+    {
+      "naam": "Krieltjes, gehalveerd",
+      "trefwoorden": [
+        "krielaardappel",
+        "krieltjes"
+      ],
+      "graden": 200,
+      "minuten": [
+        18,
+        22
+      ],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "500 g met olie en grof zout",
+      "klaar": "De snijkant is diep goudbruin en licht gebarsten."
+    },
+    {
+      "naam": "Aardappelpartjes",
+      "trefwoorden": [
+        "wedges",
+        "partjes"
+      ],
+      "graden": 200,
+      "minuten": [
+        20,
+        25
+      ],
+      "schudden": 8,
+      "voorverwarmen": true,
+      "portie": "Vier aardappelen in acht partjes",
+      "klaar": "De schil is gerimpeld en donker, het vlees geeft mee."
+    },
+    {
+      "naam": "Zoete aardappelfrieten",
+      "trefwoorden": [
+        "zoete aardappel",
+        "patat douce"
+      ],
+      "graden": 190,
+      "minuten": [
+        15,
+        20
+      ],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "400 g met een eetlepel olie",
+      "klaar": "Donkeroranje randen. Ze blijven zachter dan gewone frieten, dat hoort zo.",
+      "tip": "Zoete aardappel bevat meer suiker en kleurt dus sneller donker. Ga liever op kleur af dan op de klok."
+    },
+    {
+      "naam": "Gepofte aardappel, heel",
+      "trefwoorden": [
+        "pofaardappel",
+        "jacket potato"
+      ],
+      "graden": 200,
+      "minuten": [
+        35,
+        45
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee middelgrote aardappelen, ingeprikt",
+      "klaar": "Een mes glijdt zonder weerstand tot in het midden."
+    },
+    {
+      "naam": "Rösti of aardappelschijven",
+      "trefwoorden": [
+        "rosti",
+        "hash brown"
+      ],
+      "graden": 200,
+      "minuten": [
+        10,
+        12
+      ],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Vier stuks naast elkaar",
+      "klaar": "Doorbakken bruin, en de randen krullen lichtjes op."
+    }
+  ]
+}

@@ -5,7 +5,8 @@ Alleen lezen en koken: geen login, geen formulieren, niets dat kapot kan.
 
 ## Vaste werkafspraken
 
-- `recepten/*.json` is de enige bron. Alles wat je verandert, verander je daar.
+- `recepten/*.json` en `airfryer/*.json` zijn de enige bronnen. Alles wat je
+  verandert, verander je daar.
 - `docs/` wordt volledig overschreven door de generator. Nooit handmatig aanpassen.
 - Na elke wijziging: `python3 build.py`. Zonder die stap verandert de site niet.
 - Controleer het resultaat voor je commit. Open de gegenereerde pagina of maak
@@ -57,6 +58,67 @@ Aandachtspunten:
   veld weg als je de herkomst niet weet, en verzin geen bron.
 - `pdf` mag weg als er geen A4 bestaat. Elke receptpagina houdt een printknop:
   met een A4 opent die de PDF, zonder A4 print de browser de pagina zelf.
+
+## Airfryertijden: Crispy DaLe
+
+Tweede site in dezelfde repo, onder `docs/airfryer/`. Zelfde huisstijl, andere
+inhoud: een lange lijst producten met temperatuur, tijd en een timer. Wordt
+gegenereerd door `build_airfryer.py`, dat vanzelf meedraait met `build.py`.
+
+- `airfryer/*.json` is de bron. Eén bestand per categorie, niet per product,
+  want anders sta je bij elke wijziging in tachtig bestanden te zoeken.
+- `volgorde` bepaalt waar de categorie in de lijst komt.
+- Foto's komen in `airfryer/fotos/` en worden meegekopieerd. Zet de bestandsnaam
+  in het veld `foto` van het product. Zonder foto blijft de rij gewoon smaller.
+
+```json
+{
+  "categorie": "Diepvries",
+  "volgorde": 1,
+  "intro": "Eén zin boven de categorie.",
+  "items": [
+    {
+      "naam": "Frieten uit de diepvries",
+      "trefwoorden": ["friet", "patat"],
+      "favoriet": true,
+      "foto": "frieten.jpg",
+      "graden": 200,
+      "minuten": [15, 18],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "400 g, hooguit twee lagen dik",
+      "kern": 75,
+      "klaar": "Waaraan je ziet dat het klaar is.",
+      "tip": "De handgeschreven notitie in het rode kader."
+    }
+  ]
+}
+```
+
+Aandachtspunten:
+
+- `minuten` is altijd een lijst van twee: de korte en de lange tijd. De timer
+  neemt de korte, want dan ga je kijken. Is er maar één tijd, schrijf dan
+  `[10, 10]`.
+- `schudden` is het aantal minuten tussen twee schudmomenten. De timer piept
+  dan. Zet `0` bij alles wat je één keer keert of helemaal niet aanraakt.
+- `kern` alleen bij vlees en vis, in graden. Die staat in het rood, want daar
+  hangt meer van af dan van de klok.
+- `favoriet: true` zet het product achter de sterknop bovenaan.
+- Meerdere bakstappen na elkaar, zoals frieten die eerst garen en dan afbakken,
+  schrijf je als `stappen` in plaats van `graden` en `minuten`. De timer loodst
+  je er dan doorheen en zegt wanneer je de temperatuur moet veranderen:
+
+```json
+"stappen": [
+  { "wat": "Garen",    "graden": 160, "minuten": [15, 15], "schudden": 5 },
+  { "wat": "Afbakken", "graden": 200, "minuten": [8, 10],  "schudden": 4 }
+]
+```
+
+**Verzin hier al helemaal geen cijfers.** Een verkeerde tijd bij kip is geen
+schoonheidsfoutje. Neem tijden uit een betrouwbare bron of uit wat thuis is
+uitgetest, en zet in de tip dat het uitgetest is.
 
 ## Schrijfregels
 

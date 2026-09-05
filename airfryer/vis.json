@@ -1,0 +1,71 @@
+{
+  "categorie": "Vis",
+  "volgorde": 5,
+  "intro": "Vis gaat in twee minuten van perfect naar droog. Zet je wekker aan de korte kant en kijk liever een keer te veel.",
+  "items": [
+    {
+      "naam": "Zalmmoot",
+      "trefwoorden": ["zalm", "salmon"],
+      "graden": 180,
+      "minuten": [8, 12],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee moten van ongeveer 150 g, vel naar beneden",
+      "kern": 55,
+      "klaar": "Het vlees laat los in schilfers en het midden is nog net glazig.",
+      "tip": "Laat het vel eraan. Het beschermt de onderkant tegen de hete lucht en komt er na het bakken vanzelf af."
+    },
+    {
+      "naam": "Witte visfilet",
+      "trefwoorden": ["kabeljauw", "koolvis", "pangasius", "vis"],
+      "graden": 180,
+      "minuten": [8, 10],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee filets, op bakpapier met gaatjes",
+      "kern": 60,
+      "klaar": "Ondoorschijnend wit en het vlees valt uit elkaar onder een vork."
+    },
+    {
+      "naam": "Garnalen, rauw en gepeld",
+      "trefwoorden": ["garnaal", "scampi", "gamba"],
+      "graden": 190,
+      "minuten": [6, 8],
+      "schudden": 3,
+      "voorverwarmen": true,
+      "portie": "300 g in één laag, met olie en look",
+      "klaar": "Roze en opgekruld tot een C. Een O betekent te lang."
+    },
+    {
+      "naam": "Gepaneerde inktvisringen",
+      "trefwoorden": ["calamares", "inktvis", "pijlinktvis"],
+      "graden": 200,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Een losse laag, uit de diepvries",
+      "klaar": "Goudbruin paneermeel dat kraakt."
+    },
+    {
+      "naam": "Hele forel",
+      "trefwoorden": ["forel", "vis"],
+      "graden": 180,
+      "minuten": [12, 15],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Eén vis, ingesmeerd met olie",
+      "kern": 60,
+      "klaar": "De rugvin laat los als je eraan trekt."
+    },
+    {
+      "naam": "Mosselen of scheermessen gratineren",
+      "trefwoorden": ["mossel", "gratineren", "schelpdier"],
+      "graden": 180,
+      "minuten": [5, 7],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Voorgekookt, in de halve schelp met kruidenboter",
+      "klaar": "De boter borrelt en het broodkruim is goudbruin."
+    }
+  ]
+}

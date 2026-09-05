@@ -1,0 +1,151 @@
+{
+  "categorie": "Groenten",
+  "volgorde": 3,
+  "intro": "Een lepel olie erover en goed door elkaar hussen, anders verbranden de randjes voor de rest gaar is.",
+  "items": [
+    {
+      "naam": "Broccoliroosjes",
+      "trefwoorden": ["broccoli"],
+      "graden": 190,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "300 g roosjes met olie",
+      "klaar": "De toppen zijn donker en krokant, de steel geeft mee onder een vork."
+    },
+    {
+      "naam": "Bloemkoolroosjes",
+      "trefwoorden": ["bloemkool"],
+      "graden": 190,
+      "minuten": [12, 15],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "300 g roosjes met olie",
+      "klaar": "Gouden vlekken op de snijkanten, geen krak meer in het midden."
+    },
+    {
+      "naam": "Spruitjes, gehalveerd",
+      "trefwoorden": ["spruiten", "spruitjes"],
+      "graden": 190,
+      "minuten": [12, 15],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "300 g met olie, snijkant naar beneden",
+      "klaar": "De buitenste blaadjes zijn bijna zwart en de kern is zacht.",
+      "tip": "Die verbrande buitenblaadjes zijn het lekkerste stuk. Haal ze er niet af."
+    },
+    {
+      "naam": "Wortelen in staafjes",
+      "trefwoorden": ["wortel", "peen"],
+      "graden": 190,
+      "minuten": [12, 16],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "300 g staafjes van een halve centimeter",
+      "klaar": "Gerimpeld en zoet, met bruine plekken op de dikste kant."
+    },
+    {
+      "naam": "Courgette in plakken",
+      "trefwoorden": ["courgette", "zucchini"],
+      "graden": 190,
+      "minuten": [10, 12],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Eén courgette in plakken van een centimeter",
+      "klaar": "Goudbruine randen. Dunner gesneden wordt slap, dus houd ze stevig."
+    },
+    {
+      "naam": "Aubergine in blokjes",
+      "trefwoorden": ["aubergine", "melanzane"],
+      "graden": 190,
+      "minuten": [12, 15],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Eén aubergine in blokjes, royaal met olie",
+      "klaar": "Diep goudbruin en romig van binnen.",
+      "tip": "Aubergine drinkt olie op als een spons. Meng de olie erdoor in een kom voor ze de mand in gaan, dan verdeelt hij zich eerlijk."
+    },
+    {
+      "naam": "Paprika in repen",
+      "trefwoorden": ["paprika"],
+      "graden": 190,
+      "minuten": [10, 12],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Twee paprika's in brede repen",
+      "klaar": "De velletjes blazen op en krijgen zwarte blaasjes."
+    },
+    {
+      "naam": "Champignons, gehalveerd",
+      "trefwoorden": ["champignon", "paddenstoel"],
+      "graden": 180,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "250 g met olie en peper",
+      "klaar": "Ze zijn geslonken en het vocht is verdampt.",
+      "tip": "Zout pas na het bakken. Zout trekt vocht naar buiten en dan stoven ze in plaats van bakken."
+    },
+    {
+      "naam": "Groene asperges",
+      "trefwoorden": ["asperge", "asperges"],
+      "graden": 190,
+      "minuten": [6, 9],
+      "schudden": 4,
+      "voorverwarmen": true,
+      "portie": "Eén bundel in één laag",
+      "klaar": "Fel groen met bruine puntjes, en de steel buigt nog net niet door."
+    },
+    {
+      "naam": "Groene boontjes",
+      "trefwoorden": ["boontjes", "prinsessenboon"],
+      "graden": 190,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "250 g met olie",
+      "klaar": "Blaasjes op het vel, en ze knappen nog lichtjes."
+    },
+    {
+      "naam": "Pompoenblokjes",
+      "trefwoorden": ["pompoen", "butternut"],
+      "graden": 190,
+      "minuten": [15, 18],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "400 g blokjes van twee centimeter",
+      "klaar": "Karamelbruine randen, en een vork gaat er zonder duwen in."
+    },
+    {
+      "naam": "Ui in ringen",
+      "trefwoorden": ["ui", "ajuin"],
+      "graden": 180,
+      "minuten": [10, 12],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Twee uien in dikke ringen",
+      "klaar": "Doorschijnend met bruine punten."
+    },
+    {
+      "naam": "Kikkererwten uit blik",
+      "trefwoorden": ["kikkererwt", "chickpeas", "snack"],
+      "graden": 190,
+      "minuten": [12, 15],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Eén blik, uitgelekt en kurkdroog gedept",
+      "klaar": "Ze rammelen in de mand en kraken tussen je tanden.",
+      "tip": "Kruid ze pas na het bakken. Paprikapoeder verbrandt en wordt bitter."
+    },
+    {
+      "naam": "Maïskolf",
+      "trefwoorden": ["mais", "maiskolf"],
+      "graden": 190,
+      "minuten": [12, 15],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Twee kolven met boter of olie",
+      "klaar": "De korrels blinken en er zitten bruine plekken op."
+    }
+  ]
+}

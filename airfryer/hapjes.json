@@ -1,0 +1,80 @@
+{
+  "categorie": "Hapjes",
+  "volgorde": 6,
+  "intro": "Voor als er volk komt en de oven al bezet is door iets anders.",
+  "items": [
+    {
+      "naam": "Bladerdeeghapjes",
+      "trefwoorden": ["bladerdeeg", "worstenbrood", "hapje"],
+      "graden": 180,
+      "minuten": [10, 12],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Zes stuks op bakpapier, met ruimte om te rijzen",
+      "klaar": "Hoog gerezen en overal goudbruin, ook aan de zijkant.",
+      "tip": "Bestrijk met ei voor de kleur, maar hou de rand vrij. Ei op de snijkant plakt de laagjes dicht en dan rijst het deeg niet."
+    },
+    {
+      "naam": "Gyoza uit de diepvries",
+      "trefwoorden": ["gyoza", "dumpling", "dim sum"],
+      "graden": 190,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Tien stuks, licht ingeolied",
+      "klaar": "De bodem is bruin en de plooien zijn krokant."
+    },
+    {
+      "naam": "Halloumi in plakken",
+      "trefwoorden": ["halloumi", "kaas"],
+      "graden": 190,
+      "minuten": [8, 10],
+      "schudden": 4,
+      "voorverwarmen": true,
+      "portie": "Eén pak in plakken van een centimeter",
+      "klaar": "Goudbruine strepen en de kaas piept tussen je tanden."
+    },
+    {
+      "naam": "Tofu in blokjes",
+      "trefwoorden": ["tofu", "vegetarisch"],
+      "graden": 190,
+      "minuten": [12, 15],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "400 g stevige tofu, uitgeperst en met maïszetmeel bestoven",
+      "klaar": "Aan alle kanten goudbruin en stevig.",
+      "tip": "Pers de tofu een half uur onder een zwaar bord. Al dat vocht dat eruit loopt is precies wat anders verhindert dat hij krokant wordt."
+    },
+    {
+      "naam": "Falafel uit de diepvries",
+      "trefwoorden": ["falafel", "vegetarisch"],
+      "graden": 190,
+      "minuten": [10, 12],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Acht stuks, licht ingeolied",
+      "klaar": "Donkerbruin korstje, warm en kruimelig binnenin."
+    },
+    {
+      "naam": "Geroosterde noten",
+      "trefwoorden": ["noten", "amandel", "cashew"],
+      "graden": 160,
+      "minuten": [5, 8],
+      "schudden": 3,
+      "voorverwarmen": false,
+      "portie": "200 g in één laag",
+      "klaar": "Ze ruiken naar geroosterd en zijn een tint donkerder.",
+      "tip": "Blijf erbij en schud vaak. Van goudbruin naar verbrand duurt bij noten nog geen minuut."
+    },
+    {
+      "naam": "Kaas- en hamrolletjes",
+      "trefwoorden": ["rolletjes", "ham", "kaas", "hapje"],
+      "graden": 180,
+      "minuten": [8, 10],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Acht rolletjes met de naad naar beneden",
+      "klaar": "Het deeg is bruin en de kaas komt net aan de randen naar buiten."
+    }
+  ]
+}

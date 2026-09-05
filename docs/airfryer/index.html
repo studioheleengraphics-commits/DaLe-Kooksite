@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD2C2C">
+<title>Crispy DaLe</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600&family=Caveat:wght@500&display=swap' rel='stylesheet'>
+<style>
+:root{
+  --rood:#AD2C2C; --zeegroen:#77968E; --inkt:#1F1D1A;
+  --inkt-zacht:#7B7777; --inkt-licht:#ADA7A7;
+  --papier:#F0EEEB; --wit:#FFFFFF; --kaart:#FAFAFA; --lijn:#E8E8E8;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{-webkit-text-size-adjust:100%;}
+[hidden]{display:none !important;}
+body{
+  margin:0; background:var(--papier); color:var(--inkt);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:17px; line-height:1.6; padding-bottom:70px;
+}
+body.timert{padding-bottom:172px;}
+.wrap{max-width:760px; margin:0 auto; padding:0 20px;}
+a{color:var(--rood); text-decoration:none;}
+
+/* kop van de site */
+.kop{background:var(--wit); border-bottom:1px solid var(--lijn); padding:24px 0 20px;}
+.koprij{display:flex; align-items:center; justify-content:space-between; gap:14px;}
+.kop h1{font-family:'DM Sans',sans-serif; font-weight:700; font-size:30px;
+  margin:0; letter-spacing:-.4px;}
+.kop h1 span{color:var(--rood);}
+.kop p{margin:4px 0 0; color:var(--inkt-zacht); font-size:13px;
+  letter-spacing:1.4px; text-transform:uppercase;}
+.pil{border:1px solid var(--lijn); border-radius:999px; padding:8px 14px;
+  font-size:13px; color:var(--zeegroen); background:var(--wit); white-space:nowrap;
+  font-family:'DM Sans',sans-serif;}
+
+/* uitleg bovenaan */
+.noot{background:var(--wit); border:1px solid var(--lijn); border-radius:12px;
+  padding:14px 18px; margin:20px 0 0; font-size:14px; color:var(--inkt-zacht);}
+.noot b{color:var(--inkt); font-family:'DM Sans',sans-serif; font-weight:500;}
+
+/* zoeken en filters */
+.zoek{width:100%; padding:13px 16px; border:1px solid var(--lijn);
+  border-radius:10px; background:var(--wit); font-size:16px;
+  font-family:inherit; color:var(--inkt); margin:16px 0 12px;}
+.zoek:focus{outline:none; border-color:var(--zeegroen);}
+.chips{display:flex; gap:8px; margin-bottom:20px; overflow-x:auto;
+  padding-bottom:4px; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+.chips::-webkit-scrollbar{display:none;}
+.chip{flex:none; border:1px solid var(--lijn); background:var(--wit);
+  color:var(--inkt-zacht); padding:7px 14px; border-radius:999px; font-size:13px;
+  font-family:inherit; cursor:pointer; letter-spacing:.3px; white-space:nowrap;}
+.chip.aan{background:var(--rood); border-color:var(--rood); color:var(--wit);}
+.chip.ster{color:var(--rood);}
+.chip.ster.aan{color:var(--wit);}
+
+/* groepen */
+.groep{margin-bottom:26px;}
+.groepkop{font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--rood); margin:0 0 4px;}
+.groepintro{margin:0 0 12px; font-size:14px; color:var(--inkt-zacht);}
+
+/* rijen */
+.item{background:var(--wit); border:1px solid var(--lijn); border-radius:12px;
+  margin-bottom:8px; overflow:hidden;}
+.rij{display:flex; align-items:center; gap:12px; width:100%; text-align:left;
+  background:none; border:0; padding:13px 16px; font-family:inherit;
+  font-size:17px; color:var(--inkt); cursor:pointer;}
+.rij .foto{width:46px; height:46px; border-radius:9px; object-fit:cover;
+  background:var(--papier); flex:none;}
+.rij .naam{flex:1; min-width:0; font-family:'DM Sans',sans-serif; font-weight:500;
+  font-size:16px; line-height:1.3;}
+.rij .naam i{color:var(--rood); font-style:normal; font-size:13px; margin-left:5px;}
+.rij .tijd{font-family:'DM Sans',sans-serif; font-size:13.5px; color:var(--zeegroen);
+  white-space:nowrap; text-align:right;}
+.rij .pijl{color:var(--inkt-licht); font-size:12px; transition:transform .15s; flex:none;}
+.rij.open{border-bottom:1px solid var(--lijn);}
+.rij.open .pijl{transform:rotate(90deg);}
+.rij.open .tijd{color:var(--rood);}
+
+/* uitgeklapt paneel */
+.paneel{padding:16px 18px 20px; background:var(--kaart);}
+.lading{display:flex; gap:8px; margin-bottom:16px;}
+.lknop{flex:1; border:1px solid var(--lijn); background:var(--wit);
+  color:var(--inkt-zacht); border-radius:9px; padding:9px 6px; font-size:13px;
+  font-family:inherit; cursor:pointer;}
+.lknop.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
+
+/* bakstappen */
+ol.stappen{list-style:none; margin:0; padding:0;}
+ol.stappen li{display:flex; gap:12px; padding:11px 0; border-bottom:1px solid var(--lijn);}
+ol.stappen li .nr{font-family:'DM Sans',sans-serif; font-weight:700; font-size:15px;
+  color:var(--rood); min-width:16px;}
+ol.stappen li .lijf{flex:1; min-width:0;}
+ol.stappen li .wat{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
+ol.stappen li .zet{font-family:'DM Sans',sans-serif; font-weight:500; font-size:17px;}
+ol.stappen li .schud{display:block; font-size:13px; color:var(--zeegroen);}
+
+.feiten{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 18px;
+  padding:14px 0 16px; border-bottom:1px solid var(--lijn);}
+.feiten div span{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
+.feiten div b{font-family:'DM Sans',sans-serif; font-weight:500; font-size:16px;}
+.feiten div.kern b{color:var(--rood);}
+.regels{margin:14px 0 0;}
+.regels p{margin:0 0 10px; font-size:15px; color:var(--inkt);}
+.regels p span{color:var(--inkt-licht); font-family:'DM Sans',sans-serif;
+  font-size:10px; letter-spacing:1.4px; text-transform:uppercase; display:block;}
+.ptip{background:var(--papier); border-left:3px solid var(--rood);
+  border-radius:0 10px 10px 0; padding:10px 16px; margin:14px 0 0;
+  display:flex; gap:10px; align-items:flex-start;}
+.ptip .pen{color:var(--rood); font-size:14px; line-height:1.6;}
+.ptip p{font-family:'Caveat',cursive; font-size:20px; line-height:1.3; margin:0;}
+.volnoot{margin:12px 0 0; font-size:13px; color:var(--zeegroen);}
+.timerknop{width:100%; margin-top:16px; padding:13px; border-radius:10px;
+  border:1px solid var(--rood); background:var(--wit); color:var(--rood);
+  font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px; cursor:pointer;}
+.timerknop:active{background:var(--rood); color:var(--wit);}
+
+.leeg{color:var(--inkt-zacht); text-align:center; padding:30px 0;}
+.voet{text-align:center; color:var(--inkt-licht); font-size:12px;
+  letter-spacing:.6px; padding:6px 0 30px;}
+
+/* vaste balk onderaan */
+.balk{position:fixed; left:0; right:0; bottom:0; background:var(--wit);
+  border-top:1px solid var(--lijn); display:flex; gap:10px; padding:10px 16px;
+  justify-content:center; z-index:9;}
+.balk button, .balk a{flex:1; max-width:220px; text-align:center; padding:11px 8px;
+  border-radius:10px; border:1px solid var(--lijn); background:var(--wit);
+  color:var(--inkt); font-size:14px; font-family:inherit; cursor:pointer;}
+.balk button.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
+
+/* timerbalk, zweeft boven de vaste balk */
+.timerbalk{position:fixed; left:0; right:0; bottom:62px; z-index:10;
+  background:var(--inkt); color:var(--wit); padding:10px 16px 12px;}
+.timerbalk.schud{background:var(--zeegroen);}
+.timerbalk.af{background:var(--rood);}
+.tb-boven{display:flex; align-items:center; gap:12px;}
+.tb-links{flex:1; min-width:0;}
+.tb-links b{display:block; font-family:'DM Sans',sans-serif; font-weight:500;
+  font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb-links span{display:block; font-size:12.5px; opacity:.8;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.tb-klok{font-family:'DM Sans',sans-serif; font-weight:700; font-size:27px;
+  font-variant-numeric:tabular-nums; letter-spacing:-.5px;}
+.tb-knoppen{display:flex; gap:8px; margin-top:9px;}
+.tb-knoppen button{flex:1; border:1px solid rgba(255,255,255,.4); background:transparent;
+  color:var(--wit); border-radius:9px; padding:9px 6px; font-size:13.5px;
+  font-family:inherit; cursor:pointer;}
+.tb-knoppen button#tb-next{background:var(--wit); color:var(--rood); border-color:var(--wit);
+  font-family:'DM Sans',sans-serif; font-weight:500;}
+
+/* omrekenpagina */
+.kaart{background:var(--wit); border:1px solid var(--lijn); border-radius:12px;
+  padding:20px 22px; margin-bottom:16px;}
+.kaart h2{font-family:'DM Sans',sans-serif; font-size:20px; margin:0 0 6px;}
+.kaart p.uit{margin:0 0 16px; font-size:15px; color:var(--inkt-zacht);}
+.richting{display:flex; gap:8px; margin-bottom:16px;}
+.richting button{flex:1; border:1px solid var(--lijn); background:var(--kaart);
+  color:var(--inkt-zacht); border-radius:9px; padding:10px 6px; font-size:13px;
+  font-family:inherit; cursor:pointer;}
+.richting button.aan{background:var(--rood); border-color:var(--rood); color:var(--wit);}
+.velden{display:flex; gap:12px;}
+.veld{flex:1;}
+.veld label{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);
+  margin-bottom:5px;}
+.veld input{width:100%; padding:12px 14px; border:1px solid var(--lijn);
+  border-radius:10px; font-size:17px; font-family:'DM Sans',sans-serif;
+  color:var(--inkt); background:var(--wit);}
+.veld input:focus{outline:none; border-color:var(--zeegroen);}
+.veld input::-webkit-outer-spin-button,
+.veld input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
+.veld input[type=number]{-moz-appearance:textfield;}
+.uitkomst{margin-top:18px; background:var(--papier); border-radius:10px;
+  padding:16px 18px; text-align:center;}
+.uitkomst span{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
+.uitkomst b{font-family:'DM Sans',sans-serif; font-weight:700; font-size:26px;
+  color:var(--rood); letter-spacing:-.5px;}
+table.kern{width:100%; border-collapse:collapse; font-size:15px;}
+table.kern td{padding:10px 0; border-bottom:1px solid var(--lijn);}
+table.kern td:last-child{text-align:right; font-family:'DM Sans',sans-serif;
+  font-weight:500; color:var(--rood); white-space:nowrap;}
+table.kern tr:last-child td{border-bottom:0;}
+ul.regelset{margin:0; padding-left:20px;}
+ul.regelset li{margin-bottom:9px; font-size:15px;}
+ul.regelset li:last-child{margin-bottom:0;}
+
+@media print{ .balk,.timerbalk,.chips,.zoek{display:none;} body{background:#fff;} }
+</style>
+</head>
+<body>
+
+<header class="kop"><div class="wrap">
+  <div class="koprij">
+    <h1>Crispy <span>DaLe</span></h1>
+    <a class="pil" href="../index.html">Kookboek</a>
+  </div>
+  <p>Airfryertijden · Studio HeLeen</p>
+</div></header>
+<main class="wrap">
+  <p class="noot"><b>Richttijden voor een mand van vier &agrave; vijf liter, in
+  &eacute;&eacute;n laag.</b> Elk toestel bakt anders, dus de timer springt op de
+  korte tijd. Kijk dan, en geef er gerust nog wat bij. Bij vlees telt de
+  kerntemperatuur, niet de klok.</p>
+  <input class="zoek" id="zoek" type="search"
+         placeholder="Zoek een product, bijvoorbeeld kip of frieten...">
+  <div class="chips">
+    <button class="chip aan" data-cat="">Alles</button>
+    <button class="chip ster" data-cat="~fav">&#9733; Favorieten</button><button class="chip" data-cat="Diepvries">Diepvries</button><button class="chip" data-cat="Aardappel">Aardappel</button><button class="chip" data-cat="Groenten">Groenten</button><button class="chip" data-cat="Vlees en gevogelte">Vlees en gevogelte</button><button class="chip" data-cat="Vis">Vis</button><button class="chip" data-cat="Hapjes">Hapjes</button><button class="chip" data-cat="Brood en bakken">Brood en bakken</button><button class="chip" data-cat="Opwarmen">Opwarmen</button>
+  </div>
+  
+    <section class="groep" data-cat="Diepvries">
+      <h2 class="groepkop">Diepvries</h2>
+      <p class="groepintro">Alles wat rechtstreeks uit de vriezer de mand in mag. Niet ontdooien, want dan wordt het slap in plaats van krokant.</p>
+      
+      <div class="item" data-zoek="frieten uit de diepvries friet patat frietjes"
+           data-cat="Diepvries" data-naam="Frieten uit de diepvries"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Frieten uit de diepvries</span>
+          <span class="tijd">200&deg; &middot; 15 tot 18 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="15" data-hi="18" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>400 g, hooguit twee lagen dik</p><p><span>Klaar als</span>Goudbruin en hard als je erin knijpt. Nog bleek betekent nog drie minuten.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Schud minstens twee keer. Doe je dat niet, dan bakken de onderste donker terwijl de bovenste bleek blijven.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 15 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="steakfrieten dikke frieten steakhouse"
+           data-cat="Diepvries" data-naam="Steakfrieten"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Steakfrieten</span>
+          <span class="tijd">200&deg; &middot; 18 tot 22 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="18" data-hi="22" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>400 g in een losse laag</p><p><span>Klaar als</span>Buitenkant knapperig, binnenkant zacht als je er een vork in duwt.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 18 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="aardappelkroketten kroket kroketjes"
+           data-cat="Diepvries" data-naam="Aardappelkroketten"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Aardappelkroketten</span>
+          <span class="tijd">200&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="10" data-hi="12" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Een losse laag, ze mogen elkaar niet raken</p><p><span>Klaar als</span>Goudbruin en licht gebarsten aan de uiteinden.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="bitterballen borrelhapje bitterbal"
+           data-cat="Diepvries" data-naam="Bitterballen"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Bitterballen</span>
+          <span class="tijd">200&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Acht tot tien stuks in een losse laag</p><p><span>Klaar als</span>Bruin en stevig. Barsten ze open, dan zijn ze te lang binnen gebleven.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="vleeskroketten of kaaskroketten kaaskroket garnaalkroket"
+           data-cat="Diepvries" data-naam="Vleeskroketten of kaaskroketten"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Vleeskroketten of kaaskroketten</span>
+          <span class="tijd">190&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee tot vier stuks, met ruimte ertussen</p><p><span>Klaar als</span>Diep goudbruin en warm tot in het midden.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Keer ze halverwege voorzichtig met een tang. Schudden laat ze barsten en dan loopt de vulling eruit.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="frikandel"
+           data-cat="Diepvries" data-naam="Frikandel"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Frikandel</span>
+          <span class="tijd">190&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier stuks naast elkaar</p><p><span>Klaar als</span>Rondom bruin en heet tot in de kern.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kipnuggets nuggets kip"
+           data-cat="Diepvries" data-naam="Kipnuggets"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kipnuggets</span>
+          <span class="tijd">200&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Tien tot twaalf stuks in een losse laag</p><p><span>Klaar als</span>Krokant korstje, geen roze binnenkant meer.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="loempia&#x27;s, klein loempia mini loempia"
+           data-cat="Diepvries" data-naam="Loempia&#x27;s, klein"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Loempia&#x27;s, klein</span>
+          <span class="tijd">190&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Acht stuks met ruimte ertussen</p><p><span>Klaar als</span>Het deeg is bruin en bladert af als je erop tikt.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="vissticks vis sticks"
+           data-cat="Diepvries" data-naam="Vissticks"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Vissticks</span>
+          <span class="tijd">200&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Zes tot acht stuks in een losse laag</p><p><span>Klaar als</span>Goudbruin paneermeel, de vis laat los in schilfers.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="mozzarellasticks mozzarella kaas"
+           data-cat="Diepvries" data-naam="Mozzarellasticks"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Mozzarellasticks</span>
+          <span class="tijd">190&deg; &middot; 6 tot 8 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="8" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Zes stuks, niet tegen elkaar</p><p><span>Klaar als</span>Het korstje is bruin en de kaas veert mee als je erop duwt.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Blijf erbij vanaf minuut zes. Een minuut te veel en de kaas ligt in de mand.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 6 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="diepvriespizza, kleine pizza pizzette"
+           data-cat="Diepvries" data-naam="Diepvriespizza, kleine"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Diepvriespizza, kleine</span>
+          <span class="tijd">180&deg; &middot; 8 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén pizza die in de mand past zonder om te plooien</p><p><span>Klaar als</span>De kaas borrelt en de rand is bruin.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Aardappel">
+      <h2 class="groepkop">Aardappel</h2>
+      <p class="groepintro">De reden dat dit toestel op je aanrecht staat. Droog deppen is hier het halve werk.</p>
+      
+      <div class="item" data-zoek="verse frieten friet zelfgesneden patat"
+           data-cat="Aardappel" data-naam="Verse frieten"
+           data-fav="1" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Verse frieten <i>&#9733;</i></span>
+          <span class="tijd">2 stappen &middot; 23 tot 25 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="15" data-hi="15" data-schud="5" data-wat="Garen"><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">160 &deg;C &middot; <b class="stijd">15 min</b></span><span class="schud">Schudden om de 5 min</span></div></li><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="4" data-wat="Afbakken"><span class="nr">2</span><div class="lijf"><span class="wat">Afbakken</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div><span>Samen</span><b class="ttot">23 tot 25 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>500 g gesneden aardappel met een eetlepel olie</p><p><span>Klaar als</span>Goudbruin en hard aan de buitenkant, zacht binnenin.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Spoel de gesneden frieten tot het water helder blijft en dep ze kurkdroog. Twee keer bakken is het hele geheim: eerst zacht garen, dan hard afbakken.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer starten</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="aardappelblokjes blokjes gebakken aardappel"
+           data-cat="Aardappel" data-naam="Aardappelblokjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Aardappelblokjes</span>
+          <span class="tijd">200&deg; &middot; 15 tot 20 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="15" data-hi="20" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">15 tot 20 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>500 g blokjes van twee centimeter</p><p><span>Klaar als</span>Bruine randjes, en een vork gaat er zonder weerstand door.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 15 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="krieltjes, gehalveerd krielaardappel krieltjes"
+           data-cat="Aardappel" data-naam="Krieltjes, gehalveerd"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Krieltjes, gehalveerd</span>
+          <span class="tijd">200&deg; &middot; 18 tot 22 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="18" data-hi="22" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>500 g met olie en grof zout</p><p><span>Klaar als</span>De snijkant is diep goudbruin en licht gebarsten.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 18 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="aardappelpartjes wedges partjes"
+           data-cat="Aardappel" data-naam="Aardappelpartjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Aardappelpartjes</span>
+          <span class="tijd">200&deg; &middot; 20 tot 25 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="20" data-hi="25" data-schud="8" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">20 tot 25 min</b></span><span class="schud">Schudden om de 8 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier aardappelen in acht partjes</p><p><span>Klaar als</span>De schil is gerimpeld en donker, het vlees geeft mee.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 20 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="zoete aardappelfrieten zoete aardappel patat douce"
+           data-cat="Aardappel" data-naam="Zoete aardappelfrieten"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Zoete aardappelfrieten</span>
+          <span class="tijd">190&deg; &middot; 15 tot 20 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="20" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 20 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>400 g met een eetlepel olie</p><p><span>Klaar als</span>Donkeroranje randen. Ze blijven zachter dan gewone frieten, dat hoort zo.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Zoete aardappel bevat meer suiker en kleurt dus sneller donker. Ga liever op kleur af dan op de klok.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 15 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="gepofte aardappel, heel pofaardappel jacket potato"
+           data-cat="Aardappel" data-naam="Gepofte aardappel, heel"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Gepofte aardappel, heel</span>
+          <span class="tijd">200&deg; &middot; 35 tot 45 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="35" data-hi="45" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">35 tot 45 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee middelgrote aardappelen, ingeprikt</p><p><span>Klaar als</span>Een mes glijdt zonder weerstand tot in het midden.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 35 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="rösti of aardappelschijven rosti hash brown"
+           data-cat="Aardappel" data-naam="Rösti of aardappelschijven"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Rösti of aardappelschijven</span>
+          <span class="tijd">200&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier stuks naast elkaar</p><p><span>Klaar als</span>Doorbakken bruin, en de randen krullen lichtjes op.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Groenten">
+      <h2 class="groepkop">Groenten</h2>
+      <p class="groepintro">Een lepel olie erover en goed door elkaar hussen, anders verbranden de randjes voor de rest gaar is.</p>
+      
+      <div class="item" data-zoek="broccoliroosjes broccoli"
+           data-cat="Groenten" data-naam="Broccoliroosjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Broccoliroosjes</span>
+          <span class="tijd">190&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>300 g roosjes met olie</p><p><span>Klaar als</span>De toppen zijn donker en krokant, de steel geeft mee onder een vork.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="bloemkoolroosjes bloemkool"
+           data-cat="Groenten" data-naam="Bloemkoolroosjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Bloemkoolroosjes</span>
+          <span class="tijd">190&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>300 g roosjes met olie</p><p><span>Klaar als</span>Gouden vlekken op de snijkanten, geen krak meer in het midden.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="spruitjes, gehalveerd spruiten spruitjes"
+           data-cat="Groenten" data-naam="Spruitjes, gehalveerd"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Spruitjes, gehalveerd</span>
+          <span class="tijd">190&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>300 g met olie, snijkant naar beneden</p><p><span>Klaar als</span>De buitenste blaadjes zijn bijna zwart en de kern is zacht.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Die verbrande buitenblaadjes zijn het lekkerste stuk. Haal ze er niet af.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="wortelen in staafjes wortel peen"
+           data-cat="Groenten" data-naam="Wortelen in staafjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Wortelen in staafjes</span>
+          <span class="tijd">190&deg; &middot; 12 tot 16 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="16" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 16 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>300 g staafjes van een halve centimeter</p><p><span>Klaar als</span>Gerimpeld en zoet, met bruine plekken op de dikste kant.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="courgette in plakken courgette zucchini"
+           data-cat="Groenten" data-naam="Courgette in plakken"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Courgette in plakken</span>
+          <span class="tijd">190&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén courgette in plakken van een centimeter</p><p><span>Klaar als</span>Goudbruine randen. Dunner gesneden wordt slap, dus houd ze stevig.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="aubergine in blokjes aubergine melanzane"
+           data-cat="Groenten" data-naam="Aubergine in blokjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Aubergine in blokjes</span>
+          <span class="tijd">190&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén aubergine in blokjes, royaal met olie</p><p><span>Klaar als</span>Diep goudbruin en romig van binnen.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Aubergine drinkt olie op als een spons. Meng de olie erdoor in een kom voor ze de mand in gaan, dan verdeelt hij zich eerlijk.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="paprika in repen paprika"
+           data-cat="Groenten" data-naam="Paprika in repen"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Paprika in repen</span>
+          <span class="tijd">190&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee paprika&#x27;s in brede repen</p><p><span>Klaar als</span>De velletjes blazen op en krijgen zwarte blaasjes.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="champignons, gehalveerd champignon paddenstoel"
+           data-cat="Groenten" data-naam="Champignons, gehalveerd"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Champignons, gehalveerd</span>
+          <span class="tijd">180&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>250 g met olie en peper</p><p><span>Klaar als</span>Ze zijn geslonken en het vocht is verdampt.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Zout pas na het bakken. Zout trekt vocht naar buiten en dan stoven ze in plaats van bakken.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="groene asperges asperge asperges"
+           data-cat="Groenten" data-naam="Groene asperges"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Groene asperges</span>
+          <span class="tijd">190&deg; &middot; 6 tot 9 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="9" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 9 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén bundel in één laag</p><p><span>Klaar als</span>Fel groen met bruine puntjes, en de steel buigt nog net niet door.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 6 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="groene boontjes boontjes prinsessenboon"
+           data-cat="Groenten" data-naam="Groene boontjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Groene boontjes</span>
+          <span class="tijd">190&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>250 g met olie</p><p><span>Klaar als</span>Blaasjes op het vel, en ze knappen nog lichtjes.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="pompoenblokjes pompoen butternut"
+           data-cat="Groenten" data-naam="Pompoenblokjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Pompoenblokjes</span>
+          <span class="tijd">190&deg; &middot; 15 tot 18 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="18" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>400 g blokjes van twee centimeter</p><p><span>Klaar als</span>Karamelbruine randen, en een vork gaat er zonder duwen in.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 15 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="ui in ringen ui ajuin"
+           data-cat="Groenten" data-naam="Ui in ringen"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Ui in ringen</span>
+          <span class="tijd">180&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee uien in dikke ringen</p><p><span>Klaar als</span>Doorschijnend met bruine punten.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kikkererwten uit blik kikkererwt chickpeas snack"
+           data-cat="Groenten" data-naam="Kikkererwten uit blik"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kikkererwten uit blik</span>
+          <span class="tijd">190&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén blik, uitgelekt en kurkdroog gedept</p><p><span>Klaar als</span>Ze rammelen in de mand en kraken tussen je tanden.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Kruid ze pas na het bakken. Paprikapoeder verbrandt en wordt bitter.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="maïskolf mais maiskolf"
+           data-cat="Groenten" data-naam="Maïskolf"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Maïskolf</span>
+          <span class="tijd">190&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee kolven met boter of olie</p><p><span>Klaar als</span>De korrels blinken en er zitten bruine plekken op.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Vlees en gevogelte">
+      <h2 class="groepkop">Vlees en gevogelte</h2>
+      <p class="groepintro">Hier telt de kerntemperatuur zwaarder dan de klok. Een thermometer van tien euro maakt het verschil tussen droge kip en goede kip.</p>
+      
+      <div class="item" data-zoek="kipfilet, heel kip kipfilet kippenborst"
+           data-cat="Vlees en gevogelte" data-naam="Kipfilet, heel"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kipfilet, heel</span>
+          <span class="tijd">180&deg; &middot; 18 tot 22 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="18" data-hi="22" data-schud="10" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 10 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee filets van ongeveer 150 g, naast elkaar</p><p><span>Klaar als</span>Het vocht dat eruit loopt is helder, niet meer roze.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Laat de filet vijf minuten rusten voor je snijdt. Snijd je meteen, dan loopt al het vocht op je plank in plaats van in het vlees te blijven.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 18 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kipfilet in blokjes kipblokjes kip"
+           data-cat="Vlees en gevogelte" data-naam="Kipfilet in blokjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kipfilet in blokjes</span>
+          <span class="tijd">190&deg; &middot; 10 tot 14 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="14" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 14 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>500 g blokjes van drie centimeter</p><p><span>Klaar als</span>Rondom wit met bruine randjes.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kipdijfilet dijfilet kip bovenbeen"
+           data-cat="Vlees en gevogelte" data-naam="Kipdijfilet"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kipdijfilet</span>
+          <span class="tijd">190&deg; &middot; 15 tot 18 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="18" data-schud="8" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 8 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier stuks in één laag</p><p><span>Klaar als</span>Donker gekleurd en het vlees trekt van de randen weg.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 15 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kippenbouten bout drumstick kip"
+           data-cat="Vlees en gevogelte" data-naam="Kippenbouten"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kippenbouten</span>
+          <span class="tijd">180&deg; &middot; 25 tot 30 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="25" data-hi="30" data-schud="12" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">25 tot 30 min</b></span><span class="schud">Schudden om de 12 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier bouten met ruimte ertussen</p><p><span>Klaar als</span>Het vel is bruin en krokant, en het vlees laat los van het bot.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 25 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kippenvleugels wings vleugel kip"
+           data-cat="Vlees en gevogelte" data-naam="Kippenvleugels"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kippenvleugels</span>
+          <span class="tijd">2 stappen &middot; 18 tot 22 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="14" data-schud="6" data-wat="Gaar laten worden"><span class="nr">1</span><div class="lijf"><span class="wat">Gaar laten worden</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 tot 14 min</b></span><span class="schud">Schudden om de 6 min</span></div></li><li class="stap" data-graden="200" data-lo="6" data-hi="8" data-schud="3" data-wat="Vel krokant maken"><span class="nr">2</span><div class="lijf"><span class="wat">Vel krokant maken</span><span class="zet">200 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div><span>Samen</span><b class="ttot">18 tot 22 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>600 g in één laag</p><p><span>Klaar als</span>Diep gekleurd vel dat kraakt.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Doe de saus er pas de laatste drie minuten bij. Suiker in barbecuesaus verbrandt zwart als hij er van bij het begin op zit.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer starten</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="hele kip braadkip kip"
+           data-cat="Vlees en gevogelte" data-naam="Hele kip"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Hele kip</span>
+          <span class="tijd">170&deg; &middot; 45 tot 60 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="45" data-hi="60" data-schud="25" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">45 tot 60 min</b></span><span class="schud">Schudden om de 25 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén kip van ongeveer 1,2 kg, borst eerst naar beneden</p><p><span>Klaar als</span>Meet in het dikste deel van de dij, tegen het bot aan. Onder de 75 graden gaat hij terug de mand in.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Keer hem halverwege om zodat de borst niet uitdroogt. Meet altijd, want het gewicht van je kip bepaalt de tijd meer dan deze tabel.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 45 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="gehaktballetjes balletjes gehakt vleesballetjes"
+           data-cat="Vlees en gevogelte" data-naam="Gehaktballetjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Gehaktballetjes</span>
+          <span class="tijd">180&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twaalf balletjes ter grootte van een walnoot</p><p><span>Klaar als</span>Rondom bruin, en binnenin nergens meer rood.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="hamburger burger hamburger gehakt"
+           data-cat="Vlees en gevogelte" data-naam="Hamburger"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Hamburger</span>
+          <span class="tijd">190&deg; &middot; 10 tot 14 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="14" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 14 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee burgers van 150 g, met ruimte ertussen</p><p><span>Klaar als</span>Gehakt eet je doorbakken: geen roze meer in het midden.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Leg de kaas er de laatste minuut op, met de mand al uit het toestel als het even kan. Anders blaast de ventilator hem tegen het verwarmingselement.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="braadworst of chipolata worst chipolata braadworst"
+           data-cat="Vlees en gevogelte" data-naam="Braadworst of chipolata"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Braadworst of chipolata</span>
+          <span class="tijd">180&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier worsten naast elkaar</p><p><span>Klaar als</span>Bruin en gespannen vel. Prik niet in de worst, dan loopt het vet eruit.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="varkenshaasje varkenshaas varken filet mignon"
+           data-cat="Vlees en gevogelte" data-naam="Varkenshaasje"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Varkenshaasje</span>
+          <span class="tijd">180&deg; &middot; 18 tot 22 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="18" data-hi="22" data-schud="10" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 10 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>63 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén haasje van ongeveer 400 g</p><p><span>Klaar als</span>Bij 63 graden is hij net rosé. Laat hem daarna vijf minuten rusten onder folie.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 18 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="biefstuk steak rund biefstuk"
+           data-cat="Vlees en gevogelte" data-naam="Biefstuk"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Biefstuk</span>
+          <span class="tijd">200&deg; &middot; 8 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>55 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee stukken van ongeveer 2,5 cm dik</p><p><span>Klaar als</span>55 graden is rosé, 60 is doorbakken. Elke graad telt hier.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Haal het vlees een half uur voor het bakken uit de koelkast. Koud vlees uit de frigo wordt vanbuiten grijs voor het vanbinnen warm is.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="spek of ontbijtspek spek bacon"
+           data-cat="Vlees en gevogelte" data-naam="Spek of ontbijtspek"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Spek of ontbijtspek</span>
+          <span class="tijd">190&deg; &middot; 6 tot 9 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="9" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 9 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Zes plakken naast elkaar, niet overlappend</p><p><span>Klaar als</span>Glazig en krokant. Ze worden nog harder als ze afkoelen.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Er komt veel vet uit. Giet de lade leeg voor je iets anders bakt, anders rookt je keuken.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 6 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="spareribs, voorgegaard ribs ribbetjes spareribs"
+           data-cat="Vlees en gevogelte" data-naam="Spareribs, voorgegaard"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Spareribs, voorgegaard</span>
+          <span class="tijd">180&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén rek in stukken gesneden</p><p><span>Klaar als</span>De saus is ingedikt en plakt aan het vlees.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Vis">
+      <h2 class="groepkop">Vis</h2>
+      <p class="groepintro">Vis gaat in twee minuten van perfect naar droog. Zet je wekker aan de korte kant en kijk liever een keer te veel.</p>
+      
+      <div class="item" data-zoek="zalmmoot zalm salmon"
+           data-cat="Vis" data-naam="Zalmmoot"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Zalmmoot</span>
+          <span class="tijd">180&deg; &middot; 8 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>55 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee moten van ongeveer 150 g, vel naar beneden</p><p><span>Klaar als</span>Het vlees laat los in schilfers en het midden is nog net glazig.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Laat het vel eraan. Het beschermt de onderkant tegen de hete lucht en komt er na het bakken vanzelf af.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="witte visfilet kabeljauw koolvis pangasius vis"
+           data-cat="Vis" data-naam="Witte visfilet"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Witte visfilet</span>
+          <span class="tijd">180&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>60 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee filets, op bakpapier met gaatjes</p><p><span>Klaar als</span>Ondoorschijnend wit en het vlees valt uit elkaar onder een vork.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="garnalen, rauw en gepeld garnaal scampi gamba"
+           data-cat="Vis" data-naam="Garnalen, rauw en gepeld"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Garnalen, rauw en gepeld</span>
+          <span class="tijd">190&deg; &middot; 6 tot 8 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="8" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>300 g in één laag, met olie en look</p><p><span>Klaar als</span>Roze en opgekruld tot een C. Een O betekent te lang.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 6 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="gepaneerde inktvisringen calamares inktvis pijlinktvis"
+           data-cat="Vis" data-naam="Gepaneerde inktvisringen"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Gepaneerde inktvisringen</span>
+          <span class="tijd">200&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Een losse laag, uit de diepvries</p><p><span>Klaar als</span>Goudbruin paneermeel dat kraakt.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="hele forel forel vis"
+           data-cat="Vis" data-naam="Hele forel"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Hele forel</span>
+          <span class="tijd">180&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>60 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén vis, ingesmeerd met olie</p><p><span>Klaar als</span>De rugvin laat los als je eraan trekt.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="mosselen of scheermessen gratineren mossel gratineren schelpdier"
+           data-cat="Vis" data-naam="Mosselen of scheermessen gratineren"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Mosselen of scheermessen gratineren</span>
+          <span class="tijd">180&deg; &middot; 5 tot 7 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="5" data-hi="7" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">5 tot 7 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Voorgekookt, in de halve schelp met kruidenboter</p><p><span>Klaar als</span>De boter borrelt en het broodkruim is goudbruin.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 5 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Hapjes">
+      <h2 class="groepkop">Hapjes</h2>
+      <p class="groepintro">Voor als er volk komt en de oven al bezet is door iets anders.</p>
+      
+      <div class="item" data-zoek="bladerdeeghapjes bladerdeeg worstenbrood hapje"
+           data-cat="Hapjes" data-naam="Bladerdeeghapjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Bladerdeeghapjes</span>
+          <span class="tijd">180&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Zes stuks op bakpapier, met ruimte om te rijzen</p><p><span>Klaar als</span>Hoog gerezen en overal goudbruin, ook aan de zijkant.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Bestrijk met ei voor de kleur, maar hou de rand vrij. Ei op de snijkant plakt de laagjes dicht en dan rijst het deeg niet.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="gyoza uit de diepvries gyoza dumpling dim sum"
+           data-cat="Hapjes" data-naam="Gyoza uit de diepvries"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Gyoza uit de diepvries</span>
+          <span class="tijd">190&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Tien stuks, licht ingeolied</p><p><span>Klaar als</span>De bodem is bruin en de plooien zijn krokant.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="halloumi in plakken halloumi kaas"
+           data-cat="Hapjes" data-naam="Halloumi in plakken"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Halloumi in plakken</span>
+          <span class="tijd">190&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén pak in plakken van een centimeter</p><p><span>Klaar als</span>Goudbruine strepen en de kaas piept tussen je tanden.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="tofu in blokjes tofu vegetarisch"
+           data-cat="Hapjes" data-naam="Tofu in blokjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Tofu in blokjes</span>
+          <span class="tijd">190&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>400 g stevige tofu, uitgeperst en met maïszetmeel bestoven</p><p><span>Klaar als</span>Aan alle kanten goudbruin en stevig.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Pers de tofu een half uur onder een zwaar bord. Al dat vocht dat eruit loopt is precies wat anders verhindert dat hij krokant wordt.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="falafel uit de diepvries falafel vegetarisch"
+           data-cat="Hapjes" data-naam="Falafel uit de diepvries"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Falafel uit de diepvries</span>
+          <span class="tijd">190&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Acht stuks, licht ingeolied</p><p><span>Klaar als</span>Donkerbruin korstje, warm en kruimelig binnenin.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="geroosterde noten noten amandel cashew"
+           data-cat="Hapjes" data-naam="Geroosterde noten"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Geroosterde noten</span>
+          <span class="tijd">160&deg; &middot; 5 tot 8 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="5" data-hi="8" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">5 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
+          <div class="regels"><p><span>In de mand</span>200 g in één laag</p><p><span>Klaar als</span>Ze ruiken naar geroosterd en zijn een tint donkerder.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Blijf erbij en schud vaak. Van goudbruin naar verbrand duurt bij noten nog geen minuut.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 5 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="kaas- en hamrolletjes rolletjes ham kaas hapje"
+           data-cat="Hapjes" data-naam="Kaas- en hamrolletjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Kaas- en hamrolletjes</span>
+          <span class="tijd">180&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Acht rolletjes met de naad naar beneden</p><p><span>Klaar als</span>Het deeg is bruin en de kaas komt net aan de randen naar buiten.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Brood en bakken">
+      <h2 class="groepkop">Brood en bakken</h2>
+      <p class="groepintro">Werkt beter dan je denkt, zolang je de temperatuur laag genoeg houdt. De ventilator kleurt de bovenkant sneller dan een oven dat doet.</p>
+      
+      <div class="item" data-zoek="afbakbroodjes pistolet broodje afbak sandwich"
+           data-cat="Brood en bakken" data-naam="Afbakbroodjes"
+           data-fav="1" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Afbakbroodjes <i>&#9733;</i></span>
+          <span class="tijd">170&deg; &middot; 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="10" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier broodjes naast elkaar</p><p><span>Klaar als</span>De korst kraakt als je erin knijpt en de onderkant klinkt hol.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Dit is de tijd die bij ons klopt, uitgetest tot op de minuut. Bij een volle mand een minuutje erbij.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="croissants, afbak croissant koffiekoek"
+           data-cat="Brood en bakken" data-naam="Croissants, afbak"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Croissants, afbak</span>
+          <span class="tijd">170&deg; &middot; 6 tot 8 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="6" data-hi="8" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee tot drie stuks, ze zetten nog uit</p><p><span>Klaar als</span>Diep goudbruin en de laagjes staan los van elkaar.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 6 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="geroosterd brood toast brood roosteren"
+           data-cat="Brood en bakken" data-naam="Geroosterd brood"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Geroosterd brood</span>
+          <span class="tijd">180&deg; &middot; 3 tot 5 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="3" data-hi="5" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">3 tot 5 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee sneden plat in de mand</p><p><span>Klaar als</span>Goudbruin. Kijk vanaf minuut drie, dun brood gaat snel.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 3 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="croque monsieur croque tosti"
+           data-cat="Brood en bakken" data-naam="Croque monsieur"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Croque monsieur</span>
+          <span class="tijd">180&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee stuks naast elkaar</p><p><span>Klaar als</span>De kaas loopt langs de zijkant en het brood is bruin.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Zet er een prikker door of leg er een klein rooster op. De ventilator blaast anders het bovenste sneetje eraf.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="appelflappen of bladerdeegkoeken appelflap gebak"
+           data-cat="Brood en bakken" data-naam="Appelflappen of bladerdeegkoeken"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Appelflappen of bladerdeegkoeken</span>
+          <span class="tijd">180&deg; &middot; 10 tot 12 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee tot drie stuks op bakpapier</p><p><span>Klaar als</span>Goudbruin en gerezen. Wat vulling die eruit loopt, hoort erbij.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 10 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="muffins muffin cupcake"
+           data-cat="Brood en bakken" data-naam="Muffins"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Muffins</span>
+          <span class="tijd">160&deg; &middot; 12 tot 15 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Vier in siliconen vormpjes</p><p><span>Klaar als</span>Een satéprikker komt er droog uit.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 12 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="koekjes koekjes cookies"
+           data-cat="Brood en bakken" data-naam="Koekjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Koekjes</span>
+          <span class="tijd">160&deg; &middot; 8 tot 10 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Zes op bakpapier, met ruimte ertussen</p><p><span>Klaar als</span>De randen zijn vast, het midden mag nog zacht aanvoelen.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 8 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="cake in een vorm cake taart"
+           data-cat="Brood en bakken" data-naam="Cake in een vorm"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Cake in een vorm</span>
+          <span class="tijd">160&deg; &middot; 25 tot 35 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="25" data-hi="35" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">25 tot 35 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Eén kleine vorm die in de mand past</p><p><span>Klaar als</span>Een prikker in het midden komt er droog uit.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Leg er na een kwartier los een velletje folie over als de bovenkant al bruin is. Onderin heeft hij dan nog tijd zonder dat de kruin verbrandt.</p></div>
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 25 min</button>
+        </div>
+      </div>
+    </section>
+    <section class="groep" data-cat="Opwarmen">
+      <h2 class="groepkop">Opwarmen</h2>
+      <p class="groepintro">De microgolf maakt alles slap. Dit toestel maakt het weer krokant, en dat is precies waarvoor restjes vragen.</p>
+      
+      <div class="item" data-zoek="frieten van gisteren restjes friet opwarmen"
+           data-cat="Opwarmen" data-naam="Frieten van gisteren"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Frieten van gisteren</span>
+          <span class="tijd">180&deg; &middot; 4 tot 6 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="4" data-hi="6" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">4 tot 6 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Een losse laag, zonder extra olie</p><p><span>Klaar als</span>Ze zijn weer hard aan de buitenkant en heet in het midden.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 4 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="pizzapunt pizza opwarmen restjes"
+           data-cat="Opwarmen" data-naam="Pizzapunt"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Pizzapunt</span>
+          <span class="tijd">160&deg; &middot; 3 tot 5 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="3" data-hi="5" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">3 tot 5 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Twee punten naast elkaar</p><p><span>Klaar als</span>De bodem is weer stevig en de kaas glimt.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 3 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="gebraden kip of vlees kip opwarmen restjes vlees"
+           data-cat="Opwarmen" data-naam="Gebraden kip of vlees"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Gebraden kip of vlees</span>
+          <span class="tijd">160&deg; &middot; 5 tot 8 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="5" data-hi="8" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">5 tot 8 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>In stukken, niet gestapeld</p><p><span>Klaar als</span>Heet tot in het midden. Warm restjes één keer op, niet twee keer.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 5 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="brood of stokbrood brood opwarmen stokbrood"
+           data-cat="Opwarmen" data-naam="Brood of stokbrood"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Brood of stokbrood</span>
+          <span class="tijd">160&deg; &middot; 3 tot 4 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="3" data-hi="4" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">3 tot 4 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
+          <div class="regels"><p><span>In de mand</span>Een half stokbrood of twee broodjes</p><p><span>Klaar als</span>De korst is weer krokant. Langer maakt hem hard als steen.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 3 min</button>
+        </div>
+      </div>
+      <div class="item" data-zoek="gepaneerde restjes schnitzel kroket opwarmen restjes"
+           data-cat="Opwarmen" data-naam="Gepaneerde restjes"
+           data-fav="" data-vol="0">
+        <button class="rij" type="button">
+          
+          <span class="naam">Gepaneerde restjes</span>
+          <span class="tijd">170&deg; &middot; 5 tot 7 min</span>
+          <span class="pijl">&#9654;</span>
+        </button>
+        <div class="paneel" hidden>
+          <div class="lading">
+            <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
+            <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
+          </div>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="5" data-hi="7" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">5 tot 7 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
+          <div class="regels"><p><span>In de mand</span>In één laag</p><p><span>Klaar als</span>Het korstje kraakt weer en de kern is heet.</p></div>
+          
+          <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
+            vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
+          <button class="timerknop" type="button">Timer op 5 min</button>
+        </div>
+      </div>
+    </section>
+  <p class="leeg" id="leeg" hidden>Niets gevonden. Andere zoekterm proberen?</p>
+</main>
+<footer class="voet">71 producten &middot; Studio HeLeen</footer>
+<div class="timerbalk" id="timerbalk" hidden>
+  <div class="tb-boven">
+    <div class="tb-links"><b id="tb-naam"></b><span id="tb-sub"></span></div>
+    <div class="tb-klok" id="tb-klok">00:00</div>
+  </div>
+  <div class="tb-knoppen">
+    <button id="tb-plus" type="button">+1 min</button>
+    <button id="tb-next" type="button" hidden>Volgende stap</button>
+    <button id="tb-stop" type="button">Stop</button>
+  </div>
+</div>
+<div class="balk">
+  <button id="wakker" type="button">Scherm aan houden</button>
+  <a href="omrekenen.html">Oven omrekenen</a>
+</div>
+
+<script>
+/* ---------------------------------------------------------- zoeken ---- */
+const zoek=document.getElementById('zoek');
+const items=[...document.querySelectorAll('.item')];
+const groepen=[...document.querySelectorAll('.groep')];
+let cat='';
+function filter(){
+  const t=zoek.value.toLowerCase().trim(); let n=0;
+  items.forEach(i=>{
+    const past=(cat==='~fav')?(i.dataset.fav==='1'):(!cat||i.dataset.cat===cat);
+    const ok=(!t||i.dataset.zoek.includes(t))&&past;
+    i.hidden=!ok; if(ok)n++;
+  });
+  groepen.forEach(g=>{
+    g.hidden=![...g.querySelectorAll('.item')].some(i=>!i.hidden);
+  });
+  document.getElementById('leeg').hidden=(n>0);
+}
+zoek.addEventListener('input',filter);
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('aan'));
+  c.classList.add('aan'); cat=c.dataset.cat; filter();
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+
+/* -------------------------------------------- uitklappen en lading ---- */
+function volTijd(m){return Math.max(m+3,Math.round(m*1.2));}
+function volSchud(s){return s?Math.max(3,s-2):0;}
+function tijdTekst(l,h){return (l===h)?(l+' min'):(l+' tot '+h+' min');}
+
+items.forEach(i=>{
+  const rij=i.querySelector('.rij'), paneel=i.querySelector('.paneel');
+  const stappen=[...i.querySelectorAll('.stap')];
+  const knop=i.querySelector('.timerknop'), noot=i.querySelector('.volnoot');
+  const ttot=i.querySelector('.ttot');
+
+  function toon(vol){
+    i.dataset.vol=vol?'1':'0';
+    let laag=0, hoog=0;
+    stappen.forEach(s=>{
+      const lo=vol?volTijd(+s.dataset.lo):+s.dataset.lo;
+      const hi=vol?volTijd(+s.dataset.hi):+s.dataset.hi;
+      laag+=lo; hoog+=hi;
+      s.querySelector('.stijd').textContent=tijdTekst(lo,hi);
+      const schud=+s.dataset.schud;
+      if(schud){s.querySelector('.schud').textContent=
+        'Schudden om de '+(vol?volSchud(schud):schud)+' min';}
+    });
+    if(ttot){ttot.textContent=tijdTekst(laag,hoog);}
+    knop.textContent=(stappen.length>1)?'Timer starten':('Timer op '+laag+' min');
+    noot.hidden=!vol;
+  }
+  toon(false);
+
+  i.querySelectorAll('.lknop').forEach(b=>b.addEventListener('click',()=>{
+    i.querySelectorAll('.lknop').forEach(x=>x.classList.remove('aan'));
+    b.classList.add('aan'); toon(b.dataset.vol==='1');
+  }));
+
+  rij.addEventListener('click',()=>{
+    const open=!paneel.hidden;
+    items.forEach(o=>{
+      o.querySelector('.paneel').hidden=true;
+      o.querySelector('.rij').classList.remove('open');
+    });
+    if(!open){paneel.hidden=false; rij.classList.add('open');}
+  });
+
+  knop.addEventListener('click',()=>{
+    const vol=i.dataset.vol==='1';
+    const plan=stappen.map((s,n)=>({
+      wat:s.dataset.wat||('Stap '+(n+1)),
+      graden:+s.dataset.graden,
+      min: vol?volTijd(+s.dataset.lo):+s.dataset.lo,
+      schud: vol?volSchud(+s.dataset.schud):(+s.dataset.schud)
+    }));
+    startTimer(i.dataset.naam,plan,0);
+  });
+});
+
+/* ----------------------------------------------------------- timer ---- */
+const balk=document.getElementById('timerbalk');
+const klok=document.getElementById('tb-klok');
+const sub=document.getElementById('tb-sub');
+const volgendeKnop=document.getElementById('tb-next');
+let T=null, ac=null;
+
+function fmt(ms){
+  const s=Math.max(0,Math.round(ms/1000));
+  return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+}
+
+function piep(keer){
+  try{
+    ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+    if(ac.state==='suspended'){ac.resume();}
+    for(let k=0;k<keer;k++){
+      const o=ac.createOscillator(), g=ac.createGain();
+      o.connect(g); g.connect(ac.destination);
+      o.frequency.value=880; const t0=ac.currentTime+k*0.3;
+      g.gain.setValueAtTime(0.0001,t0);
+      g.gain.exponentialRampToValueAtTime(0.35,t0+0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001,t0+0.24);
+      o.start(t0); o.stop(t0+0.26);
+    }
+  }catch(e){}
+  if(navigator.vibrate){navigator.vibrate(keer>1?[200,120,200]:[300]);}
+}
+
+function startTimer(naam,plan,index){
+  const stap=plan[index], nu=Date.now();
+  const momenten=[];
+  if(stap.schud>0){
+    for(let m=stap.schud;m*60000<stap.min*60000-30000;m+=stap.schud){
+      momenten.push({t:nu+m*60000,gedaan:false,tot:0});
+    }
+  }
+  T={naam:naam,plan:plan,index:index,eind:nu+stap.min*60000,
+     momenten:momenten,af:false};
+  document.getElementById('tb-naam').textContent=naam;
+  balk.classList.remove('af','schud');
+  volgendeKnop.hidden=true;
+  balk.hidden=false;
+  document.body.classList.add('timert');
+  try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+      if(ac.state==='suspended'){ac.resume();}}catch(e){}
+  wakkerAan();
+  tik();
+}
+
+function stopTimer(){
+  T=null; balk.hidden=true; balk.classList.remove('af','schud');
+  volgendeKnop.hidden=true;
+  document.body.classList.remove('timert');
+}
+
+function tik(){
+  if(!T)return;
+  const nu=Date.now(), rest=T.eind-nu;
+  const stap=T.plan[T.index], laatste=(T.index===T.plan.length-1);
+  const nummer=(T.plan.length>1)?('stap '+(T.index+1)+' van '+T.plan.length+' · '):'';
+  klok.textContent=fmt(rest);
+
+  let schudden=false;
+  T.momenten.forEach(m=>{
+    if(!m.gedaan&&nu>=m.t){m.gedaan=true; m.tot=nu+25000; piep(2);}
+    if(m.tot&&nu<m.tot){schudden=true;}
+  });
+
+  if(rest<=0&&!T.af){
+    T.af=true; piep(3); balk.classList.add('af');
+    if(!laatste){volgendeKnop.hidden=false;
+      volgendeKnop.textContent='Start stap '+(T.index+2);}
+  }
+
+  if(T.af){
+    balk.classList.remove('schud');
+    sub.textContent=laatste?'Kijk of het klaar is'
+      :('Zet nu op '+T.plan[T.index+1].graden+' °C');
+  }else if(schudden){
+    balk.classList.add('schud');
+    sub.textContent='Schudden!';
+  }else{
+    balk.classList.remove('schud');
+    const volgend=T.momenten.find(m=>!m.gedaan);
+    sub.textContent=nummer+(volgend?('schudden over '+fmt(volgend.t-nu))
+                                   :(stap.graden+' °C'));
+  }
+}
+setInterval(tik,250);
+
+document.getElementById('tb-stop').addEventListener('click',stopTimer);
+volgendeKnop.addEventListener('click',()=>{
+  if(T&&T.index+1<T.plan.length){startTimer(T.naam,T.plan,T.index+1);}
+});
+document.getElementById('tb-plus').addEventListener('click',()=>{
+  if(!T)return;
+  if(T.af){T.af=false; T.eind=Date.now()+60000;
+    balk.classList.remove('af'); volgendeKnop.hidden=true;}
+  else{T.eind+=60000;}
+  tik();
+});
+
+/* ------------------------------------------------- scherm aan houden ---- */
+let lock=null;
+const wknop=document.getElementById('wakker');
+async function wakkerAan(){
+  try{
+    if(!lock&&navigator.wakeLock){
+      lock=await navigator.wakeLock.request('screen');
+      wknop.classList.add('aan'); wknop.textContent='Scherm blijft aan';
+      lock.addEventListener('release',()=>{
+        lock=null; wknop.classList.remove('aan'); wknop.textContent='Scherm aan houden';
+      });
+    }
+  }catch(e){}
+}
+wknop.addEventListener('click',async()=>{
+  try{
+    if(lock){await lock.release(); lock=null;
+      wknop.classList.remove('aan'); wknop.textContent='Scherm aan houden';}
+    else{await wakkerAan();
+      if(!lock){wknop.textContent='Lukt niet op dit toestel';}}
+  }catch(e){wknop.textContent='Lukt niet op dit toestel';}
+});
+document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='visible'&&T&&!lock){wakkerAan();}
+});
+</script>
+</body>
+</html>

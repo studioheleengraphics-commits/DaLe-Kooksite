@@ -1,0 +1,121 @@
+{
+  "categorie": "Diepvries",
+  "volgorde": 1,
+  "intro": "Alles wat rechtstreeks uit de vriezer de mand in mag. Niet ontdooien, want dan wordt het slap in plaats van krokant.",
+  "items": [
+    {
+      "naam": "Frieten uit de diepvries",
+      "trefwoorden": ["friet", "patat", "frietjes"],
+      "graden": 200,
+      "minuten": [15, 18],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "400 g, hooguit twee lagen dik",
+      "klaar": "Goudbruin en hard als je erin knijpt. Nog bleek betekent nog drie minuten.",
+      "tip": "Schud minstens twee keer. Doe je dat niet, dan bakken de onderste donker terwijl de bovenste bleek blijven."
+    },
+    {
+      "naam": "Steakfrieten",
+      "trefwoorden": ["dikke frieten", "steakhouse"],
+      "graden": 200,
+      "minuten": [18, 22],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "400 g in een losse laag",
+      "klaar": "Buitenkant knapperig, binnenkant zacht als je er een vork in duwt."
+    },
+    {
+      "naam": "Aardappelkroketten",
+      "trefwoorden": ["kroket", "kroketjes"],
+      "graden": 200,
+      "minuten": [10, 12],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Een losse laag, ze mogen elkaar niet raken",
+      "klaar": "Goudbruin en licht gebarsten aan de uiteinden."
+    },
+    {
+      "naam": "Bitterballen",
+      "trefwoorden": ["borrelhapje", "bitterbal"],
+      "graden": 200,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Acht tot tien stuks in een losse laag",
+      "klaar": "Bruin en stevig. Barsten ze open, dan zijn ze te lang binnen gebleven."
+    },
+    {
+      "naam": "Vleeskroketten of kaaskroketten",
+      "trefwoorden": ["kaaskroket", "garnaalkroket"],
+      "graden": 190,
+      "minuten": [10, 12],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Twee tot vier stuks, met ruimte ertussen",
+      "klaar": "Diep goudbruin en warm tot in het midden.",
+      "tip": "Keer ze halverwege voorzichtig met een tang. Schudden laat ze barsten en dan loopt de vulling eruit."
+    },
+    {
+      "naam": "Frikandel",
+      "graden": 190,
+      "minuten": [10, 12],
+      "schudden": 6,
+      "voorverwarmen": true,
+      "portie": "Vier stuks naast elkaar",
+      "kern": 75,
+      "klaar": "Rondom bruin en heet tot in de kern."
+    },
+    {
+      "naam": "Kipnuggets",
+      "trefwoorden": ["nuggets", "kip"],
+      "graden": 200,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Tien tot twaalf stuks in een losse laag",
+      "kern": 75,
+      "klaar": "Krokant korstje, geen roze binnenkant meer."
+    },
+    {
+      "naam": "Loempia's, klein",
+      "trefwoorden": ["loempia", "mini loempia"],
+      "graden": 190,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Acht stuks met ruimte ertussen",
+      "klaar": "Het deeg is bruin en bladert af als je erop tikt."
+    },
+    {
+      "naam": "Vissticks",
+      "trefwoorden": ["vis", "sticks"],
+      "graden": 200,
+      "minuten": [8, 10],
+      "schudden": 5,
+      "voorverwarmen": true,
+      "portie": "Zes tot acht stuks in een losse laag",
+      "klaar": "Goudbruin paneermeel, de vis laat los in schilfers."
+    },
+    {
+      "naam": "Mozzarellasticks",
+      "trefwoorden": ["mozzarella", "kaas"],
+      "graden": 190,
+      "minuten": [6, 8],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Zes stuks, niet tegen elkaar",
+      "klaar": "Het korstje is bruin en de kaas veert mee als je erop duwt.",
+      "tip": "Blijf erbij vanaf minuut zes. Een minuut te veel en de kaas ligt in de mand."
+    },
+    {
+      "naam": "Diepvriespizza, kleine",
+      "trefwoorden": ["pizza", "pizzette"],
+      "graden": 180,
+      "minuten": [8, 12],
+      "schudden": 0,
+      "voorverwarmen": true,
+      "portie": "Eén pizza die in de mand past zonder om te plooien",
+      "klaar": "De kaas borrelt en de rand is bruin."
+    }
+  ]
+}
