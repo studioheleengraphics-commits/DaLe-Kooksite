@@ -10,6 +10,10 @@ JSON laat schrijven en de generator laat draaien.
 - `recepten/*.json` en `airfryer/*.json` zijn de enige bronnen. Alles wat je
   verandert, verander je daar.
 - `docs/` wordt volledig overschreven door de generator. Nooit handmatig aanpassen.
+- `a4/*.html` is de bron van de print-PDF's, `pdf/` het resultaat. Wil je een A4
+  aanpassen, pas dan het HTML-bestand aan en draai `python3 maak-a4.py <slug>`.
+  Nooit een PDF vervangen zonder het bijbehorende HTML-bestand bij te werken,
+  anders kan niemand die pagina later nog wijzigen.
 - Na elke wijziging: `python3 build.py`. Zonder die stap verandert de site niet.
 - Controleer het resultaat voor je commit. Open de gegenereerde pagina of maak
   een screenshot op 390px breed, want de site wordt vooral op een telefoon
@@ -165,6 +169,18 @@ Rood `#AD2C2C` is het enige accent, zeegroen `#77968E` de stille tweede stem,
 inkt `#1F1D1A` voor tekst, warm papier `#F0EEEB` als achtergrond. DM Sans voor
 koppen, Inter voor lopende tekst, Caveat voor de tip. Deze waarden staan in de
 CSS bovenaan `build.py`. Voeg geen tweede rood toe.
+
+## De A4-pagina's
+
+`a4/<slug>.html` is een ingevulde kopie van het sjabloon uit de skill
+sh-kookboekpagina. `maak-a4.py` geeft dat bestand aan het build-script van
+die skill, dat de fonts insluit en op exacte A4-maat rendert. Dat script
+weigert luid wanneer de inhoud niet op één pagina past: kort dan de tekst
+in en raak de opmaak niet aan.
+
+De chorizo en de salmorreta hebben nog geen bronbestand in `a4/`, want die
+PDF's kwamen kant-en-klaar aan. Wie ze wil wijzigen, bouwt ze opnieuw op
+uit het sjabloon.
 
 ## Wat hier niet thuishoort
 
