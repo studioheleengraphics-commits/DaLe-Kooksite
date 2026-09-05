@@ -27,7 +27,8 @@
         "visburger",
         "burger",
         "vis",
-        "vers"
+        "vers",
+        "double stack pro"
       ],
       "getest": true,
       "graden": 180,
@@ -37,7 +38,8 @@
       ],
       "kern": 60,
       "klaar": "Ondoorschijnend wit tot in het midden.",
-      "tip": "Uitgetest op de Double Stack Pro. Dezelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen."
+      "tip": "Met Double Stack Pro aan, zodat de bovenste laag van het mandje extra warmte krijgt en de burgers boven en onder even ver staan. Zelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen.",
+      "functie": "Double Stack Pro"
     },
     {
       "naam": "Zalmmoot",

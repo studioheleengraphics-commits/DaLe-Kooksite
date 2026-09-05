@@ -331,12 +331,13 @@
           ]
         },
         {
-          "wat": "Max Crisp",
+          "wat": "Afwerken",
           "graden": 240,
           "minuten": [
             3,
             3
-          ]
+          ],
+          "stand": "Max Crisp"
         }
       ],
       "kern": 75,

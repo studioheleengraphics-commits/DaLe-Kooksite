@@ -98,6 +98,11 @@ ol.stappen li .wat{display:block; font-family:'DM Sans',sans-serif; font-size:10
   letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
 ol.stappen li .zet{font-family:'DM Sans',sans-serif; font-weight:500; font-size:17px;}
 ol.stappen li .schud{display:block; font-size:13px; color:var(--zeegroen);}
+ol.stappen li .stand, ol.stappen li .functie{display:inline-block; margin-left:8px;
+  padding:2px 9px; border-radius:999px; font-family:'DM Sans',sans-serif;
+  font-size:11px; font-weight:500; letter-spacing:.6px; vertical-align:2px;}
+ol.stappen li .stand{background:var(--zeegroen); color:var(--wit);}
+ol.stappen li .functie{border:1px solid var(--zeegroen); color:var(--zeegroen);}
 
 .getest{margin:12px 0 0; font-size:13.5px; color:var(--zeegroen);}
 .feiten{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 18px;
@@ -234,7 +239,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="10" data-schud="0" data-wat="Bakken"><span class="nr">1</span><div class="lijf"><span class="wat">Bakken</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 min</b></span></div></li><li class="stap" data-graden="240" data-lo="5" data-hi="5" data-schud="0" data-wat="Max Crisp"><span class="nr">2</span><div class="lijf"><span class="wat">Max Crisp</span><span class="zet">240 &deg;C &middot; <b class="stijd">5 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="10" data-schud="0" data-wat="Bakken" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Bakken</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 min</b></span></div></li><li class="stap" data-graden="240" data-lo="5" data-hi="5" data-schud="0" data-wat="Afwerken" data-stand="Max Crisp" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Afwerken</span><span class="zet">240 &deg;C &middot; <b class="stijd">5 min</b><span class="stand">Max Crisp</span></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div><span>Samen</span><b class="ttot">15 min</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Rondom donker en krokant, heet tot in de kern.</p></div>
@@ -258,7 +263,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="15" data-hi="18" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="15" data-hi="18" data-schud="7" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>400 g, hooguit twee lagen dik</p><p><span>Klaar als</span>Goudbruin en hard als je erin knijpt. Nog bleek betekent nog drie minuten.</p></div>
@@ -282,7 +287,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="18" data-hi="22" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="18" data-hi="22" data-schud="7" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>400 g in een losse laag</p><p><span>Klaar als</span>Buitenkant knapperig, binnenkant zacht als je er een vork in duwt.</p></div>
@@ -306,7 +311,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="10" data-hi="12" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="10" data-hi="12" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Een losse laag, ze mogen elkaar niet raken</p><p><span>Klaar als</span>Goudbruin en licht gebarsten aan de uiteinden.</p></div>
@@ -330,7 +335,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Acht tot tien stuks in een losse laag</p><p><span>Klaar als</span>Bruin en stevig. Barsten ze open, dan zijn ze te lang binnen gebleven.</p></div>
@@ -354,7 +359,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee tot vier stuks, met ruimte ertussen</p><p><span>Klaar als</span>Diep goudbruin en warm tot in het midden.</p></div>
@@ -378,7 +383,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier stuks naast elkaar</p><p><span>Klaar als</span>Rondom bruin en heet tot in de kern.</p></div>
@@ -402,7 +407,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Tien tot twaalf stuks in een losse laag</p><p><span>Klaar als</span>Krokant korstje, geen roze binnenkant meer.</p></div>
@@ -426,7 +431,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Acht stuks met ruimte ertussen</p><p><span>Klaar als</span>Het deeg is bruin en bladert af als je erop tikt.</p></div>
@@ -450,7 +455,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Zes tot acht stuks in een losse laag</p><p><span>Klaar als</span>Goudbruin paneermeel, de vis laat los in schilfers.</p></div>
@@ -474,7 +479,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="8" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="8" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Zes stuks, niet tegen elkaar</p><p><span>Klaar als</span>Het korstje is bruin en de kaas veert mee als je erop duwt.</p></div>
@@ -498,7 +503,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén pizza die in de mand past zonder om te plooien</p><p><span>Klaar als</span>De kaas borrelt en de rand is bruin.</p></div>
@@ -527,7 +532,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="15" data-hi="15" data-schud="5" data-wat="Garen"><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">160 &deg;C &middot; <b class="stijd">15 min</b></span><span class="schud">Schudden om de 5 min</span></div></li><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="4" data-wat="Afbakken"><span class="nr">2</span><div class="lijf"><span class="wat">Afbakken</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="15" data-hi="15" data-schud="5" data-wat="Garen" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">160 &deg;C &middot; <b class="stijd">15 min</b></span><span class="schud">Schudden om de 5 min</span></div></li><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="4" data-wat="Afbakken" data-stand="" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Afbakken</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div><span>Samen</span><b class="ttot">23 tot 25 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>500 g gesneden aardappel met een eetlepel olie</p><p><span>Klaar als</span>Goudbruin en hard aan de buitenkant, zacht binnenin.</p></div>
@@ -551,7 +556,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="16" data-hi="16" data-schud="0" data-wat="Garen"><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">180 &deg;C &middot; <b class="stijd">16 min</b></span></div></li><li class="stap" data-graden="170" data-lo="6" data-hi="6" data-schud="0" data-wat="Afwerken"><span class="nr">2</span><div class="lijf"><span class="wat">Afwerken</span><span class="zet">170 &deg;C &middot; <b class="stijd">6 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="16" data-hi="16" data-schud="0" data-wat="Garen" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">180 &deg;C &middot; <b class="stijd">16 min</b></span></div></li><li class="stap" data-graden="170" data-lo="6" data-hi="6" data-schud="0" data-wat="Afwerken" data-stand="" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Afwerken</span><span class="zet">170 &deg;C &middot; <b class="stijd">6 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div><span>Samen</span><b class="ttot">22 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>500 g blokjes van twee centimeter</p><p><span>Klaar als</span>Bruine randjes, en een vork gaat er zonder weerstand door.</p></div>
@@ -575,7 +580,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="18" data-hi="22" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="18" data-hi="22" data-schud="7" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>500 g met olie en grof zout</p><p><span>Klaar als</span>De snijkant is diep goudbruin en licht gebarsten.</p></div>
@@ -599,7 +604,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="20" data-hi="25" data-schud="8" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">20 tot 25 min</b></span><span class="schud">Schudden om de 8 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="20" data-hi="25" data-schud="8" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">20 tot 25 min</b></span><span class="schud">Schudden om de 8 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier aardappelen in acht partjes</p><p><span>Klaar als</span>De schil is gerimpeld en donker, het vlees geeft mee.</p></div>
@@ -623,7 +628,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="20" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 20 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="20" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 20 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>400 g met een eetlepel olie</p><p><span>Klaar als</span>Donkeroranje randen. Ze blijven zachter dan gewone frieten, dat hoort zo.</p></div>
@@ -647,7 +652,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="35" data-hi="45" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">35 tot 45 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="35" data-hi="45" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">35 tot 45 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee middelgrote aardappelen, ingeprikt</p><p><span>Klaar als</span>Een mes glijdt zonder weerstand tot in het midden.</p></div>
@@ -671,7 +676,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier stuks naast elkaar</p><p><span>Klaar als</span>Doorbakken bruin, en de randen krullen lichtjes op.</p></div>
@@ -700,7 +705,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>300 g roosjes met olie</p><p><span>Klaar als</span>De toppen zijn donker en krokant, de steel geeft mee onder een vork.</p></div>
@@ -724,7 +729,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>300 g roosjes met olie</p><p><span>Klaar als</span>Gouden vlekken op de snijkanten, geen krak meer in het midden.</p></div>
@@ -748,7 +753,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>300 g met olie, snijkant naar beneden</p><p><span>Klaar als</span>De buitenste blaadjes zijn bijna zwart en de kern is zacht.</p></div>
@@ -772,7 +777,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="16" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 16 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="16" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 16 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>300 g staafjes van een halve centimeter</p><p><span>Klaar als</span>Gerimpeld en zoet, met bruine plekken op de dikste kant.</p></div>
@@ -796,7 +801,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén courgette in plakken van een centimeter</p><p><span>Klaar als</span>Goudbruine randen. Dunner gesneden wordt slap, dus houd ze stevig.</p></div>
@@ -820,7 +825,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén aubergine in blokjes, royaal met olie</p><p><span>Klaar als</span>Diep goudbruin en romig van binnen.</p></div>
@@ -844,7 +849,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee paprika&#x27;s in brede repen</p><p><span>Klaar als</span>De velletjes blazen op en krijgen zwarte blaasjes.</p></div>
@@ -868,7 +873,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>250 g met olie en peper</p><p><span>Klaar als</span>Ze zijn geslonken en het vocht is verdampt.</p></div>
@@ -892,7 +897,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="9" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 9 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="9" data-schud="4" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 9 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén bundel in één laag</p><p><span>Klaar als</span>Fel groen met bruine puntjes, en de steel buigt nog net niet door.</p></div>
@@ -916,7 +921,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>250 g met olie</p><p><span>Klaar als</span>Blaasjes op het vel, en ze knappen nog lichtjes.</p></div>
@@ -940,7 +945,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="18" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="18" data-schud="7" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>400 g blokjes van twee centimeter</p><p><span>Klaar als</span>Karamelbruine randen, en een vork gaat er zonder duwen in.</p></div>
@@ -964,7 +969,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee uien in dikke ringen</p><p><span>Klaar als</span>Doorschijnend met bruine punten.</p></div>
@@ -988,7 +993,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén blik, uitgelekt en kurkdroog gedept</p><p><span>Klaar als</span>Ze rammelen in de mand en kraken tussen je tanden.</p></div>
@@ -1012,7 +1017,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee kolven met boter of olie</p><p><span>Klaar als</span>De korrels blinken en er zitten bruine plekken op.</p></div>
@@ -1041,7 +1046,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="18" data-hi="22" data-schud="10" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 10 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="18" data-hi="22" data-schud="10" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 10 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee filets van ongeveer 150 g, naast elkaar</p><p><span>Klaar als</span>Het vocht dat eruit loopt is helder, niet meer roze.</p></div>
@@ -1065,7 +1070,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="14" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 14 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="14" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 14 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>500 g blokjes van drie centimeter</p><p><span>Klaar als</span>Rondom wit met bruine randjes.</p></div>
@@ -1089,7 +1094,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="18" data-schud="8" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 8 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="15" data-hi="18" data-schud="8" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">15 tot 18 min</b></span><span class="schud">Schudden om de 8 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier stuks in één laag</p><p><span>Klaar als</span>Donker gekleurd en het vlees trekt van de randen weg.</p></div>
@@ -1113,7 +1118,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="25" data-hi="30" data-schud="12" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">25 tot 30 min</b></span><span class="schud">Schudden om de 12 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="25" data-hi="30" data-schud="12" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">25 tot 30 min</b></span><span class="schud">Schudden om de 12 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier bouten met ruimte ertussen</p><p><span>Klaar als</span>Het vel is bruin en krokant, en het vlees laat los van het bot.</p></div>
@@ -1137,7 +1142,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="14" data-schud="6" data-wat="Gaar laten worden"><span class="nr">1</span><div class="lijf"><span class="wat">Gaar laten worden</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 tot 14 min</b></span><span class="schud">Schudden om de 6 min</span></div></li><li class="stap" data-graden="200" data-lo="6" data-hi="8" data-schud="3" data-wat="Vel krokant maken"><span class="nr">2</span><div class="lijf"><span class="wat">Vel krokant maken</span><span class="zet">200 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="14" data-schud="6" data-wat="Gaar laten worden" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Gaar laten worden</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 tot 14 min</b></span><span class="schud">Schudden om de 6 min</span></div></li><li class="stap" data-graden="200" data-lo="6" data-hi="8" data-schud="3" data-wat="Vel krokant maken" data-stand="" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Vel krokant maken</span><span class="zet">200 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div><span>Samen</span><b class="ttot">18 tot 22 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>600 g in één laag</p><p><span>Klaar als</span>Diep gekleurd vel dat kraakt.</p></div>
@@ -1161,7 +1166,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="170" data-lo="45" data-hi="60" data-schud="25" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">45 tot 60 min</b></span><span class="schud">Schudden om de 25 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="45" data-hi="60" data-schud="25" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">45 tot 60 min</b></span><span class="schud">Schudden om de 25 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén kip van ongeveer 1,2 kg, borst eerst naar beneden</p><p><span>Klaar als</span>Meet in het dikste deel van de dij, tegen het bot aan. Onder de 75 graden gaat hij terug de mand in.</p></div>
@@ -1185,7 +1190,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="8" data-schud="0" data-wat="Hard aanzetten"><span class="nr">1</span><div class="lijf"><span class="wat">Hard aanzetten</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 min</b></span></div></li><li class="stap" data-graden="180" data-lo="8" data-hi="8" data-schud="0" data-wat="Rustig gaar maken"><span class="nr">2</span><div class="lijf"><span class="wat">Rustig gaar maken</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="8" data-schud="0" data-wat="Hard aanzetten" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Hard aanzetten</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 min</b></span></div></li><li class="stap" data-graden="180" data-lo="8" data-hi="8" data-schud="0" data-wat="Rustig gaar maken" data-stand="" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Rustig gaar maken</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div><span>Samen</span><b class="ttot">16 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Rondom bruin, en binnenin nergens meer rood.</p></div>
@@ -1209,7 +1214,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="14" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 14 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="14" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 14 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee burgers van 150 g, met ruimte ertussen</p><p><span>Klaar als</span>Gehakt eet je doorbakken: geen roze meer in het midden.</p></div>
@@ -1233,7 +1238,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier worsten naast elkaar</p><p><span>Klaar als</span>Bruin en gespannen vel. Prik niet in de worst, dan loopt het vet eruit.</p></div>
@@ -1257,7 +1262,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="18" data-hi="22" data-schud="10" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 10 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="18" data-hi="22" data-schud="10" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">18 tot 22 min</b></span><span class="schud">Schudden om de 10 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>63 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén haasje van ongeveer 400 g</p><p><span>Klaar als</span>Bij 63 graden is hij net rosé. Laat hem daarna vijf minuten rusten onder folie.</p></div>
@@ -1281,7 +1286,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="12" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>55 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee stukken van ongeveer 2,5 cm dik</p><p><span>Klaar als</span>55 graden is rosé, 60 is doorbakken. Elke graad telt hier.</p></div>
@@ -1305,7 +1310,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="9" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 9 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="9" data-schud="4" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 9 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
           <div class="regels"><p><span>In de mand</span>Zes plakken naast elkaar, niet overlappend</p><p><span>Klaar als</span>Glazig en krokant. Ze worden nog harder als ze afkoelen.</p></div>
@@ -1329,7 +1334,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="7" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="7" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 7 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén rek in stukken gesneden</p><p><span>Klaar als</span>De saus is ingedikt en plakt aan het vlees.</p></div>
@@ -1353,7 +1358,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="6" data-hi="6" data-schud="0" data-wat="Garen"><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">180 &deg;C &middot; <b class="stijd">6 min</b></span></div></li><li class="stap" data-graden="200" data-lo="2" data-hi="2" data-schud="0" data-wat="Afwerken"><span class="nr">2</span><div class="lijf"><span class="wat">Afwerken</span><span class="zet">200 &deg;C &middot; <b class="stijd">2 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="6" data-hi="6" data-schud="0" data-wat="Garen" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">180 &deg;C &middot; <b class="stijd">6 min</b></span></div></li><li class="stap" data-graden="200" data-lo="2" data-hi="2" data-schud="0" data-wat="Afwerken" data-stand="" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Afwerken</span><span class="zet">200 &deg;C &middot; <b class="stijd">2 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div><span>Samen</span><b class="ttot">8 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Gespannen vel met bruine plekken.</p></div>
@@ -1377,7 +1382,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="50" data-hi="50" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">50 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="50" data-hi="50" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">50 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Ontdooid, in één stuk</p><p><span>Klaar als</span>Meet in het midden van de rollade. Onder de 75 graden gaat hij terug de mand in.</p></div>
@@ -1401,7 +1406,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="7" data-hi="7" data-schud="0" data-wat="Garen"><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">180 &deg;C &middot; <b class="stijd">7 min</b></span></div></li><li class="stap" data-graden="240" data-lo="3" data-hi="3" data-schud="0" data-wat="Max Crisp"><span class="nr">2</span><div class="lijf"><span class="wat">Max Crisp</span><span class="zet">240 &deg;C &middot; <b class="stijd">3 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="7" data-hi="7" data-schud="0" data-wat="Garen" data-stand="" data-functie=""><span class="nr">1</span><div class="lijf"><span class="wat">Garen</span><span class="zet">180 &deg;C &middot; <b class="stijd">7 min</b></span></div></li><li class="stap" data-graden="240" data-lo="3" data-hi="3" data-schud="0" data-wat="Afwerken" data-stand="Max Crisp" data-functie=""><span class="nr">2</span><div class="lijf"><span class="wat">Afwerken</span><span class="zet">240 &deg;C &middot; <b class="stijd">3 min</b><span class="stand">Max Crisp</span></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div><span>Samen</span><b class="ttot">10 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Rondom wit met bruine randjes, geen roze meer.</p></div>
@@ -1430,7 +1435,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="15" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">15 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="15" data-hi="15" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">15 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div class="kern"><span>Kerntemperatuur</span><b>60 &deg;C</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Doorbakken bruin korstje, de vis valt uit elkaar onder een vork.</p></div>
@@ -1440,7 +1445,7 @@ ul.regelset li:last-child{margin-bottom:0;}
           <button class="timerknop" type="button">Timer op 15 min</button>
         </div>
       </div>
-      <div class="item" data-zoek="verse kabeljauwburgers kabeljauw visburger burger vis vers"
+      <div class="item" data-zoek="verse kabeljauwburgers kabeljauw visburger burger vis vers double stack pro"
            data-cat="Vis" data-naam="Verse kabeljauwburgers"
            data-fav="1" data-vol="0">
         <button class="rij" type="button">
@@ -1454,11 +1459,11 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="15" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">15 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="15" data-hi="15" data-schud="0" data-wat="Zet op" data-stand="" data-functie="Double Stack Pro"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">15 min</b><span class="functie">Double Stack Pro aan</span></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div class="kern"><span>Kerntemperatuur</span><b>60 &deg;C</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Ondoorschijnend wit tot in het midden.</p></div>
-          <div class="ptip"><span class="pen">&#9998;</span><p>Uitgetest op de Double Stack Pro. Dezelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen.</p></div>
+          <div class="ptip"><span class="pen">&#9998;</span><p>Met Double Stack Pro aan, zodat de bovenste laag van het mandje extra warmte krijgt en de burgers boven en onder even ver staan. Zelfde tijd als de diepvriesversie, dus je hoeft niets om te rekenen.</p></div>
           <p class="volnoot" hidden>Vuistregel: een volle mand vraagt ongeveer een
             vijfde meer tijd. Schud vaker en kijk zeker op het einde.</p>
           <button class="timerknop" type="button">Timer op 15 min</button>
@@ -1478,7 +1483,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>55 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee moten van ongeveer 150 g, vel naar beneden</p><p><span>Klaar als</span>Het vlees laat los in schilfers en het midden is nog net glazig.</p></div>
@@ -1502,7 +1507,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>60 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee filets, op bakpapier met gaatjes</p><p><span>Klaar als</span>Ondoorschijnend wit en het vlees valt uit elkaar onder een vork.</p></div>
@@ -1526,7 +1531,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="8" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="6" data-hi="8" data-schud="3" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>300 g in één laag, met olie en look</p><p><span>Klaar als</span>Roze en opgekruld tot een C. Een O betekent te lang.</p></div>
@@ -1550,7 +1555,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Een losse laag, uit de diepvries</p><p><span>Klaar als</span>Goudbruin paneermeel dat kraakt.</p></div>
@@ -1574,7 +1579,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="12" data-hi="15" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div><div class="kern"><span>Kerntemperatuur</span><b>60 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén vis, ingesmeerd met olie</p><p><span>Klaar als</span>De rugvin laat los als je eraan trekt.</p></div>
@@ -1598,7 +1603,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="5" data-hi="7" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">5 tot 7 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="5" data-hi="7" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">5 tot 7 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Voorgekookt, in de halve schelp met kruidenboter</p><p><span>Klaar als</span>De boter borrelt en het broodkruim is goudbruin.</p></div>
@@ -1627,7 +1632,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="15" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">15 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="15" data-hi="15" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">15 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"><div class="kern"><span>Kerntemperatuur</span><b>72 &deg;C</b></div></div>
           <div class="regels"><p><span>Klaar als</span>Het deeg is goudbruin en de onderkant is droog, niet vettig.</p></div>
@@ -1651,7 +1656,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Zes stuks op bakpapier, met ruimte om te rijzen</p><p><span>Klaar als</span>Hoog gerezen en overal goudbruin, ook aan de zijkant.</p></div>
@@ -1675,7 +1680,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Tien stuks, licht ingeolied</p><p><span>Klaar als</span>De bodem is bruin en de plooien zijn krokant.</p></div>
@@ -1699,7 +1704,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="8" data-hi="10" data-schud="4" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén pak in plakken van een centimeter</p><p><span>Klaar als</span>Goudbruine strepen en de kaas piept tussen je tanden.</p></div>
@@ -1723,7 +1728,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="12" data-hi="15" data-schud="6" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Schudden om de 6 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>400 g stevige tofu, uitgeperst en met maïszetmeel bestoven</p><p><span>Klaar als</span>Aan alle kanten goudbruin en stevig.</p></div>
@@ -1747,7 +1752,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="10" data-hi="12" data-schud="5" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Schudden om de 5 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Acht stuks, licht ingeolied</p><p><span>Klaar als</span>Donkerbruin korstje, warm en kruimelig binnenin.</p></div>
@@ -1771,7 +1776,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="5" data-hi="8" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">5 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="5" data-hi="8" data-schud="3" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">5 tot 8 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
           <div class="regels"><p><span>In de mand</span>200 g in één laag</p><p><span>Klaar als</span>Ze ruiken naar geroosterd en zijn een tint donkerder.</p></div>
@@ -1795,7 +1800,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Acht rolletjes met de naad naar beneden</p><p><span>Klaar als</span>Het deeg is bruin en de kaas komt net aan de randen naar buiten.</p></div>
@@ -1824,7 +1829,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="170" data-lo="10" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">10 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="10" data-hi="10" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">10 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"></div>
           <div class="regels"><p><span>Klaar als</span>De korst kraakt als je erin knijpt en de onderkant klinkt hol.</p></div>
@@ -1848,7 +1853,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="170" data-lo="6" data-hi="8" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="6" data-hi="8" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">6 tot 8 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee tot drie stuks, ze zetten nog uit</p><p><span>Klaar als</span>Diep goudbruin en de laagjes staan los van elkaar.</p></div>
@@ -1872,7 +1877,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="3" data-hi="5" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">3 tot 5 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="3" data-hi="5" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">3 tot 5 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee sneden plat in de mand</p><p><span>Klaar als</span>Goudbruin. Kijk vanaf minuut drie, dun brood gaat snel.</p></div>
@@ -1896,7 +1901,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee stuks naast elkaar</p><p><span>Klaar als</span>De kaas loopt langs de zijkant en het brood is bruin.</p></div>
@@ -1920,7 +1925,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="10" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">10 tot 12 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee tot drie stuks op bakpapier</p><p><span>Klaar als</span>Goudbruin en gerezen. Wat vulling die eruit loopt, hoort erbij.</p></div>
@@ -1944,7 +1949,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="15" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="15" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 tot 15 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Vier in siliconen vormpjes</p><p><span>Klaar als</span>Een satéprikker komt er droog uit.</p></div>
@@ -1968,7 +1973,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="8" data-hi="10" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">8 tot 10 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Zes op bakpapier, met ruimte ertussen</p><p><span>Klaar als</span>De randen zijn vast, het midden mag nog zacht aanvoelen.</p></div>
@@ -1992,7 +1997,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="25" data-hi="35" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">25 tot 35 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="25" data-hi="35" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">25 tot 35 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Ja, 3 min</b></div></div>
           <div class="regels"><p><span>In de mand</span>Eén kleine vorm die in de mand past</p><p><span>Klaar als</span>Een prikker in het midden komt er droog uit.</p></div>
@@ -2016,7 +2021,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="190" data-lo="7" data-hi="7" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">7 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="190" data-lo="7" data-hi="7" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">190 &deg;C &middot; <b class="stijd">7 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"></div>
           <div class="regels"><p><span>Klaar als</span>Bruin en hol klinkend als je op de onderkant tikt.</p></div>
@@ -2040,7 +2045,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="200" data-lo="5" data-hi="5" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">5 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="200" data-lo="5" data-hi="5" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">200 &deg;C &middot; <b class="stijd">5 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"></div>
           <div class="regels"><p><span>Klaar als</span>Goudbruin. Vijf minuten volstaat, langer maakt ze hard.</p></div>
@@ -2064,7 +2069,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="12" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="12" data-hi="12" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">12 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"></div>
           <div class="regels"><p><span>Klaar als</span>Doorbakken bruin, en de onderkant klinkt hol.</p></div>
@@ -2088,7 +2093,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="10" data-hi="10" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">10 min</b></span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="10" data-hi="10" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">10 min</b></span></div></li></ol>
           <p class="getest">&#9733; Bij ons uitgetest, deze tijd klopt.</p>
           <div class="feiten"></div>
           <div class="regels"><p><span>Klaar als</span>Goudbruin en de laagjes staan los van elkaar.</p></div>
@@ -2117,7 +2122,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="180" data-lo="4" data-hi="6" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">4 tot 6 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="180" data-lo="4" data-hi="6" data-schud="3" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">180 &deg;C &middot; <b class="stijd">4 tot 6 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
           <div class="regels"><p><span>In de mand</span>Een losse laag, zonder extra olie</p><p><span>Klaar als</span>Ze zijn weer hard aan de buitenkant en heet in het midden.</p></div>
@@ -2141,7 +2146,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="3" data-hi="5" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">3 tot 5 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="3" data-hi="5" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">3 tot 5 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
           <div class="regels"><p><span>In de mand</span>Twee punten naast elkaar</p><p><span>Klaar als</span>De bodem is weer stevig en de kaas glimt.</p></div>
@@ -2165,7 +2170,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="5" data-hi="8" data-schud="4" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">5 tot 8 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="5" data-hi="8" data-schud="4" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">5 tot 8 min</b></span><span class="schud">Schudden om de 4 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>In stukken, niet gestapeld</p><p><span>Klaar als</span>Heet tot in het midden. Warm restjes één keer op, niet twee keer.</p></div>
@@ -2189,7 +2194,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="160" data-lo="3" data-hi="4" data-schud="0" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">3 tot 4 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="160" data-lo="3" data-hi="4" data-schud="0" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">160 &deg;C &middot; <b class="stijd">3 tot 4 min</b></span><span class="schud">Keren halverwege</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div></div>
           <div class="regels"><p><span>In de mand</span>Een half stokbrood of twee broodjes</p><p><span>Klaar als</span>De korst is weer krokant. Langer maakt hem hard als steen.</p></div>
@@ -2213,7 +2218,7 @@ ul.regelset li:last-child{margin-bottom:0;}
             <button class="lknop aan" type="button" data-vol="0">Normale lading</button>
             <button class="lknop" type="button" data-vol="1">Mand goed vol</button>
           </div>
-          <ol class="stappen"><li class="stap" data-graden="170" data-lo="5" data-hi="7" data-schud="3" data-wat="Zet op"><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">5 tot 7 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
+          <ol class="stappen"><li class="stap" data-graden="170" data-lo="5" data-hi="7" data-schud="3" data-wat="Zet op" data-stand="" data-functie=""><div class="lijf"><span class="wat">Zet op</span><span class="zet">170 &deg;C &middot; <b class="stijd">5 tot 7 min</b></span><span class="schud">Schudden om de 3 min</span></div></li></ol>
           
           <div class="feiten"><div><span>Voorverwarmen</span><b>Niet nodig</b></div><div class="kern"><span>Kerntemperatuur</span><b>75 &deg;C</b></div></div>
           <div class="regels"><p><span>In de mand</span>In één laag</p><p><span>Klaar als</span>Het korstje kraakt weer en de kern is heet.</p></div>
@@ -2316,6 +2321,8 @@ items.forEach(i=>{
     const plan=stappen.map((s,n)=>({
       wat:s.dataset.wat||('Stap '+(n+1)),
       graden:+s.dataset.graden,
+      stand:s.dataset.stand||'',
+      functie:s.dataset.functie||'',
       min: vol?volTijd(+s.dataset.lo):+s.dataset.lo,
       schud: vol?volSchud(+s.dataset.schud):(+s.dataset.schud)
     }));
@@ -2400,16 +2407,22 @@ function tik(){
 
   if(T.af){
     balk.classList.remove('schud');
-    sub.textContent=laatste?'Kijk of het klaar is'
-      :('Zet nu op '+T.plan[T.index+1].graden+' °C');
+    if(laatste){sub.textContent='Kijk of het klaar is';}
+    else{
+      const volgende=T.plan[T.index+1];
+      sub.textContent='Zet nu op '+volgende.graden+' °C'
+        +(volgende.stand?(', '+volgende.stand):'')
+        +(volgende.functie?(', '+volgende.functie+' aan'):'');
+    }
   }else if(schudden){
     balk.classList.add('schud');
     sub.textContent='Schudden!';
   }else{
     balk.classList.remove('schud');
     const volgend=T.momenten.find(m=>!m.gedaan);
-    sub.textContent=nummer+(volgend?('schudden over '+fmt(volgend.t-nu))
-                                   :(stap.graden+' °C'));
+    const zet=stap.graden+' °C'+(stap.stand?(' · '+stap.stand):'')
+      +(stap.functie?(' · '+stap.functie):'');
+    sub.textContent=nummer+(volgend?('schudden over '+fmt(volgend.t-nu)):zet);
   }
 }
 setInterval(tik,250);

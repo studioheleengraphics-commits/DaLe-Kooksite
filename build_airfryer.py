@@ -119,6 +119,11 @@ ol.stappen li .wat{display:block; font-family:'DM Sans',sans-serif; font-size:10
   letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
 ol.stappen li .zet{font-family:'DM Sans',sans-serif; font-weight:500; font-size:17px;}
 ol.stappen li .schud{display:block; font-size:13px; color:var(--zeegroen);}
+ol.stappen li .stand, ol.stappen li .functie{display:inline-block; margin-left:8px;
+  padding:2px 9px; border-radius:999px; font-family:'DM Sans',sans-serif;
+  font-size:11px; font-weight:500; letter-spacing:.6px; vertical-align:2px;}
+ol.stappen li .stand{background:var(--zeegroen); color:var(--wit);}
+ol.stappen li .functie{border:1px solid var(--zeegroen); color:var(--zeegroen);}
 
 .getest{margin:12px 0 0; font-size:13.5px; color:var(--zeegroen);}
 .feiten{display:grid; grid-template-columns:repeat(2,1fr); gap:14px 18px;
@@ -257,6 +262,10 @@ def stappen_van(it):
     # Alleen meenemen als de bron er iets over zegt, anders zwijgt de site erover.
     if "schudden" in it:
         stap["schudden"] = it["schudden"]
+    if it.get("stand"):
+        stap["stand"] = it["stand"]
+    if it.get("functie"):
+        stap["functie"] = it["functie"]
     return [stap]
 
 
@@ -303,13 +312,22 @@ def bouw_item(it):
             schudregel = f'<span class="schud">Schudden om de {schud} min</span>'
         else:
             schudregel = '<span class="schud">Keren halverwege</span>'
+        stand = s.get("stand", "")
+        functie = s.get("functie", "")
+        standbadge = (f'<span class="stand">{html.escape(stand)}</span>'
+                      if stand else "")
+        if functie:
+            standbadge += f'<span class="functie">{html.escape(functie)} aan</span>'
         regels_stappen.append(
             f'<li class="stap" data-graden="{s["graden"]}" data-lo="{s["minuten"][0]}"'
             f' data-hi="{s["minuten"][-1]}" data-schud="{schud}"'
-            f' data-wat="{html.escape(wat)}">{nr}<div class="lijf">'
+            f' data-wat="{html.escape(wat)}" data-stand="{html.escape(stand)}"'
+            f' data-functie="{html.escape(functie)}">'
+            f'{nr}<div class="lijf">'
             f'<span class="wat">{html.escape(wat)}</span>'
             f'<span class="zet">{s["graden"]} &deg;C &middot; '
-            f'<b class="stijd">{tijd_tekst(s["minuten"][0], s["minuten"][-1])}</b></span>'
+            f'<b class="stijd">{tijd_tekst(s["minuten"][0], s["minuten"][-1])}</b>'
+            f'{standbadge}</span>'
             f'{schudregel}</div></li>')
 
     feiten = []
@@ -507,6 +525,8 @@ items.forEach(i=>{
     const plan=stappen.map((s,n)=>({
       wat:s.dataset.wat||('Stap '+(n+1)),
       graden:+s.dataset.graden,
+      stand:s.dataset.stand||'',
+      functie:s.dataset.functie||'',
       min: vol?volTijd(+s.dataset.lo):+s.dataset.lo,
       schud: vol?volSchud(+s.dataset.schud):(+s.dataset.schud)
     }));
@@ -591,16 +611,22 @@ function tik(){
 
   if(T.af){
     balk.classList.remove('schud');
-    sub.textContent=laatste?'Kijk of het klaar is'
-      :('Zet nu op '+T.plan[T.index+1].graden+' °C');
+    if(laatste){sub.textContent='Kijk of het klaar is';}
+    else{
+      const volgende=T.plan[T.index+1];
+      sub.textContent='Zet nu op '+volgende.graden+' °C'
+        +(volgende.stand?(', '+volgende.stand):'')
+        +(volgende.functie?(', '+volgende.functie+' aan'):'');
+    }
   }else if(schudden){
     balk.classList.add('schud');
     sub.textContent='Schudden!';
   }else{
     balk.classList.remove('schud');
     const volgend=T.momenten.find(m=>!m.gedaan);
-    sub.textContent=nummer+(volgend?('schudden over '+fmt(volgend.t-nu))
-                                   :(stap.graden+' °C'));
+    const zet=stap.graden+' °C'+(stap.stand?(' · '+stap.stand):'')
+      +(stap.functie?(' · '+stap.functie):'');
+    sub.textContent=nummer+(volgend?('schudden over '+fmt(volgend.t-nu)):zet);
   }
 }
 setInterval(tik,250);

@@ -21,12 +21,13 @@
           ]
         },
         {
-          "wat": "Max Crisp",
+          "wat": "Afwerken",
           "graden": 240,
           "minuten": [
             5,
             5
-          ]
+          ],
+          "stand": "Max Crisp"
         }
       ],
       "klaar": "Rondom donker en krokant, heet tot in de kern.",

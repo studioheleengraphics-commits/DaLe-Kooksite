@@ -106,6 +106,13 @@ Aandachtspunten:
   Hetzelfde geldt voor `voorverwarmen`.
 - `kern` alleen bij vlees en vis, in graden. Die staat in het rood, want daar
   hangt meer van af dan van de klok.
+- `stand` is een programma met een eigen temperatuur, zoals Max Crisp. Die komt
+  als een gevuld zeegroen label naast de tijd te staan.
+- `functie` is iets wat je bij eender welke stand kan aanzetten, zoals Double
+  Stack Pro, dat de bovenste laag van het mandje extra warmte geeft. Die krijgt
+  een omlijnd label, zodat je in één oogopslag ziet dat het iets anders is dan
+  een stand. Beide velden mogen samen op dezelfde stap staan, en de timer zegt
+  ze allebei bij de overgang naar een volgende stap.
 - `getest: true` is het belangrijkste veld van de hele site: het betekent dat
   die tijd thuis is uitgeprobeerd en klopt. Het product krijgt een rode ster en
   komt achter de sterknop bovenaan. Zet het alleen bij wat echt gemeten is.
