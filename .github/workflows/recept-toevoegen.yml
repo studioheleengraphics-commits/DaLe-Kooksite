@@ -11,16 +11,20 @@ permissions:
   issues: write
   id-token: write
 
-# Twee recepten tegelijk zouden elkaar op main in de weg zitten.
+# Twee dingen tegelijk zouden elkaar op main in de weg zitten. De
+# airfryerworkflow deelt deze wachtrij, want die pusht naar dezelfde branch.
 concurrency:
-  group: recept-toevoegen
+  group: site-publiceren
   cancel-in-progress: false
 
 jobs:
   recept:
     # Alleen issues van de eigenaar zelf zetten dit in gang. Een voorbijganger
     # die een issue opent op deze publieke repo start hier dus niets mee.
-    if: github.event.issue.user.login == github.repository_owner
+    # Een airfryertijd gaat naar zijn eigen workflow, niet hierheen.
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      !startsWith(github.event.issue.title, 'Airfryertijd:')
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

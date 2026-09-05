@@ -1,7 +1,9 @@
 # Kookboek Studio HeLeen
 
 Statische receptensite in de Studio HeLeen kookboek-huisstijl, voor de familie.
-Alleen lezen en koken: geen login, geen formulieren, niets dat kapot kan.
+Alleen lezen en koken: geen login, geen formulieren op de site zelf, niets
+dat kapot kan. Toevoegen gebeurt via een issueformulier op GitHub, dat de
+JSON laat schrijven en de generator laat draaien.
 
 ## Vaste werkafspraken
 

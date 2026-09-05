@@ -76,6 +76,33 @@ zijn richttijden uit algemene airfryerbronnen, bedoeld als vertrekpunt. Wat je
 uittest zet je erin, met `getest: true`, en dan klopt het voorgoed en op elke
 telefoon in plaats van in het geheugen van één app.
 
+## Iets toevoegen zonder JSON aan te raken
+
+Op de site zelf kan niemand iets toevoegen, en dat is bewust: geen server, geen
+login, dus ook niets dat stuk kan. Toevoegen gaat via GitHub, met een formulier
+in plaats van met accolades.
+
+Ga naar het tabblad Issues, klik New issue en kies:
+
+| Formulier | Waarvoor |
+|---|---|
+| Recept toevoegen | Een heel recept, hoe rommelig geplakt ook |
+| Airfryertijd toevoegen | Alleen een naam, een temperatuur en een tijd |
+
+Je vult in, je verstuurt, en een workflow schrijft de JSON, draait de generator
+en zet het online. Een minuutje later staat het op alle telefoons. Loopt er iets
+mis, dan blijft de issue open staan met een link naar wat er gebeurde.
+
+Twee dingen om te weten. Alleen issues van de eigenaar van de repository zetten
+dit in gang, dus de rest van de familie kan lezen en koken maar niets
+publiceren. En de titel van een airfryertijd moet met `Airfryertijd:` beginnen,
+want daaraan wordt het onderscheid met een recept gemaakt. Het formulier vult
+dat vanzelf voor je in.
+
+Dit werkt alleen als het secret `CLAUDE_CODE_OAUTH_TOKEN` klaarstaat in
+Settings, Secrets and variables, Actions. Maak het aan met `claude setup-token`.
+Ontbreekt het, dan stoppen de workflows meteen in plaats van rood te lopen.
+
 ## Online zetten met GitHub Pages
 
 1. Maak een repository, bijvoorbeeld `kookboek`. Zet hem op private als je dat

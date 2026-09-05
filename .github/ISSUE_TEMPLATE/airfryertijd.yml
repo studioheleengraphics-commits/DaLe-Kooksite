@@ -1,0 +1,67 @@
+name: Airfryertijd toevoegen
+description: Iets uitgeprobeerd in de airfryer? Zet het erbij, dan staat het op alle telefoons.
+title: "Airfryertijd: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Laat de titel beginnen met **Airfryertijd:**, daar wordt dit formulier aan
+        herkend. De rest mag rommelig. "15 minuten op 180" is genoeg.
+
+  - type: input
+    id: naam
+    attributes:
+      label: Wat bak je
+      description: Zoals je het zelf zou noemen. Bestaat het al op de site, dan wordt die tijd bijgewerkt.
+      placeholder: Kalkoenblokjes
+    validations:
+      required: true
+
+  - type: textarea
+    id: tijden
+    attributes:
+      label: Temperatuur en tijd
+      description: >
+        Bak je in twee ronden, schrijf ze dan na elkaar. Standen zoals Max Crisp
+        en functies zoals Double Stack Pro mag je er gewoon bij zetten.
+      placeholder: |
+        15 min op 180
+
+        of in twee ronden:
+        7 min op 180, dan 3 min op 240 Max Crisp
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: getest
+    attributes:
+      label: Uitgetest
+      description: Alleen aanvinken bij wat je echt gebakken hebt. Dit product krijgt dan een rode ster.
+      options:
+        - label: Dit heb ik zelf gebakken en deze tijd klopt
+
+  - type: dropdown
+    id: categorie
+    attributes:
+      label: Waar hoort het thuis
+      description: Twijfel je, laat het dan op de eerste staan.
+      options:
+        - Kies zelf maar
+        - Diepvries
+        - Aardappel
+        - Groenten
+        - Vlees en gevogelte
+        - Vis
+        - Hapjes
+        - Brood en bakken
+        - Opwarmen
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Iets dat erbij hoort
+      description: >
+        Of je schudde en hoe vaak, hoe vol de mand zat, waaraan je zag dat het
+        klaar was, welk merk het was. Alles wat je niet zegt, wordt ook niet
+        verzonnen.
+      placeholder: Optioneel.
