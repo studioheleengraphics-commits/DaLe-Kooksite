@@ -87,11 +87,21 @@ Ga naar het tabblad Issues, klik New issue en kies:
 | Formulier | Waarvoor |
 |---|---|
 | Recept toevoegen | Een heel recept, hoe rommelig geplakt ook |
-| Airfryertijd toevoegen | Alleen een naam, een temperatuur en een tijd |
+| Airfryertijd toevoegen of bijstellen | Iets nieuws, een tijd die niet klopt, of een ster |
 
 Je vult in, je verstuurt, en een workflow schrijft de JSON, draait de generator
 en zet het online. Een minuutje later staat het op alle telefoons. Loopt er iets
 mis, dan blijft de issue open staan met een link naar wat er gebeurde.
+
+Bij de airfryertijden hoef je alleen in te vullen wat er verandert. Bestaat het
+product al, dan wordt het bijgewerkt en blijft alles wat je leeg laat gewoon
+staan. Zo geef je een ster aan iets dat je eindelijk hebt uitgetest zonder de
+tijd opnieuw in te tikken, of stel je een tijd bij zonder de ster kwijt te
+raken. De ster zelf zet en haal je met het keuzemenu in datzelfde formulier.
+
+Eén ding dat niet vanzelf spreekt: workflows die op een issue reageren draaien
+altijd vanaf de standaardbranch. Een verbetering aan zo'n formulier of workflow
+doet dus pas iets zodra ze op `main` staat.
 
 Twee dingen om te weten. Alleen issues van de eigenaar van de repository zetten
 dit in gang, dus de rest van de familie kan lezen en koken maar niets

@@ -1,8 +1,8 @@
 name: Airfryertijd toevoegen
 
-# Maak een issue aan met het formulier "Airfryertijd toevoegen", en deze
-# workflow zet het om naar een product in airfryer/*.json, draait de
-# generator en publiceert het.
+# Maak een issue aan met het airfryerformulier, en deze workflow voegt het
+# product toe aan airfryer/*.json, stelt een bestaande tijd bij of zet er een
+# ster bij. Daarna draait de generator en gaat het online.
 on:
   issues:
     types: [opened]
@@ -67,48 +67,76 @@ jobs:
           # Het secret maak je met: claude setup-token
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
-            In .airfryer-inbox.md staat een airfryertijd die Leen wil toevoegen
-            aan Crispy DaLe, de airfryersite onder docs/airfryer/.
+            In .airfryer-inbox.md staat een ingevuld formulier voor Crispy DaLe,
+            de airfryersite onder docs/airfryer/. Het kan gaan om iets nieuws,
+            om een tijd die bijgesteld wordt, of alleen om een ster.
 
             Lees eerst CLAUDE.md, hoofdstuk "Airfryertijden: Crispy DaLe". Daar
             staat de structuur van een product en wat elk veld doet. Houd je
             daar strikt aan.
 
-            Werkwijze:
-            1. Lees .airfryer-inbox.md en CLAUDE.md.
-            2. Kies het juiste bestand in airfryer/. Staat er een categorie in
-               het formulier, volg die dan. Staat er "Kies zelf maar", kies dan
-               de categorie waar het product thuishoort. Maak geen nieuwe
-               categorie aan tenzij het echt nergens past.
-            3. Bestaat er al een product met dezelfde of vrijwel dezelfde naam,
-               werk dat dan bij. Zet er geen tweede regel naast, want twee
-               waarheden naast elkaar maken de lijst onbetrouwbaar.
-            4. Schrijf minuten altijd als een lijst van twee: een vaste tijd
-               van 15 minuten wordt [15, 15].
-            5. Twee ronden na elkaar schrijf je als stappen, met een korte
-               kop in het veld wat, bijvoorbeeld "Garen" en "Afwerken".
-            6. Max Crisp is een stand met een eigen temperatuur en hoort in
-               het veld stand. Double Stack Pro is een functie die bij eender
-               welke stand kan en hoort in het veld functie.
-            7. Zet getest op true als het vinkje "Dit heb ik zelf gebakken"
-               is aangekruist, en anders niet.
-            8. Verzin niets. Staat er niets over schudden, voorverwarmen,
-               de hoeveelheid in de mand of waaraan je ziet dat het klaar is,
-               laat die velden dan gewoon weg. De site zwijgt er dan over,
-               en dat is beter dan een verzonnen cijfer bij vlees.
-            9. Vul trefwoorden aan met woorden waarop Leen zou zoeken, ook
-               een merknaam als die genoemd wordt.
-            10. Verwijder .airfryer-inbox.md weer.
-            11. Draai python3 build.py.
-            12. Commit in het Nederlands als "airfryertijd toegevoegd: <naam>"
-                of "airfryertijd bijgewerkt: <naam>", en push naar main.
+            Zoek eerst het product op naam in alle bestanden in airfryer/. Kijk
+            ook naar duidelijke varianten van dezelfde naam, zoals enkelvoud
+            tegenover meervoud, want anders komt hetzelfde product twee keer op
+            de lijst te staan. Wat je vindt, bepaalt wat je doet.
+
+            BESTAAT HET AL: werk het bij, en raak alleen aan wat het formulier
+            noemt. Alles wat leeg gelaten is, blijft staan zoals het staat.
+            - Staat er een temperatuur en tijd in, vervang die dan.
+            - Is dat veld leeg, laat de bestaande tijden dan met rust.
+            - Staat er iets bij "iets dat erbij hoort" dat een veld raakt,
+              zoals schudden of waaraan je ziet dat het klaar is, werk dat
+              veld dan bij. De rest blijft.
+            - Verplaats het product niet naar een andere categorie, tenzij het
+              formulier daar uitdrukkelijk om vraagt.
+
+            BESTAAT HET NOG NIET: maak het aan in het juiste bestand. Volg de
+            categorie uit het formulier. Staat er "Kies zelf maar", kies dan
+            waar het thuishoort, en maak geen nieuwe categorie aan tenzij het
+            echt nergens past. Ontbreekt de temperatuur of de tijd bij iets
+            nieuws, verander dan niets, leg in je slotbericht uit dat die
+            ontbreekt, en stop met exitcode 1. Dan blijft de issue open staan
+            en verzin jij geen tijd.
+
+            DE STER regelt het veld getest, en dat veld regel je alleen hier:
+            - "Zet er een ster bij" wordt getest: true.
+            - "Haal de ster weg" betekent het veld getest verwijderen.
+            - "Laat de ster zoals hij nu staat" betekent niet aankomen. Bij
+              iets nieuws krijgt het dan geen ster, want het is een richttijd
+              en geen meting.
+
+            Verder, voor alle gevallen:
+            - Schrijf minuten altijd als een lijst van twee: een vaste tijd
+              van 15 minuten wordt [15, 15].
+            - Twee ronden na elkaar schrijf je als stappen, met een korte kop
+              in het veld wat, bijvoorbeeld "Garen" en "Afwerken". Gaat een
+              product van twee ronden terug naar een, verwijder dan stappen en
+              zet graden en minuten terug.
+            - Max Crisp is een stand met een eigen temperatuur en hoort in het
+              veld stand. Double Stack Pro is een functie die bij eender welke
+              stand kan en hoort in het veld functie.
+            - Verzin niets. Staat er niets over schudden, voorverwarmen, de
+              hoeveelheid in de mand of waaraan je ziet dat het klaar is, laat
+              die velden dan weg bij iets nieuws en laat ze ongemoeid bij iets
+              bestaands. De site zwijgt er liever over dan dat er een verzonnen
+              cijfer bij vlees staat.
+            - Vul trefwoorden aan met woorden waarop Leen zou zoeken, ook een
+              merknaam als die genoemd wordt. Gooi bestaande trefwoorden niet weg.
+
+            Tot slot:
+            1. Verwijder .airfryer-inbox.md weer.
+            2. Draai python3 build.py.
+            3. Commit in het Nederlands, kort en concreet, met de naam van het
+               product erin: "airfryertijd toegevoegd: kalkoenblokjes",
+               "airfryertijd bijgesteld: boomstammetjes", "ster gezet bij:
+               keizerbroodjes" of "ster weggehaald bij: pizzapunt". Push naar main.
 
             Maak geen pull request en pas docs/ nooit met de hand aan, die map
             wordt volledig door build.py geschreven.
 
-            Sluit af met een korte alinea over wat je toegevoegd of bijgewerkt
-            hebt, in welke categorie, en welke velden je hebt weggelaten omdat
-            de gegevens ontbraken.
+            Sluit af met een korte alinea: wat er veranderd is, in welk bestand,
+            en wat je bewust hebt laten staan of weggelaten omdat de gegevens
+            ontbraken.
           claude_args: |
             --allowedTools "Read,Write,Edit,Glob,Grep,Bash"
             --max-turns 30
@@ -131,7 +159,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh issue comment "${{ github.event.issue.number }}" --body "Er liep iets mis bij het verwerken van deze airfryertijd. De issue blijft open staan.
+          gh issue comment "${{ github.event.issue.number }}" --body "Er liep iets mis, of er ontbrak iets in het formulier. De issue blijft open staan, er is niets gewijzigd.
 
           Wat er precies gebeurde, staat in het logboek van deze run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
