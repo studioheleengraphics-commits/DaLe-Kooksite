@@ -140,27 +140,35 @@ Hij loopt op je Claude-abonnement, dus er komt geen aparte factuur van de API
 bij. En omdat deze repository publiek staat, rekent GitHub ook de minuten van
 Actions niet aan.
 
-Aanmaken doe je zo:
+Aanmaken doe je zo, op je eigen computer:
 
-1. Zorg dat Claude Code op je eigen computer staat, en meld je aan.
-2. Draai in de terminal `claude setup-token`. Je krijgt een lange tekenreeks
-   terug. Die is de token.
-3. Ga in de repository naar Settings, Secrets and variables, Actions, en klik
+1. Open een terminal. Op Windows is dat PowerShell, op een Mac is dat Terminal.
+2. Kijk of Claude Code er al staat met `claude --version`. Krijg je een
+   versienummer, ga dan door naar stap 4.
+3. Installeren, één regel:
+   - Windows PowerShell: `irm https://claude.ai/install.ps1 | iex`
+   - Mac of Linux: `curl -fsSL https://claude.ai/install.sh | bash`
+4. Draai `claude setup-token`. Je browser opent, je meldt je aan en geeft
+   toestemming. Daarna verschijnt er een lange tekenreeks in de terminal. Die
+   is de token, en hij wordt nergens bewaard, dus kopieer hem meteen.
+5. Ga in de repository naar Settings, Secrets and variables, Actions, en klik
    New repository secret.
-4. Naam: `CLAUDE_CODE_OAUTH_TOKEN`. Waarde: die tekenreeks. Bewaren.
+6. Naam: `CLAUDE_CODE_OAUTH_TOKEN`. Waarde: die tekenreeks. Add secret.
 
 Het kan ook in één beweging: draai `/install-github-app` in Claude Code op je
 computer. Dat installeert de Claude GitHub App op de repository en zet de token
 er meteen bij. Daarvoor moet de GitHub CLI geïnstalleerd zijn.
 
-Plak de token nergens anders. Niet in een bestand in de repository, niet in
-een issue. Een secret is de enige plek waar hij hoort, want daar kan niemand
-hem nog uitlezen, ook jij niet.
+De token is een jaar geldig en hangt aan je Claude-abonnement. Zet dus een
+herinnering, want over een jaar stoppen de workflows met een foutmelding over
+authenticatie en maak je op dezelfde manier een nieuwe.
+
+Plak hem nergens anders. Niet in een bestand in de repository, niet in een
+issue, niet in een gesprek. Een secret is de enige plek waar hij hoort, want
+daar kan niemand hem nog uitlezen, ook jij niet.
 
 Zolang hij ontbreekt, stoppen de workflows meteen en netjes, zonder rode
-kruisjes op elke issue die je opent. Beginnen ze later te klagen over
-authenticatie, dan is de token verlopen of ingetrokken en maak je op dezelfde
-manier een nieuwe.
+kruisjes op elke issue die je opent.
 
 ## Online zetten met GitHub Pages
 
