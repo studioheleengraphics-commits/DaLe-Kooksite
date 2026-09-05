@@ -140,6 +140,8 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 /* voet en balk */
 .voet{text-align:center; color:var(--inkt-licht); font-size:12px;
   letter-spacing:.6px; padding:10px 0 30px;}
+.voet .bron{margin-top:8px;}
+.voet .bron a{border-bottom:1px solid rgba(173,44,44,.35);}
 .balk{position:fixed; left:0; right:0; bottom:0; background:var(--wit);
   border-top:1px solid var(--lijn); display:flex; gap:10px; padding:10px 16px;
   justify-content:center; z-index:9;}
@@ -243,6 +245,29 @@ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
 
 # ---------------------------------------------------------- receptpagina ----
 
+def bronregel(bron):
+    """Waar het recept vandaan komt, met een link als die er is.
+
+    Mag een gewone tekst zijn ("Van oma Mieke") of een object met een naam
+    en optioneel een url: {"naam": "Dagelijkse Kost", "url": "https://..."}.
+    """
+    if not bron:
+        return ""
+    if isinstance(bron, str):
+        return f'<div class="bron">Bron: {html.escape(bron)}</div>'
+
+    naam = bron.get("naam", "")
+    url = bron.get("url", "")
+    if not naam and not url:
+        return ""
+    # Alleen gewone weblinks, zodat er niets anders dan een url in de href belandt.
+    if url.startswith(("http://", "https://")):
+        tekst = html.escape(naam or url)
+        return (f'<div class="bron">Bron: <a href="{html.escape(url)}" '
+                f'target="_blank" rel="noopener noreferrer">{tekst}</a></div>')
+    return f'<div class="bron">Bron: {html.escape(naam)}</div>'
+
+
 def bouw_recept(r):
     meta = "".join(f"<div><span>{html.escape(m['label'])}</span><b>{html.escape(m['waarde'])}</b></div>"
                    for m in r.get("meta", []))
@@ -304,7 +329,7 @@ def bouw_recept(r):
     {tip}
     {praktijk}
   </article>
-  <footer class="voet">{html.escape(r.get('voet',''))}</footer>
+  <footer class="voet">{html.escape(r.get('voet',''))}{bronregel(r.get('bron'))}</footer>
 </main>
 <div class="balk">
   <button id="wakker">Scherm aan houden</button>

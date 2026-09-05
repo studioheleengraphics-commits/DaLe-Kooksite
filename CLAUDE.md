@@ -35,6 +35,7 @@ Alleen lezen en koken: geen login, geen formulieren, niets dat kapot kan.
   "tip": "De handgeschreven tip in het rode kader.",
   "uit_de_praktijk": [{ "kop": "Optioneel blok", "tekst": "Extra tips onderaan." }],
   "voet": "Korte serveer- of bewaarzin.",
+  "bron": { "naam": "Dagelijkse Kost", "url": "https://dagelijksekost.vrt.be/..." },
   "pdf": "gambas-al-ajillo.pdf"
 }
 ```
@@ -50,6 +51,10 @@ Aandachtspunten:
 - Zet de hoeveelheid vooraan in het veld `hoeveelheid`, niet in `naam`, anders kan
   de omrekening er niet bij.
 - `meta` bevat twee tot vier velden. Meer past niet netjes op een smal scherm.
+- `bron` vermeldt waar het recept vandaan komt, onderaan de receptpagina. Een
+  gewone tekst mag ook: `"bron": "Van oma Mieke"`. Bij een object is `url`
+  optioneel, en alleen http- en https-links worden klikbaar gemaakt. Laat het
+  veld weg als je de herkomst niet weet, en verzin geen bron.
 - `pdf` mag weg als er geen A4 bestaat. Elke receptpagina houdt een printknop:
   met een A4 opent die de PDF, zonder A4 print de browser de pagina zelf.
 
