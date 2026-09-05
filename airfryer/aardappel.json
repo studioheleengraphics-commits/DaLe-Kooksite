@@ -39,7 +39,8 @@
       "naam": "Aardappelblokjes",
       "trefwoorden": [
         "blokjes",
-        "gebakken aardappel"
+        "gebakken aardappel",
+        "double stack pro"
       ],
       "getest": true,
       "stappen": [
@@ -49,7 +50,8 @@
           "minuten": [
             16,
             16
-          ]
+          ],
+          "functie": "Double Stack Pro"
         },
         {
           "wat": "Afwerken",
@@ -57,7 +59,8 @@
           "minuten": [
             6,
             6
-          ]
+          ],
+          "functie": "Double Stack Pro"
         }
       ],
       "portie": "500 g blokjes van twee centimeter",
