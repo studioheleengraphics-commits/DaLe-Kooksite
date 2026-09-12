@@ -37,7 +37,7 @@ html{-webkit-text-size-adjust:100%;}
 body{
   margin:0; background:var(--papier); color:var(--inkt);
   font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  font-size:17px; line-height:1.6; padding-bottom:64px;
+  font-size:17px; line-height:1.6; padding-bottom:78px;
 }
 .wrap{max-width:760px; margin:0 auto; padding:0 20px;}
 a{color:var(--rood); text-decoration:none;}
@@ -155,6 +155,8 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
   border-radius:10px; border:1px solid var(--lijn); background:var(--wit);
   color:var(--inkt); font-size:14px; font-family:inherit; cursor:pointer;}
 .balk button.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
+.balk .nieuw{border-color:var(--rood); color:var(--rood);
+  font-family:'DM Sans',sans-serif; font-weight:500;}
 
 @media print{
   .balk,.terug,.porties button{display:none;}
@@ -229,6 +231,11 @@ def bouw_index(recepten):
   <p class="leeg" id="leeg" style="display:none">Niets gevonden. Andere zoekterm proberen?</p>
 </main>
 <footer class="voet">{len(recepten)} recepten · Studio HeLeen</footer>
+<div class="balk">
+  <a class="nieuw" href="https://github.com/{build_airfryer.REPO}/issues/new?template=recept.yml"
+     target="_blank" rel="noopener noreferrer">+ Recept toevoegen</a>
+  <a href="airfryer/index.html">Airfryer</a>
+</div>
 """
 
     js = """
