@@ -1,0 +1,71 @@
+{
+  "slug": "jorzo",
+  "titel": "Jorzo",
+  "kicker": "Snel op tafel · Gyros en orzo",
+  "categorie": "Snel op tafel",
+  "trefwoorden": ["gyros", "orzo", "varkensvlees", "champignons", "een pan", "tomaat"],
+  "intro": "Gyros en orzo in één pan, en daar komt de naam ook vandaan. De orzo gaat rauw bij de tomatensaus en kookt daarin gaar, zodat hij de smaak opneemt in plaats van in kookwater te liggen. Eén pan op het vuur, en verder alleen af en toe roeren.",
+  "porties": 4,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "Zachtjes koken", "waarde": "± 10 min" },
+    { "label": "Bereiding", "waarde": "Alles in één pan" },
+    { "label": "Niveau", "waarde": "Makkelijk" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "350 g", "naam": "varkensgyros" },
+    { "hoeveelheid": "225 g", "naam": "volkoren orzo" },
+    { "hoeveelheid": "200 g", "naam": "champignonmix met kruiden" },
+    { "hoeveelheid": "500 g", "naam": "passata" },
+    { "hoeveelheid": "400 g", "naam": "tomatenstukjes met chili" },
+    { "hoeveelheid": "250 ml", "naam": "water" },
+    { "hoeveelheid": "30 g", "naam": "gember" },
+    { "hoeveelheid": "2 tl", "naam": "fijngesneden knoflook, uit de diepvries" },
+    { "hoeveelheid": "1 tl", "naam": "komijn" },
+    { "hoeveelheid": "1", "naam": "blokje groentebouillon" },
+    { "hoeveelheid": "1", "naam": "bosje koriander" },
+    { "hoeveelheid": "1", "naam": "plantje basilicum" },
+    { "hoeveelheid": "", "naam": "olijfolie, om in te bakken" },
+    { "hoeveelheid": "", "naam": "peper" }
+  ],
+  "stappen": [
+    {
+      "kop": "Aromaten aanzetten",
+      "tekst": "Verhit een scheut olijfolie op middelhoog vuur en bak de knoflook en de gember kort aan. Roer de komijn erdoor en laat die even meebakken. Droge kruiden geven hun smaak pas af in warm vet, dus dit korte moment is geen overslaan waard."
+    },
+    {
+      "kop": "Gyros en champignons bakken",
+      "tekst": "Voeg de gyros toe en bak het vlees rondom aan. Doe er dan de champignons bij en laat ze meestoven tot ze kleuren. Ze geven eerst vocht af: wacht tot dat verdampt is, anders stooft je vlees in plaats van te bakken."
+    },
+    {
+      "kop": "Tomaat erbij",
+      "tekst": "Voeg de tomatenstukjes met chili en de passata toe en laat enkele minuten pruttelen. De saus wordt zo alvast iets dikker, wat straks scheelt wanneer de orzo er vocht uit trekt."
+    },
+    {
+      "kop": "Orzo en bouillon",
+      "tekst": "Doe de orzo, het bouillonblokje en ongeveer 250 ml water in de pan. Roer goed door en breng aan de kook. De orzo gaat rauw de saus in, dus zorg dat alles onder het vocht zit."
+    },
+    {
+      "kop": "Zachtjes gaar laten koken",
+      "tekst": "Laat ongeveer 10 minuten zachtjes koken tot de orzo gaar is en de saus grotendeels is opgenomen. Roer regelmatig, want orzo geeft zetmeel af en zakt naar de bodem."
+    },
+    {
+      "kop": "Verse kruiden op het einde",
+      "tekst": "Snijd de koriander en de basilicum fijn en meng ze er van het vuur door. Kruid af met peper. Verse kruiden verliezen hun geur als ze meekoken, dus die gaan er pas in wanneer de pan al van het vuur is."
+    }
+  ],
+  "tip": "Roer in die laatste tien minuten echt regelmatig. Orzo geeft zetmeel af en zakt naar de bodem, en wat daar blijft liggen bakt aan voor je het merkt. Staat de pan droog terwijl de orzo nog hard is, giet er dan een scheutje water bij.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Volkoren orzo",
+      "tekst": "Die drinkt wat meer vocht dan de gewone en heeft soms een paar minuten langer nodig. Proef voor je de pan van het vuur haalt."
+    },
+    {
+      "kop": "Kruiden naar smaak",
+      "tekst": "De champignonmix en de tomatenstukjes zijn allebei al gekruid, en het bouillonblokje brengt zout mee. Proef dus eerst voor je nog iets toevoegt."
+    }
+  ],
+  "voet": "Eén pan, van rauwe orzo tot bord.",
+  "bron": "Colruyt",
+  "pdf": "jorzo.pdf"
+}
