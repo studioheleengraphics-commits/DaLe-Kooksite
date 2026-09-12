@@ -138,8 +138,40 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 .balk .nieuw{border-color:var(--rood); color:var(--rood);
   font-family:'DM Sans',sans-serif; font-weight:500;}
 
+/* het venster om een recept door te sturen */
+[hidden]{display:none !important;}
+.venster{position:fixed; inset:0; z-index:20; background:rgba(31,29,26,.55);
+  display:flex; align-items:flex-end; justify-content:center;}
+.venster-kaart{background:var(--wit); width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto; border-radius:16px 16px 0 0;
+  padding:22px 20px 24px;}
+.venster-kaart h3{font-family:'DM Sans',sans-serif; font-size:20px; margin:0 0 6px;
+  color:var(--rood);}
+.venster-kaart .uitleg{margin:0 0 18px; font-size:14px; color:var(--inkt-zacht);}
+.veld{margin-bottom:14px;}
+.veld label{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);
+  margin-bottom:5px;}
+.veld input, .veld textarea{width:100%; padding:12px 14px; border:1px solid var(--lijn);
+  border-radius:10px; font-size:16px; font-family:inherit; color:var(--inkt);
+  background:var(--wit);}
+.veld textarea{resize:vertical; line-height:1.5;}
+.veld input:focus, .veld textarea:focus{outline:none; border-color:var(--zeegroen);}
+.veld input::-webkit-outer-spin-button,
+.veld input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
+.veld input[type=number]{-moz-appearance:textfield;}
+.velden{display:flex; gap:12px;}
+.velden .veld{flex:1;}
+.vensternoot{font-size:13px; color:var(--inkt-zacht); margin:0 0 16px;}
+.venster-knoppen{display:flex; gap:10px;}
+.venster-knoppen button{flex:1; padding:14px; border-radius:10px;
+  border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  font-family:inherit; font-size:15px; cursor:pointer;}
+.venster-knoppen button.hoofd{background:var(--rood); border-color:var(--rood);
+  color:var(--wit); font-family:'DM Sans',sans-serif; font-weight:500;}
+
 @media print{
-  .balk,.terug,.porties button{display:none;}
+  .balk,.terug,.porties button,.venster{display:none;}
   body{background:var(--wit); padding:0;}
   .recept{border:none; padding:0;}
 }

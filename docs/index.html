@@ -138,8 +138,40 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 .balk .nieuw{border-color:var(--rood); color:var(--rood);
   font-family:'DM Sans',sans-serif; font-weight:500;}
 
+/* het venster om een recept door te sturen */
+[hidden]{display:none !important;}
+.venster{position:fixed; inset:0; z-index:20; background:rgba(31,29,26,.55);
+  display:flex; align-items:flex-end; justify-content:center;}
+.venster-kaart{background:var(--wit); width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto; border-radius:16px 16px 0 0;
+  padding:22px 20px 24px;}
+.venster-kaart h3{font-family:'DM Sans',sans-serif; font-size:20px; margin:0 0 6px;
+  color:var(--rood);}
+.venster-kaart .uitleg{margin:0 0 18px; font-size:14px; color:var(--inkt-zacht);}
+.veld{margin-bottom:14px;}
+.veld label{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);
+  margin-bottom:5px;}
+.veld input, .veld textarea{width:100%; padding:12px 14px; border:1px solid var(--lijn);
+  border-radius:10px; font-size:16px; font-family:inherit; color:var(--inkt);
+  background:var(--wit);}
+.veld textarea{resize:vertical; line-height:1.5;}
+.veld input:focus, .veld textarea:focus{outline:none; border-color:var(--zeegroen);}
+.veld input::-webkit-outer-spin-button,
+.veld input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
+.veld input[type=number]{-moz-appearance:textfield;}
+.velden{display:flex; gap:12px;}
+.velden .veld{flex:1;}
+.vensternoot{font-size:13px; color:var(--inkt-zacht); margin:0 0 16px;}
+.venster-knoppen{display:flex; gap:10px;}
+.venster-knoppen button{flex:1; padding:14px; border-radius:10px;
+  border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  font-family:inherit; font-size:15px; cursor:pointer;}
+.venster-knoppen button.hoofd{background:var(--rood); border-color:var(--rood);
+  color:var(--wit); font-family:'DM Sans',sans-serif; font-weight:500;}
+
 @media print{
-  .balk,.terug,.porties button{display:none;}
+  .balk,.terug,.porties button,.venster{display:none;}
   body{background:var(--wit); padding:0;}
   .recept{border:none; padding:0;}
 }
@@ -260,12 +292,44 @@ ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
 </main>
 <footer class="voet">12 recepten · Studio HeLeen</footer>
 <div class="balk">
-  <a class="nieuw" href="https://github.com/studioheleengraphics-commits/DaLe-Kooksite/issues/new?template=recept.yml"
+  <a class="nieuw" id="v-nieuw"
+     href="https://github.com/studioheleengraphics-commits/DaLe-Kooksite/issues/new?template=recept.yml"
      target="_blank" rel="noopener noreferrer">+ Recept toevoegen</a>
   <a href="airfryer/index.html">Airfryer</a>
 </div>
 
-<script>
+<div class="venster" id="venster" hidden>
+  <div class="venster-kaart">
+    <h3>Recept toevoegen</h3>
+    <p class="uitleg">Typ het erin zoals je het tegenkwam. Rommelig mag, het wordt
+      toch herschreven in de kookboekstijl.</p>
+    <div class="veld"><label for="v-titel">Hoe heet het</label>
+      <input id="v-titel" type="text" placeholder="Gambas al ajillo"></div>
+    <div class="velden">
+      <div class="veld"><label for="v-cat">Categorie</label>
+        <input id="v-cat" type="text" list="v-catlijst" placeholder="Tapas">
+        <datalist id="v-catlijst"><option value="Basis"><option value="Hapjes"><option value="Mealprep"><option value="Snel op tafel"></datalist></div>
+      <div class="veld"><label for="v-porties">Voor hoeveel</label>
+        <input id="v-porties" type="number" inputmode="numeric" placeholder="4"></div>
+    </div>
+    <div class="veld"><label for="v-recept">Ingredi&#235;nten en bereiding</label>
+      <textarea id="v-recept" rows="8"
+        placeholder="400 g gepelde garnalen&#10;4 tenen knoflook&#10;&#10;1. ..."></textarea></div>
+    <div class="veld"><label for="v-extra">Iets dat erbij hoort</label>
+      <textarea id="v-extra" rows="2"
+        placeholder="Van wie het komt, waar het vorige keer misging."></textarea></div>
+    <p class="vensternoot">Met <b>Doorsturen</b> opent het formulier op GitHub met
+      alles al ingevuld. Daar op <b>Submit</b> duwen en het recept komt op de site.
+      Tot dan blijft wat je typt op dit toestel staan.</p>
+    <div class="venster-knoppen">
+      <button id="v-sluit" type="button">Later</button>
+      <button id="v-stuur" class="hoofd" type="button">Doorsturen</button>
+    </div>
+  </div>
+</div>
+
+<script>const REPO="studioheleengraphics-commits/DaLe-Kooksite";
+
 const zoek=document.getElementById('zoek');
 const kaarten=[...document.querySelectorAll('.kaart')];
 let cat='';
@@ -282,6 +346,61 @@ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
   document.querySelectorAll('.chip').forEach(x=>x.classList.remove('aan'));
   c.classList.add('aan'); cat=c.dataset.cat; filter();
 }));
+
+/* Het venster om een recept door te sturen. Er komt niets op de site zelf te
+   staan: het opent het formulier op GitHub, alvast ingevuld. Een half getypt
+   recept blijft in deze browser bewaard, zodat je de pagina kan wegleggen. */
+const venster=document.getElementById('venster');
+const VELDEN=['titel','cat','porties','recept','extra'];
+const CONCEPT='kookboek-concept-v1';
+
+function el(n){return document.getElementById('v-'+n);}
+
+function bewaarConcept(){
+  const c={}; VELDEN.forEach(n=>{c[n]=el(n).value;});
+  try{localStorage.setItem(CONCEPT,JSON.stringify(c));}catch(e){}
+}
+function leegConcept(){
+  VELDEN.forEach(n=>{el(n).value='';});
+  try{localStorage.removeItem(CONCEPT);}catch(e){}
+}
+function opendVenster(){
+  let c={};
+  try{c=JSON.parse(localStorage.getItem(CONCEPT))||{};}catch(e){}
+  VELDEN.forEach(n=>{el(n).value=c[n]||'';});
+  venster.hidden=false;
+  document.body.style.overflow='hidden';
+  el('titel').focus();
+}
+function sluitVenster(){
+  bewaarConcept();
+  venster.hidden=true;
+  document.body.style.overflow='';
+}
+
+document.getElementById('v-nieuw').addEventListener('click',e=>{
+  e.preventDefault(); opendVenster();
+});
+document.getElementById('v-sluit').addEventListener('click',sluitVenster);
+venster.addEventListener('click',e=>{if(e.target===venster)sluitVenster();});
+VELDEN.forEach(n=>el(n).addEventListener('input',bewaarConcept));
+
+document.getElementById('v-stuur').addEventListener('click',()=>{
+  const titel=el('titel').value.trim(), recept=el('recept').value.trim();
+  if(!titel){alert('Geef het gerecht eerst een naam.');return;}
+  if(!recept){alert('Zet er ingredienten of een bereiding bij.');return;}
+  const p=new URLSearchParams({template:'recept.yml',
+                               title:'Recept: '+titel, recept:recept});
+  const rest={porties:el('porties').value.trim(),
+              categorie:el('cat').value.trim(),
+              opmerkingen:el('extra').value.trim()};
+  Object.keys(rest).forEach(k=>{if(rest[k])p.set(k,rest[k]);});
+  window.open('https://github.com/'+REPO+'/issues/new?'+p.toString(),
+              '_blank','noopener');
+  leegConcept();
+  venster.hidden=true;
+  document.body.style.overflow='';
+});
 </script>
 </body>
 </html>

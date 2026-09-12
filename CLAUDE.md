@@ -1,9 +1,10 @@
 # Kookboek Studio HeLeen
 
 Statische receptensite in de Studio HeLeen kookboek-huisstijl, voor de familie.
-Alleen lezen en koken: geen login, geen formulieren op de site zelf, niets
-dat kapot kan. Toevoegen gebeurt via een issueformulier op GitHub, dat de
-JSON laat schrijven en de generator laat draaien.
+Alleen lezen en koken: geen login, geen database, niets dat kapot kan.
+Toevoegen gebeurt via een issueformulier op GitHub, dat de JSON laat schrijven
+en de generator laat draaien. De knop op de site vult dat formulier alvast in,
+maar schrijft zelf niets.
 
 ## Vaste werkafspraken
 
@@ -64,6 +65,21 @@ Aandachtspunten:
   veld weg als je de herkomst niet weet, en verzin geen bron.
 - `pdf` mag weg als er geen A4 bestaat. Elke receptpagina houdt een printknop:
   met een A4 opent die de PDF, zonder A4 print de browser de pagina zelf.
+
+## De knop Recept toevoegen
+
+Onderaan de overzichtspagina staat een rode knop die een venster opent: titel,
+categorie, porties, ingrediënten met bereiding, en een opmerking. `Doorsturen`
+opent het issueformulier `recept.yml` op GitHub met alles al ingevuld, zodat er
+daar enkel nog op Submit geduwd moet worden en de workflow de rest doet. Er komt
+dus niets rechtstreeks op de site terecht.
+
+- Wat er getypt is zonder door te sturen, blijft staan in `localStorage` onder
+  `kookboek-concept-v1`, en dus alleen op dat ene toestel.
+- Verander je de veld-id's in `.github/ISSUE_TEMPLATE/recept.yml`, pas dan ook
+  de sleutels in de `URLSearchParams` van `bouw_index` aan, anders opent het
+  formulier leeg.
+- Zonder JavaScript blijft de knop een gewone link naar het lege issueformulier.
 
 ## Airfryertijden: Crispy DaLe
 
