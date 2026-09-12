@@ -1,11 +1,14 @@
 # Kookboek Studio HeLeen
 
 Statische receptensite in de Studio HeLeen kookboek-huisstijl, voor de familie.
-Alleen lezen en koken: geen login, geen formulieren, niets dat kapot kan.
+Alleen lezen en koken: geen login, geen formulieren op de site zelf, niets
+dat kapot kan. Toevoegen gebeurt via een issueformulier op GitHub, dat de
+JSON laat schrijven en de generator laat draaien.
 
 ## Vaste werkafspraken
 
-- `recepten/*.json` is de enige bron. Alles wat je verandert, verander je daar.
+- `recepten/*.json` en `airfryer/*.json` zijn de enige bronnen. Alles wat je
+  verandert, verander je daar.
 - `docs/` wordt volledig overschreven door de generator. Nooit handmatig aanpassen.
 - `a4/*.html` is de bron van de print-PDF's, `pdf/` het resultaat. Wil je een A4
   aanpassen, pas dan het HTML-bestand aan en draai `python3 maak-a4.py <slug>`.
@@ -61,6 +64,87 @@ Aandachtspunten:
   veld weg als je de herkomst niet weet, en verzin geen bron.
 - `pdf` mag weg als er geen A4 bestaat. Elke receptpagina houdt een printknop:
   met een A4 opent die de PDF, zonder A4 print de browser de pagina zelf.
+
+## Airfryertijden: Crispy DaLe
+
+Tweede site in dezelfde repo, onder `docs/airfryer/`. Zelfde huisstijl, andere
+inhoud: een lange lijst producten met temperatuur, tijd en een timer. Wordt
+gegenereerd door `build_airfryer.py`, dat vanzelf meedraait met `build.py`.
+
+- `airfryer/*.json` is de bron. Eén bestand per categorie, niet per product,
+  want anders sta je bij elke wijziging in tachtig bestanden te zoeken.
+- `volgorde` bepaalt waar de categorie in de lijst komt.
+- Foto's komen in `airfryer/fotos/` en worden meegekopieerd. Zet de bestandsnaam
+  in het veld `foto` van het product. Zonder foto blijft de rij gewoon smaller.
+- De pagina draagt alle brongegevens mee in een constante `BRON`, zodat de
+  knoppen Toevoegen en Aanpassen een rij opnieuw kunnen opbouwen. Wat daar
+  bewaard wordt, staat in `localStorage` onder `crispy-dale-eigen-v1` en dus
+  alleen op dat ene toestel. De bron in `airfryer/*.json` blijft de waarheid.
+- **Let op bij het aanpassen van een rij:** `maakItemHtml` in de JavaScript
+  bouwt precies dezelfde opmaak als `bouw_item` in Python. Verander je de vorm
+  van een rij, verander die dan op allebei de plekken, anders ziet een zelf
+  toegevoegd product er anders uit dan de rest.
+
+```json
+{
+  "categorie": "Diepvries",
+  "volgorde": 1,
+  "intro": "Eén zin boven de categorie.",
+  "items": [
+    {
+      "naam": "Frieten uit de diepvries",
+      "trefwoorden": ["friet", "patat"],
+      "getest": true,
+      "foto": "frieten.jpg",
+      "graden": 200,
+      "minuten": [15, 18],
+      "schudden": 7,
+      "voorverwarmen": true,
+      "portie": "400 g, hooguit twee lagen dik",
+      "kern": 75,
+      "klaar": "Waaraan je ziet dat het klaar is.",
+      "tip": "De handgeschreven notitie in het rode kader."
+    }
+  ]
+}
+```
+
+Aandachtspunten:
+
+- `minuten` is altijd een lijst van twee: de korte en de lange tijd. De timer
+  neemt de korte, want dan ga je kijken. Is er maar één tijd, schrijf dan
+  `[10, 10]`.
+- `schudden` is het aantal minuten tussen twee schudmomenten. De timer piept
+  dan. Zet `0` bij alles wat je één keer keert. Laat het veld weg als je het
+  niet weet, dan zegt de site er niets over in plaats van iets te verzinnen.
+  Hetzelfde geldt voor `voorverwarmen`.
+- `kern` alleen bij vlees en vis, in graden. Die staat in het rood, want daar
+  hangt meer van af dan van de klok.
+- `stand` is een programma met een eigen temperatuur, zoals Max Crisp. Die komt
+  als een gevuld zeegroen label naast de tijd te staan.
+- `functie` is iets wat je bij eender welke stand kan aanzetten, zoals Double
+  Stack Pro, dat de bovenste laag van het mandje extra warmte geeft. Die krijgt
+  een omlijnd label, zodat je in één oogopslag ziet dat het iets anders is dan
+  een stand. Beide velden mogen samen op dezelfde stap staan, en de timer zegt
+  ze allebei bij de overgang naar een volgende stap.
+- `getest: true` is het belangrijkste veld van de hele site: het betekent dat
+  die tijd thuis is uitgeprobeerd en klopt. Het product krijgt een rode ster en
+  komt achter de sterknop bovenaan. Zet het alleen bij wat echt gemeten is.
+  Een uitgeteste tijd vervangt de richttijd, er komt geen tweede regel bij.
+- Meerdere bakstappen na elkaar, zoals frieten die eerst garen en dan afbakken,
+  schrijf je als `stappen` in plaats van `graden` en `minuten`. De timer loodst
+  je er dan doorheen en zegt wanneer je de temperatuur moet veranderen:
+
+```json
+"stappen": [
+  { "wat": "Garen",    "graden": 160, "minuten": [15, 15], "schudden": 5 },
+  { "wat": "Afbakken", "graden": 200, "minuten": [8, 10],  "schudden": 4 }
+]
+```
+
+**Verzin hier al helemaal geen cijfers.** Een verkeerde tijd bij kip is geen
+schoonheidsfoutje. Neem tijden uit een betrouwbare bron of uit wat thuis is
+uitgetest, en zet in de tip dat het uitgetest is.
 
 ## Schrijfregels
 

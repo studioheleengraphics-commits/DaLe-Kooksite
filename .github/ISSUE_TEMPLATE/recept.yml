@@ -8,6 +8,9 @@ body:
         Plak het recept hieronder zoals je het gevonden hebt. Rommelig mag,
         het wordt toch herschreven in de kookboekstijl.
 
+        Gaat het enkel om een bereidingstijd in de airfryer, gebruik dan het
+        formulier "Airfryertijd toevoegen". Dat is een stuk korter.
+
   - type: textarea
     id: recept
     attributes:

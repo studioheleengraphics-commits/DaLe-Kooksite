@@ -1,0 +1,167 @@
+name: Airfryertijd toevoegen
+
+# Maak een issue aan met het airfryerformulier, en deze workflow voegt het
+# product toe aan airfryer/*.json, stelt een bestaande tijd bij of zet er een
+# ster bij. Daarna draait de generator en gaat het online.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write
+
+# Deelt de wachtrij met de receptworkflow, want ze pushen allebei naar main.
+concurrency:
+  group: site-publiceren
+  cancel-in-progress: false
+
+jobs:
+  airfryertijd:
+    # Alleen issues van de eigenaar zelf zetten dit in gang, en alleen die van
+    # het airfryerformulier. De titel is de scheidingslijn met de recepten.
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      startsWith(github.event.issue.title, 'Airfryertijd:')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      # Zolang het secret niet klaarstaat, doet deze workflow niets. Zo krijg
+      # je geen mislukte runs op elke issue die je aanmaakt.
+      - id: sleutel
+        env:
+          TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then
+            echo "klaar=ja" >> "$GITHUB_OUTPUT"
+          else
+            echo "klaar=nee" >> "$GITHUB_OUTPUT"
+            echo "Secret CLAUDE_CODE_OAUTH_TOKEN ontbreekt, deze run stopt hier."
+          fi
+
+      - uses: actions/checkout@v6
+        if: steps.sleutel.outputs.klaar == 'ja'
+        with:
+          ref: main
+
+      # Via een bestand, niet rechtstreeks in de prompt: de tekst van een
+      # issue mag aanhalingstekens en regeleindes bevatten zonder dat de
+      # workflow erover struikelt.
+      - name: De tijd in een bestand zetten
+        if: steps.sleutel.outputs.klaar == 'ja'
+        env:
+          TITEL: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+        run: |
+          {
+            echo "# $TITEL"
+            echo
+            echo "$BODY"
+          } > .airfryer-inbox.md
+
+      - uses: anthropics/claude-code-action@v1
+        if: steps.sleutel.outputs.klaar == 'ja'
+        with:
+          # Draait op je Claude-abonnement, dus zonder API-kosten.
+          # Het secret maak je met: claude setup-token
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            In .airfryer-inbox.md staat een ingevuld formulier voor Crispy DaLe,
+            de airfryersite onder docs/airfryer/. Het kan gaan om iets nieuws,
+            om een tijd die bijgesteld wordt, of alleen om een ster.
+
+            Lees eerst CLAUDE.md, hoofdstuk "Airfryertijden: Crispy DaLe". Daar
+            staat de structuur van een product en wat elk veld doet. Houd je
+            daar strikt aan.
+
+            Zoek eerst het product op naam in alle bestanden in airfryer/. Kijk
+            ook naar duidelijke varianten van dezelfde naam, zoals enkelvoud
+            tegenover meervoud, want anders komt hetzelfde product twee keer op
+            de lijst te staan. Wat je vindt, bepaalt wat je doet.
+
+            BESTAAT HET AL: werk het bij, en raak alleen aan wat het formulier
+            noemt. Alles wat leeg gelaten is, blijft staan zoals het staat.
+            - Staat er een temperatuur en tijd in, vervang die dan.
+            - Is dat veld leeg, laat de bestaande tijden dan met rust.
+            - Staat er iets bij "iets dat erbij hoort" dat een veld raakt,
+              zoals schudden of waaraan je ziet dat het klaar is, werk dat
+              veld dan bij. De rest blijft.
+            - Verplaats het product niet naar een andere categorie, tenzij het
+              formulier daar uitdrukkelijk om vraagt.
+
+            BESTAAT HET NOG NIET: maak het aan in het juiste bestand. Volg de
+            categorie uit het formulier. Staat er "Kies zelf maar", kies dan
+            waar het thuishoort, en maak geen nieuwe categorie aan tenzij het
+            echt nergens past. Ontbreekt de temperatuur of de tijd bij iets
+            nieuws, verander dan niets, leg in je slotbericht uit dat die
+            ontbreekt, en stop met exitcode 1. Dan blijft de issue open staan
+            en verzin jij geen tijd.
+
+            DE STER regelt het veld getest, en dat veld regel je alleen hier:
+            - "Zet er een ster bij" wordt getest: true.
+            - "Haal de ster weg" betekent het veld getest verwijderen.
+            - "Laat de ster zoals hij nu staat" betekent niet aankomen. Bij
+              iets nieuws krijgt het dan geen ster, want het is een richttijd
+              en geen meting.
+
+            Verder, voor alle gevallen:
+            - Schrijf minuten altijd als een lijst van twee: een vaste tijd
+              van 15 minuten wordt [15, 15].
+            - Twee ronden na elkaar schrijf je als stappen, met een korte kop
+              in het veld wat, bijvoorbeeld "Garen" en "Afwerken". Gaat een
+              product van twee ronden terug naar een, verwijder dan stappen en
+              zet graden en minuten terug.
+            - Max Crisp is een stand met een eigen temperatuur en hoort in het
+              veld stand. Double Stack Pro is een functie die bij eender welke
+              stand kan en hoort in het veld functie.
+            - Verzin niets. Staat er niets over schudden, voorverwarmen, de
+              hoeveelheid in de mand of waaraan je ziet dat het klaar is, laat
+              die velden dan weg bij iets nieuws en laat ze ongemoeid bij iets
+              bestaands. De site zwijgt er liever over dan dat er een verzonnen
+              cijfer bij vlees staat.
+            - Vul trefwoorden aan met woorden waarop Leen zou zoeken, ook een
+              merknaam als die genoemd wordt. Gooi bestaande trefwoorden niet weg.
+
+            Tot slot:
+            1. Verwijder .airfryer-inbox.md weer.
+            2. Draai python3 build.py.
+            3. Commit in het Nederlands, kort en concreet, met de naam van het
+               product erin: "airfryertijd toegevoegd: kalkoenblokjes",
+               "airfryertijd bijgesteld: boomstammetjes", "ster gezet bij:
+               keizerbroodjes" of "ster weggehaald bij: pizzapunt". Push naar main.
+
+            Maak geen pull request en pas docs/ nooit met de hand aan, die map
+            wordt volledig door build.py geschreven.
+
+            Sluit af met een korte alinea: wat er veranderd is, in welk bestand,
+            en wat je bewust hebt laten staan of weggelaten omdat de gegevens
+            ontbraken.
+          claude_args: |
+            --allowedTools "Read,Write,Edit,Glob,Grep,Bash"
+            --max-turns 30
+
+      - name: Melden dat het gelukt is
+        if: success() && steps.sleutel.outputs.klaar == 'ja'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ github.event.issue.number }}" --body "De tijd staat op de site. Geef GitHub Pages een minuutje en ververs dan https://studioheleengraphics-commits.github.io/DaLe-Kooksite/airfryer/
+
+          Klopt er iets niet, open dan een nieuwe issue met wat er anders moet.
+
+          ---
+          _Generated by [Claude Code](https://claude.ai/code)_"
+          gh issue close "${{ github.event.issue.number }}"
+
+      - name: Melden dat het misliep
+        if: failure() && steps.sleutel.outputs.klaar == 'ja'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue comment "${{ github.event.issue.number }}" --body "Er liep iets mis, of er ontbrak iets in het formulier. De issue blijft open staan, er is niets gewijzigd.
+
+          Wat er precies gebeurde, staat in het logboek van deze run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          ---
+          _Generated by [Claude Code](https://claude.ai/code)_"

@@ -14,6 +14,8 @@ import shutil
 import html
 from pathlib import Path
 
+import build_airfryer
+
 ROOT = Path(__file__).parent
 RECEPTEN = ROOT / "recepten"
 PDF_BRON = ROOT / "pdf"
@@ -42,6 +44,10 @@ a{color:var(--rood); text-decoration:none;}
 
 /* kop van de site */
 .kop{background:var(--wit); border-bottom:1px solid var(--lijn); padding:28px 0 24px;}
+.koprij{display:flex; align-items:center; justify-content:space-between; gap:14px;}
+.pil{border:1px solid var(--lijn); border-radius:999px; padding:8px 14px;
+  font-size:13px; color:var(--zeegroen); background:var(--wit); white-space:nowrap;
+  font-family:'DM Sans',sans-serif;}
 .kop h1{
   font-family:'DM Sans',sans-serif; font-weight:700; font-size:30px;
   margin:0; letter-spacing:-.4px;
@@ -208,7 +214,10 @@ def bouw_index(recepten):
 
     inhoud = f"""
 <header class="kop"><div class="wrap">
-  <h1>Het <span>kookboek</span></h1>
+  <div class="koprij">
+    <h1>Het <span>kookboek</span></h1>
+    <a class="pil" href="airfryer/index.html">Airfryer</a>
+  </div>
   <p>{SITE_ONDERTITEL}</p>
 </div></header>
 <main class="wrap">
@@ -406,6 +415,9 @@ def main():
 
     if PDF_BRON.exists():
         shutil.copytree(PDF_BRON, UIT / "pdf")
+
+    # docs/ is net leeggemaakt, dus de airfryersite komt er hierna weer bij.
+    build_airfryer.bouw(UIT / "airfryer")
 
     print(f"Klaar. {len(recepten)} recepten naar {UIT}/")
     for r in recepten:
