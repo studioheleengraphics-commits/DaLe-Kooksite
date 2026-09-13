@@ -38,6 +38,18 @@
       "klaar": "Diep goudbruin en de laagjes staan los van elkaar."
     },
     {
+      "naam": "Gevulde croissants",
+      "trefwoorden": [
+        "croissant",
+        "gevuld"
+      ],
+      "graden": 150,
+      "minuten": [
+        18,
+        18
+      ]
+    },
+    {
       "naam": "Geroosterd brood",
       "trefwoorden": [
         "toast",
