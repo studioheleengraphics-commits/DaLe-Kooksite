@@ -19,11 +19,14 @@ concurrency:
 
 jobs:
   recept:
-    # Alleen issues van de eigenaar zelf zetten dit in gang. Een voorbijganger
-    # die een issue opent op deze publieke repo start hier dus niets mee.
-    # Een airfryertijd gaat naar zijn eigen workflow, niet hierheen.
+    # Alleen issues van wie hieronder staat zetten dit in gang. Een
+    # voorbijganger die een issue opent op deze publieke repo start hier dus
+    # niets mee. Een airfryertijd gaat naar zijn eigen workflow, niet hierheen.
+    # Iemand erbij of eruit? Pas het lijstje aan, hier en in
+    # airfryertijd-toevoegen.yml, want de twee horen gelijk te lopen.
     if: >-
-      github.event.issue.user.login == github.repository_owner &&
+      contains(fromJSON('["studioheleengraphics-commits", "Smekke1976"]'),
+      github.event.issue.user.login) &&
       !startsWith(github.event.issue.title, 'Airfryertijd:')
     runs-on: ubuntu-latest
     timeout-minutes: 15
