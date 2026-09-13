@@ -292,7 +292,7 @@ def bouw_index(recepten):
       <textarea id="v-extra" rows="2"
         placeholder="Van wie het komt, waar het vorige keer misging."></textarea></div>
     <p class="vensternoot">Met <b>Doorsturen</b> opent het formulier op GitHub met
-      alles al ingevuld. Daar op <b>Submit</b> duwen en het recept komt op de site.
+      alles al ingevuld. Daar moet je ingelogd zijn, en dan op <b>Submit</b> duwen.
       Tot dan blijft wat je typt op dit toestel staan.</p>
     <div class="venster-knoppen">
       <button id="v-sluit" type="button">Later</button>

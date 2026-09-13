@@ -25,7 +25,7 @@ FOTOS = BRON / "fotos"
 SITE_TITEL = "Crispy DaLe"
 SITE_ONDERTITEL = "Airfryertijden · Studio HeLeen"
 
-# Waar het issueformulier staat, voor de knop "voorgoed op de site".
+# Waar het issueformulier staat, voor de knop "doorsturen naar Leen".
 REPO = "studioheleengraphics-commits/DaLe-Kooksite"
 
 # ---------------------------------------------------------------- stijl ----
@@ -565,8 +565,9 @@ INDEX_JS = r"""
 /* ------------------------------------------------- eigen aanpassingen ---- */
 /* Alles wat je hier zelf toevoegt of bijstelt, staat in de browser van dit
    toestel. Dat is meteen bruikbaar, maar het is niet hetzelfde als de site.
-   Met de knop "voorgoed op de site" gaat het naar GitHub en dan staat het
-   voor iedereen vast. */
+   Met de knop "doorsturen naar Leen" opent het issueformulier op GitHub, en
+   pas wanneer dat verstuurd is, staat het voor iedereen vast. Daar is een
+   GitHub-account voor nodig, dus de knop belooft niet meer dan doorsturen. */
 const SLEUTEL = 'crispy-dale-eigen-v1';
 let eigen = { items: [], wijzig: {} };
 
@@ -766,9 +767,10 @@ function vulEigenrij(i){
   rij.innerHTML=
     '<p class="eigennoot">'+(zelf
       ? 'Dit product staat alleen op deze telefoon.'
-      : 'Je hebt deze tijd zelf bijgesteld, alleen op deze telefoon.')+'</p>'+
+      : 'Je hebt deze tijd zelf bijgesteld, alleen op deze telefoon.')+
+      ' Doorsturen gaat via GitHub en vraagt daar een account.</p>'+
     '<div class="paneelknoppen">'+
-    '<a class="voorgoed" target="_blank" rel="noopener">Voorgoed op de site</a>'+
+    '<a class="voorgoed" target="_blank" rel="noopener">Doorsturen naar Leen</a>'+
     '<button class="terugzet" type="button">'+(zelf?'Verwijderen':'Zet terug')+'</button>'+
     '</div>';
   rij.querySelector('.voorgoed').href=githubLink(zelf||Object.assign(
