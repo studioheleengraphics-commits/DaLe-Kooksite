@@ -1,0 +1,114 @@
+{
+  "slug": "marry-me-chicken-pasta",
+  "titel": "Marry me chicken pasta",
+  "kicker": "Snel op tafel · Kip en tomaat",
+  "categorie": "Snel op tafel",
+  "trefwoorden": [
+    "pasta",
+    "kip",
+    "cherrytomaat",
+    "room",
+    "parmezaan",
+    "penne",
+    "eiwitrijk"
+  ],
+  "intro": "Penne door een roomsaus die begint bij cherrytomaatjes die je in de pan laat openbarsten, met plakjes goudbruine kipfilet erbovenop. Alles gebeurt in dezelfde pan, en het sap van die tomaatjes is wat de room van wit naar oranje trekt. De naam belooft nogal wat, en eerlijk is eerlijk: voor vijfhonderd calorieën en vijfenveertig gram eiwit doet dit bord zijn best.",
+  "porties": 1,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    {
+      "label": "Tijd",
+      "waarde": "± 25 minuten"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "± 500 kcal, 45 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "120 g",
+      "naam": "kipfilet"
+    },
+    {
+      "hoeveelheid": "100 g",
+      "naam": "cherrytomaat"
+    },
+    {
+      "hoeveelheid": "75 g",
+      "naam": "pasta, ongekookt"
+    },
+    {
+      "hoeveelheid": "30 ml",
+      "naam": "kookroom light"
+    },
+    {
+      "hoeveelheid": "10 g",
+      "naam": "Parmezaanse kaas"
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "olijfolie"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "knoflookpoeder"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "Italiaanse kruiden"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "chiliflakes"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peper en zout"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Pasta opzetten",
+      "tekst": "Kook de pasta in ruim gezouten water. Houd voor je afgiet een beetje kookvocht apart, dat heb je straks nodig als de saus te dik wordt."
+    },
+    {
+      "kop": "Kip bakken",
+      "tekst": "Kruid de kipfilet met knoflookpoeder, Italiaanse kruiden, peper en zout en bak hem goudbruin en gaar in de olijfolie. Haal hem uit de pan en laat hem liggen. Snijden doe je pas op het einde, anders loopt het vocht op je plank."
+    },
+    {
+      "kop": "Tomaatjes laten barsten",
+      "tekst": "Doe de cherrytomaatjes in dezelfde pan met wat extra Italiaanse kruiden en de chiliflakes. Laat ze bakken tot ze openbarsten en hun sap loslaten. Dit is het moment waar je saus vandaan komt, dus haast je hier niet doorheen."
+    },
+    {
+      "kop": "Room en parmezaan",
+      "tekst": "Voeg de kookroom en de Parmezaanse kaas toe en roer tot de kaas gesmolten is. Houd het vuur matig en breng de saus niet aan de kook, want light kookroom schift makkelijker dan volle."
+    },
+    {
+      "kop": "Pasta erdoor",
+      "tekst": "Schep de uitgelekte pasta door de saus en laat het geheel kort indikken tot elke buis bedekt is. Wordt het te dik, roer er dan een lepel kookvocht bij."
+    },
+    {
+      "kop": "Serveren",
+      "tekst": "Snijd de kipfilet in plakjes en leg ze op de pasta. Werk af met nog wat chiliflakes en peper van de molen."
+    }
+  ],
+  "tip": "Laat die cherrytomaatjes echt openbarsten voor de room erbij gaat. Het sap dat vrijkomt is de basis van de saus, en wie te vroeg giet houdt room met tomaatjes erin over in plaats van een saus. Duw ze desnoods plat met de bolle kant van je lepel.",
+  "uit_de_praktijk": [
+    {
+      "kop": "De kleur verraadt het",
+      "tekst": "Een goede saus is oranje, niet wit met rode bolletjes. Blijft ze bleek, dan hebben de tomaatjes te weinig sap afgegeven en mogen ze een minuutje terug voor de room erbij gaat."
+    },
+    {
+      "kop": "Basilicum op de foto",
+      "tekst": "Op het bronbeeld liggen er blaadjes basilicum bovenop, maar die staan niet in de ingrediëntenlijst. Heb je ze, gooi ze er dan zeker op, van het vuur af zodat ze hun geur houden."
+    }
+  ],
+  "voet": "Meteen op tafel, zolang de saus nog glanst.",
+  "bron": "De Snelle Keuken op Instagram",
+  "pdf": "marry-me-chicken-pasta.pdf"
+}
