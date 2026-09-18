@@ -15,6 +15,14 @@ maar schrijft zelf niets.
   aanpassen, pas dan het HTML-bestand aan en draai `python3 maak-a4.py <slug>`.
   Nooit een PDF vervangen zonder het bijbehorende HTML-bestand bij te werken,
   anders kan niemand die pagina later nog wijzigen.
+- **Bij elk nieuw recept hoort een A4.** Maak `a4/<slug>.html` uit het sjabloon
+  van de skill sh-kookboekpagina, draai `python3 maak-a4.py <slug>`, bekijk de
+  preview en zet dan `"pdf": "<slug>.pdf"` in de JSON. Een recept zonder A4 is
+  pas af als iemand uitdrukkelijk zegt dat het zo mag blijven.
+- Past de A4 niet op één pagina, dan zegt het script hoeveel millimeter eraf
+  moet. De ingrediëntenkolom is maar 55 mm breed, dus lange ingrediëntnamen
+  lopen om naar twee regels en kosten daar het meest. Kijk daar eerst, voor je
+  in de stapteksten begint te snoeien.
 - Na elke wijziging: `python3 build.py`. Zonder die stap verandert de site niet.
 - Controleer het resultaat voor je commit. Open de gegenereerde pagina of maak
   een screenshot op 390px breed, want de site wordt vooral op een telefoon
