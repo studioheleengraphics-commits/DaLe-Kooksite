@@ -1,0 +1,72 @@
+{
+  "slug": "bananenbroodmuffins",
+  "titel": "Bananenbroodmuffins",
+  "kicker": "Bakken · Uit de airfryer",
+  "categorie": "Bakken",
+  "trefwoorden": ["muffins", "bananenbrood", "banaan", "airfryer", "dadels", "walnoten", "bakken", "zoet"],
+  "intro": "Het beslag van een bananenbrood met dadels en walnoten, maar dan verdeeld over zes siliconen vormpjes in plaats van in één vorm. In de airfryer is dat de slimmere weg: kleine porties garen gelijkmatig, terwijl een dikke cake van boven al kleurt terwijl het midden nog nat is. Een kwartier en ze zijn klaar, tegen een halfuur voor een brood dat je daarna ook nog moet laten afkoelen.",
+  "porties": 6,
+  "portie_eenheid": "muffin|muffins",
+  "meta": [
+    { "label": "Richttijd", "waarde": "12 tot 15 min op 160 °C" },
+    { "label": "Vormpjes", "waarde": "Silicone, vier per ronde" },
+    { "label": "Per 100 g", "waarde": "± 253 kcal" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "2", "naam": "rijpe bananen" },
+    { "hoeveelheid": "100 g", "naam": "tarwebloem" },
+    { "hoeveelheid": "1", "naam": "ei" },
+    { "hoeveelheid": "40 g", "naam": "walnootstukjes" },
+    { "hoeveelheid": "40 g", "naam": "dadelstukjes" },
+    { "hoeveelheid": "35 ml", "naam": "zonnebloemolie" },
+    { "hoeveelheid": "25 ml", "naam": "melk, plantaardig mag ook" },
+    { "hoeveelheid": "2,5 el", "naam": "honing" },
+    { "hoeveelheid": "4 g", "naam": "bakpoeder" },
+    { "hoeveelheid": "0,75 tl", "naam": "gemalen kaneel" },
+    { "hoeveelheid": "", "naam": "snuf zout" }
+  ],
+  "stappen": [
+    {
+      "kop": "Airfryer en vormpjes klaar",
+      "tekst": "Verwarm de airfryer voor op 160 °C en zet zes siliconen vormpjes klaar. Kijk meteen hoeveel er naast elkaar in je mandje passen zonder elkaar te raken, want daar hangt af of je in één of in twee ronden bakt."
+    },
+    {
+      "kop": "Natte boel mengen",
+      "tekst": "Prak anderhalve banaan fijn met een vork. Meng er de olie, de honing, de melk en het ei door tot een glad geheel. Snijd de halve banaan die overblijft in zes dunne plakjes en houd die apart."
+    },
+    {
+      "kop": "Droge boel erdoor",
+      "tekst": "Roer de bloem, de kaneel, het bakpoeder en het zout erdoor tot je net geen droge bloem meer ziet, en stop dan. Doorroeren maakt het gluten in de bloem wakker, en dat geeft taaie muffins in plaats van luchtige."
+    },
+    {
+      "kop": "Vullen en beleggen",
+      "tekst": "Schep de dadels en de walnoten erdoor en verdeel het beslag over de vormpjes, tot tweederde en niet hoger. Leg op elke muffin een plakje banaan. Ze rijzen nog flink, en wat over de rand loopt bakt vast aan het mandje."
+    },
+    {
+      "kop": "Bakken",
+      "tekst": "Zet de vormpjes 12 tot 15 minuten in de airfryer op 160 °C. Passen ze er niet allemaal in, bak dan in twee ronden en houd het beslag ondertussen gewoon in de kom. Een tweede ronde in een al warme airfryer gaat meestal een tikje sneller."
+    },
+    {
+      "kop": "Prikken en afkoelen",
+      "tekst": "Prik met een satéprikker in het midden van de dikste muffin. Komt die er schoon uit, dan zijn ze klaar. Laat ze een paar minuten in de vormpjes staan voor je ze eruit haalt, anders scheur je de zachte randen kapot."
+    }
+  ],
+  "tip": "De klok is hier de tweede stem, de satéprikker de eerste. De airfryer blaast van boven, dus de kruin ziet er klaar uit terwijl het midden nog nat kan zijn. Kijk vanaf minuut twaalf en prik voor je de tijd vertrouwt.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Waar die tijd vandaan komt",
+      "tekst": "De 12 tot 15 minuten op 160 °C komen van de rij Muffins op Crispy DaLe, en diezelfde 160 °C staat ook in het bronrecept van HelloFresh. Het is een richttijd, geen uitgeteste tijd. Bak je ze, noteer dan wat het bij jou werd."
+    },
+    {
+      "kop": "Vier per ronde",
+      "tekst": "Crispy DaLe rekent op vier siliconen vormpjes naast elkaar. Met zes wordt het dus vier en dan twee, tenzij je mandje ruimer is of je met twee lagen kan werken."
+    },
+    {
+      "kop": "Liever één brood",
+      "tekst": "Giet hetzelfde beslag in een kleine cakevorm die in de mand past en bak 25 tot 35 minuten op 160 °C, de tijd die bij Cake in een vorm staat. Leg er na een kwartier los folie over zodra de bovenkant kleurt, want daar zit dan nog een nat midden onder."
+    }
+  ],
+  "voet": "Lauw het lekkerst, met de walnoten nog knapperig.",
+  "bron": "HelloFresh, gehalveerd en omgezet naar de airfryer",
+  "pdf": "bananenbroodmuffins.pdf"
+}
