@@ -1,0 +1,118 @@
+{
+  "slug": "kip-kerrie-pastasalade",
+  "titel": "Kip-kerrie pastasalade",
+  "kicker": "Snel op tafel · Koude pastasalade",
+  "categorie": "Snel op tafel",
+  "trefwoorden": [
+    "pastasalade",
+    "kip",
+    "kerrie",
+    "koud",
+    "druiven",
+    "yoghurt",
+    "eiwitrijk"
+  ],
+  "intro": "Koude fusilli met gebakken kipblokjes, halve druiven en komkommer, alles door een dressing van Griekse yoghurt met kerrie. De kerrie gaat twee keer de pan en de kom in: een beetje op de kip, de rest door de dressing. Zoet van de druiven, fris van de komkommer en koel van de yoghurt, en klaar op de tijd die de pasta nodig heeft.",
+  "porties": 1,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    {
+      "label": "Tijd",
+      "waarde": "± 20 minuten"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "± 530 kcal, 45 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "125 g",
+      "naam": "kipfilet"
+    },
+    {
+      "hoeveelheid": "75 g",
+      "naam": "fusilli, ongekookt"
+    },
+    {
+      "hoeveelheid": "60 g",
+      "naam": "Griekse yoghurt 0%"
+    },
+    {
+      "hoeveelheid": "60 g",
+      "naam": "rode druiven"
+    },
+    {
+      "hoeveelheid": "50 g",
+      "naam": "komkommer"
+    },
+    {
+      "hoeveelheid": "20 g",
+      "naam": "rode ui"
+    },
+    {
+      "hoeveelheid": "5 g",
+      "naam": "light mayonaise"
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "kerriepoeder"
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "citroensap"
+    },
+    {
+      "hoeveelheid": "0,5 tl",
+      "naam": "knoflookpoeder"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "verse peterselie of koriander"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peper en zout"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Pasta koken en koud laten worden",
+      "tekst": "Kook de fusilli volgens de verpakking en laat ze volledig afkoelen. Spoel ze desnoods koud af om het sneller te laten gaan. Warme pasta maakt de yoghurtdressing dun en waterig, dus dit is geen stap om te haasten."
+    },
+    {
+      "kop": "Kip kruiden en bakken",
+      "tekst": "Snijd de kipfilet in stukjes en kruid met een beetje van het kerriepoeder, het knoflookpoeder, peper en zout. Bak ze goudbruin en gaar. Houd de rest van het kerriepoeder apart, die gaat straks door de dressing."
+    },
+    {
+      "kop": "Fruit en groen snijden",
+      "tekst": "Halveer de druiven en snijd de komkommer en de rode ui klein. Die halve druiven zijn het verschil tussen een salade waarin je af en toe iets zoets tegenkomt en eentje waarin het overal zit."
+    },
+    {
+      "kop": "Kerriedressing roeren",
+      "tekst": "Meng de Griekse yoghurt met de light mayonaise, het citroensap en de rest van het kerriepoeder. Proef en kruid bij met peper en zout. De mayonaise is er maar weinig, en toch is zij het die de yoghurt van zuur naar rond trekt."
+    },
+    {
+      "kop": "Alles samenvoegen",
+      "tekst": "Meng de koude pasta met de kip, de druiven, de komkommer, de rode ui en de dressing. Werk af met fijngesneden peterselie of koriander en nog wat peper van de molen."
+    }
+  ],
+  "tip": "Laat die pasta echt koud worden voor de dressing erbij gaat. Warme pasta trekt vocht uit de yoghurt en dan ligt je salade in een plasje in plaats van romig te zijn. Heb je haast, spoel ze dan koud af en laat ze even uitlekken.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Kerrie in twee keer",
+      "tekst": "Een deel op de kip, de rest in de dressing. Dat is geen omweg: kerrie die meebakt geeft een warme, geroosterde smaak, terwijl kerrie in koude yoghurt fris en scherp blijft. Samen krijg je allebei."
+    },
+    {
+      "kop": "De volgende dag",
+      "tekst": "Maak je hem op voorhand, houd de dressing dan apart en meng pas vlak voor het eten. Anders zuigt de pasta alles op en blijft er niets romigs over."
+    }
+  ],
+  "voet": "Koud uit de koelkast, met de druiven er koel doorheen.",
+  "bron": "De Snelle Keuken op Instagram",
+  "pdf": "kip-kerrie-pastasalade.pdf"
+}

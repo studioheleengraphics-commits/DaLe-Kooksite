@@ -1,0 +1,106 @@
+{
+  "slug": "steak-alfredo-pasta",
+  "titel": "Steak alfredo pasta",
+  "kicker": "Snel op tafel · Romige pasta",
+  "categorie": "Snel op tafel",
+  "trefwoorden": [
+    "pasta",
+    "biefstuk",
+    "steak",
+    "alfredo",
+    "room",
+    "parmezaan",
+    "tagliatelle"
+  ],
+  "intro": "Tagliatelle door een roomsaus met ui, knoflook en parmezaan, met plakjes gebakken biefstuk erbovenop. De saus maak je in de pan waarin het vlees gebakken heeft, zodat alles wat daar is blijven plakken alsnog op je bord komt. Eén pan, twintig minuten, en toch het soort bord waar je even stil voor gaat zitten.",
+  "porties": 1,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    {
+      "label": "Tijd",
+      "waarde": "± 20 minuten"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "± 550 kcal, 42 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "125 g",
+      "naam": "biefstuk"
+    },
+    {
+      "hoeveelheid": "75 g",
+      "naam": "tagliatelle, ongekookt"
+    },
+    {
+      "hoeveelheid": "40 ml",
+      "naam": "kookroom light"
+    },
+    {
+      "hoeveelheid": "10 g",
+      "naam": "Parmezaanse kaas"
+    },
+    {
+      "hoeveelheid": "0,5",
+      "naam": "ui, fijngesneden"
+    },
+    {
+      "hoeveelheid": "1",
+      "naam": "teentje knoflook"
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "olijfolie"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "Italiaanse kruiden"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peper en zout"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Pasta opzetten",
+      "tekst": "Kook de tagliatelle volgens de verpakking in ruim gezouten water. Houd een beetje kookvocht apart voor je afgiet, dat is je redmiddel als de saus straks te dik wordt."
+    },
+    {
+      "kop": "Biefstuk bakken",
+      "tekst": "Bak de biefstuk in de olijfolie naar jouw smaak en haal hem uit de pan. Laat hem rusten terwijl je verdergaat. Snijd je hem meteen, dan loopt al het vocht op je plank in plaats van in het vlees te blijven."
+    },
+    {
+      "kop": "Ui en knoflook in dezelfde pan",
+      "tekst": "Bak de fijngesneden ui en de knoflook aan in de pan waar het vlees uit komt. Niet afspoelen dus: die bruine aanbaksels op de bodem zijn de smaak waarvoor je net stond te bakken, en ze lossen vanzelf op zodra de room erbij gaat."
+    },
+    {
+      "kop": "Saus laten indikken",
+      "tekst": "Voeg de kookroom, de Parmezaanse kaas en de Italiaanse kruiden toe en laat de saus twee tot drie minuten indikken. Houd het vuur matig, want light kookroom schift makkelijker dan volle."
+    },
+    {
+      "kop": "Mengen en afwerken",
+      "tekst": "Meng de uitgelekte pasta door de saus en schep goed om, zodat elke sliert bedekt is. Snijd de biefstuk in plakjes en leg ze bovenop. Kruid af met peper van de molen."
+    }
+  ],
+  "tip": "Haal de biefstuk uit de pan voor de saus erin gaat en laat hem rusten terwijl die indikt. Zo krijgt het vlees zijn vocht terug en bakt het niet door in een pan waar het niets meer te zoeken heeft. Snijden doe je pas als de pasta klaar is.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Een scheutje kookvocht",
+      "tekst": "Wordt de saus te dik terwijl je de pasta erdoor schept, roer er dan een lepel pastawater bij. Het zetmeel dat erin zit maakt de saus juist gladder in plaats van dunner."
+    },
+    {
+      "kop": "Light kookroom",
+      "tekst": "Die bindt minder en schift sneller dan volle room. Laat ze zachtjes indikken op matig vuur en breng ze niet aan de kook, dan blijft ze glad."
+    }
+  ],
+  "voet": "Meteen op tafel, met het vlees nog roze in het midden.",
+  "bron": "De Snelle Keuken op Instagram",
+  "pdf": "steak-alfredo-pasta.pdf"
+}

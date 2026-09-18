@@ -1,0 +1,123 @@
+{
+  "slug": "honey-garlic-zalmbowl",
+  "titel": "Honey garlic zalmbowl",
+  "kicker": "Snel op tafel · Bowl",
+  "categorie": "Snel op tafel",
+  "trefwoorden": [
+    "zalm",
+    "bowl",
+    "honing",
+    "knoflook",
+    "sriracha",
+    "avocado",
+    "rijst",
+    "eiwitrijk"
+  ],
+  "intro": "Blokjes zalm die in de pan glaceren in honing, knoflook en sojasaus tot ze plakken, op een bed rijst met avocado en ui ernaast. Daaroverheen een drizzle van Griekse yoghurt met sriracha, die de zoete lak meteen weer rechttrekt. Een bord dat eruitziet alsof het lang geduurd heeft, terwijl de zalm er nauwelijks een paar minuten in ligt.",
+  "porties": 1,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    {
+      "label": "Tijd",
+      "waarde": "± 20 minuten"
+    },
+    {
+      "label": "Per portie",
+      "waarde": "± 560 kcal, 33 g eiwit"
+    },
+    {
+      "label": "Niveau",
+      "waarde": "Makkelijk"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "130 g",
+      "naam": "zalmfilet"
+    },
+    {
+      "hoeveelheid": "75 g",
+      "naam": "rijst, ongekookt"
+    },
+    {
+      "hoeveelheid": "40 g",
+      "naam": "avocado"
+    },
+    {
+      "hoeveelheid": "30 g",
+      "naam": "ui"
+    },
+    {
+      "hoeveelheid": "30 g",
+      "naam": "Griekse yoghurt 0%"
+    },
+    {
+      "hoeveelheid": "10 g",
+      "naam": "honing"
+    },
+    {
+      "hoeveelheid": "10 g",
+      "naam": "sriracha"
+    },
+    {
+      "hoeveelheid": "5 g",
+      "naam": "sojasaus"
+    },
+    {
+      "hoeveelheid": "1 tl",
+      "naam": "sesamzaad"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "knoflook, naar smaak"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "bosui"
+    },
+    {
+      "hoeveelheid": "",
+      "naam": "peper en zout"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Rijst opzetten",
+      "tekst": "Kook de rijst volgens de verpakking. Die heeft het langst nodig, dus hij gaat als eerste op het vuur."
+    },
+    {
+      "kop": "Zalm en ui snijden",
+      "tekst": "Snijd de zalmfilet in blokjes en de ui in halve ringen. Kruid de zalm met peper en zout. Houd de blokjes ongeveer even groot, anders is de ene kant droog voor de andere gaar is."
+    },
+    {
+      "kop": "Zalm bakken",
+      "tekst": "Bak de zalm samen met de ui tot de zalm gaar en licht krokant is. Laat de blokjes liggen tot ze vanzelf van de pan loskomen. Wie te vroeg begint te roeren, houdt kruimels over in plaats van blokjes."
+    },
+    {
+      "kop": "Glaceren",
+      "tekst": "Pers de knoflook erbij en voeg de honing en de sojasaus toe. Bak kort mee tot de zalm plakkerig glaceert. Blijf erbij, want honing op een hete bodem wordt bitter voor je het merkt."
+    },
+    {
+      "kop": "Sriracha-yoghurt",
+      "tekst": "Meng de Griekse yoghurt met de sriracha tot een gladde drizzle. Proef even: dit is het koude, scherpe tegengewicht voor alles wat er zoet in de pan gebeurd is."
+    },
+    {
+      "kop": "Bowl opbouwen",
+      "tekst": "Doe de rijst in een kom en leg de zalm, de avocado in plakjes en de ui ernaast in plaats van erdoor. Besprenkel met de sriracha-yoghurt en bestrooi met sesamzaad en fijngesneden bosui."
+    }
+  ],
+  "tip": "Laat de zalmblokjes met rust zodra ze in de pan liggen. Zalm hecht eerst aan de bodem en laat vanzelf los zodra er een korstje staat, en juist dat korstje houdt de blokjes heel. Roer je te vroeg, dan eet je zalmkruimels met een sausje.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Ernaast, niet erdoor",
+      "tekst": "Leg alles in aparte hoekjes op de rijst in plaats van het door elkaar te roeren. Zo houd je per hap de keuze tussen zoet, romig en scherp, en dat is het hele idee van een bowl."
+    },
+    {
+      "kop": "Knoflook op het einde",
+      "tekst": "Die gaat er pas bij als de zalm al gebakken is. Geperste knoflook verbrandt op een hete pan in een halve minuut en wordt dan bitter."
+    }
+  ],
+  "voet": "Meteen serveren, met de avocado nog koel.",
+  "bron": "De Snelle Keuken op Instagram",
+  "pdf": "honey-garlic-zalmbowl.pdf"
+}
