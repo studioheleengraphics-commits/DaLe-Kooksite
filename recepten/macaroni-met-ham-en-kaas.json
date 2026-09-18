@@ -1,0 +1,68 @@
+{
+  "slug": "macaroni-met-ham-en-kaas",
+  "titel": "Macaroni met ham en kaas",
+  "kicker": "Mealprep · Belgische klassieker",
+  "categorie": "Mealprep",
+  "trefwoorden": ["macaroni", "ham", "kaas", "ovenschotel", "bechamel", "klassieker", "pasta"],
+  "intro": "Macaroni met ham in een kaassaus op basis van bechamel, met geplette hardgekookte eieren erdoor en een laag kaas die onder de grill goudbruin kleurt. De saus maak je zelf uit boter, bloem, melk en room, en dat is het enige stuk waar je even bij moet blijven staan. Het is het soort schotel waar iedereen aan tafel stil van wordt, en dat komt door die eieren.",
+  "porties": 4,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "Tijd", "waarde": "40 minuten" },
+    { "label": "Afwerken", "waarde": "Onder de hete grill" },
+    { "label": "Niveau", "waarde": "Doenbaar" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "450 g", "naam": "macaroni" },
+    { "hoeveelheid": "400 g", "naam": "kaas, gemalen" },
+    { "hoeveelheid": "300 g", "naam": "gekookte ham" },
+    { "hoeveelheid": "5", "naam": "eieren" },
+    { "hoeveelheid": "6 dl", "naam": "melk" },
+    { "hoeveelheid": "1 dl", "naam": "room" },
+    { "hoeveelheid": "40 g", "naam": "bloem" },
+    { "hoeveelheid": "30 g", "naam": "boter" },
+    { "hoeveelheid": "1", "naam": "citroen", "schaal": false },
+    { "hoeveelheid": "", "naam": "nootmuskaat" },
+    { "hoeveelheid": "", "naam": "peper en zout" }
+  ],
+  "stappen": [
+    {
+      "kop": "Eieren hard koken",
+      "tekst": "Dompel de eieren onder in kokend water en kook ze hard in 8 à 9 minuten. Koel ze daarna meteen in koud water, want dan pellen ze makkelijker en gaart de dooier niet verder tot dat grijsgroene randje."
+    },
+    {
+      "kop": "Roux maken",
+      "tekst": "Smelt de boter in een kookpot en roer de bloem erdoor. Laat het mengsel al roerend opdrogen, maar laat het niet aanbakken. Je weet dat het klaar is wanneer je de zachte geur van biscuit ruikt, en dat is geen beeldspraak maar gewoon het moment waarop de bloem gaar is."
+    },
+    {
+      "kop": "Bechamel draaien",
+      "tekst": "Schenk de melk bij de roux, zet het vuur wat zachter en blijf met een garde roeren tot de saus bindt. Giet tussendoor de room erbij. Geduldig doorroeren is hier alles: te snel gieten of te weinig roeren geeft klontjes die je er niet meer uit krijgt."
+    },
+    {
+      "kop": "Kaassaus afwerken",
+      "tekst": "Haal de pot van het vuur en roer de helft van de gemalen kaas door de saus. Kruid met versgeraspte nootmuskaat, peper van de molen en wat zout. Werk af met een klein scheutje citroensap, dat de saus lichter en frisser maakt tegen al die kaas in."
+    },
+    {
+      "kop": "Macaroni, eieren en ham",
+      "tekst": "Kook de macaroni al dente in ruim gezouten water. Pel intussen de eieren en plet ze met een pureestamper of een vork, maar niet tot puree: stukjes mogen blijven. Snijd de ham in reepjes of blokjes en haal er de zwoerden af."
+    },
+    {
+      "kop": "Mengen en gratineren",
+      "tekst": "Giet de pasta af en meng er de kaassaus, de geplette eieren en de ham door. Stort alles in een ovenschaal, strooi de rest van de kaas er gelijkmatig over en zet de schaal onder de hete grill. Zodra de kaas een goudbruin korstje is, mag je aan tafel."
+    }
+  ],
+  "tip": "Kook de macaroni echt al dente, een streepje korter dan de verpakking zegt. Ze gaat daarna nog onder de grill en gaart daar verder, en pasta die al gaar de oven in gaat, komt er als pap weer uit.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Kaas in twee hopen",
+      "tekst": "De helft gaat door de saus, de helft gaat erover. Verdeel ze op voorhand in twee, dan sta je straks niet te schatten met een pot op het vuur."
+    },
+    {
+      "kop": "Zout in het pastawater",
+      "tekst": "Jeroen verwijst naar Antonio Carluccio, die pasta kookt in water met 15 gram zout per liter. Dat klinkt veel, maar het is de enige kans om de pasta zelf op smaak te brengen."
+    }
+  ],
+  "voet": "Uit de schaal op tafel, zolang het korstje nog knappert.",
+  "bron": "Jeroen Meus, Dagelijkse Kost",
+  "pdf": "macaroni-met-ham-en-kaas.pdf"
+}
