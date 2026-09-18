@@ -1,0 +1,66 @@
+{
+  "slug": "sticky-sweet-chili-chicken",
+  "titel": "Sticky sweet chili chicken",
+  "kicker": "Snel op tafel · Eiwitrijk",
+  "categorie": "Snel op tafel",
+  "trefwoorden": ["kip", "eiwitrijk", "sweet chili", "rijst", "snel", "een pan", "mealprep"],
+  "intro": "Kipblokjes met knoflookpoeder en gerookt paprikapoeder, en daaroverheen een saus van sweet chili, honing en sojasaus die inkookt tot ze aan het vlees blijft kleven. De rijst is al gekookt, dus het echte werk gebeurt in één pan en is zo gebeurd. Ruim zestig gram eiwit op één bord, en het smaakt nergens naar iets wat je jezelf oplegt.",
+  "porties": 1,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "Bereiding", "waarde": "Eén pan" },
+    { "label": "Per portie", "waarde": "± 570 kcal, 60+ g eiwit" },
+    { "label": "Niveau", "waarde": "Heel makkelijk" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "240 g", "naam": "kipfilet" },
+    { "hoeveelheid": "180 g", "naam": "gekookte jasmijnrijst" },
+    { "hoeveelheid": "19 g", "naam": "sweet chilisaus, de less sugar" },
+    { "hoeveelheid": "12 g", "naam": "honing" },
+    { "hoeveelheid": "12 ml", "naam": "sojasaus" },
+    { "hoeveelheid": "2,5 g", "naam": "More Protein Sahne, optioneel" },
+    { "hoeveelheid": "", "naam": "knoflookpoeder" },
+    { "hoeveelheid": "", "naam": "gerookt paprikapoeder" },
+    { "hoeveelheid": "", "naam": "bosui, in ringetjes" },
+    { "hoeveelheid": "", "naam": "rauwkost erbij, zoals komkommer, paprika of tomaat" }
+  ],
+  "stappen": [
+    {
+      "kop": "Kip kruiden",
+      "tekst": "Snijd de kipfilet in blokjes en bestrooi ze met knoflookpoeder en gerookt paprikapoeder. Doe dat voor de pan op het vuur staat, zolang het vlees nog droog is. Eenmaal er saus bij komt, spoelen die kruiden er gewoon weer af."
+    },
+    {
+      "kop": "Kip bakken",
+      "tekst": "Bak de blokjes gaar in een hete pan. Leg ze naast elkaar in plaats van op een hoopje en roer niet te vaak. Kip die op elkaar ligt, laat vocht los en gaat stoven, en dan krijg je nooit die bruine randjes waar de smaak in zit."
+    },
+    {
+      "kop": "Saus erbij",
+      "tekst": "Voeg de sweet chilisaus, de honing en de sojasaus toe en roer alles door de kip. Zet het vuur meteen wat lager, want vanaf hier gaat het snel."
+    },
+    {
+      "kop": "Laten inkoken",
+      "tekst": "Laat de saus zachtjes pruttelen tot ze glanst en aan het vlees blijft hangen. Dit is het moment waarop het gerecht zijn naam verdient. Honing en sweet chili zitten allebei vol suiker, dus blijf erbij staan en roer af en toe om."
+    },
+    {
+      "kop": "Dikker maken, als je wil",
+      "tekst": "Roer er op het einde de Protein Sahne door voor een romiger saus en wat extra eiwit. Heb je die niet in huis, dan doet een klein beetje maïzena of allesbinder hetzelfde. Niets toevoegen mag ook, dan blijft de saus gewoon dunner."
+    },
+    {
+      "kop": "Opdienen",
+      "tekst": "Schep de kip met de saus op de rijst en strooi de bosui erover. Zet er rauwkost naast, komkommer, paprika of tomaat. Iets fris en knapperigs tegen die zoete saus maakt het verschil tussen een bord dat je opeet en een bord waar je naar uitkijkt."
+    }
+  ],
+  "tip": "Let op je vuur zodra de saus in de pan gaat. Suiker gaat van glanzend naar aangebrand in een halve minuut, en die bittere smaak krijg je er niet meer uit. Kookt de saus te ver in voor de kip gaar is, giet er dan een lepel water bij in plaats van nog saus.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Andere rijst",
+      "tekst": "Jasmijnrijst is geen must. Gewone witte rijst werkt net zo goed, en zilvervliesrijst geeft er wat meer vezels bij."
+    },
+    {
+      "kop": "De rijst op voorhand",
+      "tekst": "Die 180 gram is gekookt gewicht. Kook je op voorhand een grotere pot, dan blijft hiervan alleen nog het bakken van de kip over."
+    }
+  ],
+  "voet": "Meteen eten, zolang de saus nog glanst en de bosui nog knapt.",
+  "bron": "fitmom_marjolein op Instagram"
+}
