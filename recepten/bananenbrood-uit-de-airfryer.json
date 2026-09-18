@@ -1,0 +1,72 @@
+{
+  "slug": "bananenbrood-uit-de-airfryer",
+  "titel": "Bananenbrood uit de airfryer",
+  "kicker": "Bakken · Uit de airfryer",
+  "categorie": "Bakken",
+  "trefwoorden": ["bananenbrood", "cake", "airfryer", "dadels", "walnoten", "bakken", "zoet"],
+  "intro": "Een half bananenbrood met dadels en walnoten, gebakken in een kleine vorm in de airfryer in plaats van in de oven. Het beslag is dat van HelloFresh, gehalveerd tot het in het mandje past, en op 160 °C bakt de airfryer even zacht als een oven. Vier plakken, geen hele cake die drie dagen op het aanrecht ligt te wachten tot iemand hem opeet.",
+  "porties": 1,
+  "portie_eenheid": "brood|broden",
+  "meta": [
+    { "label": "Richttijd", "waarde": "25 tot 35 min op 160 °C" },
+    { "label": "Vorm", "waarde": "Kleine cakevorm" },
+    { "label": "Per 100 g", "waarde": "± 253 kcal" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "2", "naam": "rijpe bananen" },
+    { "hoeveelheid": "100 g", "naam": "tarwebloem" },
+    { "hoeveelheid": "1", "naam": "ei" },
+    { "hoeveelheid": "40 g", "naam": "walnootstukjes" },
+    { "hoeveelheid": "40 g", "naam": "dadelstukjes" },
+    { "hoeveelheid": "35 ml", "naam": "zonnebloemolie" },
+    { "hoeveelheid": "25 ml", "naam": "melk, plantaardig mag ook" },
+    { "hoeveelheid": "2,5 el", "naam": "honing" },
+    { "hoeveelheid": "4 g", "naam": "bakpoeder" },
+    { "hoeveelheid": "0,75 tl", "naam": "gemalen kaneel" },
+    { "hoeveelheid": "", "naam": "snuf zout" }
+  ],
+  "stappen": [
+    {
+      "kop": "Airfryer en vorm klaarzetten",
+      "tekst": "Verwarm de airfryer voor op 160 °C. Vet een kleine cakevorm in of bekleed hem met bakpapier, en kijk eerst of hij in het mandje past met een vinger ruimte rondom. Zonder die ruimte kan de lucht er niet omheen en bakt de zijkant sneller dan de rest."
+    },
+    {
+      "kop": "Natte boel mengen",
+      "tekst": "Prak anderhalve banaan fijn met een vork. Voeg de olie, de honing, de melk en het ei toe en meng tot een glad geheel. Houd de halve banaan die overblijft apart, die gaat straks bovenop."
+    },
+    {
+      "kop": "Droge boel erdoor",
+      "tekst": "Roer de bloem, de kaneel, het bakpoeder en het zout erdoor tot je net geen droge bloem meer ziet. Stop dan. Doorroeren maakt het gluten in de bloem wakker en dat geeft een taai brood in plaats van een luchtig."
+    },
+    {
+      "kop": "Dadels, walnoten en de banaan erop",
+      "tekst": "Schep de dadelstukjes en de walnoten erdoor en giet het beslag in de vorm. Halveer de overgebleven banaan in de lengte en leg de twee helften met de snijkant naar boven op het beslag. Die openen zich tijdens het bakken en geven het brood zijn herkenbare kop."
+    },
+    {
+      "kop": "Bakken en afdekken",
+      "tekst": "Zet de vorm 25 tot 35 minuten in de airfryer op 160 °C. Ligt er na een kwartier al kleur op de bovenkant, leg er dan los een velletje folie over. De ventilator kleurt de kruin veel sneller dan een oven dat doet, terwijl het midden nog tijd nodig heeft."
+    },
+    {
+      "kop": "Prikken en afkoelen",
+      "tekst": "Prik met een satéprikker in het midden. Komt die er schoon uit, dan is het brood klaar; blijft er beslag aan hangen, geef het dan nog vijf minuten. Laat het daarna volledig afkoelen voor je snijdt, want warm bananenbrood valt onder het mes uit elkaar."
+    }
+  ],
+  "tip": "De klok is hier de tweede stem, de satéprikker de eerste. De airfryer blaast van boven, dus de kruin ziet er klaar uit terwijl het midden nog nat is. Kijk vanaf minuut vijfentwintig en dek af zodra er kleur op staat.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Waar die tijd vandaan komt",
+      "tekst": "De 25 tot 35 minuten komen van de rij Cake in een vorm op Crispy DaLe, en de 160 °C staat ook zo in het bronrecept. Het is een richttijd, geen uitgeteste tijd. Bak je hem, noteer dan wat het bij jou werd."
+    },
+    {
+      "kop": "Liever muffins",
+      "tekst": "Verdeel het beslag over vier siliconen vormpjes en bak ze 12 tot 15 minuten op 160 °C, de tijd die op Crispy DaLe bij Muffins staat. Kleinere porties garen gelijkmatiger, want daar heeft de warmte geen dik midden te overwinnen."
+    },
+    {
+      "kop": "Verdubbelen kan, maar niet hier",
+      "tekst": "Zet je de teller op twee broden, dan krijg je exact het hele bronrecept terug. Dat past niet in een airfryermandje: neem dan de oven op 160 °C en reken op 45 tot 55 minuten, zoals HelloFresh het geeft."
+    }
+  ],
+  "voet": "Volledig laten afkoelen voor je snijdt, anders kruimelt hij uit elkaar.",
+  "bron": "HelloFresh, gehalveerd en omgezet naar de airfryer",
+  "pdf": "bananenbrood-uit-de-airfryer.pdf"
+}
