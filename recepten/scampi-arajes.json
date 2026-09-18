@@ -1,0 +1,71 @@
+{
+  "slug": "scampi-arajes",
+  "titel": "Scampi-arajes",
+  "kicker": "Hapjes · Van de barbecue",
+  "categorie": "Hapjes",
+  "trefwoorden": ["scampi", "garnalen", "bbq", "barbecue", "pita", "arajes", "ananas", "salsa"],
+  "intro": "Arajes zijn pitabroodjes die je vult met een gekruid mengsel en daarna op de grill legt, hier met grof gehakte scampi in plaats van het gehakt dat er doorgaans in gaat. De vulling gaart in het brood, zodat het pitaatje alles opvangt wat eruit zou lopen. Daarnaast een koude salsa van geblakerde paprika, verse ananas en munt, die precies dat frisse tegengewicht geeft dat zo'n warm krokant broodje nodig heeft.",
+  "porties": 4,
+  "portie_eenheid": "persoon|personen",
+  "meta": [
+    { "label": "Bereiding", "waarde": "Op de barbecue" },
+    { "label": "Levert", "waarde": "16 stukjes" },
+    { "label": "Niveau", "waarde": "Makkelijk" }
+  ],
+  "ingredienten": [
+    { "hoeveelheid": "300 g", "naam": "scampi's, gepeld" },
+    { "hoeveelheid": "4", "naam": "pitabroodjes" },
+    { "hoeveelheid": "3 el", "naam": "paneermeel" },
+    { "hoeveelheid": "2 el", "naam": "scampi- en garnalenkruiden" },
+    { "hoeveelheid": "1 tl", "naam": "cajunkruiden" },
+    { "hoeveelheid": "2", "naam": "rode paprika's" },
+    { "hoeveelheid": "0,5", "naam": "verse ananas" },
+    { "hoeveelheid": "1", "naam": "rode ui" },
+    { "hoeveelheid": "1 handvol", "naam": "verse munt" },
+    { "hoeveelheid": "0,5", "naam": "citroen, het sap" },
+    { "hoeveelheid": "1 el", "naam": "olijfolie, voor de salsa" },
+    { "hoeveelheid": "", "naam": "olijfolie, om te bestrijken" },
+    { "hoeveelheid": "", "naam": "zout" },
+    { "hoeveelheid": "", "naam": "andalousesaus" }
+  ],
+  "stappen": [
+    {
+      "kop": "Scampivulling maken",
+      "tekst": "Hak de scampi grof met een mes tot een ruw mengsel. Meng er het paneermeel, de scampi- en garnalenkruiden, de cajunkruiden en een snuifje zout door. Grof is hier het punt: laat je er een keukenmachine op los, dan krijg je een pasta die in het brood tot een vissige laag samenklit."
+    },
+    {
+      "kop": "Paprika's blakeren en pellen",
+      "tekst": "Leg de paprika's op de barbecue en rooster ze tot het vel rondom zwartgeblakerd is. Doe ze in een kom, dek af met folie en laat tien minuten stomen. Die stoom wrikt het vel los, dus wie dit overslaat staat straks met een mesje te pulken. Trek het vel eraf en snijd het vruchtvlees in fijne blokjes."
+    },
+    {
+      "kop": "Salsa mengen",
+      "tekst": "Snijd de ananas en de rode ui fijn en doe ze bij de paprika. Meng er de fijngehakte munt, het citroensap, een snuifje zout en een eetlepel olijfolie door. Proef en zet de kom opzij, want deze salsa hoort koud te blijven tegenover het warme broodje."
+    },
+    {
+      "kop": "Pitabroodjes vullen",
+      "tekst": "Snijd elk pitabroodje in vier gelijke stukken en snijd die open tot zakjes. Vul ze met het scampimengsel en druk licht aan. Niet overvullen: wat er langs de randen uitpuilt, valt op de grill in het vuur."
+    },
+    {
+      "kop": "Grillen en serveren",
+      "tekst": "Bestrijk de gevulde stukjes met olijfolie en leg ze op de barbecue. Gril ze aan beide kanten tot de buitenkant krokant is en de scampi vanbinnen gaar zijn. Serveer meteen, met de ananas-paprikasalsa en de andalousesaus ernaast."
+    }
+  ],
+  "tip": "Leg ze niet boven de heetste kolen. Het brood is daar in een minuut donker terwijl de scampi vanbinnen nog rauw zijn, en dan sta je met een zwart hapje en een koude vulling. Een matige zone geeft de vulling de tijd om mee te garen.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Met het mes, niet met de machine",
+      "tekst": "Grof gehakte scampi houden beet en blijven herkenbaar in de vulling. Een keukenmachine maakt er in drie tellen een gladde massa van, en dan smaakt het naar visburger in plaats van naar scampi."
+    },
+    {
+      "kop": "Geen barbecue bij de hand",
+      "tekst": "Blaker de paprika's onder de hete grill van de oven tot het vel zwart is, en werk de gevulde pitastukjes af in een grillpan. Je mist de rook, maar verder komt het op hetzelfde neer."
+    },
+    {
+      "kop": "De salsa op voorhand",
+      "tekst": "Die kan gerust al klaarstaan voor je het vuur aansteekt. De munt en de rode ui trekken ondertussen door de ananas, en dat maakt het geheel alleen maar ronder."
+    }
+  ],
+  "voet": "Warm van de grill, met de koude salsa ernaast.",
+  "bron": "Snelle Jelle, njam.tv",
+  "pdf": "scampi-arajes.pdf"
+}
