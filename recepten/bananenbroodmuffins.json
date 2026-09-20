@@ -13,8 +13,8 @@
     "bakken",
     "zoet"
   ],
-  "intro": "Het beslag van een bananenbrood met dadels en walnoten, maar dan verdeeld over zes siliconen vormpjes in plaats van in één vorm. In de airfryer is dat de slimmere weg: kleine porties garen gelijkmatig, terwijl een dikke cake van boven al kleurt terwijl het midden nog nat is. Achttien minuten en ze zijn klaar, tegen een halfuur voor een brood dat je daarna ook nog moet laten afkoelen.",
-  "porties": 6,
+  "intro": "Het beslag van een bananenbrood met dadels en walnoten, maar dan verdeeld over vijf siliconen vormpjes in plaats van in één vorm. In de airfryer is dat de slimmere weg: kleine porties garen gelijkmatig, terwijl een dikke cake van boven al kleurt terwijl het midden nog nat is. Achttien minuten en ze zijn klaar, tegen een halfuur voor een brood dat je daarna ook nog moet laten afkoelen.",
+  "porties": 5,
   "portie_eenheid": "muffin|muffins",
   "meta": [
     {
@@ -23,7 +23,7 @@
     },
     {
       "label": "Vormpjes",
-      "waarde": "Silicone, vier per ronde"
+      "waarde": "Silicone, vijf in één bak"
     },
     {
       "label": "Per 100 g",
@@ -79,11 +79,11 @@
   "stappen": [
     {
       "kop": "Airfryer en vormpjes klaar",
-      "tekst": "Verwarm de airfryer voor op 160 °C en zet zes siliconen vormpjes klaar. Er passen er vier naast elkaar in de mand, dus reken op twee ronden. Is jouw mandje ruimer of kan je met twee lagen werken, dan lukken er misschien zes in één keer."
+      "tekst": "Verwarm de airfryer voor op 160 °C en zet vijf siliconen vormpjes klaar. Die passen samen in de mand, dus je bakt ze in één keer. Zet ze wel zo dat ze elkaar niet raken, anders blijven ze bleek op hun raakvlakken."
     },
     {
       "kop": "Natte boel mengen",
-      "tekst": "Prak anderhalve banaan fijn met een vork. Meng er de olie, de honing, de melk en het ei door tot een glad geheel. Snijd de halve banaan die overblijft in zes dunne plakjes en houd die apart."
+      "tekst": "Prak anderhalve banaan fijn met een vork. Meng er de olie, de honing, de melk en het ei door tot een glad geheel. Snijd de halve banaan die overblijft in vijf dunne plakjes en houd die apart."
     },
     {
       "kop": "Droge boel erdoor",
@@ -95,7 +95,7 @@
     },
     {
       "kop": "Bakken",
-      "tekst": "Zet de vormpjes 18 minuten in de airfryer op 160 °C. Passen ze er niet allemaal in, bak dan in twee ronden en houd het beslag ondertussen gewoon in de kom. Een tweede ronde in een al warme airfryer gaat meestal een tikje sneller, dus prik daar wat vroeger."
+      "tekst": "Zet de vormpjes 18 minuten in de airfryer op 160 °C. Die tijd is geklokt met vier vormpjes in de mand, dus met vijf erin kan het een tikje langer duren. Prik voor je ze eruit haalt."
     },
     {
       "kop": "Prikken en afkoelen",
@@ -109,8 +109,8 @@
       "tekst": "De eerste batch had 18 minuten op 160 °C nodig, niet de 12 tot 15 die bij Muffins op Crispy DaLe staan. Bananenbroodbeslag is natter en zwaarder dan gewoon muffinbeslag, en dat scheelt dus een paar minuten."
     },
     {
-      "kop": "Vier per ronde",
-      "tekst": "Vier siliconen vormpjes passen naast elkaar, uitgeprobeerd en geteld. Zes muffins worden dus vier en dan twee, tenzij jouw mandje ruimer is of je met twee lagen kan werken."
+      "kop": "Vijf in één bak",
+      "tekst": "Uit dit beslag komen vijf evenwaardige muffins, en die passen samen in de mand. Zes worden er dus kleintjes, en dan sta je bovendien twee keer te bakken."
     },
     {
       "kop": "Liever één brood",
