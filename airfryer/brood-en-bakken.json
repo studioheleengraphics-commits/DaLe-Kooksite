@@ -115,6 +115,26 @@
       "klaar": "Een satéprikker komt er droog uit."
     },
     {
+      "naam": "Bananenbroodmuffins",
+      "trefwoorden": [
+        "muffin",
+        "bananenbrood",
+        "banaan",
+        "cupcake",
+        "zoet"
+      ],
+      "getest": true,
+      "graden": 160,
+      "minuten": [
+        18,
+        18
+      ],
+      "voorverwarmen": true,
+      "portie": "Vier siliconen vormpjes, tot tweederde gevuld",
+      "klaar": "Een satéprikker in de dikste komt er schoon uit.",
+      "tip": "Thuis uitgetest, eerste batch. Nat bananenbroodbeslag heeft langer nodig dan gewoon muffinbeslag, vandaar 18 in plaats van de 12 tot 15 hierboven."
+    },
+    {
       "naam": "Koekjes",
       "trefwoorden": [
         "koekjes",
