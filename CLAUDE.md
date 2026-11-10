@@ -229,6 +229,14 @@ inkt `#1F1D1A` voor tekst, warm papier `#F0EEEB` als achtergrond. DM Sans voor
 koppen, Inter voor lopende tekst, Caveat voor de tip. Deze waarden staan in de
 CSS bovenaan `build.py`. Voeg geen tweede rood toe.
 
+## Het icoon
+
+Het rode DaLe-blokje in het browsertabblad en op het beginscherm van een
+telefoon. `icoon/icoon.html` is de bron, `icoon/favicon.png` (64 px, ronde
+hoeken) en `icoon/icoon-180.png` (vierkant, de telefoon rondt zelf af) zijn
+het resultaat. `build.py` kopieert die twee naar `docs/icoon/` en zet de
+links in elke pagina, ook in die van de airfryer en het weekmenu.
+
 ## De A4-pagina's
 
 `a4/<slug>.html` is een ingevulde kopie van het sjabloon uit de skill

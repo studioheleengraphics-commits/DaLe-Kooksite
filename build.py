@@ -20,6 +20,7 @@ import build_weekmenu
 ROOT = Path(__file__).parent
 RECEPTEN = ROOT / "recepten"
 PDF_BRON = ROOT / "pdf"
+ICOON_BRON = ROOT / "icoon"
 UIT = ROOT / "docs"
 
 SITE_TITEL = "Het kookboek"
@@ -205,7 +206,17 @@ FONTS = ("<link rel='preconnect' href='https://fonts.googleapis.com'>"
          "&family=Inter:wght@400;600&family=Caveat:wght@500&display=swap' rel='stylesheet'>")
 
 
-def pagina(titel, inhoud, extra_js="", extra_css=""):
+def icoon_links(wortel=""):
+    """Het DaLe-icoon voor het browsertabblad en het beginscherm van een telefoon.
+
+    wortel is het pad terug naar docs/: leeg voor het kookboek zelf, "../"
+    voor de delen die een map dieper staan.
+    """
+    return (f'<link rel="icon" type="image/png" href="{wortel}icoon/favicon.png">'
+            f'<link rel="apple-touch-icon" href="{wortel}icoon/icoon-180.png">')
+
+
+def pagina(titel, inhoud, extra_js="", extra_css="", wortel=""):
     return f"""<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -213,6 +224,7 @@ def pagina(titel, inhoud, extra_js="", extra_css=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#AD2C2C">
 <title>{html.escape(titel)}</title>
+{icoon_links(wortel)}
 {FONTS}
 <style>{CSS}{extra_css}</style>
 </head>
@@ -548,8 +560,14 @@ def main():
     if PDF_BRON.exists():
         shutil.copytree(PDF_BRON, UIT / "pdf")
 
+    if ICOON_BRON.exists():
+        (UIT / "icoon").mkdir()
+        for f in ICOON_BRON.glob("*.png"):
+            if f.name in ("favicon.png", "icoon-180.png"):
+                shutil.copy(f, UIT / "icoon" / f.name)
+
     # docs/ is net leeggemaakt, dus de airfryersite komt er hierna weer bij.
-    build_airfryer.bouw(UIT / "airfryer")
+    build_airfryer.bouw(UIT / "airfryer", icoon_links("../"))
     weken = build_weekmenu.bouw(UIT / "weekmenu", pagina)
 
     print(f"Klaar. {len(recepten)} recepten en {weken} weekmenu's naar {UIT}/")

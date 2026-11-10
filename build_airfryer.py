@@ -271,6 +271,9 @@ ul.regelset li:last-child{margin-bottom:0;}
 @media print{ .balk,.timerbalk,.chips,.zoek{display:none;} body{background:#fff;} }
 """
 
+# De icoonlinks komen van build.py, zodat het pad maar op één plek staat.
+ICOON = ""
+
 FONTS = ("<link rel='preconnect' href='https://fonts.googleapis.com'>"
          "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>"
          "<link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700"
@@ -285,6 +288,7 @@ def pagina(titel, inhoud, extra_js=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#AD2C2C">
 <title>{html.escape(titel)}</title>
+{ICOON}
 {FONTS}
 <style>{CSS}</style>
 </head>
@@ -1178,8 +1182,10 @@ reken();
 
 # ------------------------------------------------------------------ main ----
 
-def bouw(uit):
+def bouw(uit, icoon=""):
     """Schrijft de airfryersite naar de map uit, meestal docs/airfryer."""
+    global ICOON
+    ICOON = icoon
     groepen = laad()
     if not groepen:
         print("Geen producten gevonden in airfryer/")

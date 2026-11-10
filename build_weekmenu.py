@@ -450,16 +450,16 @@ def bouw(uit, pagina):
     uit.mkdir(parents=True, exist_ok=True)
 
     inhoud, js = bouw_index(weken)
-    (uit / "index.html").write_text(pagina(SITE_TITEL, inhoud, js, CSS), encoding="utf-8")
+    (uit / "index.html").write_text(pagina(SITE_TITEL, inhoud, js, CSS, "../"), encoding="utf-8")
     (uit / "afspraken.html").write_text(
-        pagina(f"Afspraken · {SITE_TITEL}", bouw_afspraken(algemeen), "", CSS),
+        pagina(f"Afspraken · {SITE_TITEL}", bouw_afspraken(algemeen), "", CSS, "../"),
         encoding="utf-8")
     for w in weken:
         (uit / baksel_bestand(w)).write_text(
-            pagina(f"{w['baksel']['titel']} · {SITE_TITEL}", bouw_baksel(w), RECEPT_JS, CSS),
+            pagina(f"{w['baksel']['titel']} · {SITE_TITEL}", bouw_baksel(w), RECEPT_JS, CSS, "../"),
             encoding="utf-8")
         for r in w["recepten"]:
             (uit / recept_bestand(w, r["nr"])).write_text(
-                pagina(f"{r['titel']} · {SITE_TITEL}", bouw_recept(w, r), RECEPT_JS, CSS),
+                pagina(f"{r['titel']} · {SITE_TITEL}", bouw_recept(w, r), RECEPT_JS, CSS, "../"),
                 encoding="utf-8")
     return len(weken)
