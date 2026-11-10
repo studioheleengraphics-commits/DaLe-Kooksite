@@ -169,7 +169,7 @@ def bouw_week(w):
   {dagen}
   <div class="weekblok">
     <h3 class="blokkop">Voorbereiding deze week</h3>
-    <ul class="ing">{voorbereiding}</ul>
+    <ul class="punten">{voorbereiding}</ul>
     <h3 class="blokkop">Zondag bakken</h3>
     <div class="kaarten">
       <a class="kaart" href="{baksel_bestand(w)}">
@@ -212,10 +212,29 @@ document.querySelectorAll('.weken .chip').forEach(c=>c.onclick=()=>{
   toon(vandaag>=w.dataset.van&&vandaag<=w.dataset.tot?vandaag:w.dataset.van);
 });
 document.getElementById('vandaag').onclick=()=>{toon(dichtstbij());window.scrollTo(0,0);};
-document.querySelectorAll('.moment').forEach(m=>m.onclick=ev=>{
-  if(!ev.target.closest('a'))m.classList.toggle('af');
+
+/* Wat je al gegeten hebt, blijft aangevinkt op dit toestel tot de dag om is.
+   Ieder vinkt dus op de eigen telefoon af; er wordt niets gedeeld. */
+const GEGETEN='weekmenu-gegeten-v1';
+let gegeten={};
+try{gegeten=JSON.parse(localStorage.getItem(GEGETEN))||{};}catch(e){}
+Object.keys(gegeten).forEach(d=>{if(d<vandaag)delete gegeten[d];});
+function bewaar(){try{localStorage.setItem(GEGETEN,JSON.stringify(gegeten));}catch(e){}}
+bewaar();
+dagen.forEach(dag=>{
+  const datum=dag.dataset.datum;
+  [...dag.querySelectorAll('.moment')].forEach((m,i)=>{
+    if((gegeten[datum]||[]).includes(i))m.classList.add('af');
+    m.onclick=ev=>{
+      if(ev.target.closest('a'))return;
+      const aan=m.classList.toggle('af');
+      const lijst=(gegeten[datum]||[]).filter(x=>x!==i);
+      if(aan)lijst.push(i);
+      if(lijst.length)gegeten[datum]=lijst; else delete gegeten[datum];
+      bewaar();
+    };
+  });
 });
-document.querySelectorAll('ul.ing li').forEach(li=>li.onclick=()=>li.classList.toggle('af'));
 
 const uitHash=location.hash.slice(1);
 toon(alleData.includes(uitHash)?uitHash:dichtstbij());
@@ -400,7 +419,7 @@ def bouw_afspraken(a):
     {punten(a['bewust'])}
 
     <h3 class="blokkop">Basisvoorbereiding op zondag</h3>
-    <ul class="ing" id="ing">{voorbereiding}</ul>
+    <ul class="punten">{voorbereiding}</ul>
 
     <h3 class="blokkop">Tussendoortjes door de week</h3>
     {weekritme}
@@ -419,9 +438,6 @@ def bouw_afspraken(a):
 """
 
 
-AFSPRAKEN_JS = "document.querySelectorAll('#ing li').forEach(li=>li.onclick=()=>li.classList.toggle('af'));"
-
-
 # ------------------------------------------------------------------ main ----
 
 def bouw(uit, pagina):
@@ -436,7 +452,7 @@ def bouw(uit, pagina):
     inhoud, js = bouw_index(weken)
     (uit / "index.html").write_text(pagina(SITE_TITEL, inhoud, js, CSS), encoding="utf-8")
     (uit / "afspraken.html").write_text(
-        pagina(f"Afspraken · {SITE_TITEL}", bouw_afspraken(algemeen), AFSPRAKEN_JS, CSS),
+        pagina(f"Afspraken · {SITE_TITEL}", bouw_afspraken(algemeen), "", CSS),
         encoding="utf-8")
     for w in weken:
         (uit / baksel_bestand(w)).write_text(

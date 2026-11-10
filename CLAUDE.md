@@ -181,6 +181,11 @@ Derde deel in dezelfde repo, onder `docs/weekmenu/`. Gegenereerd door
 - De overzichtspagina opent op vandaag. Ligt vandaag buiten het schema, dan
   toont ze de eerste of de laatste dag. `van` en `tot` van de week bepalen dat.
 - Een moment met `"recept": 3` linkt naar recept nummer 3 van die week.
+- De eetmomenten van een dag zijn afvinkbaar. Die vinkjes staan in
+  `localStorage` onder `weekmenu-gegeten-v1`, alleen op dat ene toestel, en
+  worden gewist zodra de dag voorbij is. De voorbereiding is bewust niet
+  afvinkbaar: dat is één klus voor iedereen samen, en een vinkje dat maar op
+  één telefoon staat zou daar alleen verwarren.
 - **Geen namen.** De site is publiek. De kleinste portie heet `basis`, wat de
   grotere eter erbij krijgt heet `extra`. In lopende tekst: "de basisportie"
   en "de portie met extra's".
