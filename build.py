@@ -15,6 +15,7 @@ import html
 from pathlib import Path
 
 import build_airfryer
+import build_weekmenu
 
 ROOT = Path(__file__).parent
 RECEPTEN = ROOT / "recepten"
@@ -48,9 +49,10 @@ a{color:var(--rood); text-decoration:none;}
 .pil{border:1px solid var(--lijn); border-radius:999px; padding:8px 14px;
   font-size:13px; color:var(--zeegroen); background:var(--wit); white-space:nowrap;
   font-family:'DM Sans',sans-serif;}
+.koppils{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
 .kop h1{
   font-family:'DM Sans',sans-serif; font-weight:700; font-size:30px;
-  margin:0; letter-spacing:-.4px;
+  margin:0; letter-spacing:-.4px; white-space:nowrap;
 }
 .kop h1 span{color:var(--rood);}
 .kop p{margin:4px 0 0; color:var(--inkt-zacht); font-size:13px;
@@ -203,7 +205,7 @@ FONTS = ("<link rel='preconnect' href='https://fonts.googleapis.com'>"
          "&family=Inter:wght@400;600&family=Caveat:wght@500&display=swap' rel='stylesheet'>")
 
 
-def pagina(titel, inhoud, extra_js=""):
+def pagina(titel, inhoud, extra_js="", extra_css=""):
     return f"""<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -212,7 +214,7 @@ def pagina(titel, inhoud, extra_js=""):
 <meta name="theme-color" content="#AD2C2C">
 <title>{html.escape(titel)}</title>
 {FONTS}
-<style>{CSS}</style>
+<style>{CSS}{extra_css}</style>
 </head>
 <body>
 {inhoud}
@@ -251,7 +253,10 @@ def bouw_index(recepten):
 <header class="kop"><div class="wrap">
   <div class="koprij">
     <h1>Het <span>kookboek</span></h1>
-    <a class="pil" href="airfryer/index.html">Airfryer</a>
+    <div class="koppils">
+      <a class="pil" href="weekmenu/index.html">Weekmenu</a>
+      <a class="pil" href="airfryer/index.html">Airfryer</a>
+    </div>
   </div>
   <p>{SITE_ONDERTITEL}</p>
 </div></header>
@@ -545,8 +550,9 @@ def main():
 
     # docs/ is net leeggemaakt, dus de airfryersite komt er hierna weer bij.
     build_airfryer.bouw(UIT / "airfryer")
+    weken = build_weekmenu.bouw(UIT / "weekmenu", pagina)
 
-    print(f"Klaar. {len(recepten)} recepten naar {UIT}/")
+    print(f"Klaar. {len(recepten)} recepten en {weken} weekmenu's naar {UIT}/")
     for r in recepten:
         print(f"  - {r['titel']}")
 

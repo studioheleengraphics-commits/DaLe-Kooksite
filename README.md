@@ -11,6 +11,8 @@ pdf/              de print-klare A4's, worden meegekopieerd
 airfryer/         één JSON per categorie airfryertijden
 build.py          generator: JSON in, complete site uit
 build_airfryer.py generator van de airfryersite, draait mee met build.py
+weekmenu/         één JSON per week, plus algemeen.json met de afspraken
+build_weekmenu.py generator van het weekmenu, draait mee met build.py
 docs/             het resultaat. Niet handmatig aanpassen, wordt overschreven.
 ```
 
@@ -48,6 +50,15 @@ Velden die niet vanzelf spreken:
 
 Er is geen login en er wordt niets opgeslagen. Iedereen met de link kan lezen en
 koken, niemand kan per ongeluk iets stukmaken.
+
+## Het weekmenu
+
+Onder `docs/weekmenu/` staat het eetschema, bereikbaar via de knop Weekmenu
+rechtsboven op het kookboek. De pagina opent op vandaag en toont de dag van
+ontbijt tot avondsnack, met de basisportie en wat er als extra bij komt. Het
+warme gerecht linkt door naar zijn recept, met afvinkbare ingrediënten en
+stappen. Per week staan er ook de voorbereiding, het baksel en de zeven
+recepten, en onder Afspraken het dagritme en de ruillijst.
 
 ## Crispy DaLe: de airfryertijden
 

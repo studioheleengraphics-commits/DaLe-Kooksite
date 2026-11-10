@@ -1,0 +1,942 @@
+{
+  "week": 4,
+  "voor": 4,
+  "van": "2026-11-30",
+  "tot": "2026-12-06",
+  "dagen": [
+    {
+      "datum": "2026-11-30",
+      "dag": "Maandag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi",
+          "extra": "+ 50 g plattekaas + 15 g granola"
+        },
+        {
+          "moment": "10 u",
+          "basis": "150 g mandarijn",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 sneetje wortelcake met walnoten (zondag gebakken)",
+          "kcal": 100
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g appel",
+          "kcal": 60
+        },
+        {
+          "moment": "Avond",
+          "basis": "Varkensmignonette met wortelen en uiensaus",
+          "detail": "150 g varkensmignonette + 250 g wortelen + 150 g aardappelen",
+          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "recept": 1
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "basis": {
+        "kcal": 1570,
+        "eiwit": 78
+      },
+      "extra": {
+        "kcal": 2005,
+        "eiwit": 95
+      }
+    },
+    {
+      "datum": "2026-12-01",
+      "dag": "Dinsdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "2 BH (50 g) + 1 gekookt ei + 10 g smeersel",
+          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "2 kiwi’s (ca. 120 g)",
+          "kcal": 75
+        },
+        {
+          "moment": "Middag",
+          "basis": "2 BH (50 g) + 70 g koude varkensmignonette van maandag + mosterd + 150 g komkommer + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 30 g mignonette + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "120 g halfvolle plattekaas",
+          "kcal": 97
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "150 g snoepgroenten + 25 g hummus",
+          "kcal": 100
+        },
+        {
+          "moment": "Avond",
+          "basis": "Speltpasta met kalkoen en zuiderse groenten",
+          "detail": "150 g kalkoenfilet + 150 g courgette + 100 g paprika + 50 g speltpasta",
+          "extra": "+ 35 g speltpasta + 5 g olijfolie",
+          "recept": 2
+        },
+        {
+          "moment": "20 u",
+          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
+          "kcal": 105
+        }
+      ],
+      "basis": {
+        "kcal": 1590,
+        "eiwit": 104
+      },
+      "extra": {
+        "kcal": 2055,
+        "eiwit": 125
+      }
+    },
+    {
+      "datum": "2026-12-02",
+      "dag": "Woensdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi",
+          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+        },
+        {
+          "moment": "10 u",
+          "basis": "120 g peer",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "3 BH (75 g) + tonijnsalade van 80 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel",
+          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 sneetje wortelcake met walnoten (zondag gebakken)",
+          "kcal": 100
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g appel",
+          "kcal": 60
+        },
+        {
+          "moment": "Avond",
+          "basis": "Gehaktballetjes met preipuree en mosterdjus",
+          "detail": "150 g mager rundergehakt + 250 g prei + 150 g aardappelen",
+          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "recept": 3
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "basis": {
+        "kcal": 1670,
+        "eiwit": 81
+      },
+      "extra": {
+        "kcal": 2090,
+        "eiwit": 94
+      }
+    },
+    {
+      "datum": "2026-12-03",
+      "dag": "Donderdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "2 BH (50 g) + 25 g kaas + 10 g smeersel",
+          "extra": "+ 1 BH (25 g) + 15 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "150 g mandarijn",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "3 BH (75 g) + 60 g mozzarella + 30 g parmaham + 150 g tomaat + 15 g smeersel",
+          "extra": "+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 sneetje wortelcake met walnoten (zondag gebakken)",
+          "kcal": 100
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g peer",
+          "kcal": 70
+        },
+        {
+          "moment": "Avond",
+          "basis": "Kip in tomatenroomsaus met broccoli en rijst",
+          "detail": "150 g kipfilet + 200 g broccoli + 50 g rijst",
+          "extra": "+ 35 g rijst + 5 g olijfolie",
+          "recept": 4
+        },
+        {
+          "moment": "20 u",
+          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
+          "kcal": 105
+        }
+      ],
+      "thema": "rijstdag",
+      "basis": {
+        "kcal": 1710,
+        "eiwit": 92
+      },
+      "extra": {
+        "kcal": 2225,
+        "eiwit": 110
+      }
+    },
+    {
+      "datum": "2026-12-04",
+      "dag": "Vrijdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan",
+          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+        },
+        {
+          "moment": "10 u",
+          "basis": "100 g druiven",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "2 BH (50 g) + 80 g koude kip van donderdag + 100 g rauwkost + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 30 g kip + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "10 g walnoten",
+          "extra": "20 g walnoten",
+          "kcal": 65
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g appel",
+          "kcal": 60
+        },
+        {
+          "moment": "Avond",
+          "basis": "Zalm met boontjes en citroenaardappelen",
+          "detail": "150 g zalm + 250 g boontjes + 200 g aardappelen",
+          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "recept": 5
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "thema": "visdag",
+      "basis": {
+        "kcal": 1570,
+        "eiwit": 76
+      },
+      "extra": {
+        "kcal": 2015,
+        "eiwit": 92
+      }
+    },
+    {
+      "datum": "2026-12-05",
+      "dag": "Zaterdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)",
+          "extra": "+ 1 BH (25 g) + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "2 kiwi’s (ca. 120 g)",
+          "kcal": 75
+        },
+        {
+          "moment": "Middag",
+          "basis": "3 BH (75 g) + 60 g makreelfilet natuur + 100 g tomaat + 15 g smeersel",
+          "extra": "+ 1 BH (25 g) + 40 g makreel + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 sneetje wortelcake met walnoten (zondag gebakken)",
+          "kcal": 100
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "150 g snoepgroenten + 25 g hummus",
+          "kcal": 100
+        },
+        {
+          "moment": "Avond",
+          "basis": "Kippita met looksaus en ovenfrietjes",
+          "detail": "1 pitabroodje (60 g) + 150 g kipfilet + 100 g aardappelen + 150 g paprika",
+          "extra": "+ 50 g kipfilet + 100 g aardappelen + 5 g olijfolie",
+          "recept": 6
+        },
+        {
+          "moment": "20 u",
+          "basis": "kruidenthee, koffie of een glas water"
+        }
+      ],
+      "thema": "comfortfood",
+      "basis": {
+        "kcal": 1580,
+        "eiwit": 91
+      },
+      "extra": {
+        "kcal": 2030,
+        "eiwit": 117
+      }
+    },
+    {
+      "datum": "2026-12-06",
+      "dag": "Zondag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "2 BH (50 g) + 40 g kippenwit + 10 g smeersel",
+          "extra": "+ 1 BH (25 g) + 20 g kippenwit + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "150 g mandarijn",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "2 BH (50 g) + 30 g kaas + 40 g filet de Saxe + 100 g komkommer + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "120 g halfvolle plattekaas",
+          "kcal": 97
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g peer",
+          "kcal": 70
+        },
+        {
+          "moment": "Avond",
+          "basis": "Rosbief met peperroomsaus en ovenkrieltjes",
+          "detail": "150 g rosbief + 200 g boontjes + 100 g champignons + 200 g krieltjes",
+          "extra": "+ 150 g krieltjes + 5 g olijfolie",
+          "recept": 7
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "thema": "wat uitgebreider",
+      "basis": {
+        "kcal": 1665,
+        "eiwit": 96
+      },
+      "extra": {
+        "kcal": 2115,
+        "eiwit": 112
+      }
+    }
+  ],
+  "voorbereiding": [
+    "Zondag 29 november: maak het basisrecept soep voor de middagen van maandag, dinsdag, vrijdag en zondag, en kook 8 eieren hard voor maandagmiddag en dinsdagochtend.",
+    "Ook op zondag: bak de wortelcake met walnoten. Dat zijn 18 sneetjes voor de tussendoortjes van de week; wat over is, vries je in.",
+    "Maandagavond: bak 150 g varkensmignonette extra mee (R1) voor dinsdagmiddag.",
+    "Donderdagavond: bak 200 g kipfilet extra mee (R4) voor vrijdagmiddag.",
+    "De broodmaaltijd valt deze week ’s middags: pak ze ’s ochtends in een doos als jullie niet thuis eten."
+  ],
+  "baksel": {
+    "titel": "Wortelcake met walnoten",
+    "ondertitel": "Zondag bakken · smeuïg en kruidig",
+    "wanneer": "Tussendoortje · ma, wo, do en za om 14.30 u",
+    "opbrengst": "18 sneetjes",
+    "tijd": "20 minuten + 45 minuten bakken",
+    "noot": "Voor 18 sneetjes.",
+    "ingredienten": [
+      {
+        "hoeveelheid": "200 g",
+        "naam": "wortelen, fijn geraspt"
+      },
+      {
+        "hoeveelheid": "150 g",
+        "naam": "bloem"
+      },
+      {
+        "hoeveelheid": "2 tl",
+        "naam": "bakpoeder"
+      },
+      {
+        "hoeveelheid": "2",
+        "naam": "eieren"
+      },
+      {
+        "hoeveelheid": "70 g",
+        "naam": "zonnebloem- of olijfolie (mild)"
+      },
+      {
+        "hoeveelheid": "70 g",
+        "naam": "bruine suiker"
+      },
+      {
+        "hoeveelheid": "30 g",
+        "naam": "walnoten, gehakt"
+      },
+      {
+        "hoeveelheid": "2 tl",
+        "naam": "kaneel, ½ tl gemberpoeder, een snuf nootmuskaat en zout. Een cakevorm van ca. 25 cm."
+      }
+    ],
+    "stappen": [
+      "Verwarm de oven voor op 175 °C en bekleed de cakevorm met bakpapier.",
+      "Klop eieren, suiker en olie samen tot een glad mengsel.",
+      "Meng bloem, bakpoeder en de kruiden. Roer het door het eimengsel.",
+      "Spatel de geraspte wortel en de walnoten erdoor. Schep in de vorm.",
+      "Bak 40 tot 45 minuten, tot een prikker er droog uitkomt. Laat afkoelen en snijd in 18 sneetjes."
+    ],
+    "per_portie": "1 sneetje is één tussendoortje, voor allebei. Zin in iets anders? Ruil met een tussendoortje van de ruillijst bij de afspraken.",
+    "bewaren": "Bewaar 4 à 5 dagen in een gesloten doos. Wordt de dag na het bakken nog lekkerder.",
+    "noten": [
+      "Gewone suiker en boter, geen zoetstoffen of light-producten. Voedingswaarden zijn schattingen."
+    ],
+    "voeding": {
+      "label": "1 sneetje",
+      "kcal": "ca. 100 kcal",
+      "eiwit": "2 g eiwit"
+    }
+  },
+  "recepten": [
+    {
+      "nr": 1,
+      "titel": "Varkensmignonette met wortelen en uiensaus",
+      "ondertitel": "Eén warme maaltijd voor het hele gezin",
+      "wanneer": "Maandagavond",
+      "personen": 4,
+      "tijd": "40 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "750 g",
+          "naam": "varkensmignonette (150 g voor dinsdagmiddag)"
+        },
+        {
+          "hoeveelheid": "1000 g",
+          "naam": "wortelen"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "ui"
+        },
+        {
+          "hoeveelheid": "900 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "bloem"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "25 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Tijm, laurier en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de aardappelen gaar. Stoof de wortelen in plakjes met water en tijm 15 tot 20 minuten en roer 10 g boter erdoor.",
+        "Bak alle mignonettes in 20 g olie, 6 tot 10 minuten (kern 63 °C). Leg 150 g apart voor dinsdagmiddag.",
+        "Bak de ui in halve ringen in 10 g boter in het bakvocht, roer de bloem erdoor en voeg 350 ml water toe. Laat 4 tot 5 minuten indikken.",
+        "Verdeel vlees, wortelen en saus in vier, de aardappelen 150 : 300 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "Een kwart van het vlees, de wortelen en de uiensaus, met 150 g aardappelen.",
+        "extra": [
+          "+ 150 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
+        "Alle gewichten zijn rauw. De extra 150 g telt niet mee in deze maaltijd."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 520,
+          "eiwit": 40
+        },
+        "extra": {
+          "kcal": 680,
+          "eiwit": 43
+        }
+      }
+    },
+    {
+      "nr": 2,
+      "titel": "Speltpasta met kalkoen en zuiderse groenten",
+      "ondertitel": "Eén warme maaltijd voor het hele gezin",
+      "wanneer": "Dinsdagavond",
+      "personen": 4,
+      "tijd": "30 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "600 g",
+          "naam": "kalkoenfilet"
+        },
+        {
+          "hoeveelheid": "600 g",
+          "naam": "courgette"
+        },
+        {
+          "hoeveelheid": "400 g",
+          "naam": "paprika"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "passata"
+        },
+        {
+          "hoeveelheid": "285 g",
+          "naam": "speltpasta"
+        },
+        {
+          "hoeveelheid": "40 g",
+          "naam": "parmezaan"
+        },
+        {
+          "hoeveelheid": "45 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Basilicum, oregano, paprikapoeder en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de speltpasta: 50 g voor de basisportie, 85 g voor de portie met extra’s en 75 g voor elk van de anderen.",
+        "Bak de kalkoen in reepjes in 40 g olie. Voeg courgette en paprika toe en bak 5 minuten mee.",
+        "Roer passata en kruiden erdoor met een scheut pastawater en laat 5 tot 8 minuten garen.",
+        "Verdeel de saus in vier, ieder 10 g parmezaan. De laatste 5 g olie gaat door de pasta van de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "Een kwart van de kalkoensaus en 10 g parmezaan, met 50 g speltpasta.",
+        "extra": [
+          "+ 35 g speltpasta",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 75 g speltpasta per persoon.",
+        "Alle gewichten zijn rauw, pasta droog."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 540,
+          "eiwit": 49
+        },
+        "extra": {
+          "kcal": 705,
+          "eiwit": 53
+        }
+      }
+    },
+    {
+      "nr": 3,
+      "titel": "Gehaktballetjes met preipuree en mosterdjus",
+      "ondertitel": "Eén warme maaltijd voor het hele gezin",
+      "wanneer": "Woensdagavond",
+      "personen": 4,
+      "tijd": "35 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "600 g",
+          "naam": "mager rundergehakt"
+        },
+        {
+          "hoeveelheid": "1000 g",
+          "naam": "prei"
+        },
+        {
+          "hoeveelheid": "900 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "200 ml",
+          "naam": "halfvolle melk"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "1",
+          "naam": "ei"
+        },
+        {
+          "hoeveelheid": "40 g",
+          "naam": "paneermeel"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "mosterd"
+        },
+        {
+          "hoeveelheid": "25 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Nootmuskaat, peterselie en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de aardappelen gaar. Stoof de fijngesneden prei 10 tot 15 minuten onder deksel en laat het vocht verdampen.",
+        "Meng het gehakt met ei, paneermeel en kruiden en draai er 16 balletjes van.",
+        "Bak de balletjes in 20 g olie rondom bruin en laat 12 tot 15 minuten garen (kern 71 °C).",
+        "Verdeel de aardappelen 150 : 300 : 225 : 225 en stamp met prei, melk en boter tot puree.",
+        "Roer mosterd en 150 ml water door het bakvocht en laat inkoken. De laatste 5 g olie gaat in de puree van de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "4 balletjes, een kwart van de prei en jus, met 150 g aardappelen.",
+        "extra": [
+          "+ 150 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
+        "Alle gewichten zijn rauw."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 610,
+          "eiwit": 43
+        },
+        "extra": {
+          "kcal": 770,
+          "eiwit": 46
+        }
+      }
+    },
+    {
+      "nr": 4,
+      "titel": "Kip in tomatenroomsaus met broccoli en rijst",
+      "ondertitel": "Donderdag · rijstdag",
+      "wanneer": "Donderdagavond",
+      "personen": 4,
+      "tijd": "30 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "800 g",
+          "naam": "kipfilet (waarvan 200 g voor vrijdagmiddag)"
+        },
+        {
+          "hoeveelheid": "800 g",
+          "naam": "broccoli"
+        },
+        {
+          "hoeveelheid": "300 g",
+          "naam": "passata"
+        },
+        {
+          "hoeveelheid": "100 g",
+          "naam": "ui"
+        },
+        {
+          "hoeveelheid": "285 g",
+          "naam": "rijst"
+        },
+        {
+          "hoeveelheid": "120 ml",
+          "naam": "room 20 %"
+        },
+        {
+          "hoeveelheid": "25 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Paprikapoeder, oregano en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de rijst: 50 g voor de basisportie, 85 g voor de portie met extra’s en 75 g voor elk van de anderen. Stoom de broccoli 8 tot 12 minuten.",
+        "Bak 200 g kipfilet in zijn geheel gaar (kern 74 °C) en leg apart voor vrijdagmiddag.",
+        "Bak de rest van de kip in blokjes met de ui in 20 g olie. Roer passata, room, kruiden en 100 ml water erdoor en laat 8 tot 10 minuten pruttelen.",
+        "Verdeel in vier met de eigen rijst. De laatste 5 g olie gaat door de rijst van de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "Een kwart van de kip, broccoli en saus, met 50 g rijst.",
+        "extra": [
+          "+ 35 g rijst",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 75 g rijst per persoon.",
+        "Alle gewichten zijn rauw, rijst droog. De extra 200 g kip telt niet mee."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 535,
+          "eiwit": 46
+        },
+        "extra": {
+          "kcal": 705,
+          "eiwit": 49
+        }
+      }
+    },
+    {
+      "nr": 5,
+      "titel": "Zalm met boontjes en citroenaardappelen",
+      "ondertitel": "Vrijdag · visdag",
+      "wanneer": "Vrijdagavond",
+      "personen": 4,
+      "tijd": "30 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "600 g",
+          "naam": "zalm"
+        },
+        {
+          "hoeveelheid": "1000 g",
+          "naam": "boontjes"
+        },
+        {
+          "hoeveelheid": "1000 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "25 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "40 g",
+          "naam": "citroensap"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Dille, citroenrasp en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de aardappelen gaar en de boontjes 10 tot 15 minuten.",
+        "Bak de zalm in 20 g olie 3 tot 4 minuten per kant (kern 63 °C) en neem uit de pan.",
+        "Voeg boter, citroensap en 3 eetlepels water toe aan de pan en werk af met dille.",
+        "Schud de aardappelen om met citroenrasp. Verdeel 200 : 350 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "Een kwart van de zalm, boontjes en citroenboter, met 200 g aardappelen.",
+        "extra": [
+          "+ 150 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
+        "Alle gewichten zijn rauw. Aardappelen in plaats van rijst: donderdag is al rijstdag."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 615,
+          "eiwit": 39
+        },
+        "extra": {
+          "kcal": 770,
+          "eiwit": 41
+        }
+      }
+    },
+    {
+      "nr": 6,
+      "titel": "Kippita met looksaus en ovenfrietjes",
+      "ondertitel": "Zaterdag · comfortfood",
+      "wanneer": "Zaterdagavond",
+      "personen": 4,
+      "tijd": "35 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "4",
+          "naam": "pitabroodjes (240 g)"
+        },
+        {
+          "hoeveelheid": "650 g",
+          "naam": "kipfilet"
+        },
+        {
+          "hoeveelheid": "700 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "600 g",
+          "naam": "paprika"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "ui"
+        },
+        {
+          "hoeveelheid": "400 g",
+          "naam": "tomaat"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "halfvolle plattekaas"
+        },
+        {
+          "hoeveelheid": "35 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "1",
+          "naam": "kleine teen knoflook, paprikapoeder, komijn en peper."
+        }
+      ],
+      "stappen": [
+        "Verwarm de oven voor op 200 °C. Snijd de frietjes: 100 g voor de basisportie, 200 g voor elk van de anderen. Meng elk groepje met 5 g olie; bij de portie met extra’s komt nog 5 g. Rooster 25 tot 30 minuten.",
+        "Verdeel de kip: 150 g voor de basisportie, 200 g voor de portie met extra’s en 150 g voor elk van de anderen. Meng met paprika, ui, 10 g olie en kruiden op een tweede bakplaat en bak 18 tot 22 minuten.",
+        "Meng de plattekaas met de geraspte knoflook en peper tot looksaus.",
+        "Warm de pita’s, vul ze met de eigen kip, groenten, saus en tomaat. Serveer met de eigen frietjes."
+      ],
+      "verdelen": {
+        "basis": "1 pita met 150 g kip, een kwart van de groenten en looksaus, frietjes van 100 g aardappelen.",
+        "extra": [
+          "+ 50 g kipfilet",
+          "+ 100 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder 150 g kip en frietjes van 200 g aardappelen.",
+        "Alle gewichten zijn rauw. De looksaus is nu met plattekaas in plaats van yoghurt 0 %."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 600,
+          "eiwit": 52
+        },
+        "extra": {
+          "kcal": 775,
+          "eiwit": 65
+        }
+      }
+    },
+    {
+      "nr": 7,
+      "titel": "Rosbief met peperroomsaus en ovenkrieltjes",
+      "ondertitel": "Zondag · wat uitgebreider",
+      "wanneer": "Zondagavond",
+      "personen": 4,
+      "tijd": "55 minuten",
+      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "600 g",
+          "naam": "rosbief"
+        },
+        {
+          "hoeveelheid": "800 g",
+          "naam": "boontjes"
+        },
+        {
+          "hoeveelheid": "400 g",
+          "naam": "champignons"
+        },
+        {
+          "hoeveelheid": "1000 g",
+          "naam": "krieltjes"
+        },
+        {
+          "hoeveelheid": "160 ml",
+          "naam": "room 20 %"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "mosterd"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "25 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Grof gemalen peper, tijm en rozemarijn."
+        }
+      ],
+      "stappen": [
+        "Verwarm de oven voor op 180 °C. Rooster de krieltjes met 20 g olie en rozemarijn ongeveer 40 minuten.",
+        "Bak de rosbief rondom bruin in de boter en gaar 25 tot 35 minuten in de oven (kern 63 °C). Laat 10 minuten rusten.",
+        "Kook de boontjes 10 tot 15 minuten. Bak de champignons in de pan van het vlees.",
+        "Roer los met 100 ml water, voeg room, mosterd en peper toe en laat inkoken.",
+        "Snijd de rosbief dun. Verdeel in vier, de krieltjes 200 : 350 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "Een kwart van de rosbief, boontjes en saus, met 200 g krieltjes.",
+        "extra": [
+          "+ 150 g krieltjes",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g krieltjes per persoon.",
+        "Alle gewichten zijn rauw."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 625,
+          "eiwit": 45
+        },
+        "extra": {
+          "kcal": 785,
+          "eiwit": 48
+        }
+      }
+    }
+  ]
+}

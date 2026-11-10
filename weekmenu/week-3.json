@@ -1,0 +1,956 @@
+{
+  "week": 3,
+  "voor": 2,
+  "van": "2026-11-23",
+  "tot": "2026-11-29",
+  "dagen": [
+    {
+      "datum": "2026-11-23",
+      "dag": "Maandag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi",
+          "extra": "+ 50 g plattekaas + 15 g granola"
+        },
+        {
+          "moment": "10 u",
+          "basis": "150 g mandarijn",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "Kipragout met champignons en wortelpuree",
+          "detail": "150 g kipfilet + 150 g champignons + 150 g wortelen + 150 g aardappelen",
+          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "recept": 1
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 stukje appel-kaneelcake (zondag gebakken)",
+          "kcal": 105
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g appel",
+          "kcal": 60
+        },
+        {
+          "moment": "Avond",
+          "basis": "2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "basis": {
+        "kcal": 1600,
+        "eiwit": 86
+      },
+      "extra": {
+        "kcal": 2035,
+        "eiwit": 103
+      }
+    },
+    {
+      "datum": "2026-11-24",
+      "dag": "Dinsdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan",
+          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+        },
+        {
+          "moment": "10 u",
+          "basis": "2 kiwi’s (ca. 120 g)",
+          "kcal": 75
+        },
+        {
+          "moment": "Middag",
+          "basis": "Prei-omelet met kip en aardappelen",
+          "detail": "2 eieren + 70 g kipfilet + 250 g prei + 150 g aardappelen",
+          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "recept": 2
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "10 g walnoten",
+          "extra": "20 g walnoten",
+          "kcal": 65
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "150 g snoepgroenten + 25 g hummus",
+          "kcal": 100
+        },
+        {
+          "moment": "Avond",
+          "basis": "2 BH (50 g) + 80 g koude kip van maandag + 100 g tomaat + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 30 g kip + 5 g smeersel"
+        },
+        {
+          "moment": "20 u",
+          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
+          "kcal": 105
+        }
+      ],
+      "basis": {
+        "kcal": 1585,
+        "eiwit": 87
+      },
+      "extra": {
+        "kcal": 2030,
+        "eiwit": 104
+      }
+    },
+    {
+      "datum": "2026-11-25",
+      "dag": "Woensdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "2 BH (50 g) + 1 gekookt ei + 10 g smeersel",
+          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "120 g peer",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "Romige speltpasta met kip en groenten",
+          "detail": "150 g kipfilet + 200 g courgette + 100 g spinazie + 50 g speltpasta",
+          "extra": "+ 35 g speltpasta + 5 g olijfolie",
+          "recept": 3
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 stukje appel-kaneelcake (zondag gebakken)",
+          "kcal": 105
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g appel",
+          "kcal": 60
+        },
+        {
+          "moment": "Avond",
+          "basis": "2 BH (50 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel"
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "basis": {
+        "kcal": 1650,
+        "eiwit": 94
+      },
+      "extra": {
+        "kcal": 2180,
+        "eiwit": 116
+      }
+    },
+    {
+      "datum": "2026-11-26",
+      "dag": "Donderdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi",
+          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+        },
+        {
+          "moment": "10 u",
+          "basis": "150 g mandarijn",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "Gevulde paprika met gehakt en rijst",
+          "detail": "150 g mager rundergehakt + 200 g paprika + 45 g rijst",
+          "extra": "+ 35 g rijst + 5 g olijfolie",
+          "recept": 4
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 stukje appel-kaneelcake (zondag gebakken)",
+          "kcal": 105
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g peer",
+          "kcal": 70
+        },
+        {
+          "moment": "Avond",
+          "basis": "3 BH (75 g) + tonijnsalade van 100 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel",
+          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "20 u",
+          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
+          "kcal": 105
+        }
+      ],
+      "thema": "rijstdag",
+      "basis": {
+        "kcal": 1715,
+        "eiwit": 92
+      },
+      "extra": {
+        "kcal": 2140,
+        "eiwit": 105
+      }
+    },
+    {
+      "datum": "2026-11-27",
+      "dag": "Vrijdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "2 BH (50 g) + 25 g kaas + 10 g smeersel",
+          "extra": "+ 1 BH (25 g) + 15 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "100 g druiven",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "Vispannetje met zalm, kabeljauw en prei",
+          "detail": "100 g zalm + 50 g kabeljauw + 150 g prei + 150 g wortelen + 200 g aardappelen",
+          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "recept": 5
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "120 g halfvolle plattekaas",
+          "kcal": 97
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g appel",
+          "kcal": 60
+        },
+        {
+          "moment": "Avond",
+          "basis": "3 BH (75 g) + 60 g makreelfilet natuur + 150 g komkommer + 15 g smeersel",
+          "extra": "+ 1 BH (25 g) + 40 g makreel + 5 g smeersel"
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "thema": "visdag",
+      "basis": {
+        "kcal": 1670,
+        "eiwit": 83
+      },
+      "extra": {
+        "kcal": 2160,
+        "eiwit": 103
+      }
+    },
+    {
+      "datum": "2026-11-28",
+      "dag": "Zaterdag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)",
+          "extra": "+ 1 BH (25 g) + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "2 kiwi’s (ca. 120 g)",
+          "kcal": 75
+        },
+        {
+          "moment": "Middag",
+          "basis": "3 BH (75 g) + 40 g filet de Saxe + 20 g kaas + 150 g komkommer en paprika + 15 g smeersel",
+          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "1 stukje appel-kaneelcake (zondag gebakken)",
+          "kcal": 105
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "150 g snoepgroenten + 25 g hummus",
+          "kcal": 100
+        },
+        {
+          "moment": "Avond",
+          "basis": "Kipburger met ovenfrietjes en paprika",
+          "detail": "1 hamburgerbroodje (60 g) + 150 g kipfilet + 150 g aardappelen + 150 g paprika",
+          "extra": "+ 50 g kipfilet + 200 g aardappelen + 5 g olijfolie",
+          "recept": 6
+        },
+        {
+          "moment": "20 u",
+          "basis": "kruidenthee, koffie of een glas water"
+        }
+      ],
+      "thema": "comfortfood",
+      "basis": {
+        "kcal": 1615,
+        "eiwit": 93
+      },
+      "extra": {
+        "kcal": 2135,
+        "eiwit": 117
+      }
+    },
+    {
+      "datum": "2026-11-29",
+      "dag": "Zondag",
+      "momenten": [
+        {
+          "moment": "Ontbijt",
+          "basis": "2 BH (50 g) + 25 g kaas + 10 g smeersel",
+          "extra": "+ 1 BH (25 g) + 15 g kaas + 5 g smeersel"
+        },
+        {
+          "moment": "10 u",
+          "basis": "150 g mandarijn",
+          "kcal": 70
+        },
+        {
+          "moment": "Middag",
+          "basis": "2 BH (50 g) + 50 g verse geitenkaas + 20 g parmaham + 100 g tomaat + 10 g smeersel + 300 ml soep",
+          "extra": "+ 1 BH (25 g) + 30 g geitenkaas + 5 g smeersel"
+        },
+        {
+          "moment": "14.30 u",
+          "basis": "120 g halfvolle plattekaas",
+          "kcal": 97
+        },
+        {
+          "moment": "16.30 u",
+          "basis": "120 g peer",
+          "kcal": 70
+        },
+        {
+          "moment": "Avond",
+          "basis": "Varkenshaasje met champignonroomsaus en krieltjes",
+          "detail": "150 g varkenshaasje + 200 g groene asperges + 200 g krieltjes",
+          "extra": "+ 150 g krieltjes + 5 g olijfolie",
+          "recept": 7
+        },
+        {
+          "moment": "20 u",
+          "basis": "15 g pure chocolade 70 %",
+          "kcal": 85
+        }
+      ],
+      "thema": "wat uitgebreider",
+      "basis": {
+        "kcal": 1645,
+        "eiwit": 90
+      },
+      "extra": {
+        "kcal": 2125,
+        "eiwit": 105
+      }
+    }
+  ],
+  "voorbereiding": [
+    "Zondag 22 november: maak het basisrecept soep voor maandag, dinsdag, woensdag en zondag, en kook 8 eieren hard voor maandagavond en woensdagochtend.",
+    "Ook op zondag: bak de appel-kaneelcake. Dat zijn 18 stukjes voor de tussendoortjes van de week; wat over is, vries je in.",
+    "Maandagmiddag: bak 200 g kipfilet extra mee (R1) voor dinsdagavond.",
+    "Zaterdag: de kipburger vraagt 35 minuten. De frietjes en paprika gaan samen op één bakplaat."
+  ],
+  "baksel": {
+    "titel": "Appel-kaneelcake",
+    "ondertitel": "Zondag bakken · ruikt naar herfst",
+    "wanneer": "Tussendoortje · ma, wo, do en za om 14.30 u",
+    "opbrengst": "18 stukjes",
+    "tijd": "20 minuten + 50 minuten bakken",
+    "noot": "Voor 18 stukjes.",
+    "ingredienten": [
+      {
+        "hoeveelheid": "200 g",
+        "naam": "bloem"
+      },
+      {
+        "hoeveelheid": "2 tl",
+        "naam": "bakpoeder"
+      },
+      {
+        "hoeveelheid": "2",
+        "naam": "eieren"
+      },
+      {
+        "hoeveelheid": "75 g",
+        "naam": "boter, zacht"
+      },
+      {
+        "hoeveelheid": "75 g",
+        "naam": "suiker"
+      },
+      {
+        "hoeveelheid": "100 ml",
+        "naam": "halfvolle melk"
+      },
+      {
+        "hoeveelheid": "2",
+        "naam": "appels (ca. 250 g geschild)"
+      },
+      {
+        "hoeveelheid": "2 tl",
+        "naam": "kaneel en een snuf zout. Een vierkante vorm van ca. 20 x 20 cm."
+      }
+    ],
+    "stappen": [
+      "Verwarm de oven voor op 175 °C en bekleed de vorm met bakpapier.",
+      "Klop boter en suiker romig. Klop de eieren er een voor een door.",
+      "Meng bloem, bakpoeder, kaneel en zout. Roer afwisselend met de melk door het botermengsel.",
+      "Schil de appels en snijd ze in dunne partjes. Roer de helft door het beslag, schep in de vorm en leg de rest erbovenop. Strooi wat kaneel over.",
+      "Bak 45 tot 50 minuten. Laat afkoelen en snijd in 18 stukjes (3 x 6)."
+    ],
+    "per_portie": "1 stukje is één tussendoortje, voor allebei. Zin in iets anders? Ruil met een tussendoortje van de ruillijst bij de afspraken.",
+    "bewaren": "Bewaar 3 à 4 dagen in een gesloten doos. Invriezen per stukje kan.",
+    "noten": [
+      "Gewone suiker en boter, geen zoetstoffen of light-producten. Voedingswaarden zijn schattingen."
+    ],
+    "voeding": {
+      "label": "1 stukje",
+      "kcal": "ca. 105 kcal",
+      "eiwit": "2 g eiwit"
+    }
+  },
+  "recepten": [
+    {
+      "nr": 1,
+      "titel": "Kipragout met champignons en wortelpuree",
+      "ondertitel": "Eén gerecht, en meteen het beleg voor dinsdagavond",
+      "wanneer": "Maandagmiddag",
+      "personen": 2,
+      "tijd": "35 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "500 g",
+          "naam": "kipfilet (waarvan 200 g voor dinsdagavond)"
+        },
+        {
+          "hoeveelheid": "300 g",
+          "naam": "champignons"
+        },
+        {
+          "hoeveelheid": "300 g",
+          "naam": "wortelen"
+        },
+        {
+          "hoeveelheid": "450 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "200 ml",
+          "naam": "halfvolle melk"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "bloem"
+        },
+        {
+          "hoeveelheid": "15 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "15 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Tijm, nootmuskaat, peterselie en peper."
+        }
+      ],
+      "stappen": [
+        "Kook aardappelen en wortelen apart in ongeveer 20 minuten gaar.",
+        "Bak 200 g kipfilet in zijn geheel gaar (kern 74 °C) in 5 g olie en leg apart voor dinsdagavond.",
+        "Bak de rest van de kip in blokjes in 5 g olie, voeg de champignons toe en bak 5 minuten mee. Schep op een bord.",
+        "Smelt 10 g boter, roer de bloem erdoor en voeg 150 ml melk en 150 ml water toe. Laat indikken, doe kip en champignons terug en laat 8 tot 10 minuten pruttelen.",
+        "Verdeel de aardappelen 150 : 300. Stamp met de wortelen, 50 ml melk en 5 g boter tot puree. De laatste 5 g olie gaat in de puree van de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "De helft van de ragout en wortelen, met 150 g aardappelen.",
+        "extra": [
+          "+ 150 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw. De extra 200 g kip telt niet mee in deze maaltijd."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 545,
+          "eiwit": 48
+        },
+        "extra": {
+          "kcal": 705,
+          "eiwit": 51
+        }
+      }
+    },
+    {
+      "nr": 2,
+      "titel": "Prei-omelet met kip en aardappelen",
+      "ondertitel": "Eén gerecht, passende porties voor twee",
+      "wanneer": "Dinsdagmiddag",
+      "personen": 2,
+      "tijd": "30 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "4",
+          "naam": "eieren"
+        },
+        {
+          "hoeveelheid": "140 g",
+          "naam": "kipfilet"
+        },
+        {
+          "hoeveelheid": "500 g",
+          "naam": "prei"
+        },
+        {
+          "hoeveelheid": "450 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "100 ml",
+          "naam": "halfvolle melk"
+        },
+        {
+          "hoeveelheid": "40 g",
+          "naam": "kaas"
+        },
+        {
+          "hoeveelheid": "15 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Bieslook, nootmuskaat en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de aardappelen in ongeveer 20 minuten gaar. Spoel de prei en snijd in fijne ringen.",
+        "Bak de kip in dunne reepjes gaar in 5 g olie in een antiaanbakpan met deksel. Schep uit.",
+        "Stoof de prei in 5 g olie met een scheutje water 8 tot 10 minuten zacht. Roer de kip erdoor.",
+        "Klop de eieren los met melk en kruiden, giet over de prei en strooi de kaas erop. Laat onder deksel op laag vuur 10 minuten stollen.",
+        "Snijd de omelet in twee helften. Verdeel de aardappelen 150 : 300; de laatste 5 g olie is voor de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "De helft van de omelet, met 150 g aardappelen.",
+        "extra": [
+          "+ 150 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 570,
+          "eiwit": 41
+        },
+        "extra": {
+          "kcal": 730,
+          "eiwit": 45
+        }
+      }
+    },
+    {
+      "nr": 3,
+      "titel": "Romige speltpasta met kip en groenten",
+      "ondertitel": "Eén gerecht, passende porties voor twee",
+      "wanneer": "Woensdagmiddag",
+      "personen": 2,
+      "tijd": "30 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "300 g",
+          "naam": "kipfilet"
+        },
+        {
+          "hoeveelheid": "400 g",
+          "naam": "courgette"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "spinazie"
+        },
+        {
+          "hoeveelheid": "135 g",
+          "naam": "speltpasta"
+        },
+        {
+          "hoeveelheid": "200 ml",
+          "naam": "halfvolle melk"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "bloem"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "parmezaan"
+        },
+        {
+          "hoeveelheid": "5 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Italiaanse kruiden, nootmuskaat en peper."
+        }
+      ],
+      "stappen": [
+        "Kook de speltpasta: 50 g voor de basisportie en 85 g voor de portie met extra’s, droog gewogen. Houd een kopje kookwater bij.",
+        "Bak de kip in blokjes in de boter, voeg de courgette toe en bak 5 minuten mee.",
+        "Strooi de bloem erover, voeg geleidelijk de melk toe en laat 5 tot 8 minuten pruttelen tot de kip gaar is.",
+        "Laat de spinazie erin slinken. Verdeel de saus gelijk, ieder 10 g parmezaan. De 5 g olie gaat door de pasta van de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "De helft van de kip-groentesaus en 10 g parmezaan, met 50 g speltpasta.",
+        "extra": [
+          "+ 35 g speltpasta",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw, pasta droog."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 545,
+          "eiwit": 53
+        },
+        "extra": {
+          "kcal": 710,
+          "eiwit": 57
+        }
+      }
+    },
+    {
+      "nr": 4,
+      "titel": "Gevulde paprika met gehakt en rijst",
+      "ondertitel": "Donderdag · rijstdag",
+      "wanneer": "Donderdagmiddag",
+      "personen": 2,
+      "tijd": "45 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "300 g",
+          "naam": "mager rundergehakt"
+        },
+        {
+          "hoeveelheid": "400 g",
+          "naam": "paprika"
+        },
+        {
+          "hoeveelheid": "150 g",
+          "naam": "passata"
+        },
+        {
+          "hoeveelheid": "50 g",
+          "naam": "ui"
+        },
+        {
+          "hoeveelheid": "125 g",
+          "naam": "rijst"
+        },
+        {
+          "hoeveelheid": "30 g",
+          "naam": "kaas"
+        },
+        {
+          "hoeveelheid": "15 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Oregano, paprikapoeder en peper."
+        }
+      ],
+      "stappen": [
+        "Verwarm de oven voor op 180 °C. Halveer de paprika’s en leg ze in een ovenschaal.",
+        "Fruit de ui in 10 g olie, bak het gehakt rul en roer passata en kruiden erdoor. Laat 5 minuten pruttelen.",
+        "Vul de paprika’s, strooi de kaas erover en giet een scheutje water op de bodem. Bak 25 tot 30 minuten.",
+        "Kook intussen de rijst: 45 g voor de basisportie en 80 g voor de portie met extra’s. De laatste 5 g olie gaat door de rijst van de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "De helft van de gevulde paprika’s en saus, met 45 g rijst.",
+        "extra": [
+          "+ 35 g rijst",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw, rijst droog."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 600,
+          "eiwit": 43
+        },
+        "extra": {
+          "kcal": 765,
+          "eiwit": 46
+        }
+      }
+    },
+    {
+      "nr": 5,
+      "titel": "Vispannetje met zalm, kabeljauw en prei",
+      "ondertitel": "Vrijdag · visdag",
+      "wanneer": "Vrijdagmiddag",
+      "personen": 2,
+      "tijd": "40 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "200 g",
+          "naam": "zalm"
+        },
+        {
+          "hoeveelheid": "100 g",
+          "naam": "kabeljauw"
+        },
+        {
+          "hoeveelheid": "300 g",
+          "naam": "prei"
+        },
+        {
+          "hoeveelheid": "300 g",
+          "naam": "wortelen"
+        },
+        {
+          "hoeveelheid": "550 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "200 ml",
+          "naam": "halfvolle melk"
+        },
+        {
+          "hoeveelheid": "40 ml",
+          "naam": "room 20 %"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "bloem"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "5 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Dille, nootmuskaat en peper."
+        }
+      ],
+      "stappen": [
+        "Verwarm de oven voor op 180 °C. Kook de aardappelen gaar.",
+        "Stoof wortelen en prei in de boter met 100 ml water 8 tot 10 minuten onder deksel.",
+        "Roer de bloem erdoor, voeg melk en room toe en laat binden. Kruid met dille, nootmuskaat en peper.",
+        "Leg de vis in blokjes in een ovenschaal, schep de groentesaus erover en gaar 15 tot 20 minuten.",
+        "Verdeel vis en saus gelijk, de aardappelen 200 : 350. De 5 g olie is voor de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "De helft van het vispannetje, met 200 g aardappelen.",
+        "extra": [
+          "+ 150 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw. Meer zalm dan vroeger, voor een portie vette vis."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 630,
+          "eiwit": 41
+        },
+        "extra": {
+          "kcal": 790,
+          "eiwit": 44
+        }
+      }
+    },
+    {
+      "nr": 6,
+      "titel": "Kipburger met ovenfrietjes en paprika",
+      "ondertitel": "Zaterdag · comfortfood",
+      "wanneer": "Zaterdagavond",
+      "personen": 2,
+      "tijd": "35 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "2",
+          "naam": "hamburgerbroodjes (120 g)"
+        },
+        {
+          "hoeveelheid": "350 g",
+          "naam": "kipfilet"
+        },
+        {
+          "hoeveelheid": "500 g",
+          "naam": "aardappelen"
+        },
+        {
+          "hoeveelheid": "300 g",
+          "naam": "paprika"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "tomaat"
+        },
+        {
+          "hoeveelheid": "60 g",
+          "naam": "halfvolle plattekaas"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "mosterd"
+        },
+        {
+          "hoeveelheid": "20 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Paprikapoeder, tijm en peper."
+        }
+      ],
+      "stappen": [
+        "Verwarm de oven voor op 200 °C. Snijd de aardappelen in frietjes: 150 g voor de basisportie met 5 g olie, 350 g voor de portie met extra’s met 10 g olie. Rooster 25 tot 30 minuten; de paprika in reepjes gaat de laatste 15 minuten mee.",
+        "Maak de kip ongeveer 1,5 cm dik en kruid. Bak 150 g voor de basisportie en 200 g voor de portie met extra’s in 5 g olie, 4 tot 5 minuten per kant.",
+        "Meng de plattekaas met mosterd en tijm tot een saus. Warm de broodjes kort in de oven.",
+        "Bouw ieder een burger met de eigen kip, saus en tomaat. Serveer met de eigen frietjes en paprika."
+      ],
+      "verdelen": {
+        "basis": "1 broodje met 150 g kip, saus en tomaat, frietjes van 150 g aardappelen en 150 g paprika.",
+        "extra": [
+          "+ 50 g kipfilet",
+          "+ 200 g aardappelen",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw. De saus is nu met plattekaas in plaats van yoghurt 0 %."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 605,
+          "eiwit": 50
+        },
+        "extra": {
+          "kcal": 860,
+          "eiwit": 65
+        }
+      }
+    },
+    {
+      "nr": 7,
+      "titel": "Varkenshaasje met champignonroomsaus en krieltjes",
+      "ondertitel": "Zondag · wat uitgebreider",
+      "wanneer": "Zondagavond",
+      "personen": 2,
+      "tijd": "40 minuten",
+      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "ingredienten": [
+        {
+          "hoeveelheid": "300 g",
+          "naam": "varkenshaasje"
+        },
+        {
+          "hoeveelheid": "200 g",
+          "naam": "champignons"
+        },
+        {
+          "hoeveelheid": "400 g",
+          "naam": "groene asperges (diepvries mag)"
+        },
+        {
+          "hoeveelheid": "550 g",
+          "naam": "krieltjes"
+        },
+        {
+          "hoeveelheid": "80 ml",
+          "naam": "room 20 %"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "mosterd"
+        },
+        {
+          "hoeveelheid": "10 g",
+          "naam": "boter"
+        },
+        {
+          "hoeveelheid": "15 g",
+          "naam": "olijfolie"
+        },
+        {
+          "hoeveelheid": "",
+          "naam": "Tijm, rozemarijn en peper."
+        }
+      ],
+      "stappen": [
+        "Verwarm de oven voor op 180 °C. Rooster de krieltjes met 5 g olie en rozemarijn 30 tot 35 minuten.",
+        "Bak het varkenshaasje rondom bruin in de boter en zet 12 tot 18 minuten in de oven (kern 63 °C). Laat 5 minuten rusten.",
+        "Bak de asperges 6 tot 10 minuten in 5 g olie.",
+        "Bak de champignons in de pan van het vlees, roer los met 50 ml water en voeg room en mosterd toe.",
+        "Verdeel vlees, saus en asperges gelijk, de krieltjes 200 : 350. De laatste 5 g olie is voor de portie met extra’s."
+      ],
+      "verdelen": {
+        "basis": "De helft van het vlees, de saus en de asperges, met 200 g krieltjes.",
+        "extra": [
+          "+ 150 g krieltjes",
+          "+ 5 g olijfolie"
+        ]
+      },
+      "noten": [
+        "Alle gewichten zijn rauw."
+      ],
+      "voeding": {
+        "basis": {
+          "kcal": 560,
+          "eiwit": 47
+        },
+        "extra": {
+          "kcal": 720,
+          "eiwit": 50
+        }
+      }
+    }
+  ]
+}

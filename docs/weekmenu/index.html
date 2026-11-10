@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#AD2C2C">
+<title>Het weekmenu</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;600&family=Caveat:wght@500&display=swap' rel='stylesheet'>
+<style>
+:root{
+  --rood:#AD2C2C; --zeegroen:#77968E; --inkt:#1F1D1A;
+  --inkt-zacht:#7B7777; --inkt-licht:#ADA7A7;
+  --papier:#F0EEEB; --wit:#FFFFFF; --kaart:#FAFAFA; --lijn:#E8E8E8;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--papier); color:var(--inkt);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:17px; line-height:1.6; padding-bottom:78px;
+}
+.wrap{max-width:760px; margin:0 auto; padding:0 20px;}
+a{color:var(--rood); text-decoration:none;}
+
+/* kop van de site */
+.kop{background:var(--wit); border-bottom:1px solid var(--lijn); padding:28px 0 24px;}
+.koprij{display:flex; align-items:center; justify-content:space-between; gap:14px;}
+.pil{border:1px solid var(--lijn); border-radius:999px; padding:8px 14px;
+  font-size:13px; color:var(--zeegroen); background:var(--wit); white-space:nowrap;
+  font-family:'DM Sans',sans-serif;}
+.koppils{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
+.kop h1{
+  font-family:'DM Sans',sans-serif; font-weight:700; font-size:30px;
+  margin:0; letter-spacing:-.4px; white-space:nowrap;
+}
+.kop h1 span{color:var(--rood);}
+.kop p{margin:4px 0 0; color:var(--inkt-zacht); font-size:13px;
+  letter-spacing:1.4px; text-transform:uppercase;}
+
+/* zoeken en filters */
+.zoek{width:100%; padding:13px 16px; border:1px solid var(--lijn);
+  border-radius:10px; background:var(--wit); font-size:16px;
+  font-family:inherit; color:var(--inkt); margin:22px 0 12px;}
+.zoek:focus{outline:none; border-color:var(--zeegroen);}
+.chips{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:22px;}
+.chip{border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  padding:7px 14px; border-radius:999px; font-size:13px; font-family:inherit;
+  cursor:pointer; letter-spacing:.3px;}
+.chip.aan{background:var(--rood); border-color:var(--rood); color:var(--wit);}
+
+/* receptkaarten */
+.kaarten{display:grid; gap:14px; padding-bottom:40px;}
+.kaart{display:block; background:var(--wit); border:1px solid var(--lijn);
+  border-radius:12px; padding:20px 22px; color:var(--inkt);}
+.kaart .kicker{font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.8px; text-transform:uppercase; color:var(--rood);}
+.kaart h2{font-family:'DM Sans',sans-serif; font-size:23px; font-weight:700;
+  margin:6px 0 6px; letter-spacing:-.3px;}
+.kaart p{margin:0; color:var(--inkt-zacht); font-size:15px;}
+.kaart .regel{margin-top:12px; font-size:12px; color:var(--inkt-licht);
+  letter-spacing:.4px;}
+.leeg{color:var(--inkt-zacht); text-align:center; padding:40px 0;}
+
+/* receptpagina */
+.terug{display:inline-block; margin:22px 0 6px; font-size:14px; color:var(--inkt-zacht);}
+.recept{background:var(--wit); border:1px solid var(--lijn); border-radius:12px;
+  padding:30px 26px 34px; margin-bottom:30px;}
+.recept .kicker{font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:2px; text-transform:uppercase; color:var(--rood);}
+.recept h1{font-family:'DM Sans',sans-serif; font-size:36px; font-weight:700;
+  line-height:1.1; margin:10px 0 14px; letter-spacing:-.8px; color:var(--rood);}
+.intro{color:var(--inkt-zacht); font-size:16px; margin:0 0 24px;}
+
+.meta{display:flex; flex-wrap:wrap; gap:22px; padding:16px 0;
+  border-top:1px solid var(--lijn); border-bottom:1px solid var(--lijn);}
+.meta div span{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);}
+.meta div b{font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;}
+
+h3.blokkop{font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--rood); margin:30px 0 14px;}
+
+/* porties */
+.porties{display:flex; align-items:center; gap:14px; background:var(--papier);
+  border-radius:10px; padding:12px 16px; margin-bottom:16px;}
+.porties .tekst{font-size:14px; color:var(--inkt-zacht); flex:1;}
+.porties button{width:36px; height:36px; border-radius:9px; border:1px solid var(--lijn);
+  background:var(--wit); font-size:20px; color:var(--rood); cursor:pointer;
+  line-height:1; font-family:inherit;}
+.porties .aantal{font-family:'DM Sans',sans-serif; font-weight:700; font-size:19px;
+  min-width:26px; text-align:center;}
+
+/* ingredienten */
+ul.ing{list-style:none; padding:0; margin:0;}
+ul.ing li{padding:11px 0 11px 30px; border-bottom:1px solid var(--lijn);
+  position:relative; cursor:pointer; font-size:16px;}
+ul.ing li:before{content:""; position:absolute; left:0; top:15px; width:16px;
+  height:16px; border:1.5px solid var(--inkt-licht); border-radius:4px;}
+ul.ing li.af{color:var(--inkt-licht); text-decoration:line-through;}
+ul.ing li.af:before{background:var(--zeegroen); border-color:var(--zeegroen);}
+ul.ing li b{font-family:'DM Sans',sans-serif; font-weight:600;}
+
+/* stappen */
+.stap{display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--lijn);
+  cursor:pointer;}
+.stap .nr{font-family:'DM Sans',sans-serif; font-weight:700; font-size:20px;
+  color:var(--rood); min-width:26px;}
+.stap h4{font-family:'DM Sans',sans-serif; font-size:17px; margin:0 0 4px;}
+.stap p{margin:0; font-size:16px; color:var(--inkt);}
+.stap.af{opacity:.4;}
+.stap.af .nr{color:var(--zeegroen);}
+
+/* tip */
+.tip{background:var(--papier); border-left:3px solid var(--rood); border-radius:0 10px 10px 0;
+  padding:16px 20px; margin:26px 0 0;}
+.tip p{font-family:'Caveat',cursive; font-size:22px; line-height:1.35; margin:0;}
+.tip .pen{color:var(--rood); font-size:15px;}
+
+/* praktijk */
+.praktijk{display:grid; gap:12px;}
+.praktijk div{background:var(--kaart); border:1px solid var(--lijn);
+  border-radius:10px; padding:14px 18px;}
+.praktijk h4{font-family:'DM Sans',sans-serif; font-size:15px; margin:0 0 4px;
+  color:var(--zeegroen);}
+.praktijk p{margin:0; font-size:15px; color:var(--inkt-zacht);}
+
+/* voet en balk */
+.voet{text-align:center; color:var(--inkt-licht); font-size:12px;
+  letter-spacing:.6px; padding:10px 0 30px;}
+.voet .bron{margin-top:8px;}
+.voet .bron a{border-bottom:1px solid rgba(173,44,44,.35);}
+.balk{position:fixed; left:0; right:0; bottom:0; background:var(--wit);
+  border-top:1px solid var(--lijn); display:flex; gap:10px; padding:10px 16px;
+  justify-content:center; z-index:9;}
+.balk button, .balk a{flex:1; max-width:220px; text-align:center; padding:11px 8px;
+  border-radius:10px; border:1px solid var(--lijn); background:var(--wit);
+  color:var(--inkt); font-size:14px; font-family:inherit; cursor:pointer;}
+.balk button.aan{background:var(--zeegroen); border-color:var(--zeegroen); color:var(--wit);}
+.balk .nieuw{border-color:var(--rood); color:var(--rood);
+  font-family:'DM Sans',sans-serif; font-weight:500;}
+
+/* het venster om een recept door te sturen */
+[hidden]{display:none !important;}
+.venster{position:fixed; inset:0; z-index:20; background:rgba(31,29,26,.55);
+  display:flex; align-items:flex-end; justify-content:center;}
+.venster-kaart{background:var(--wit); width:100%; max-width:520px;
+  max-height:92vh; overflow-y:auto; border-radius:16px 16px 0 0;
+  padding:22px 20px 24px;}
+.venster-kaart h3{font-family:'DM Sans',sans-serif; font-size:20px; margin:0 0 6px;
+  color:var(--rood);}
+.venster-kaart .uitleg{margin:0 0 18px; font-size:14px; color:var(--inkt-zacht);}
+.veld{margin-bottom:14px;}
+.veld label{display:block; font-family:'DM Sans',sans-serif; font-size:10px;
+  letter-spacing:1.4px; text-transform:uppercase; color:var(--inkt-licht);
+  margin-bottom:5px;}
+.veld input, .veld textarea{width:100%; padding:12px 14px; border:1px solid var(--lijn);
+  border-radius:10px; font-size:16px; font-family:inherit; color:var(--inkt);
+  background:var(--wit);}
+.veld textarea{resize:vertical; line-height:1.5;}
+.veld input:focus, .veld textarea:focus{outline:none; border-color:var(--zeegroen);}
+.veld input::-webkit-outer-spin-button,
+.veld input::-webkit-inner-spin-button{-webkit-appearance:none; margin:0;}
+.veld input[type=number]{-moz-appearance:textfield;}
+.velden{display:flex; gap:12px;}
+.velden .veld{flex:1;}
+.vensternoot{font-size:13px; color:var(--inkt-zacht); margin:0 0 16px;}
+.venster-knoppen{display:flex; gap:10px;}
+.venster-knoppen button{flex:1; padding:14px; border-radius:10px;
+  border:1px solid var(--lijn); background:var(--wit); color:var(--inkt-zacht);
+  font-family:inherit; font-size:15px; cursor:pointer;}
+.venster-knoppen button.hoofd{background:var(--rood); border-color:var(--rood);
+  color:var(--wit); font-family:'DM Sans',sans-serif; font-weight:500;}
+
+@media print{
+  .balk,.terug,.porties button,.venster{display:none;}
+  body{background:var(--wit); padding:0;}
+  .recept{border:none; padding:0;}
+}
+
+.recept h1{font-size:30px; overflow-wrap:break-word; hyphens:auto;}
+.weken{display:flex; gap:8px; flex-wrap:wrap; margin:22px 0 10px;}
+.dagchips{display:flex; gap:6px; margin:0 0 16px;}
+.dagchips .chip{flex:1; padding:8px 0; text-align:center; line-height:1.25;}
+.dagchips .chip b{display:block; font-family:'DM Sans',sans-serif; font-size:16px;
+  color:var(--inkt);}
+.dagchips .chip.aan b{color:var(--wit);}
+.dagchips .chip.nu{border-color:var(--rood);}
+
+.dag.recept{padding:26px 22px 24px; margin-bottom:22px;}
+.dag h2{font-family:'DM Sans',sans-serif; font-size:30px; font-weight:700;
+  line-height:1.1; margin:8px 0 16px; letter-spacing:-.6px; color:var(--rood);}
+.moment{display:flex; gap:14px; padding:13px 0; border-top:1px solid var(--lijn);
+  cursor:pointer;}
+.moment .uur{font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:1.2px;
+  text-transform:uppercase; color:var(--inkt-licht); min-width:58px; padding-top:5px;}
+.moment .wat{flex:1; font-size:16px;}
+.moment .kcal{color:var(--inkt-licht); font-size:13px; white-space:nowrap;}
+.moment .detail{display:block; color:var(--inkt-zacht); font-size:15px; margin-top:2px;}
+.moment .extra{display:block; color:var(--zeegroen); font-size:15px; margin-top:4px;}
+.extra b, .tag{font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:1.2px;
+  text-transform:uppercase; font-weight:700; margin-right:4px;}
+.moment.af{opacity:.4;}
+.moment.af .uur{color:var(--zeegroen);}
+.moment a.gerecht{font-family:'DM Sans',sans-serif; font-weight:700; font-size:18px;
+  line-height:1.25; display:block;}
+.moment a.gerecht:after{content:" \2192";}
+.dagtotaal{display:flex; gap:10px; margin-top:6px; padding-top:16px;
+  border-top:1px solid var(--lijn);}
+.dagtotaal div, .voeding div{flex:1; background:var(--zeegroen); color:var(--wit);
+  border-radius:10px; padding:10px 14px; font-size:13px;}
+.dagtotaal span, .voeding span{display:block; font-family:'DM Sans',sans-serif;
+  font-size:10px; letter-spacing:1.4px; text-transform:uppercase; opacity:.85;}
+.dagtotaal b, .voeding b{font-family:'DM Sans',sans-serif; font-size:17px;}
+.voeding{display:flex; gap:10px; margin-top:20px;}
+
+.weekblok{background:var(--wit); border:1px solid var(--lijn); border-radius:12px;
+  padding:6px 22px 22px; margin-bottom:22px;}
+.weekblok .kaarten{padding-bottom:0; gap:10px;}
+.weekblok .kaart{padding:14px 16px; background:var(--kaart);}
+.weekblok .kaart h2{font-size:17px; margin:4px 0 0;}
+.nootregel{font-size:14px; color:var(--inkt-zacht); margin:0 0 6px;}
+.recept p.klein{font-size:14px; color:var(--inkt-zacht); margin:14px 0 0;}
+.stap p{padding-top:3px;}
+.praktijk ul{margin:0; padding:0; list-style:none; font-size:15px; color:var(--inkt-zacht);}
+
+.ritme div{display:flex;}
+.ritme .tag{flex:none; width:66px; padding-top:6px; color:var(--inkt-licht);}
+.afspraken .moment .uur{min-width:78px;}
+ul.punten{margin:0; padding-left:20px; font-size:16px;}
+ul.punten li{margin-bottom:8px;}
+
+@media print{ .weken,.dagchips{display:none;} }
+</style>
+</head>
+<body>
+
+<header class="kop"><div class="wrap">
+  <div class="koprij">
+    <h1>Het <span>weekmenu</span></h1>
+    <a class="pil" href="../index.html">Kookboek</a>
+  </div>
+  <p>Studio HeLeen · wat eten we vandaag</p>
+</div></header>
+<main class="wrap">
+  <div class="weken"><button class="chip" data-week="1">9-15 nov · twee</button><button class="chip" data-week="2">16-22 nov · vier</button><button class="chip" data-week="3">23-29 nov · twee</button><button class="chip" data-week="4">30 nov - 6 dec · vier</button><button class="chip" data-week="5">7-13 dec · twee</button></div>
+  
+<section class="week" data-week="1" data-van="2026-11-09" data-tot="2026-11-15">
+  <div class="dagchips"><button class="chip" data-datum="2026-11-09">Ma<b>9</b></button><button class="chip" data-datum="2026-11-10">Di<b>10</b></button><button class="chip" data-datum="2026-11-11">Wo<b>11</b></button><button class="chip" data-datum="2026-11-12">Do<b>12</b></button><button class="chip" data-datum="2026-11-13">Vr<b>13</b></button><button class="chip" data-datum="2026-11-14">Za<b>14</b></button><button class="chip" data-datum="2026-11-15">Zo<b>15</b></button></div>
+  
+  <article class="recept dag" id="d2026-11-09" data-datum="2026-11-09">
+    <div class="kicker">Week 1 · voor twee</div>
+    <h2>Maandag 9 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g plattekaas + 15 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-1-r1.html">Kip met wortelen en peterselieaardappelen</a><span class="detail">150 g kipfilet + 300 g wortelen + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje bananenbrood met walnoten (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1535 kcal</b> · 78 g eiwit</div>
+      <div><span>Met extra</span><b>1970 kcal</b> · 95 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-10" data-datum="2026-11-10">
+    <div class="kicker">Week 1 · voor twee</div>
+    <h2>Dinsdag 10 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 1 gekookt ei + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-1-r2.html">Kabeljauw met preisaus en puree</a><span class="detail">150 g kabeljauw + 250 g prei + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 80 g koude kip van maandag + 100 g komkommer en tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g kip + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1560 kcal</b> · 98 g eiwit</div>
+      <div><span>Met extra</span><b>2020 kcal</b> · 119 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-11" data-datum="2026-11-11">
+    <div class="kicker">Week 1 · voor twee</div>
+    <h2>Woensdag 11 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-1-r3.html">Gehaktballetjes in tomatensaus met spaghetti</a><span class="detail">150 g mager rundergehakt + 150 g courgette + 50 g spaghetti</span><span class="extra"><b>Extra</b>+ 35 g spaghetti + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje bananenbrood met walnoten (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">3 BH (75 g) + tonijnsalade van 100 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1675 kcal</b> · 88 g eiwit</div>
+      <div><span>Met extra</span><b>2105 kcal</b> · 102 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-12" data-datum="2026-11-12">
+    <div class="kicker">Week 1 · voor twee · rijstdag</div>
+    <h2>Donderdag 12 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 25 g kaas + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-1-r4.html">Kip met broccoli, kaassaus en rijst</a><span class="detail">150 g kipfilet + 250 g broccoli + 40 g rijst</span><span class="extra"><b>Extra</b>+ 35 g rijst + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje bananenbrood met walnoten (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">3 BH (75 g) + 40 g filet de Saxe + 20 g kaas + 100 g komkommer + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1720 kcal</b> · 96 g eiwit</div>
+      <div><span>Met extra</span><b>2205 kcal</b> · 113 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-13" data-datum="2026-11-13">
+    <div class="kicker">Week 1 · voor twee · visdag</div>
+    <h2>Vrijdag 13 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">100 g druiven</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-1-r5.html">Zalm met spinazie en puree</a><span class="detail">150 g zalm + 250 g spinazie + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">10 g walnoten<span class="extra"><b>Extra</b>20 g walnoten</span></div><span class="kcal">65 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 60 g makreelfilet natuur + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g makreel + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1570 kcal</b> · 73 g eiwit</div>
+      <div><span>Met extra</span><b>2065 kcal</b> · 90 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-14" data-datum="2026-11-14">
+    <div class="kicker">Week 1 · voor twee · comfortfood</div>
+    <h2>Zaterdag 14 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 60 g mozzarella + 30 g parmaham + 150 g tomaat en rucola + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje bananenbrood met walnoten (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-1-r6.html">Stoofvlees met wortelen en ovenfrietjes</a><span class="detail">150 g stoofvlees + 300 g wortelen + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">kruidenthee, koffie of een glas water</div></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1655 kcal</b> · 85 g eiwit</div>
+      <div><span>Met extra</span><b>2110 kcal</b> · 99 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-15" data-datum="2026-11-15">
+    <div class="kicker">Week 1 · voor twee · wat uitgebreider</div>
+    <h2>Zondag 15 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 1 gekookt ei + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 50 g verse geitenkaas + 30 g kippenwit + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g geitenkaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-1-r7.html">Varkenshaasje met boontjes en mosterdroomsaus</a><span class="detail">150 g varkenshaasje + 200 g boontjes + 100 g champignons + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1600 kcal</b> · 89 g eiwit</div>
+      <div><span>Met extra</span><b>2095 kcal</b> · 107 g eiwit</div>
+    </div>
+  </article>
+  <div class="weekblok">
+    <h3 class="blokkop">Voorbereiding deze week</h3>
+    <ul class="ing"><li>Zondag 8 november: maak het basisrecept soep (zie afspraken) voor maandag, dinsdag, vrijdag en zondag, en kook 8 eieren hard voor maandagavond en dinsdagochtend.</li><li>Ook op zondag: bak de bananenbrood met walnoten. Dat zijn 18 sneetjes voor de tussendoortjes van de week; wat over is, vries je in.</li><li>Maandagmiddag: bak 200 g kipfilet extra mee (R1). Dat is het beleg voor dinsdagavond.</li><li>Zaterdag: het stoofvlees heeft 2½ tot 3 uur nodig. Zet het na de middag op. Maak gerust dubbel en vries een portie in.</li></ul>
+    <h3 class="blokkop">Zondag bakken</h3>
+    <div class="kaarten">
+      <a class="kaart" href="week-1-baksel.html">
+        <div class="kicker">18 sneetjes · 15 minuten + 55 minuten bakken</div><h2>Bananenbrood met walnoten</h2></a>
+    </div>
+    <h3 class="blokkop">De zeven recepten</h3>
+    <div class="kaarten"><a class="kaart" href="week-1-r1.html"><div class="kicker">Maandagmiddag</div><h2>Kip met wortelen en peterselieaardappelen</h2></a><a class="kaart" href="week-1-r2.html"><div class="kicker">Dinsdagmiddag</div><h2>Kabeljauw met preisaus en puree</h2></a><a class="kaart" href="week-1-r3.html"><div class="kicker">Woensdagmiddag</div><h2>Gehaktballetjes in tomatensaus met spaghetti</h2></a><a class="kaart" href="week-1-r4.html"><div class="kicker">Donderdagmiddag</div><h2>Kip met broccoli, kaassaus en rijst</h2></a><a class="kaart" href="week-1-r5.html"><div class="kicker">Vrijdagmiddag</div><h2>Zalm met spinazie en puree</h2></a><a class="kaart" href="week-1-r6.html"><div class="kicker">Zaterdagavond</div><h2>Stoofvlees met wortelen en ovenfrietjes</h2></a><a class="kaart" href="week-1-r7.html"><div class="kicker">Zondagavond</div><h2>Varkenshaasje met boontjes en mosterdroomsaus</h2></a></div>
+  </div>
+</section>
+<section class="week" data-week="2" data-van="2026-11-16" data-tot="2026-11-22">
+  <div class="dagchips"><button class="chip" data-datum="2026-11-16">Ma<b>16</b></button><button class="chip" data-datum="2026-11-17">Di<b>17</b></button><button class="chip" data-datum="2026-11-18">Wo<b>18</b></button><button class="chip" data-datum="2026-11-19">Do<b>19</b></button><button class="chip" data-datum="2026-11-20">Vr<b>20</b></button><button class="chip" data-datum="2026-11-21">Za<b>21</b></button><button class="chip" data-datum="2026-11-22">Zo<b>22</b></button></div>
+  
+  <article class="recept dag" id="d2026-11-16" data-datum="2026-11-16">
+    <div class="kicker">Week 2 · voor vier</div>
+    <h2>Maandag 16 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g plattekaas + 15 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 punt plattekaastaart zonder bodem (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r1.html">Kalkoen met bloemkool in kaassaus</a><span class="detail">150 g kalkoenfilet + 300 g bloemkool + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1650 kcal</b> · 92 g eiwit</div>
+      <div><span>Met extra</span><b>2085 kcal</b> · 109 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-17" data-datum="2026-11-17">
+    <div class="kicker">Week 2 · voor vier</div>
+    <h2>Dinsdag 17 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 1 gekookt ei + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 80 g koude kalkoen van maandag + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g kalkoen + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r2.html">Kabeljauw uit de oven met tomaat en courgette</a><span class="detail">150 g kabeljauw + 200 g courgette + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1480 kcal</b> · 93 g eiwit</div>
+      <div><span>Met extra</span><b>1935 kcal</b> · 114 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-18" data-datum="2026-11-18">
+    <div class="kicker">Week 2 · voor vier</div>
+    <h2>Woensdag 18 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + tonijnsalade van 80 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 punt plattekaastaart zonder bodem (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r3.html">Gehaktbrood met wortelpuree</a><span class="detail">150 g mager rundergehakt + 250 g wortelen + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1690 kcal</b> · 79 g eiwit</div>
+      <div><span>Met extra</span><b>2110 kcal</b> · 92 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-19" data-datum="2026-11-19">
+    <div class="kicker">Week 2 · voor vier · rijstdag</div>
+    <h2>Donderdag 19 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 40 g filet de Saxe + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g filet de Saxe + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 60 g koud gehaktbrood van woensdag + mosterd + 150 g komkommer + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g gehaktbrood + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 punt plattekaastaart zonder bodem (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r4.html">Kip met paprika in zachte currysaus</a><span class="detail">150 g kipfilet + 250 g paprika + 50 g rijst</span><span class="extra"><b>Extra</b>+ 35 g rijst + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1620 kcal</b> · 87 g eiwit</div>
+      <div><span>Met extra</span><b>2065 kcal</b> · 105 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-20" data-datum="2026-11-20">
+    <div class="kicker">Week 2 · voor vier · visdag</div>
+    <h2>Vrijdag 20 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">100 g druiven</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">10 g walnoten<span class="extra"><b>Extra</b>20 g walnoten</span></div><span class="kcal">65 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r5.html">Zalm met broccoli en citroenpuree</a><span class="detail">150 g zalm + 300 g broccoli + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1675 kcal</b> · 82 g eiwit</div>
+      <div><span>Met extra</span><b>2190 kcal</b> · 98 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-21" data-datum="2026-11-21">
+    <div class="kicker">Week 2 · voor vier · comfortfood</div>
+    <h2>Zaterdag 21 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 30 g parmaham + 20 g kaas + 150 g komkommer en paprika + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 punt plattekaastaart zonder bodem (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r6.html">Spaghetti met huisgemaakte bolognaise</a><span class="detail">150 g mager rundergehakt + 100 g courgette + 75 g wortelen + 50 g spaghetti</span><span class="extra"><b>Extra</b>+ 35 g spaghetti + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">kruidenthee, koffie of een glas water</div></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1625 kcal</b> · 85 g eiwit</div>
+      <div><span>Met extra</span><b>2055 kcal</b> · 98 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-22" data-datum="2026-11-22">
+    <div class="kicker">Week 2 · voor vier · wat uitgebreider</div>
+    <h2>Zondag 22 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 25 g kaas + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 60 g makreelfilet natuur + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g makreel + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-2-r7.html">Biefstuk met boontjes en peperroomsaus</a><span class="detail">150 g biefstuk + 300 g boontjes + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1650 kcal</b> · 87 g eiwit</div>
+      <div><span>Met extra</span><b>2140 kcal</b> · 107 g eiwit</div>
+    </div>
+  </article>
+  <div class="weekblok">
+    <h3 class="blokkop">Voorbereiding deze week</h3>
+    <ul class="ing"><li>Zondag 15 november: maak het basisrecept soep voor de middagen van maandag, dinsdag, donderdag en zondag, en kook 8 eieren hard voor maandagmiddag en dinsdagochtend.</li><li>Ook op zondag: bak de plattekaastaart zonder bodem. Dat zijn 10 punten voor de tussendoortjes van de week; wat over is, vries je in.</li><li>Maandagavond: bak 200 g kalkoenfilet extra mee (R1) voor dinsdagmiddag.</li><li>Woensdagavond: maak het gehaktbrood met 150 g extra gehakt (R3). Twee sneden zijn voor donderdagmiddag.</li><li>De broodmaaltijd valt deze week ’s middags: pak ze ’s ochtends in een doos als jullie niet thuis eten.</li></ul>
+    <h3 class="blokkop">Zondag bakken</h3>
+    <div class="kaarten">
+      <a class="kaart" href="week-2-baksel.html">
+        <div class="kicker">10 punten · 15 minuten + 50 minuten bakken</div><h2>Plattekaastaart zonder bodem</h2></a>
+    </div>
+    <h3 class="blokkop">De zeven recepten</h3>
+    <div class="kaarten"><a class="kaart" href="week-2-r1.html"><div class="kicker">Maandagavond</div><h2>Kalkoen met bloemkool in kaassaus</h2></a><a class="kaart" href="week-2-r2.html"><div class="kicker">Dinsdagavond</div><h2>Kabeljauw uit de oven met tomaat en courgette</h2></a><a class="kaart" href="week-2-r3.html"><div class="kicker">Woensdagavond</div><h2>Gehaktbrood met wortelpuree</h2></a><a class="kaart" href="week-2-r4.html"><div class="kicker">Donderdagavond</div><h2>Kip met paprika in zachte currysaus</h2></a><a class="kaart" href="week-2-r5.html"><div class="kicker">Vrijdagavond</div><h2>Zalm met broccoli en citroenpuree</h2></a><a class="kaart" href="week-2-r6.html"><div class="kicker">Zaterdagavond</div><h2>Spaghetti met huisgemaakte bolognaise</h2></a><a class="kaart" href="week-2-r7.html"><div class="kicker">Zondagavond</div><h2>Biefstuk met boontjes en peperroomsaus</h2></a></div>
+  </div>
+</section>
+<section class="week" data-week="3" data-van="2026-11-23" data-tot="2026-11-29">
+  <div class="dagchips"><button class="chip" data-datum="2026-11-23">Ma<b>23</b></button><button class="chip" data-datum="2026-11-24">Di<b>24</b></button><button class="chip" data-datum="2026-11-25">Wo<b>25</b></button><button class="chip" data-datum="2026-11-26">Do<b>26</b></button><button class="chip" data-datum="2026-11-27">Vr<b>27</b></button><button class="chip" data-datum="2026-11-28">Za<b>28</b></button><button class="chip" data-datum="2026-11-29">Zo<b>29</b></button></div>
+  
+  <article class="recept dag" id="d2026-11-23" data-datum="2026-11-23">
+    <div class="kicker">Week 3 · voor twee</div>
+    <h2>Maandag 23 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g plattekaas + 15 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-3-r1.html">Kipragout met champignons en wortelpuree</a><span class="detail">150 g kipfilet + 150 g champignons + 150 g wortelen + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje appel-kaneelcake (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1600 kcal</b> · 86 g eiwit</div>
+      <div><span>Met extra</span><b>2035 kcal</b> · 103 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-24" data-datum="2026-11-24">
+    <div class="kicker">Week 3 · voor twee</div>
+    <h2>Dinsdag 24 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-3-r2.html">Prei-omelet met kip en aardappelen</a><span class="detail">2 eieren + 70 g kipfilet + 250 g prei + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">10 g walnoten<span class="extra"><b>Extra</b>20 g walnoten</span></div><span class="kcal">65 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 80 g koude kip van maandag + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g kip + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1585 kcal</b> · 87 g eiwit</div>
+      <div><span>Met extra</span><b>2030 kcal</b> · 104 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-25" data-datum="2026-11-25">
+    <div class="kicker">Week 3 · voor twee</div>
+    <h2>Woensdag 25 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 1 gekookt ei + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-3-r3.html">Romige speltpasta met kip en groenten</a><span class="detail">150 g kipfilet + 200 g courgette + 100 g spinazie + 50 g speltpasta</span><span class="extra"><b>Extra</b>+ 35 g speltpasta + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje appel-kaneelcake (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1650 kcal</b> · 94 g eiwit</div>
+      <div><span>Met extra</span><b>2180 kcal</b> · 116 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-26" data-datum="2026-11-26">
+    <div class="kicker">Week 3 · voor twee · rijstdag</div>
+    <h2>Donderdag 26 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-3-r4.html">Gevulde paprika met gehakt en rijst</a><span class="detail">150 g mager rundergehakt + 200 g paprika + 45 g rijst</span><span class="extra"><b>Extra</b>+ 35 g rijst + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje appel-kaneelcake (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">3 BH (75 g) + tonijnsalade van 100 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1715 kcal</b> · 92 g eiwit</div>
+      <div><span>Met extra</span><b>2140 kcal</b> · 105 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-27" data-datum="2026-11-27">
+    <div class="kicker">Week 3 · voor twee · visdag</div>
+    <h2>Vrijdag 27 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 25 g kaas + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">100 g druiven</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-3-r5.html">Vispannetje met zalm, kabeljauw en prei</a><span class="detail">100 g zalm + 50 g kabeljauw + 150 g prei + 150 g wortelen + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">3 BH (75 g) + 60 g makreelfilet natuur + 150 g komkommer + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g makreel + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1670 kcal</b> · 83 g eiwit</div>
+      <div><span>Met extra</span><b>2160 kcal</b> · 103 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-28" data-datum="2026-11-28">
+    <div class="kicker">Week 3 · voor twee · comfortfood</div>
+    <h2>Zaterdag 28 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 40 g filet de Saxe + 20 g kaas + 150 g komkommer en paprika + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje appel-kaneelcake (zondag gebakken)</div><span class="kcal">105 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-3-r6.html">Kipburger met ovenfrietjes en paprika</a><span class="detail">1 hamburgerbroodje (60 g) + 150 g kipfilet + 150 g aardappelen + 150 g paprika</span><span class="extra"><b>Extra</b>+ 50 g kipfilet + 200 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">kruidenthee, koffie of een glas water</div></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1615 kcal</b> · 93 g eiwit</div>
+      <div><span>Met extra</span><b>2135 kcal</b> · 117 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-11-29" data-datum="2026-11-29">
+    <div class="kicker">Week 3 · voor twee · wat uitgebreider</div>
+    <h2>Zondag 29 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 25 g kaas + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 50 g verse geitenkaas + 20 g parmaham + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g geitenkaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-3-r7.html">Varkenshaasje met champignonroomsaus en krieltjes</a><span class="detail">150 g varkenshaasje + 200 g groene asperges + 200 g krieltjes</span><span class="extra"><b>Extra</b>+ 150 g krieltjes + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1645 kcal</b> · 90 g eiwit</div>
+      <div><span>Met extra</span><b>2125 kcal</b> · 105 g eiwit</div>
+    </div>
+  </article>
+  <div class="weekblok">
+    <h3 class="blokkop">Voorbereiding deze week</h3>
+    <ul class="ing"><li>Zondag 22 november: maak het basisrecept soep voor maandag, dinsdag, woensdag en zondag, en kook 8 eieren hard voor maandagavond en woensdagochtend.</li><li>Ook op zondag: bak de appel-kaneelcake. Dat zijn 18 stukjes voor de tussendoortjes van de week; wat over is, vries je in.</li><li>Maandagmiddag: bak 200 g kipfilet extra mee (R1) voor dinsdagavond.</li><li>Zaterdag: de kipburger vraagt 35 minuten. De frietjes en paprika gaan samen op één bakplaat.</li></ul>
+    <h3 class="blokkop">Zondag bakken</h3>
+    <div class="kaarten">
+      <a class="kaart" href="week-3-baksel.html">
+        <div class="kicker">18 stukjes · 20 minuten + 50 minuten bakken</div><h2>Appel-kaneelcake</h2></a>
+    </div>
+    <h3 class="blokkop">De zeven recepten</h3>
+    <div class="kaarten"><a class="kaart" href="week-3-r1.html"><div class="kicker">Maandagmiddag</div><h2>Kipragout met champignons en wortelpuree</h2></a><a class="kaart" href="week-3-r2.html"><div class="kicker">Dinsdagmiddag</div><h2>Prei-omelet met kip en aardappelen</h2></a><a class="kaart" href="week-3-r3.html"><div class="kicker">Woensdagmiddag</div><h2>Romige speltpasta met kip en groenten</h2></a><a class="kaart" href="week-3-r4.html"><div class="kicker">Donderdagmiddag</div><h2>Gevulde paprika met gehakt en rijst</h2></a><a class="kaart" href="week-3-r5.html"><div class="kicker">Vrijdagmiddag</div><h2>Vispannetje met zalm, kabeljauw en prei</h2></a><a class="kaart" href="week-3-r6.html"><div class="kicker">Zaterdagavond</div><h2>Kipburger met ovenfrietjes en paprika</h2></a><a class="kaart" href="week-3-r7.html"><div class="kicker">Zondagavond</div><h2>Varkenshaasje met champignonroomsaus en krieltjes</h2></a></div>
+  </div>
+</section>
+<section class="week" data-week="4" data-van="2026-11-30" data-tot="2026-12-06">
+  <div class="dagchips"><button class="chip" data-datum="2026-11-30">Ma<b>30</b></button><button class="chip" data-datum="2026-12-01">Di<b>1</b></button><button class="chip" data-datum="2026-12-02">Wo<b>2</b></button><button class="chip" data-datum="2026-12-03">Do<b>3</b></button><button class="chip" data-datum="2026-12-04">Vr<b>4</b></button><button class="chip" data-datum="2026-12-05">Za<b>5</b></button><button class="chip" data-datum="2026-12-06">Zo<b>6</b></button></div>
+  
+  <article class="recept dag" id="d2026-11-30" data-datum="2026-11-30">
+    <div class="kicker">Week 4 · voor vier</div>
+    <h2>Maandag 30 november</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g plattekaas + 15 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje wortelcake met walnoten (zondag gebakken)</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r1.html">Varkensmignonette met wortelen en uiensaus</a><span class="detail">150 g varkensmignonette + 250 g wortelen + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1570 kcal</b> · 78 g eiwit</div>
+      <div><span>Met extra</span><b>2005 kcal</b> · 95 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-01" data-datum="2026-12-01">
+    <div class="kicker">Week 4 · voor vier</div>
+    <h2>Dinsdag 1 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 1 gekookt ei + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 70 g koude varkensmignonette van maandag + mosterd + 150 g komkommer + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g mignonette + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r2.html">Speltpasta met kalkoen en zuiderse groenten</a><span class="detail">150 g kalkoenfilet + 150 g courgette + 100 g paprika + 50 g speltpasta</span><span class="extra"><b>Extra</b>+ 35 g speltpasta + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1590 kcal</b> · 104 g eiwit</div>
+      <div><span>Met extra</span><b>2055 kcal</b> · 125 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-02" data-datum="2026-12-02">
+    <div class="kicker">Week 4 · voor vier</div>
+    <h2>Woensdag 2 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + tonijnsalade van 80 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje wortelcake met walnoten (zondag gebakken)</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r3.html">Gehaktballetjes met preipuree en mosterdjus</a><span class="detail">150 g mager rundergehakt + 250 g prei + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1670 kcal</b> · 81 g eiwit</div>
+      <div><span>Met extra</span><b>2090 kcal</b> · 94 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-03" data-datum="2026-12-03">
+    <div class="kicker">Week 4 · voor vier · rijstdag</div>
+    <h2>Donderdag 3 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 25 g kaas + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 60 g mozzarella + 30 g parmaham + 150 g tomaat + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje wortelcake met walnoten (zondag gebakken)</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r4.html">Kip in tomatenroomsaus met broccoli en rijst</a><span class="detail">150 g kipfilet + 200 g broccoli + 50 g rijst</span><span class="extra"><b>Extra</b>+ 35 g rijst + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1710 kcal</b> · 92 g eiwit</div>
+      <div><span>Met extra</span><b>2225 kcal</b> · 110 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-04" data-datum="2026-12-04">
+    <div class="kicker">Week 4 · voor vier · visdag</div>
+    <h2>Vrijdag 4 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">100 g druiven</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 80 g koude kip van donderdag + 100 g rauwkost + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g kip + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">10 g walnoten<span class="extra"><b>Extra</b>20 g walnoten</span></div><span class="kcal">65 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r5.html">Zalm met boontjes en citroenaardappelen</a><span class="detail">150 g zalm + 250 g boontjes + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1570 kcal</b> · 76 g eiwit</div>
+      <div><span>Met extra</span><b>2015 kcal</b> · 92 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-05" data-datum="2026-12-05">
+    <div class="kicker">Week 4 · voor vier · comfortfood</div>
+    <h2>Zaterdag 5 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 60 g makreelfilet natuur + 100 g tomaat + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g makreel + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 sneetje wortelcake met walnoten (zondag gebakken)</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r6.html">Kippita met looksaus en ovenfrietjes</a><span class="detail">1 pitabroodje (60 g) + 150 g kipfilet + 100 g aardappelen + 150 g paprika</span><span class="extra"><b>Extra</b>+ 50 g kipfilet + 100 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">kruidenthee, koffie of een glas water</div></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1580 kcal</b> · 91 g eiwit</div>
+      <div><span>Met extra</span><b>2030 kcal</b> · 117 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-06" data-datum="2026-12-06">
+    <div class="kicker">Week 4 · voor vier · wat uitgebreider</div>
+    <h2>Zondag 6 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 40 g kippenwit + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kippenwit + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 30 g kaas + 40 g filet de Saxe + 100 g komkommer + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-4-r7.html">Rosbief met peperroomsaus en ovenkrieltjes</a><span class="detail">150 g rosbief + 200 g boontjes + 100 g champignons + 200 g krieltjes</span><span class="extra"><b>Extra</b>+ 150 g krieltjes + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1665 kcal</b> · 96 g eiwit</div>
+      <div><span>Met extra</span><b>2115 kcal</b> · 112 g eiwit</div>
+    </div>
+  </article>
+  <div class="weekblok">
+    <h3 class="blokkop">Voorbereiding deze week</h3>
+    <ul class="ing"><li>Zondag 29 november: maak het basisrecept soep voor de middagen van maandag, dinsdag, vrijdag en zondag, en kook 8 eieren hard voor maandagmiddag en dinsdagochtend.</li><li>Ook op zondag: bak de wortelcake met walnoten. Dat zijn 18 sneetjes voor de tussendoortjes van de week; wat over is, vries je in.</li><li>Maandagavond: bak 150 g varkensmignonette extra mee (R1) voor dinsdagmiddag.</li><li>Donderdagavond: bak 200 g kipfilet extra mee (R4) voor vrijdagmiddag.</li><li>De broodmaaltijd valt deze week ’s middags: pak ze ’s ochtends in een doos als jullie niet thuis eten.</li></ul>
+    <h3 class="blokkop">Zondag bakken</h3>
+    <div class="kaarten">
+      <a class="kaart" href="week-4-baksel.html">
+        <div class="kicker">18 sneetjes · 20 minuten + 45 minuten bakken</div><h2>Wortelcake met walnoten</h2></a>
+    </div>
+    <h3 class="blokkop">De zeven recepten</h3>
+    <div class="kaarten"><a class="kaart" href="week-4-r1.html"><div class="kicker">Maandagavond</div><h2>Varkensmignonette met wortelen en uiensaus</h2></a><a class="kaart" href="week-4-r2.html"><div class="kicker">Dinsdagavond</div><h2>Speltpasta met kalkoen en zuiderse groenten</h2></a><a class="kaart" href="week-4-r3.html"><div class="kicker">Woensdagavond</div><h2>Gehaktballetjes met preipuree en mosterdjus</h2></a><a class="kaart" href="week-4-r4.html"><div class="kicker">Donderdagavond</div><h2>Kip in tomatenroomsaus met broccoli en rijst</h2></a><a class="kaart" href="week-4-r5.html"><div class="kicker">Vrijdagavond</div><h2>Zalm met boontjes en citroenaardappelen</h2></a><a class="kaart" href="week-4-r6.html"><div class="kicker">Zaterdagavond</div><h2>Kippita met looksaus en ovenfrietjes</h2></a><a class="kaart" href="week-4-r7.html"><div class="kicker">Zondagavond</div><h2>Rosbief met peperroomsaus en ovenkrieltjes</h2></a></div>
+  </div>
+</section>
+<section class="week" data-week="5" data-van="2026-12-07" data-tot="2026-12-13">
+  <div class="dagchips"><button class="chip" data-datum="2026-12-07">Ma<b>7</b></button><button class="chip" data-datum="2026-12-08">Di<b>8</b></button><button class="chip" data-datum="2026-12-09">Wo<b>9</b></button><button class="chip" data-datum="2026-12-10">Do<b>10</b></button><button class="chip" data-datum="2026-12-11">Vr<b>11</b></button><button class="chip" data-datum="2026-12-12">Za<b>12</b></button><button class="chip" data-datum="2026-12-13">Zo<b>13</b></button></div>
+  
+  <article class="recept dag" id="d2026-12-07" data-datum="2026-12-07">
+    <div class="kicker">Week 5 · voor twee</div>
+    <h2>Maandag 7 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g plattekaas + 15 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-5-r1.html">Ovenkip met wortelen, rode ui en krieltjes</a><span class="detail">150 g kipfilet + 250 g wortelen + 50 g rode ui + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje perencake met amandel (zondag gebakken)</div><span class="kcal">110 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1535 kcal</b> · 81 g eiwit</div>
+      <div><span>Met extra</span><b>1970 kcal</b> · 98 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-08" data-datum="2026-12-08">
+    <div class="kicker">Week 5 · voor twee</div>
+    <h2>Dinsdag 8 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 1 gekookt ei + 50 g tomaat + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 1 ei + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-5-r2.html">Kalkoen met gestoofd witloof en puree</a><span class="detail">150 g kalkoenfilet + 300 g witloof + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 80 g koude kip van maandag + 100 g komkommer en tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g kip + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1555 kcal</b> · 103 g eiwit</div>
+      <div><span>Met extra</span><b>2015 kcal</b> · 124 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-09" data-datum="2026-12-09">
+    <div class="kicker">Week 5 · voor twee</div>
+    <h2>Woensdag 9 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-5-r3.html">Gehaktballetjes met rode kool en aardappelen</a><span class="detail">150 g mager rundergehakt + 250 g rode kool + 50 g appel + 200 g aardappelen</span><span class="extra"><b>Extra</b>+ 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje perencake met amandel (zondag gebakken)</div><span class="kcal">110 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">3 BH (75 g) + 80 g koude kalkoen van dinsdag + 20 g kaas + 100 g rauwkost + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1590 kcal</b> · 80 g eiwit</div>
+      <div><span>Met extra</span><b>2010 kcal</b> · 93 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-10" data-datum="2026-12-10">
+    <div class="kicker">Week 5 · voor twee · rijstdag</div>
+    <h2>Donderdag 10 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">2 BH (50 g) + 25 g kaas + 10 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-5-r4.html">Kipcurry met bloemkool, spinazie en rijst</a><span class="detail">150 g kipfilet + 200 g bloemkool + 100 g spinazie + 50 g rijst</span><span class="extra"><b>Extra</b>+ 35 g rijst + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje perencake met amandel (zondag gebakken)</div><span class="kcal">110 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">2 BH (50 g) + 60 g makreelfilet natuur + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g makreel + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker</div><span class="kcal">105 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1615 kcal</b> · 85 g eiwit</div>
+      <div><span>Met extra</span><b>2110 kcal</b> · 103 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-11" data-datum="2026-12-11">
+    <div class="kicker">Week 5 · voor twee · visdag</div>
+    <h2>Vrijdag 11 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan<span class="extra"><b>Extra</b>+ 50 g fruit- of vanilleyoghurt + 10 g granola</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">100 g druiven</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat"><a class="gerecht" href="week-5-r5.html">Zalm uit de oven met broccoli en citroenaardappelen</a><span class="detail">150 g zalm + 300 g broccoli + 150 g aardappelen</span><span class="extra"><b>Extra</b>+ 200 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">10 g walnoten<span class="extra"><b>Extra</b>20 g walnoten</span></div><span class="kcal">65 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g appel</div><span class="kcal">60 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat">3 BH (75 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1625 kcal</b> · 79 g eiwit</div>
+      <div><span>Met extra</span><b>2180 kcal</b> · 96 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-12" data-datum="2026-12-12">
+    <div class="kicker">Week 5 · voor twee · comfortfood</div>
+    <h2>Zaterdag 12 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">2 kiwi’s (ca. 120 g)</div><span class="kcal">75 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">3 BH (75 g) + 40 g filet de Saxe + 20 g kaas + 150 g komkommer en paprika + 15 g smeersel<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 20 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">1 stukje perencake met amandel (zondag gebakken)</div><span class="kcal">110 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">150 g snoepgroenten + 25 g hummus</div><span class="kcal">100 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-5-r6.html">Vol-au-vent met kip en champignons</a><span class="detail">150 g kipfilet + 150 g champignons + 150 g aardappelen + 100 g sla</span><span class="extra"><b>Extra</b>+ 50 g kipfilet + 150 g aardappelen + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">kruidenthee, koffie of een glas water</div></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1550 kcal</b> · 92 g eiwit</div>
+      <div><span>Met extra</span><b>2030 kcal</b> · 115 g eiwit</div>
+    </div>
+  </article>
+  <article class="recept dag" id="d2026-12-13" data-datum="2026-12-13">
+    <div class="kicker">Week 5 · voor twee · wat uitgebreider</div>
+    <h2>Zondag 13 december</h2>
+    <div class="moment"><div class="uur">Ontbijt</div><div class="wat">1 volkorenpistolet (60 g) + 1 gekookt ei + 5 g smeersel<span class="extra"><b>Extra</b>+ 1 pistolet + 15 g kaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">10 u</div><div class="wat">150 g mandarijn</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Middag</div><div class="wat">2 BH (50 g) + 50 g verse geitenkaas + 20 g parmaham + 100 g tomaat + 10 g smeersel + 300 ml soep<span class="extra"><b>Extra</b>+ 1 BH (25 g) + 30 g geitenkaas + 5 g smeersel</span></div></div><div class="moment"><div class="uur">14.30 u</div><div class="wat">120 g halfvolle plattekaas</div><span class="kcal">97 kcal</span></div><div class="moment"><div class="uur">16.30 u</div><div class="wat">120 g peer</div><span class="kcal">70 kcal</span></div><div class="moment"><div class="uur">Avond</div><div class="wat"><a class="gerecht" href="week-5-r7.html">Varkenshaasje met spruitjes, appel en krieltjes</a><span class="detail">150 g varkenshaasje + 250 g spruitjes + 50 g appel + 150 g krieltjes</span><span class="extra"><b>Extra</b>+ 200 g krieltjes + 5 g olijfolie</span></div></div><div class="moment"><div class="uur">20 u</div><div class="wat">15 g pure chocolade 70 %</div><span class="kcal">85 kcal</span></div>
+    <div class="dagtotaal">
+      <div><span>Basis</span><b>1670 kcal</b> · 90 g eiwit</div>
+      <div><span>Met extra</span><b>2285 kcal</b> · 109 g eiwit</div>
+    </div>
+  </article>
+  <div class="weekblok">
+    <h3 class="blokkop">Voorbereiding deze week</h3>
+    <ul class="ing"><li>Zondag 6 december: maak het basisrecept soep voor maandag, dinsdag, donderdag en zondag, en kook 8 eieren hard voor maandagavond en dinsdagochtend.</li><li>Ook op zondag: bak de perencake met amandel. Dat zijn 18 stukjes voor de tussendoortjes van de week; wat over is, vries je in.</li><li>Maandagmiddag: bak 200 g kipfilet extra mee (R1) voor dinsdagavond.</li><li>Dinsdagmiddag: bak 200 g kalkoenfilet extra mee (R2) voor woensdagavond.</li></ul>
+    <h3 class="blokkop">Zondag bakken</h3>
+    <div class="kaarten">
+      <a class="kaart" href="week-5-baksel.html">
+        <div class="kicker">18 stukjes · 20 minuten + 50 minuten bakken</div><h2>Perencake met amandel</h2></a>
+    </div>
+    <h3 class="blokkop">De zeven recepten</h3>
+    <div class="kaarten"><a class="kaart" href="week-5-r1.html"><div class="kicker">Maandagmiddag</div><h2>Ovenkip met wortelen, rode ui en krieltjes</h2></a><a class="kaart" href="week-5-r2.html"><div class="kicker">Dinsdagmiddag</div><h2>Kalkoen met gestoofd witloof en puree</h2></a><a class="kaart" href="week-5-r3.html"><div class="kicker">Woensdagmiddag</div><h2>Gehaktballetjes met rode kool en aardappelen</h2></a><a class="kaart" href="week-5-r4.html"><div class="kicker">Donderdagmiddag</div><h2>Kipcurry met bloemkool, spinazie en rijst</h2></a><a class="kaart" href="week-5-r5.html"><div class="kicker">Vrijdagmiddag</div><h2>Zalm uit de oven met broccoli en citroenaardappelen</h2></a><a class="kaart" href="week-5-r6.html"><div class="kicker">Zaterdagavond</div><h2>Vol-au-vent met kip en champignons</h2></a><a class="kaart" href="week-5-r7.html"><div class="kicker">Zondagavond</div><h2>Varkenshaasje met spruitjes, appel en krieltjes</h2></a></div>
+  </div>
+</section>
+</main>
+<footer class="voet">Alle voedingswaarden zijn schattingen · Studio HeLeen</footer>
+<div class="balk">
+  <button id="vandaag" class="nieuw">Vandaag</button>
+  <a href="afspraken.html">Afspraken</a>
+  <a href="../airfryer/index.html">Airfryer</a>
+</div>
+
+<script>
+const weken=[...document.querySelectorAll('.week')];
+const dagen=[...document.querySelectorAll('.dag')];
+const alleData=dagen.map(d=>d.dataset.datum);
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+const vandaag=iso(new Date());
+
+function toon(datum){
+  dagen.forEach(d=>{d.hidden=d.dataset.datum!==datum;});
+  weken.forEach(w=>{
+    const erin=datum>=w.dataset.van&&datum<=w.dataset.tot;
+    w.hidden=!erin;
+    document.querySelector('.weken .chip[data-week="'+w.dataset.week+'"]').classList.toggle('aan',erin);
+  });
+  document.querySelectorAll('.dagchips .chip').forEach(c=>{
+    c.classList.toggle('aan',c.dataset.datum===datum);
+    c.classList.toggle('nu',c.dataset.datum===vandaag);
+  });
+  try{history.replaceState(null,'','#'+datum);}catch(e){}
+}
+/* Vandaag als die in het schema staat. Ervoor de eerste dag, erna de laatste. */
+function dichtstbij(){
+  if(alleData.includes(vandaag))return vandaag;
+  return vandaag<alleData[0]?alleData[0]:alleData[alleData.length-1];
+}
+document.querySelectorAll('.dagchips .chip').forEach(c=>c.onclick=()=>toon(c.dataset.datum));
+document.querySelectorAll('.weken .chip').forEach(c=>c.onclick=()=>{
+  const w=weken.find(x=>x.dataset.week===c.dataset.week);
+  toon(vandaag>=w.dataset.van&&vandaag<=w.dataset.tot?vandaag:w.dataset.van);
+});
+document.getElementById('vandaag').onclick=()=>{toon(dichtstbij());window.scrollTo(0,0);};
+document.querySelectorAll('.moment').forEach(m=>m.onclick=ev=>{
+  if(!ev.target.closest('a'))m.classList.toggle('af');
+});
+document.querySelectorAll('ul.ing li').forEach(li=>li.onclick=()=>li.classList.toggle('af'));
+
+const uitHash=location.hash.slice(1);
+toon(alleData.includes(uitHash)?uitHash:dichtstbij());
+</script>
+</body>
+</html>

@@ -170,6 +170,28 @@ Aandachtspunten:
 schoonheidsfoutje. Neem tijden uit een betrouwbare bron of uit wat thuis is
 uitgetest, en zet in de tip dat het uitgetest is.
 
+## Het weekmenu
+
+Derde deel in dezelfde repo, onder `docs/weekmenu/`. Gegenereerd door
+`build_weekmenu.py`, dat vanzelf meedraait met `build.py`.
+
+- `weekmenu/week-N.json` is de bron, één bestand per week: zeven `dagen` met
+  elk zeven `momenten`, de `voorbereiding`, het `baksel` en zeven `recepten`.
+  `weekmenu/algemeen.json` bevat de afspraken, het dagritme en de ruillijst.
+- De overzichtspagina opent op vandaag. Ligt vandaag buiten het schema, dan
+  toont ze de eerste of de laatste dag. `van` en `tot` van de week bepalen dat.
+- Een moment met `"recept": 3` linkt naar recept nummer 3 van die week.
+- **Geen namen.** De site is publiek. De kleinste portie heet `basis`, wat de
+  grotere eter erbij krijgt heet `extra`. In lopende tekst: "de basisportie"
+  en "de portie met extra's".
+- De weekmenurecepten staan los van het kookboek. Ze zijn op de gram afgewogen
+  voor dat ene eetmoment, rekenen dus niet om naar andere porties, en hebben
+  geen A4 nodig. Stappen en ingrediënten zijn wel afvinkbaar, net als in het
+  kookboek. Wordt er een blijver, zet hem dan volgens de gewone regels in
+  `recepten/`.
+- De cijfers komen uit de aangeleverde weekmenu's. Verander geen gewichten,
+  tijden of voedingswaarden op eigen houtje.
+
 ## Schrijfregels
 
 Dit wordt gelezen door iemand met vettige handen en een pan op het vuur.
