@@ -70,6 +70,7 @@ CSS = """
 .weekblok .kaarten{padding-bottom:0; gap:10px;}
 .weekblok .kaart{padding:14px 16px; background:var(--kaart);}
 .weekblok .kaart h2{font-size:17px; margin:4px 0 0;}
+.weeknoot{font-size:15px; color:var(--inkt-zacht); margin:0;}
 .nootregel{font-size:14px; color:var(--inkt-zacht); margin:0 0 6px;}
 .recept p.klein{font-size:14px; color:var(--inkt-zacht); margin:14px 0 0;}
 .stap p{padding-top:3px;}
@@ -135,7 +136,13 @@ def bouw_moment(w, m):
 
 
 def bouw_dag(w, d):
-    kicker = f"Week {w['week']} · voor {VOOR.get(w['voor'], w['voor'])}"
+    # Met hoeveel er gegeten wordt, kan binnen een week wisselen. Het warme
+    # gerecht van de dag weet het: dat recept is voor twee of voor vier.
+    nr = next((m["recept"] for m in d["momenten"] if m.get("recept")), None)
+    aantal = next((r["personen"] for r in w["recepten"] if r["nr"] == nr), w.get("voor"))
+    kicker = f"Week {w['week']}"
+    if aantal:
+        kicker += f" · voor {VOOR.get(aantal, aantal)}"
     if d.get("thema"):
         kicker += f" · {d['thema']}"
     momenten = "".join(bouw_moment(w, m) for m in d["momenten"])
@@ -163,11 +170,14 @@ def bouw_week(w):
         f'<div class="kicker">{e(r["wanneer"])}</div><h2>{e(r["titel"])}</h2></a>'
         for r in w["recepten"])
     b = w["baksel"]
+    noot = (f'<h3 class="blokkop">Zo werkt deze week</h3><p class="weeknoot">{e(w["noot"])}</p>'
+            if w.get("noot") else "")
     return f"""
 <section class="week" data-week="{w['week']}" data-van="{w['van']}" data-tot="{w['tot']}">
   <div class="dagchips">{chips}</div>
   {dagen}
   <div class="weekblok">
+    {noot}
     <h3 class="blokkop">Voorbereiding deze week</h3>
     <ul class="punten">{voorbereiding}</ul>
     <h3 class="blokkop">Zondag bakken</h3>
@@ -243,7 +253,7 @@ toon(alleData.includes(uitHash)?uitHash:dichtstbij());
 
 def bouw_index(weken):
     weekchips = "".join(
-        f'<button class="chip" data-week="{w["week"]}">{e(periode(w))} · {VOOR.get(w["voor"], w["voor"])}</button>'
+        f'<button class="chip" data-week="{w["week"]}">{e(periode(w))}</button>'
         for w in weken)
     inhoud = f"""
 <header class="kop"><div class="wrap">
@@ -400,6 +410,8 @@ def bouw_afspraken(a):
         + "".join(f"<li>{e(k)}</li>" for k in g["keuzes"]) + "</ul></div>"
         for g in a["ruillijst"])
     voorbereiding = "".join(f"<li>{e(v)}</li>" for v in a["voorbereiding"])
+    let_op = (f'<div class="tip"><span class="pen">&#9998;</span><p>{e(a["let_op"])}</p></div>'
+              if a.get("let_op") else "")
 
     return f"""
 <main class="wrap">
@@ -407,6 +419,7 @@ def bouw_afspraken(a):
   <article class="recept afspraken">
     <div class="kicker">Geldt voor alle weken, met twee en met vier</div>
     <h1>Afspraken en voorbereiding</h1>
+    {let_op}
 
     <h3 class="blokkop">Dagritme</h3>
     {ritme}

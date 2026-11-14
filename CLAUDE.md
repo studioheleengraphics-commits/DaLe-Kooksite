@@ -181,6 +181,12 @@ Derde deel in dezelfde repo, onder `docs/weekmenu/`. Gegenereerd door
 - De overzichtspagina opent op vandaag. Ligt vandaag buiten het schema, dan
   toont ze de eerste of de laatste dag. `van` en `tot` van de week bepalen dat.
 - Een moment met `"recept": 3` linkt naar recept nummer 3 van die week.
+- `noot` van een week is de uitleg die onder "Zo werkt deze week" komt. Met
+  hoeveel er die dag gegeten wordt, haalt de site uit `personen` van het
+  recept van die dag, want dat kan binnen één week wisselen.
+- Vanaf week 2 loopt het W-schema. Die letter mag er staan, de naam erachter
+  niet, en ook niets over wie wanneer wat neemt. `let_op` in `algemeen.json`
+  zegt dat het dagschema voorgaat op de oudere algemene afspraken.
 - De eetmomenten van een dag zijn afvinkbaar. Die vinkjes staan in
   `localStorage` onder `weekmenu-gegeten-v1`, alleen op dat ene toestel, en
   worden gewist zodra de dag voorbij is. De voorbereiding is bewust niet

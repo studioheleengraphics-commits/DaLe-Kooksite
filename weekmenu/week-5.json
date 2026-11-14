@@ -1,6 +1,6 @@
 {
   "week": 5,
-  "voor": 2,
+  "noot": "W-schema vanaf 16 november: kleinere borden, meer eiwit. De basis is de kleinste portie; met extra eet je hetzelfde met extra eiwit. Basis: elke ochtend koffie met 30 ml amandelmelk en een klontje rietsuiker. Eerst vlees of vis, dan groenten, aardappelen het laatst. 1 BH = 25 g brood, smeersel = 5 g boter per BH. Ma-do met twee, warm ’s middags. Vrijdagavond tot zondag met vier, warm ’s avonds. Cake nog maar op woensdag en zaterdag.",
   "van": "2026-12-07",
   "tot": "2026-12-13",
   "dagen": [
@@ -10,8 +10,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi",
-          "extra": "+ 50 g plattekaas + 15 g granola"
+          "basis": "150 g halfvolle plattekaas + 15 g granola + 100 g kiwi",
+          "extra": "200 g plattekaas"
         },
         {
           "moment": "10 u",
@@ -21,14 +21,15 @@
         {
           "moment": "Middag",
           "basis": "Ovenkip met wortelen, rode ui en krieltjes",
-          "detail": "150 g kipfilet + 250 g wortelen + 50 g rode ui + 200 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g kipfilet + 250 g wortelen + 50 g rode ui + 100 g aardappelen",
+          "extra": "+ 50 g kipfilet",
           "recept": 1
         },
         {
           "moment": "14.30 u",
-          "basis": "1 stukje perencake met amandel (zondag gebakken)",
-          "kcal": 110
+          "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
+          "kcal": 97
         },
         {
           "moment": "16.30 u",
@@ -38,21 +39,21 @@
         {
           "moment": "Avond",
           "basis": "2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+          "extra": "+ 1 ei"
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "basis": {
-        "kcal": 1535,
-        "eiwit": 81
+        "kcal": 1415,
+        "eiwit": 87
       },
       "extra": {
-        "kcal": 1970,
-        "eiwit": 98
+        "kcal": 1585,
+        "eiwit": 111
       }
     },
     {
@@ -62,7 +63,7 @@
         {
           "moment": "Ontbijt",
           "basis": "2 BH (50 g) + 1 gekookt ei + 50 g tomaat + 10 g smeersel",
-          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+          "extra": "+ 1 ei"
         },
         {
           "moment": "10 u",
@@ -72,13 +73,14 @@
         {
           "moment": "Middag",
           "basis": "Kalkoen met gestoofd witloof en puree",
-          "detail": "150 g kalkoenfilet + 300 g witloof + 200 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g kalkoenfilet + 300 g witloof + 100 g aardappelen",
+          "extra": "+ 50 g kalkoenfilet",
           "recept": 2
         },
         {
           "moment": "14.30 u",
           "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
           "kcal": 97
         },
         {
@@ -89,21 +91,22 @@
         {
           "moment": "Avond",
           "basis": "2 BH (50 g) + 80 g koude kip van maandag + 100 g komkommer en tomaat + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 30 g kip + 5 g smeersel"
+          "extra": "+ 30 g kip"
         },
         {
           "moment": "20 u",
-          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
-          "kcal": 105
+          "basis": "warme chocomelk met 150 ml ongezoete amandelmelk + 1 tl cacao + 1 tl suiker",
+          "extra": "met 150 ml halfvolle melk",
+          "kcal": 55
         }
       ],
       "basis": {
-        "kcal": 1555,
-        "eiwit": 103
+        "kcal": 1450,
+        "eiwit": 97
       },
       "extra": {
-        "kcal": 2015,
-        "eiwit": 124
+        "kcal": 1660,
+        "eiwit": 128
       }
     },
     {
@@ -112,8 +115,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi",
-          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+          "basis": "120 g fruit- of vanilleyoghurt + 15 g granola + 100 g kiwi",
+          "extra": "hetzelfde + 100 g plattekaas erbij"
         },
         {
           "moment": "10 u",
@@ -123,8 +126,8 @@
         {
           "moment": "Middag",
           "basis": "Gehaktballetjes met rode kool en aardappelen",
-          "detail": "150 g mager rundergehakt + 250 g rode kool + 50 g appel + 200 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g mager rundergehakt + 250 g rode kool + 50 g appel + 100 g aardappelen",
+          "extra": "+ 50 g mager rundergehakt",
           "recept": 3
         },
         {
@@ -139,22 +142,22 @@
         },
         {
           "moment": "Avond",
-          "basis": "3 BH (75 g) + 80 g koude kalkoen van dinsdag + 20 g kaas + 100 g rauwkost + 15 g smeersel",
-          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+          "basis": "2 BH (50 g) + 80 g koude kalkoen van dinsdag + 20 g kaas + 100 g rauwkost + 10 g smeersel",
+          "extra": "+ 20 g kaas"
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "basis": {
-        "kcal": 1590,
-        "eiwit": 80
+        "kcal": 1385,
+        "eiwit": 75
       },
       "extra": {
-        "kcal": 2010,
-        "eiwit": 93
+        "kcal": 1580,
+        "eiwit": 97
       }
     },
     {
@@ -164,7 +167,7 @@
         {
           "moment": "Ontbijt",
           "basis": "2 BH (50 g) + 25 g kaas + 10 g smeersel",
-          "extra": "+ 1 BH (25 g) + 15 g kaas + 5 g smeersel"
+          "extra": "+ 15 g kaas"
         },
         {
           "moment": "10 u",
@@ -174,14 +177,15 @@
         {
           "moment": "Middag",
           "basis": "Kipcurry met bloemkool, spinazie en rijst",
-          "detail": "150 g kipfilet + 200 g bloemkool + 100 g spinazie + 50 g rijst",
-          "extra": "+ 35 g rijst + 5 g olijfolie",
+          "detail": "150 g kipfilet + 200 g bloemkool + 100 g spinazie + 30 g rijst",
+          "extra": "+ 50 g kipfilet",
           "recept": 4
         },
         {
           "moment": "14.30 u",
-          "basis": "1 stukje perencake met amandel (zondag gebakken)",
-          "kcal": 110
+          "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
+          "kcal": 97
         },
         {
           "moment": "16.30 u",
@@ -191,22 +195,23 @@
         {
           "moment": "Avond",
           "basis": "2 BH (50 g) + 60 g makreelfilet natuur + 100 g tomaat + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 40 g makreel + 5 g smeersel"
+          "extra": "+ 40 g makreel"
         },
         {
           "moment": "20 u",
-          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
-          "kcal": 105
+          "basis": "warme chocomelk met 150 ml ongezoete amandelmelk + 1 tl cacao + 1 tl suiker",
+          "extra": "met 150 ml halfvolle melk",
+          "kcal": 55
         }
       ],
       "thema": "rijstdag",
       "basis": {
-        "kcal": 1615,
-        "eiwit": 85
+        "kcal": 1505,
+        "eiwit": 88
       },
       "extra": {
-        "kcal": 2110,
-        "eiwit": 103
+        "kcal": 1745,
+        "eiwit": 117
       }
     },
     {
@@ -215,8 +220,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan",
-          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+          "basis": "120 g fruit- of vanilleyoghurt + 15 g granola + 70 g banaan",
+          "extra": "hetzelfde + 100 g plattekaas erbij"
         },
         {
           "moment": "10 u",
@@ -225,16 +230,14 @@
         },
         {
           "moment": "Middag",
-          "basis": "Zalm uit de oven met broccoli en citroenaardappelen",
-          "detail": "150 g zalm + 300 g broccoli + 150 g aardappelen",
-          "extra": "+ 200 g aardappelen + 5 g olijfolie",
-          "recept": 5
+          "basis": "2 BH (50 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 10 g smeersel",
+          "extra": "+ 40 g mozzarella"
         },
         {
           "moment": "14.30 u",
-          "basis": "10 g walnoten",
-          "extra": "20 g walnoten",
-          "kcal": 65
+          "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
+          "kcal": 97
         },
         {
           "moment": "16.30 u",
@@ -243,23 +246,25 @@
         },
         {
           "moment": "Avond",
-          "basis": "3 BH (75 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 15 g smeersel",
-          "extra": "+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel"
+          "basis": "Zalm uit de oven met broccoli en citroenaardappelen",
+          "detail": "150 g zalm + 300 g broccoli + 100 g aardappelen",
+          "extra": "+ 50 g zalm",
+          "recept": 5
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "thema": "visdag",
       "basis": {
-        "kcal": 1625,
-        "eiwit": 79
+        "kcal": 1490,
+        "eiwit": 82
       },
       "extra": {
-        "kcal": 2180,
-        "eiwit": 96
+        "kcal": 1775,
+        "eiwit": 109
       }
     },
     {
@@ -268,8 +273,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)",
-          "extra": "+ 1 BH (25 g) + 5 g smeersel"
+          "basis": "1 BH (25 g) + roerei van 2 eieren (bakken in 5 g boter)",
+          "extra": "roerei van 3 eieren"
         },
         {
           "moment": "10 u",
@@ -278,8 +283,8 @@
         },
         {
           "moment": "Middag",
-          "basis": "3 BH (75 g) + 40 g filet de Saxe + 20 g kaas + 150 g komkommer en paprika + 15 g smeersel",
-          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+          "basis": "2 BH (50 g) + 40 g filet de Saxe + 20 g kaas + 150 g komkommer en paprika + 10 g smeersel",
+          "extra": "+ 20 g kaas"
         },
         {
           "moment": "14.30 u",
@@ -294,8 +299,8 @@
         {
           "moment": "Avond",
           "basis": "Vol-au-vent met kip en champignons",
-          "detail": "150 g kipfilet + 150 g champignons + 150 g aardappelen + 100 g sla",
-          "extra": "+ 50 g kipfilet + 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g kipfilet + 150 g champignons + 100 g aardappelen + 100 g sla",
+          "extra": "+ 50 g kipfilet",
           "recept": 6
         },
         {
@@ -305,12 +310,12 @@
       ],
       "thema": "comfortfood",
       "basis": {
-        "kcal": 1550,
-        "eiwit": 92
+        "kcal": 1430,
+        "eiwit": 89
       },
       "extra": {
-        "kcal": 2030,
-        "eiwit": 115
+        "kcal": 1610,
+        "eiwit": 112
       }
     },
     {
@@ -320,7 +325,7 @@
         {
           "moment": "Ontbijt",
           "basis": "1 volkorenpistolet (60 g) + 1 gekookt ei + 5 g smeersel",
-          "extra": "+ 1 pistolet + 15 g kaas + 5 g smeersel"
+          "extra": "+ 1 ei + 15 g kaas"
         },
         {
           "moment": "10 u",
@@ -330,11 +335,12 @@
         {
           "moment": "Middag",
           "basis": "2 BH (50 g) + 50 g verse geitenkaas + 20 g parmaham + 100 g tomaat + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 30 g geitenkaas + 5 g smeersel"
+          "extra": "+ 30 g geitenkaas"
         },
         {
           "moment": "14.30 u",
           "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
           "kcal": 97
         },
         {
@@ -345,24 +351,24 @@
         {
           "moment": "Avond",
           "basis": "Varkenshaasje met spruitjes, appel en krieltjes",
-          "detail": "150 g varkenshaasje + 250 g spruitjes + 50 g appel + 150 g krieltjes",
-          "extra": "+ 200 g krieltjes + 5 g olijfolie",
+          "detail": "150 g varkenshaasje + 250 g spruitjes + 50 g appel + 100 g krieltjes",
+          "extra": "+ 50 g varkenshaasje",
           "recept": 7
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "thema": "wat uitgebreider",
       "basis": {
-        "kcal": 1670,
-        "eiwit": 90
+        "kcal": 1620,
+        "eiwit": 88
       },
       "extra": {
-        "kcal": 2285,
-        "eiwit": 109
+        "kcal": 1880,
+        "eiwit": 115
       }
     }
   ],
@@ -375,7 +381,7 @@
   "baksel": {
     "titel": "Perencake met amandel",
     "ondertitel": "Zondag bakken · zacht en luchtig",
-    "wanneer": "Tussendoortje · ma, wo, do en za om 14.30 u",
+    "wanneer": "Tussendoortje · wo en za om 14.30 u",
     "opbrengst": "18 stukjes",
     "tijd": "20 minuten + 50 minuten bakken",
     "noot": "Voor 18 stukjes.",
@@ -425,7 +431,7 @@
       "Bak 45 tot 50 minuten. Laat afkoelen en snijd in 18 stukjes (3 x 6)."
     ],
     "per_portie": "1 stukje is één tussendoortje, voor allebei. Zin in iets anders? Ruil met een tussendoortje van de ruillijst bij de afspraken.",
-    "bewaren": "Bewaar 3 dagen in een gesloten doos of in de koelkast. Invriezen per stukje kan.",
+    "bewaren": "W-schema: jullie eten er maar 2 stuks per persoon per week. Bak een halve portie, of vries de rest per stuk in. Bewaar 3 dagen in een gesloten doos of in de koelkast. Invriezen per stukje kan.",
     "noten": [
       "Gewone suiker en boter, geen zoetstoffen of light-producten. Voedingswaarden zijn schattingen."
     ],
@@ -477,23 +483,22 @@
         "Laat 200 g kip afkoelen en bewaar die in de koelkast voor dinsdagavond. Verdeel de rest gelijk; de aardappelen in de verhouding 200 : 350. De laatste 5 g olie gaat over de aardappelen van de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "De helft van de kip en groenten (150 g kip), met 200 g aardappelen.",
+        "basis": "De helft van de kip en groenten (150 g kip), met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g kipfilet"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw. De extra 200 g kip telt niet mee in deze maaltijd."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. De extra 200 g kip telt niet mee in deze maaltijd."
       ],
       "voeding": {
         "basis": {
-          "kcal": 475,
-          "eiwit": 43
+          "kcal": 400,
+          "eiwit": 41
         },
         "extra": {
-          "kcal": 635,
-          "eiwit": 46
+          "kcal": 455,
+          "eiwit": 52
         }
       }
     },
@@ -542,23 +547,22 @@
         "Verdeel de aardappelen in de verhouding 200 : 350. Verdeel de warme melk en 10 g boter gelijk, stamp en kruid met nootmuskaat. Roer de laatste 5 g olie alleen door de puree van de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "De helft van de kalkoen en het witloof (150 g kalkoen), met 200 g aardappelen.",
+        "basis": "De helft van de kalkoen en het witloof (150 g kalkoen), met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g kalkoenfilet"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw. De extra 200 g kalkoen telt niet mee in deze maaltijd."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. De extra 200 g kalkoen telt niet mee in deze maaltijd."
       ],
       "voeding": {
         "basis": {
-          "kcal": 505,
-          "eiwit": 45
+          "kcal": 430,
+          "eiwit": 43
         },
         "extra": {
-          "kcal": 665,
-          "eiwit": 48
+          "kcal": 480,
+          "eiwit": 55
         }
       }
     },
@@ -615,23 +619,22 @@
         "Verdeel balletjes en kool gelijk, en de aardappelen in de verhouding 200 : 350. Ieder krijgt 5 g boter op de aardappelen; de laatste 5 g olie is voor de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "5 balletjes en de helft van de rode kool, met 200 g aardappelen.",
+        "basis": "5 balletjes en de helft van de rode kool, met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g mager rundergehakt"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw. Verwijder kruidnagels en laurier voor het opdienen."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. Verwijder kruidnagels en laurier voor het opdienen."
       ],
       "voeding": {
         "basis": {
-          "kcal": 525,
-          "eiwit": 39
+          "kcal": 450,
+          "eiwit": 37
         },
         "extra": {
-          "kcal": 685,
-          "eiwit": 42
+          "kcal": 515,
+          "eiwit": 47
         }
       }
     },
@@ -689,23 +692,22 @@
         "Verdeel de curry gelijk. Meng de laatste 5 g olie alleen door de rijst van de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "De helft van de curry, met 50 g rijst (droog gewogen).",
+        "basis": "De helft van de curry, met 30 g rijst (droog gewogen).",
         "extra": [
-          "+ 35 g rijst",
-          "+ 5 g olijfolie"
+          "+ 50 g kipfilet"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw, rijst droog. Verdeel gekookte rijst in de verhouding 50 : 85."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw, rijst droog. Verdeel gekookte rijst in de verhouding 50 : 85."
       ],
       "voeding": {
         "basis": {
-          "kcal": 545,
-          "eiwit": 46
+          "kcal": 475,
+          "eiwit": 44
         },
         "extra": {
-          "kcal": 710,
-          "eiwit": 48
+          "kcal": 530,
+          "eiwit": 55
         }
       }
     },
@@ -713,30 +715,30 @@
       "nr": 5,
       "titel": "Zalm uit de oven met broccoli en citroenaardappelen",
       "ondertitel": "Vrijdag · visdag",
-      "wanneer": "Vrijdagmiddag",
-      "personen": 2,
+      "wanneer": "Vrijdagavond",
+      "personen": 4,
       "tijd": "30 minuten",
-      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "noot": "Totaal voor vier, inclusief de extra. Bij dit gerecht zijn jullie met vier.",
       "ingredienten": [
         {
-          "hoeveelheid": "300 g",
+          "hoeveelheid": "650 g",
           "naam": "zalmfilet"
         },
         {
-          "hoeveelheid": "600 g",
+          "hoeveelheid": "1200 g",
           "naam": "broccoli"
         },
         {
-          "hoeveelheid": "500 g",
+          "hoeveelheid": "650 g",
           "naam": "aardappelen"
         },
         {
-          "hoeveelheid": "15 g",
+          "hoeveelheid": "25 g",
           "naam": "olijfolie"
         },
         {
-          "hoeveelheid": "1",
-          "naam": "citroen"
+          "hoeveelheid": "2",
+          "naam": "citroenen"
         },
         {
           "hoeveelheid": "",
@@ -745,28 +747,28 @@
       ],
       "stappen": [
         "Kook de aardappelen in ongeveer 20 minuten gaar. Verwarm de oven voor op 180 °C.",
-        "Leg de zalm in een ovenschaal, bestrijk met 5 g olie en kruid met peper, dille en schijfjes citroen. Bak 15 tot 18 minuten, tot de kern ongeveer 63 °C bereikt.",
+        "Leg de zalm in een ovenschaal: 150 g per persoon, 200 g voor de portie met extra’s. Bestrijk met 10 g olie en kruid met peper, dille en schijfjes citroen. Bak 15 tot 18 minuten, kern ongeveer 63 °C.",
         "Stoom de broccoli in 6 tot 8 minuten beetgaar.",
-        "Schud de aardappelen om met citroenrasp en 5 g olie. Verdeel in de verhouding 150 : 350; de laatste 5 g olie gaat alleen naar de portie met extra’s."
+        "Schud de aardappelen om met citroenrasp en de rest van de olie. 100 g voor elke volwassene, 225 g voor de anderen."
       ],
       "verdelen": {
-        "basis": "150 g zalm en de helft van de broccoli, met 150 g aardappelen.",
+        "basis": "150 g zalm en een kwart van de broccoli, met 100 g aardappelen.",
         "extra": [
-          "+ 200 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g zalm"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw."
+        "De andere twee eters: ieder 150 g vlees of vis, een gelijk deel groenten en saus, met 225 g aardappelen per persoon.",
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw."
       ],
       "voeding": {
         "basis": {
-          "kcal": 560,
-          "eiwit": 41
+          "kcal": 520,
+          "eiwit": 40
         },
         "extra": {
-          "kcal": 760,
-          "eiwit": 45
+          "kcal": 620,
+          "eiwit": 50
         }
       }
     },
@@ -775,40 +777,40 @@
       "titel": "Vol-au-vent met kip en champignons",
       "ondertitel": "Zaterdag · comfortfood, met ovenfrietjes en sla",
       "wanneer": "Zaterdagavond",
-      "personen": 2,
+      "personen": 4,
       "tijd": "45 minuten",
-      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "noot": "Totaal voor vier, inclusief de extra. Bij dit gerecht zijn jullie met vier.",
       "ingredienten": [
         {
-          "hoeveelheid": "350 g",
+          "hoeveelheid": "650 g",
           "naam": "kipfilet"
         },
         {
-          "hoeveelheid": "300 g",
+          "hoeveelheid": "600 g",
           "naam": "champignons"
         },
         {
-          "hoeveelheid": "250 ml",
+          "hoeveelheid": "500 ml",
           "naam": "halfvolle melk"
         },
         {
-          "hoeveelheid": "20 g",
+          "hoeveelheid": "40 g",
           "naam": "bloem"
         },
         {
-          "hoeveelheid": "15 g",
+          "hoeveelheid": "30 g",
           "naam": "boter"
         },
         {
-          "hoeveelheid": "450 g",
+          "hoeveelheid": "600 g",
           "naam": "aardappelen"
         },
         {
-          "hoeveelheid": "15 g",
+          "hoeveelheid": "25 g",
           "naam": "olijfolie"
         },
         {
-          "hoeveelheid": "200 g",
+          "hoeveelheid": "400 g",
           "naam": "sla of rauwkost"
         },
         {
@@ -817,31 +819,30 @@
         }
       ],
       "stappen": [
-        "Verwarm de oven voor op 210 °C. Snijd de aardappelen in frietjes en dep ze droog. Meng 150 g met 5 g olie voor de basisportie en 300 g met 10 g olie voor de portie met extra’s. Bak 25 tot 30 minuten; schep halverwege om.",
-        "Pocheer de kip 12 minuten in licht kokend water met laurier en tijm, tot de kern minstens 74 °C bereikt. Snijd in blokjes en houd 100 ml kookvocht bij.",
+        "Verwarm de oven voor op 210 °C. Snijd de aardappelen in frietjes en dep ze droog: 100 g voor elke volwassene, 200 g voor elk van de anderen. Meng met de olie en bak 25 tot 30 minuten.",
+        "Pocheer de kip 12 minuten in licht kokend water met laurier en tijm, tot de kern minstens 74 °C bereikt. Snijd in blokjes en bewaar 250 ml kookvocht.",
         "Bak de champignons in plakjes droog in een pan.",
-        "Smelt de boter, roer de bloem erdoor en laat 1 minuut garen. Klop de melk en het kookvocht erdoor tot een gladde saus. Kruid met nootmuskaat, peper en citroensap, en voeg kip en champignons toe.",
-        "Verdeel de vol-au-vent in de verhouding 150 : 200 (kip). Serveer met de eigen frietjes en de sla."
+        "Smelt de boter, roer de bloem erdoor en laat 1 minuut garen. Klop de melk en het kookvocht erdoor tot een gladde saus. Roer kip en champignons erdoor.",
+        "Verdeel de vol-au-vent 150 : 200 : 150 : 150 (kip, met extra 200 g). Serveer met de eigen frietjes en de sla."
       ],
       "verdelen": {
-        "basis": "Vol-au-vent met 150 g kip, frietjes van 150 g aardappelen en de helft van de sla.",
+        "basis": "Vol-au-vent met 150 g kip, frietjes van 100 g aardappelen en de helft van de sla.",
         "extra": [
-          "+ 50 g kipfilet",
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g kipfilet"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw. Zin in een pasteibakje? Reken dan ongeveer 110 kcal extra."
+        "De andere twee eters: ieder 150 g vlees of vis, een gelijk deel groenten en saus, met frietjes van 200 g aardappelen per persoon.",
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. Zin in een pasteibakje? Reken dan ongeveer 110 kcal extra."
       ],
       "voeding": {
         "basis": {
-          "kcal": 535,
-          "eiwit": 49
+          "kcal": 495,
+          "eiwit": 48
         },
         "extra": {
-          "kcal": 750,
-          "eiwit": 63
+          "kcal": 550,
+          "eiwit": 60
         }
       }
     },
@@ -850,36 +851,36 @@
       "titel": "Varkenshaasje met spruitjes, appel en krieltjes",
       "ondertitel": "Zondag · wat uitgebreider, met mosterdroomsaus",
       "wanneer": "Zondagavond",
-      "personen": 2,
+      "personen": 4,
       "tijd": "50 minuten",
-      "noot": "Totaal voor twee, inclusief de extra’s.",
+      "noot": "Totaal voor vier, inclusief de extra. Bij dit gerecht zijn jullie met vier.",
       "ingredienten": [
         {
-          "hoeveelheid": "300 g",
+          "hoeveelheid": "650 g",
           "naam": "varkenshaasje"
         },
         {
-          "hoeveelheid": "500 g",
+          "hoeveelheid": "1000 g",
           "naam": "spruitjes"
         },
         {
-          "hoeveelheid": "1",
-          "naam": "appel (100 g)"
+          "hoeveelheid": "2",
+          "naam": "appels (200 g)"
         },
         {
-          "hoeveelheid": "500 g",
+          "hoeveelheid": "650 g",
           "naam": "krieltjes"
         },
         {
-          "hoeveelheid": "100 ml",
+          "hoeveelheid": "200 ml",
           "naam": "room 20 %"
         },
         {
-          "hoeveelheid": "10 g",
+          "hoeveelheid": "20 g",
           "naam": "mosterd"
         },
         {
-          "hoeveelheid": "20 g",
+          "hoeveelheid": "35 g",
           "naam": "olijfolie"
         },
         {
@@ -888,30 +889,30 @@
         }
       ],
       "stappen": [
-        "Verwarm de oven voor op 200 °C. Halveer de krieltjes, meng met 10 g olie en rozemarijn en rooster 35 minuten.",
-        "Halveer de spruitjes en snijd de appel in partjes. Leg ze na 15 minuten mee op de bakplaat.",
-        "Kruid het varkenshaasje met peper en tijm en bak het rondom bruin in 5 g olie. Zet 12 tot 15 minuten in de oven, tot minstens 63 °C, en laat 5 minuten rusten.",
+        "Verwarm de oven voor op 200 °C. Halveer de krieltjes, meng met 15 g olie en rozemarijn en rooster 35 minuten.",
+        "Halveer de spruitjes en snijd de appels in partjes. Leg ze na 15 minuten mee op de bakplaat met 10 g olie.",
+        "Kruid het varkenshaasje met peper en tijm en bak het rondom bruin in 5 g olie. Zet 15 tot 20 minuten in de oven (kern 63 °C).",
         "Roer de aanbaksels in de pan los met een scheutje water. Voeg room en mosterd toe en laat even inkoken.",
-        "Snijd het vlees in medaillons. Verdeel vlees, saus, spruitjes en appel gelijk, en de krieltjes in de verhouding 150 : 350. De laatste 5 g olie gaat alleen naar de portie met extra’s."
+        "Snijd het vlees in medaillons: 150 g per persoon, 200 g voor de portie met extra’s. Saus, spruitjes en appel gelijk, de krieltjes 100 g voor elke volwassene, 225 g voor de anderen. De laatste 5 g olie is voor de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "De helft van het varkenshaasje, de saus, spruitjes en appel, met 150 g krieltjes.",
+        "basis": "150 g varkenshaasje, een kwart van de saus, spruitjes en appel, met 100 g krieltjes.",
         "extra": [
-          "+ 200 g krieltjes",
-          "+ 5 g olijfolie"
+          "+ 50 g varkenshaasje"
         ]
       },
       "noten": [
-        "Alle gewichten zijn rauw."
+        "De andere twee eters: ieder 150 g vlees of vis, een gelijk deel groenten en saus, met 225 g krieltjes per persoon.",
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw."
       ],
       "voeding": {
         "basis": {
-          "kcal": 605,
-          "eiwit": 46
+          "kcal": 565,
+          "eiwit": 45
         },
         "extra": {
-          "kcal": 805,
-          "eiwit": 50
+          "kcal": 625,
+          "eiwit": 56
         }
       }
     }

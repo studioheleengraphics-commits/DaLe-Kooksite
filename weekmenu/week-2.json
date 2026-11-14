@@ -1,6 +1,6 @@
 {
   "week": 2,
-  "voor": 4,
+  "noot": "W-schema vanaf 16 november: kleinere borden, meer eiwit. De basis is de kleinste portie; met extra eet je hetzelfde met extra eiwit. Basis: elke ochtend koffie met 30 ml amandelmelk en een klontje rietsuiker. Eerst vlees of vis, dan groenten, aardappelen het laatst. 1 BH = 25 g brood, smeersel = 5 g boter per BH. Ma-do met vier, warm ’s avonds. Vrijdag met twee, warm ’s middags. Weekend met twee, warm ’s avonds. Cake nog maar op woensdag en zaterdag.",
   "van": "2026-11-16",
   "tot": "2026-11-22",
   "dagen": [
@@ -10,8 +10,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "150 g halfvolle plattekaas natuur + 20 g granola + 100 g kiwi",
-          "extra": "+ 50 g plattekaas + 15 g granola"
+          "basis": "150 g halfvolle plattekaas + 15 g granola + 100 g kiwi",
+          "extra": "200 g plattekaas"
         },
         {
           "moment": "10 u",
@@ -21,12 +21,13 @@
         {
           "moment": "Middag",
           "basis": "2 BH (50 g) + 2 gekookte eieren in plakjes + mosterd + bieslook + 100 g tomaatjes + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+          "extra": "+ 1 ei"
         },
         {
           "moment": "14.30 u",
-          "basis": "1 punt plattekaastaart zonder bodem (zondag gebakken)",
-          "kcal": 105
+          "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
+          "kcal": 97
         },
         {
           "moment": "16.30 u",
@@ -36,23 +37,23 @@
         {
           "moment": "Avond",
           "basis": "Kalkoen met bloemkool in kaassaus",
-          "detail": "150 g kalkoenfilet + 300 g bloemkool + 200 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g kalkoenfilet + 300 g bloemkool + 100 g aardappelen",
+          "extra": "+ 50 g kalkoenfilet",
           "recept": 1
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "basis": {
-        "kcal": 1650,
-        "eiwit": 92
+        "kcal": 1535,
+        "eiwit": 98
       },
       "extra": {
-        "kcal": 2085,
-        "eiwit": 109
+        "kcal": 1700,
+        "eiwit": 123
       }
     },
     {
@@ -62,7 +63,7 @@
         {
           "moment": "Ontbijt",
           "basis": "2 BH (50 g) + 1 gekookt ei + 10 g smeersel",
-          "extra": "+ 1 BH (25 g) + 1 ei + 5 g smeersel"
+          "extra": "+ 1 ei"
         },
         {
           "moment": "10 u",
@@ -72,11 +73,12 @@
         {
           "moment": "Middag",
           "basis": "2 BH (50 g) + 80 g koude kalkoen van maandag + 100 g tomaat + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 30 g kalkoen + 5 g smeersel"
+          "extra": "+ 30 g kalkoen"
         },
         {
           "moment": "14.30 u",
           "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
           "kcal": 97
         },
         {
@@ -86,24 +88,25 @@
         },
         {
           "moment": "Avond",
-          "basis": "Kabeljauw uit de oven met tomaat en courgette",
-          "detail": "150 g kabeljauw + 200 g courgette + 200 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "basis": "Varkenshaasje uit de oven met tomaat en courgette",
+          "detail": "150 g varkenshaasje + 200 g courgette + 100 g aardappelen",
+          "extra": "+ 50 g varkenshaasje",
           "recept": 2
         },
         {
           "moment": "20 u",
-          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
-          "kcal": 105
+          "basis": "warme chocomelk met 150 ml ongezoete amandelmelk + 1 tl cacao + 1 tl suiker",
+          "extra": "met 150 ml halfvolle melk",
+          "kcal": 55
         }
       ],
       "basis": {
-        "kcal": 1480,
-        "eiwit": 93
+        "kcal": 1435,
+        "eiwit": 90
       },
       "extra": {
-        "kcal": 1935,
-        "eiwit": 114
+        "kcal": 1650,
+        "eiwit": 121
       }
     },
     {
@@ -112,8 +115,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 100 g kiwi",
-          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+          "basis": "120 g fruit- of vanilleyoghurt + 15 g granola + 100 g kiwi",
+          "extra": "hetzelfde + 100 g plattekaas erbij"
         },
         {
           "moment": "10 u",
@@ -122,8 +125,8 @@
         },
         {
           "moment": "Middag",
-          "basis": "3 BH (75 g) + tonijnsalade van 80 g tonijn + 10 g mayonaise + 100 g tomaat + 15 g smeersel",
-          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+          "basis": "2 BH (50 g) + tonijnsalade van 80 g tonijn + 10 g mayonaise + 100 g tomaat + 10 g smeersel",
+          "extra": "+ 20 g kaas"
         },
         {
           "moment": "14.30 u",
@@ -138,23 +141,23 @@
         {
           "moment": "Avond",
           "basis": "Gehaktbrood met wortelpuree",
-          "detail": "150 g mager rundergehakt + 250 g wortelen + 150 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g mager rundergehakt + 250 g wortelen + 100 g aardappelen",
+          "extra": "+ 50 g mager rundergehakt",
           "recept": 3
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "basis": {
-        "kcal": 1690,
-        "eiwit": 79
+        "kcal": 1520,
+        "eiwit": 75
       },
       "extra": {
-        "kcal": 2110,
-        "eiwit": 92
+        "kcal": 1720,
+        "eiwit": 97
       }
     },
     {
@@ -164,7 +167,7 @@
         {
           "moment": "Ontbijt",
           "basis": "2 BH (50 g) + 40 g filet de Saxe + 10 g smeersel",
-          "extra": "+ 1 BH (25 g) + 20 g filet de Saxe + 5 g smeersel"
+          "extra": "+ 20 g filet de Saxe"
         },
         {
           "moment": "10 u",
@@ -174,12 +177,13 @@
         {
           "moment": "Middag",
           "basis": "2 BH (50 g) + 60 g koud gehaktbrood van woensdag + mosterd + 150 g komkommer + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 30 g gehaktbrood + 5 g smeersel"
+          "extra": "+ 30 g gehaktbrood"
         },
         {
           "moment": "14.30 u",
-          "basis": "1 punt plattekaastaart zonder bodem (zondag gebakken)",
-          "kcal": 105
+          "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
+          "kcal": 97
         },
         {
           "moment": "16.30 u",
@@ -189,24 +193,25 @@
         {
           "moment": "Avond",
           "basis": "Kip met paprika in zachte currysaus",
-          "detail": "150 g kipfilet + 250 g paprika + 50 g rijst",
-          "extra": "+ 35 g rijst + 5 g olijfolie",
+          "detail": "150 g kipfilet + 250 g paprika + 30 g rijst",
+          "extra": "+ 50 g kipfilet",
           "recept": 4
         },
         {
           "moment": "20 u",
-          "basis": "warme chocomelk: 150 ml halfvolle melk + 1 tl cacao + 1 tl suiker",
-          "kcal": 105
+          "basis": "warme chocomelk met 150 ml ongezoete amandelmelk + 1 tl cacao + 1 tl suiker",
+          "extra": "met 150 ml halfvolle melk",
+          "kcal": 55
         }
       ],
       "thema": "rijstdag",
       "basis": {
-        "kcal": 1620,
-        "eiwit": 87
+        "kcal": 1510,
+        "eiwit": 90
       },
       "extra": {
-        "kcal": 2065,
-        "eiwit": 105
+        "kcal": 1710,
+        "eiwit": 118
       }
     },
     {
@@ -215,8 +220,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "120 g fruit- of vanilleyoghurt + 20 g granola + 70 g banaan",
-          "extra": "+ 50 g fruit- of vanilleyoghurt + 10 g granola"
+          "basis": "120 g fruit- of vanilleyoghurt + 15 g granola + 70 g banaan",
+          "extra": "hetzelfde + 100 g plattekaas erbij"
         },
         {
           "moment": "10 u",
@@ -225,14 +230,16 @@
         },
         {
           "moment": "Middag",
-          "basis": "3 BH (75 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 15 g smeersel",
-          "extra": "+ 1 BH (25 g) + 40 g mozzarella + 5 g smeersel"
+          "basis": "Zalm met broccoli en citroenpuree",
+          "detail": "150 g zalm + 300 g broccoli + 100 g aardappelen",
+          "extra": "+ 50 g zalm",
+          "recept": 5
         },
         {
           "moment": "14.30 u",
-          "basis": "10 g walnoten",
-          "extra": "20 g walnoten",
-          "kcal": 65
+          "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
+          "kcal": 97
         },
         {
           "moment": "16.30 u",
@@ -241,25 +248,23 @@
         },
         {
           "moment": "Avond",
-          "basis": "Zalm met broccoli en citroenpuree",
-          "detail": "150 g zalm + 300 g broccoli + 150 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
-          "recept": 5
+          "basis": "2 BH (50 g) + 60 g mozzarella + 40 g kippenwit + 150 g tomaat + basilicum + 10 g smeersel",
+          "extra": "+ 40 g mozzarella"
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "thema": "visdag",
       "basis": {
-        "kcal": 1675,
-        "eiwit": 82
+        "kcal": 1540,
+        "eiwit": 85
       },
       "extra": {
-        "kcal": 2190,
-        "eiwit": 98
+        "kcal": 1825,
+        "eiwit": 112
       }
     },
     {
@@ -268,8 +273,8 @@
       "momenten": [
         {
           "moment": "Ontbijt",
-          "basis": "1 BH (25 g) + roerei van 2 eieren + 5 g smeersel (bakken in 5 g boter)",
-          "extra": "+ 1 BH (25 g) + 5 g smeersel"
+          "basis": "1 BH (25 g) + roerei van 2 eieren (bakken in 5 g boter)",
+          "extra": "roerei van 3 eieren"
         },
         {
           "moment": "10 u",
@@ -278,8 +283,8 @@
         },
         {
           "moment": "Middag",
-          "basis": "3 BH (75 g) + 30 g parmaham + 20 g kaas + 150 g komkommer en paprika + 15 g smeersel",
-          "extra": "+ 1 BH (25 g) + 20 g kaas + 5 g smeersel"
+          "basis": "2 BH (50 g) + 30 g parmaham + 20 g kaas + 150 g komkommer en paprika + 10 g smeersel",
+          "extra": "+ 20 g kaas"
         },
         {
           "moment": "14.30 u",
@@ -294,8 +299,8 @@
         {
           "moment": "Avond",
           "basis": "Spaghetti met huisgemaakte bolognaise",
-          "detail": "150 g mager rundergehakt + 100 g courgette + 75 g wortelen + 50 g spaghetti",
-          "extra": "+ 35 g spaghetti + 5 g olijfolie",
+          "detail": "150 g mager rundergehakt + 100 g courgette + 75 g wortelen + 30 g spaghetti",
+          "extra": "+ 50 g mager rundergehakt",
           "recept": 6
         },
         {
@@ -305,12 +310,12 @@
       ],
       "thema": "comfortfood",
       "basis": {
-        "kcal": 1625,
-        "eiwit": 85
+        "kcal": 1475,
+        "eiwit": 81
       },
       "extra": {
-        "kcal": 2055,
-        "eiwit": 98
+        "kcal": 1665,
+        "eiwit": 102
       }
     },
     {
@@ -320,7 +325,7 @@
         {
           "moment": "Ontbijt",
           "basis": "2 BH (50 g) + 25 g kaas + 10 g smeersel",
-          "extra": "+ 1 BH (25 g) + 15 g kaas + 5 g smeersel"
+          "extra": "+ 15 g kaas"
         },
         {
           "moment": "10 u",
@@ -330,11 +335,12 @@
         {
           "moment": "Middag",
           "basis": "2 BH (50 g) + 60 g makreelfilet natuur + 100 g tomaat + 10 g smeersel + 300 ml soep",
-          "extra": "+ 1 BH (25 g) + 40 g makreel + 5 g smeersel"
+          "extra": "+ 40 g makreel"
         },
         {
           "moment": "14.30 u",
           "basis": "120 g halfvolle plattekaas",
+          "extra": "150 g",
           "kcal": 97
         },
         {
@@ -345,38 +351,38 @@
         {
           "moment": "Avond",
           "basis": "Biefstuk met boontjes en peperroomsaus",
-          "detail": "150 g biefstuk + 300 g boontjes + 200 g aardappelen",
-          "extra": "+ 150 g aardappelen + 5 g olijfolie",
+          "detail": "150 g biefstuk + 300 g boontjes + 100 g aardappelen",
+          "extra": "+ 50 g biefstuk",
           "recept": 7
         },
         {
           "moment": "20 u",
-          "basis": "15 g pure chocolade 70 %",
-          "kcal": 85
+          "basis": "10 g pure chocolade 70 %",
+          "kcal": 60
         }
       ],
       "thema": "wat uitgebreider",
       "basis": {
-        "kcal": 1650,
-        "eiwit": 87
+        "kcal": 1565,
+        "eiwit": 85
       },
       "extra": {
-        "kcal": 2140,
-        "eiwit": 107
+        "kcal": 1770,
+        "eiwit": 110
       }
     }
   ],
   "voorbereiding": [
-    "Zondag 15 november: maak het basisrecept soep voor de middagen van maandag, dinsdag, donderdag en zondag, en kook 8 eieren hard voor maandagmiddag en dinsdagochtend.",
+    "Zondag 15 november: maak het basisrecept soep voor de broodmaaltijden van maandag, dinsdag, donderdag en zondag, en kook 8 eieren hard voor maandagmiddag en dinsdagochtend.",
     "Ook op zondag: bak de plattekaastaart zonder bodem. Dat zijn 10 punten voor de tussendoortjes van de week; wat over is, vries je in.",
     "Maandagavond: bak 200 g kalkoenfilet extra mee (R1) voor dinsdagmiddag.",
     "Woensdagavond: maak het gehaktbrood met 150 g extra gehakt (R3). Twee sneden zijn voor donderdagmiddag.",
-    "De broodmaaltijd valt deze week ’s middags: pak ze ’s ochtends in een doos als jullie niet thuis eten."
+    "De broodmaaltijd valt deze week ’s middags, behalve op vrijdag: pak ze ’s ochtends in een doos als jullie niet thuis eten."
   ],
   "baksel": {
     "titel": "Plattekaastaart zonder bodem",
     "ondertitel": "Zondag bakken · fris, met citroen",
-    "wanneer": "Tussendoortje · ma, wo, do en za om 14.30 u",
+    "wanneer": "Tussendoortje · wo en za om 14.30 u",
     "opbrengst": "10 punten",
     "tijd": "15 minuten + 50 minuten bakken",
     "noot": "Voor 10 punten.",
@@ -418,7 +424,7 @@
       "Laat afkoelen in de oven met de deur op een kier, en daarna minstens 3 uur in de koelkast. Snijd in 10 punten."
     ],
     "per_portie": "1 punt is één tussendoortje, voor allebei. Zin in iets anders? Ruil met een tussendoortje van de ruillijst bij de afspraken.",
-    "bewaren": "Bewaar 4 dagen in de koelkast. Lekker met een paar frambozen erop.",
+    "bewaren": "W-schema: jullie eten er maar 2 stuks per persoon per week. Bak een halve portie, of vries de rest per stuk in. Bewaar 4 dagen in de koelkast. Lekker met een paar frambozen erop.",
     "noten": [
       "Gewone suiker en boter, geen zoetstoffen of light-producten. Voedingswaarden zijn schattingen."
     ],
@@ -483,39 +489,38 @@
         "Verdeel kalkoen en bloemkool in vier. De aardappelen gaan 200 : 350 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "Een kwart van de kalkoen en de bloemkool met saus, met 200 g aardappelen.",
+        "basis": "Een kwart van de kalkoen en de bloemkool met saus, met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g kalkoenfilet"
         ]
       },
       "noten": [
         "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
-        "Alle gewichten zijn rauw. De extra 200 g kalkoen telt niet mee in deze maaltijd."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. De extra 200 g kalkoen telt niet mee in deze maaltijd."
       ],
       "voeding": {
         "basis": {
-          "kcal": 595,
-          "eiwit": 54
+          "kcal": 520,
+          "eiwit": 52
         },
         "extra": {
-          "kcal": 755,
-          "eiwit": 57
+          "kcal": 570,
+          "eiwit": 64
         }
       }
     },
     {
       "nr": 2,
-      "titel": "Kabeljauw uit de oven met tomaat en courgette",
+      "titel": "Varkenshaasje uit de oven met tomaat en courgette",
       "ondertitel": "Eén warme maaltijd voor het hele gezin",
       "wanneer": "Dinsdagavond",
       "personen": 4,
-      "tijd": "35 minuten",
+      "tijd": "40 minuten",
       "noot": "Totaal voor vier, inclusief de extra’s.",
       "ingredienten": [
         {
           "hoeveelheid": "600 g",
-          "naam": "kabeljauw"
+          "naam": "varkenshaasje"
         },
         {
           "hoeveelheid": "800 g",
@@ -539,35 +544,34 @@
         },
         {
           "hoeveelheid": "",
-          "naam": "Oregano, paprikapoeder en peper."
+          "naam": "Oregano, paprikapoeder, rozemarijn en peper."
         }
       ],
       "stappen": [
         "Verwarm de oven voor op 180 °C. Kook de aardappelen in ongeveer 20 minuten gaar.",
-        "Fruit de ui in 40 g olie en bak de courgette in halve plakjes 5 minuten mee.",
+        "Fruit de ui in 30 g olie en bak de courgette in halve plakjes 5 minuten mee.",
         "Roer de passata erdoor, kruid en laat 5 minuten sudderen. Schep in een ovenschaal.",
-        "Leg de kabeljauw op de saus en gaar 15 tot 20 minuten in de oven, tot de vis makkelijk uiteenvalt.",
-        "Verdeel vis en saus in vier, de aardappelen 200 : 350 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
+        "Kruid het varkenshaasje en bak het rondom bruin in 10 g olie. Leg het op de saus en gaar 15 tot 20 minuten in de oven, tot de kern 63 °C is. Laat 5 minuten rusten en snijd in medaillons.",
+        "Verdeel vlees en saus in vier, de aardappelen 200 : 350 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "Een kwart van de vis en de groenten met saus, met 200 g aardappelen.",
+        "basis": "Een kwart van het vlees en de groenten met saus, met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g varkenshaasje"
         ]
       },
       "noten": [
         "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
-        "Alle gewichten zijn rauw."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. Vis staat deze week op vrijdag."
       ],
       "voeding": {
         "basis": {
-          "kcal": 440,
-          "eiwit": 35
+          "kcal": 425,
+          "eiwit": 36
         },
         "extra": {
-          "kcal": 600,
-          "eiwit": 38
+          "kcal": 485,
+          "eiwit": 47
         }
       }
     },
@@ -628,24 +632,23 @@
         "Laat het gehaktbrood 5 minuten rusten. Snijd twee sneden af voor donderdagmiddag en verdeel de rest in vier. De laatste 5 g olie gaat in de puree van de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "Een kwart van het gehaktbrood en de wortelpuree, met 150 g aardappelen.",
+        "basis": "Een kwart van het gehaktbrood en de wortelpuree, met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g mager rundergehakt"
         ]
       },
       "noten": [
         "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
-        "Alle gewichten zijn rauw. De twee extra sneden tellen niet mee in deze maaltijd."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw. De twee extra sneden tellen niet mee in deze maaltijd."
       ],
       "voeding": {
         "basis": {
-          "kcal": 625,
-          "eiwit": 41
+          "kcal": 585,
+          "eiwit": 40
         },
         "extra": {
-          "kcal": 785,
-          "eiwit": 44
+          "kcal": 650,
+          "eiwit": 50
         }
       }
     },
@@ -698,24 +701,23 @@
         "Laat 5 tot 8 minuten pruttelen, tot de kip gaar is. Verdeel in vier; de laatste 5 g olie gaat door de rijst van de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "Een kwart van de curry, met 50 g rijst.",
+        "basis": "Een kwart van de curry, met 30 g rijst.",
         "extra": [
-          "+ 35 g rijst",
-          "+ 5 g olijfolie"
+          "+ 50 g kipfilet"
         ]
       },
       "noten": [
         "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 75 g rijst per persoon.",
-        "Alle gewichten zijn rauw, rijst droog."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Zijn jullie met twee, kook dan minder dan de lijst hierboven aangeeft. Reken voor de portie met extra’s 50 g vlees of vis extra bij de hoeveelheid hierboven. Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw, rijst droog."
       ],
       "voeding": {
         "basis": {
-          "kcal": 580,
-          "eiwit": 45
+          "kcal": 510,
+          "eiwit": 43
         },
         "extra": {
-          "kcal": 745,
-          "eiwit": 48
+          "kcal": 565,
+          "eiwit": 54
         }
       }
     },
@@ -723,37 +725,37 @@
       "nr": 5,
       "titel": "Zalm met broccoli en citroenpuree",
       "ondertitel": "Vrijdag · visdag",
-      "wanneer": "Vrijdagavond",
-      "personen": 4,
+      "wanneer": "Vrijdagmiddag",
+      "personen": 2,
       "tijd": "30 minuten",
-      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "noot": "Totaal voor twee, inclusief de extra. Bij dit gerecht zijn jullie met twee.",
       "ingredienten": [
         {
-          "hoeveelheid": "600 g",
-          "naam": "zalm"
+          "hoeveelheid": "350 g",
+          "naam": "zalm (150 g + 200 g)"
         },
         {
-          "hoeveelheid": "1200 g",
+          "hoeveelheid": "600 g",
           "naam": "broccoli"
         },
         {
-          "hoeveelheid": "900 g",
+          "hoeveelheid": "200 g",
           "naam": "aardappelen"
         },
         {
-          "hoeveelheid": "200 ml",
+          "hoeveelheid": "100 ml",
           "naam": "halfvolle melk"
         },
         {
-          "hoeveelheid": "20 g",
+          "hoeveelheid": "10 g",
           "naam": "boter"
         },
         {
-          "hoeveelheid": "25 g",
+          "hoeveelheid": "10 g",
           "naam": "olijfolie"
         },
         {
-          "hoeveelheid": "40 g",
+          "hoeveelheid": "20 g",
           "naam": "citroensap"
         },
         {
@@ -763,29 +765,27 @@
       ],
       "stappen": [
         "Kook de aardappelen gaar en stoom de broccoli 8 tot 12 minuten.",
-        "Dep de zalm droog, kruid en bak 3 tot 4 minuten per kant in 20 g olie, tot de vis makkelijk uiteenvalt.",
-        "Verdeel de aardappelen 150 : 300 : 225 : 225, verdeel melk en boter in vier en stamp met nootmuskaat.",
-        "Verdeel citroensap over puree en zalm, werk af met dille. De laatste 5 g olie is voor de portie met extra’s."
+        "Dep de zalm droog, kruid en bak 3 tot 4 minuten per kant in de olie, tot de vis makkelijk uiteenvalt.",
+        "Stamp de aardappelen met melk, boter en nootmuskaat. Ieder 100 g.",
+        "Verdeel citroensap over puree en zalm, werk af met dille. Basis 150 g zalm, met extra 200 g."
       ],
       "verdelen": {
-        "basis": "Een kwart van de zalm en broccoli, met 150 g aardappelen.",
+        "basis": "150 g zalm, de helft van de broccoli, puree van 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g zalm"
         ]
       },
       "noten": [
-        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
-        "Alle gewichten zijn rauw."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw."
       ],
       "voeding": {
         "basis": {
-          "kcal": 610,
-          "eiwit": 44
+          "kcal": 570,
+          "eiwit": 43
         },
         "extra": {
-          "kcal": 770,
-          "eiwit": 47
+          "kcal": 670,
+          "eiwit": 53
         }
       }
     },
@@ -794,40 +794,40 @@
       "titel": "Spaghetti met huisgemaakte bolognaise",
       "ondertitel": "Zaterdag · comfortfood",
       "wanneer": "Zaterdagavond",
-      "personen": 4,
+      "personen": 2,
       "tijd": "40 minuten",
-      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "noot": "Totaal voor twee, inclusief de extra. Bij dit gerecht zijn jullie met twee.",
       "ingredienten": [
         {
-          "hoeveelheid": "600 g",
+          "hoeveelheid": "350 g",
           "naam": "mager rundergehakt"
         },
         {
-          "hoeveelheid": "400 g",
+          "hoeveelheid": "200 g",
           "naam": "passata"
         },
         {
-          "hoeveelheid": "400 g",
+          "hoeveelheid": "200 g",
           "naam": "courgette"
         },
         {
-          "hoeveelheid": "300 g",
+          "hoeveelheid": "150 g",
           "naam": "wortelen"
         },
         {
-          "hoeveelheid": "100 g",
+          "hoeveelheid": "50 g",
           "naam": "ui"
         },
         {
-          "hoeveelheid": "285 g",
+          "hoeveelheid": "60 g",
           "naam": "spaghetti"
         },
         {
-          "hoeveelheid": "25 g",
+          "hoeveelheid": "15 g",
           "naam": "olijfolie"
         },
         {
-          "hoeveelheid": "40 g",
+          "hoeveelheid": "20 g",
           "naam": "parmezaan"
         },
         {
@@ -836,30 +836,28 @@
         }
       ],
       "stappen": [
-        "Fruit de ui in 20 g olie en bak het gehakt rul en gaar.",
-        "Voeg wortelen en courgette in blokjes toe en bak 5 minuten mee. Roer passata, kruiden en 150 ml water erdoor en laat 20 tot 25 minuten sudderen.",
-        "Kook de spaghetti: 50 g voor de basisportie, 85 g voor de portie met extra’s en 75 g voor elk van de anderen.",
-        "Verdeel de saus in vier, ieder 10 g parmezaan. De laatste 5 g olie gaat door de pasta van de portie met extra’s."
+        "Fruit de ui in 10 g olie en bak het gehakt rul en gaar.",
+        "Voeg wortelen en courgette in blokjes toe en bak 5 minuten mee. Roer passata, kruiden en 75 ml water erdoor en laat 20 minuten zacht pruttelen.",
+        "Kook 30 g spaghetti per persoon.",
+        "Verdeel de saus 150 : 200 (basis : met extra), ieder 10 g parmezaan. De laatste 5 g olie gaat door de pasta van de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "Een kwart van de bolognaise en 10 g parmezaan, met 50 g spaghetti.",
+        "basis": "Iets minder dan de helft van de bolognaise en 10 g parmezaan, met 30 g spaghetti.",
         "extra": [
-          "+ 35 g spaghetti",
-          "+ 5 g olijfolie"
+          "+ 50 g mager rundergehakt"
         ]
       },
       "noten": [
-        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 75 g spaghetti per persoon.",
-        "Alle gewichten zijn rauw, pasta droog."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw, pasta droog."
       ],
       "voeding": {
         "basis": {
-          "kcal": 600,
-          "eiwit": 44
+          "kcal": 530,
+          "eiwit": 42
         },
         "extra": {
-          "kcal": 765,
-          "eiwit": 48
+          "kcal": 595,
+          "eiwit": 52
         }
       }
     },
@@ -868,36 +866,36 @@
       "titel": "Biefstuk met boontjes en peperroomsaus",
       "ondertitel": "Zondag · wat uitgebreider",
       "wanneer": "Zondagavond",
-      "personen": 4,
+      "personen": 2,
       "tijd": "35 minuten",
-      "noot": "Totaal voor vier, inclusief de extra’s.",
+      "noot": "Totaal voor twee, inclusief de extra. Bij dit gerecht zijn jullie met twee.",
       "ingredienten": [
         {
-          "hoeveelheid": "600 g",
-          "naam": "biefstuk"
+          "hoeveelheid": "350 g",
+          "naam": "biefstuk (150 g + 200 g)"
         },
         {
-          "hoeveelheid": "1200 g",
+          "hoeveelheid": "600 g",
           "naam": "boontjes"
         },
         {
-          "hoeveelheid": "1000 g",
+          "hoeveelheid": "200 g",
           "naam": "aardappelen"
         },
         {
-          "hoeveelheid": "120 ml",
+          "hoeveelheid": "60 ml",
           "naam": "room 20 %"
         },
         {
-          "hoeveelheid": "20 g",
+          "hoeveelheid": "10 g",
           "naam": "mosterd"
         },
         {
-          "hoeveelheid": "20 g",
+          "hoeveelheid": "10 g",
           "naam": "boter"
         },
         {
-          "hoeveelheid": "25 g",
+          "hoeveelheid": "10 g",
           "naam": "olijfolie"
         },
         {
@@ -907,29 +905,27 @@
       ],
       "stappen": [
         "Kook de aardappelen gaar en de boontjes 10 tot 15 minuten.",
-        "Dep de biefstukken droog en bak ze in 20 g olie en 20 g boter naar wens. Laat 5 minuten rusten.",
-        "Roer de aanbaksels los met 100 ml water. Voeg room, mosterd, tijm en peper toe en laat inkoken.",
-        "Verdeel vlees, boontjes en saus in vier, de aardappelen 200 : 350 : 225 : 225. De laatste 5 g olie is voor de portie met extra’s."
+        "Dep de biefstukken droog en bak ze in 5 g olie en de boter naar wens. Laat 5 minuten rusten.",
+        "Roer de aanbaksels los met 50 ml water. Voeg room, mosterd, tijm en peper toe en laat inkoken.",
+        "Verdeel boontjes en saus gelijk, ieder 100 g aardappelen. De laatste 5 g olie is voor de portie met extra’s."
       ],
       "verdelen": {
-        "basis": "Een kwart van de biefstuk, boontjes en saus, met 200 g aardappelen.",
+        "basis": "De kleine biefstuk (150 g), de helft van de boontjes en saus, met 100 g aardappelen.",
         "extra": [
-          "+ 150 g aardappelen",
-          "+ 5 g olijfolie"
+          "+ 50 g biefstuk"
         ]
       },
       "noten": [
-        "De andere twee eters: ieder hetzelfde aandeel vlees of vis, groenten en saus, met 225 g aardappelen per persoon.",
-        "Alle gewichten zijn rauw."
+        "W-schema: per volwassene maximaal 100 g aardappelen of 30 g rijst of pasta (droog). Eet eerst het vlees of de vis, dan de groenten, de aardappelen het laatst. Alle gewichten zijn rauw."
       ],
       "voeding": {
         "basis": {
-          "kcal": 610,
-          "eiwit": 44
+          "kcal": 535,
+          "eiwit": 42
         },
         "extra": {
-          "kcal": 770,
-          "eiwit": 47
+          "kcal": 600,
+          "eiwit": 53
         }
       }
     }
