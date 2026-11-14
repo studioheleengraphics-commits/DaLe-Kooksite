@@ -410,6 +410,10 @@ def bouw_afspraken(a):
         + "".join(f"<li>{e(k)}</li>" for k in g["keuzes"]) + "</ul></div>"
         for g in a["ruillijst"])
     voorbereiding = "".join(f"<li>{e(v)}</li>" for v in a["voorbereiding"])
+    ritme_kop = (f'<p class="nootregel">{e(a["weekritme_titel"])}</p>'
+                 if a.get("weekritme_titel") else "")
+    eten = (f'<h3 class="blokkop">{e(a.get("eten_titel", "Zo eet je"))}</h3>{punten(a["eten"])}'
+            if a.get("eten") else "")
     let_op = (f'<div class="tip"><span class="pen">&#9998;</span><p>{e(a["let_op"])}</p></div>'
               if a.get("let_op") else "")
 
@@ -417,7 +421,7 @@ def bouw_afspraken(a):
 <main class="wrap">
   <a class="terug" href="index.html">&#8592; Het weekmenu</a>
   <article class="recept afspraken">
-    <div class="kicker">Geldt voor alle weken, met twee en met vier</div>
+    <div class="kicker">{e(a.get('ondertitel', ''))}</div>
     <h1>Afspraken en voorbereiding</h1>
     {let_op}
 
@@ -428,6 +432,8 @@ def bouw_afspraken(a):
     <h3 class="blokkop">Porties en rekenafspraken</h3>
     {punten(a['porties'])}
 
+    {eten}
+
     <h3 class="blokkop">Wat we bewust doen</h3>
     {punten(a['bewust'])}
 
@@ -435,6 +441,7 @@ def bouw_afspraken(a):
     <ul class="punten">{voorbereiding}</ul>
 
     <h3 class="blokkop">Tussendoortjes door de week</h3>
+    {ritme_kop}
     {weekritme}
     <p class="klein">{e(a['weekritme_noot'])}</p>
 

@@ -1,48 +1,57 @@
 {
-  "let_op": "Vanaf 16 november geldt het W-schema: kleinere borden, meer eiwit. Wijkt het dagschema van een week af van wat hier staat, volg dan het dagschema.",
+  "ondertitel": "Geldt vanaf 16 november, voor de weken met twee en met vier",
   "dagritme": [
-    { "moment": "Ontbijt", "wat": "Twee dagen yoghurt, één à twee dagen plattekaas, de andere dagen brood. In het weekend roerei of een ei.", "opmerking": "Staat per dag in het schema." },
+    { "moment": "Ontbijt", "wat": "Twee dagen yoghurt, één dag plattekaas, de andere dagen brood. Op zaterdag roerei.", "opmerking": "Basis: elke ochtend koffie met 30 ml amandelmelk en een klontje rietsuiker." },
     { "moment": "10 u", "wat": "Fruit, wisselt per dag", "opmerking": "ca. 70 kcal" },
-    { "moment": "Middag", "wat": "Week met twee: ma-vr warm. Week met vier: broodmaaltijd.", "opmerking": "Weekend met twee: broodmaaltijd." },
-    { "moment": "14.30 u", "wat": "Ma, wo, do, za: het baksel van de week. Andere dagen plattekaas of walnoten.", "opmerking": "ca. 100 kcal" },
+    { "moment": "Middag", "wat": "Week met twee: ma-do warm. Week met vier: ma-do broodmaaltijd, vrijdag warm (met twee).", "opmerking": "In het weekend altijd een broodmaaltijd." },
+    { "moment": "14.30 u", "wat": "Woensdag en zaterdag: het baksel van de week. Andere dagen plattekaas.", "opmerking": "Plattekaas: basis 120 g, met extra 150 g." },
     { "moment": "16.30 u", "wat": "Fruit, of snoepgroenten met hummus", "opmerking": "ca. 60 tot 100 kcal" },
-    { "moment": "Avond", "wat": "Week met twee: broodmaaltijd (weekend warm). Week met vier: altijd warm." },
-    { "moment": "20 u", "wat": "Chocolade of warme chocomelk; op zaterdag thee", "opmerking": "ca. 100 kcal" }
+    { "moment": "Avond", "wat": "Week met twee: ma-do broodmaaltijd, vrijdagavond tot zondag warm met vier. Week met vier: ma-do warm met vier, vrijdag broodmaaltijd, weekend warm met twee.", "opmerking": "De kinderen wisselen op vrijdag." },
+    { "moment": "20 u", "wat": "10 g pure chocolade of warme chocomelk; op zaterdag thee", "opmerking": "Chocomelk: basis met ongezoete amandelmelk, met extra met halfvolle melk." }
   ],
-  "vaste_dagen": "Vaste dagen: donderdag rijstdag, vrijdag visdag, zaterdag comfortfood, zondag iets uitgebreider.",
+  "vaste_dagen": "Vaste dagen: donderdag rijstdag, vrijdag visdag (de enige vis bij de warme maaltijd), zaterdag comfortfood, zondag iets uitgebreider.",
   "porties": [
-    "De basis is de kleinste portie. Wie extra neemt, eet de basis plus de extra’s die bij de maaltijd staan.",
-    "1 BH = 25 g brood met 5 g ongezouten boter. Broodontbijt: 2 BH in de basis, 3 BH met extra. Broodmaaltijd: 3 BH in de basis en 4 BH met extra; op dagen met soep 2 BH en 3 BH.",
-    "Yoghurtontbijt: 120 g fruit- of vanilleyoghurt met 20 g granola en fruit; met extra 170 g en 30 g granola. Kies een yoghurt met gewone suiker, zonder zoetstof.",
-    "Plattekaasontbijt: 150 g halfvolle plattekaas natuur, 20 g granola en 100 g kiwi; met extra 200 g en 35 g granola.",
-    "Granola zonder zoetstof, chia of lijnzaad. Kijk het etiket na.",
-    "Vlees, vis, groenten en aardappelen weeg je rauw, rijst en pasta droog, vis uit blik uitgelekt. Saus en bakvet van de warme maaltijd zijn meegerekend. Groenten mag je ruimer opscheppen; het zetmeel weeg je af.",
-    "Doel per dag: basis ca. 1.500 tot 1.700 kcal en 75 tot 105 g eiwit, met extra ca. 1.950 tot 2.300 kcal. Alle voedingswaarden zijn schattingen."
+    "De basis is de kleinste portie. Met extra eet je hetzelfde met extra eiwit: 50 g vlees of vis extra bij de warme maaltijd en wat extra beleg bij het brood. Geen extra brood of aardappelen.",
+    "1 BH = 25 g brood met 5 g ongezouten boter. Broodontbijt en broodmaaltijd: 2 BH voor allebei, op soepdagen met 300 ml soep.",
+    "Aardappelen, rijst en pasta: per volwassene hooguit 100 g aardappelen of 30 g rijst of pasta (droog). De kinderen krijgen gewoon hun portie.",
+    "Yoghurtontbijt: 120 g fruit- of vanilleyoghurt met 15 g granola en fruit. Met extra komt er 100 g plattekaas bij.",
+    "Plattekaasontbijt: 150 g halfvolle plattekaas, 15 g granola en 100 g kiwi; met extra 200 g plattekaas.",
+    "Roerei: basis 2 eieren met 1 BH, met extra 3 eieren met 1 BH.",
+    "Vlees, vis, groenten en aardappelen weeg je rauw, rijst en pasta droog, vis uit blik uitgelekt. Groenten mag je ruimer opscheppen.",
+    "Doel per dag: basis ca. 1.400 tot 1.600 kcal met 85 tot 100 g eiwit, met extra ca. 1.600 tot 1.900 kcal met 100 tot 125 g eiwit. Zie het als een plafond: minder eten mag, minder eiwit liever niet. Alle waarden zijn schattingen."
+  ],
+  "eten_titel": "Eten met het W-schema",
+  "eten": [
+    "Eerst vlees of vis, dan groenten, aardappelen het laatst. Lukt een bord niet, laat dan de aardappelen liggen en niet het eiwit.",
+    "Eet traag en in kleine happen, en stop zodra je verzadigd bent. Bij een zwaar of vet gerecht neem je gerust een kleinere portie, dat valt beter.",
+    "Drink genoeg, zo’n 1,5 tot 2 liter per dag, en blijf groenten eten. Dat helpt tegen verstopping.",
+    "Beweeg met spierkracht, twee keer per week is al genoeg. Samen met voldoende eiwit houd je zo je spieren.",
+    "Bespreek nieuwe klachten of twijfels met je arts."
   ],
   "bewust": [
     "Geen light: geen light-producten, yoghurt 0 % of zoetstoffen. Gewone mayonaise, room 20 % en volle kaas in kleine porties.",
     "Weinig zout: vleeswaren hooguit drie keer per week. Ander beleg bak je mee bij de warme maaltijd, of komt uit ei, vis of zachte kaas.",
-    "Twee keer vette vis per week: zalm, makreel of sardienen.",
-    "Geen lijnzaad of chiazaad."
+    "Vis: één keer per week bij de warme maaltijd, daarnaast makreel of tonijn op brood. Geen lijnzaad of chiazaad."
   ],
   "voorbereiding": [
-    "Soep, 2,5 liter (8 porties van 300 ml, genoeg voor 4 broodmaaltijden voor jullie twee). Fruit 1 ui in 10 g olijfolie. Voeg ongeveer 1,5 kg groenten en 2 liter water toe, met hooguit een half bouillonblokje. Kook 25 minuten, mix fijn en kruid met peper en nootmuskaat. Afwisselen kan met pompoen-wortel, tomaat-paprika, bloemkool-broccoli of wortel-pastinaak. Zet 4 porties in de koelkast en vries er 4 in.",
-    "8 eieren hardkoken (9 minuten), in de schaal in de koelkast. Ze zijn voor de eierbroodmaaltijd en een broodontbijt vroeg in de week.",
-    "Rauwkost snijden voor drie dagen: komkommer, snoepworteltjes en paprika in een doos met een vochtig keukenpapiertje. Tomaatjes houd je heel.",
-    "Het baksel van de week staat bij elk weekmenu. Het is goed voor de tussendoortjes van de hele week; met vier is de rest voor de kinderen.",
-    "Meebakken: bij sommige warme maaltijden bak je een stuk vlees extra. Dat wordt het beleg van de dag erna. Wat en wanneer staat bij de voorbereiding van elke week."
+    "Soep, 2,5 liter (8 porties van 300 ml). Fruit 1 ui in 10 g olijfolie, voeg ongeveer 1,5 kg groenten en 2 liter water toe met hooguit een half bouillonblokje. Kook 25 minuten, mix fijn en kruid met peper en nootmuskaat. Zet 4 porties in de koelkast en vries er 4 in.",
+    "8 eieren hardkoken (9 minuten), in de schaal in de koelkast.",
+    "Rauwkost snijden voor drie dagen: komkommer, snoepworteltjes en paprika in een doos met een vochtig keukenpapiertje.",
+    "Het baksel van de week staat bij elk weekmenu. Jullie eten er maar 2 stuks per persoon per week: bak een halve portie of vries de rest per stuk in.",
+    "Meebakken: bij sommige warme maaltijden bak je een stuk vlees extra voor het beleg van de dag erna. Wat en wanneer staat bij de voorbereiding van elke week."
   ],
+  "weekritme_titel": "Elke dag wat anders, met eiwit waar het kan",
   "weekritme": [
-    { "dag": "Maandag", "tien": "150 g mandarijn", "half_drie": "Baksel", "half_vijf": "120 g appel", "acht": "15 g pure chocolade" },
-    { "dag": "Dinsdag", "tien": "2 kiwi’s", "half_drie": "Plattekaas of walnoten", "half_vijf": "Snoepgroenten + hummus", "acht": "Warme chocomelk" },
-    { "dag": "Woensdag", "tien": "120 g peer", "half_drie": "Baksel", "half_vijf": "120 g appel", "acht": "15 g pure chocolade" },
-    { "dag": "Donderdag", "tien": "150 g mandarijn", "half_drie": "Baksel", "half_vijf": "120 g peer", "acht": "Warme chocomelk" },
-    { "dag": "Vrijdag", "tien": "100 g druiven", "half_drie": "Plattekaas of walnoten", "half_vijf": "120 g appel", "acht": "15 g pure chocolade" },
+    { "dag": "Maandag", "tien": "150 g mandarijn", "half_drie": "Plattekaas", "half_vijf": "120 g appel", "acht": "10 g pure chocolade" },
+    { "dag": "Dinsdag", "tien": "2 kiwi’s", "half_drie": "Plattekaas", "half_vijf": "Snoepgroenten + hummus", "acht": "Warme chocomelk" },
+    { "dag": "Woensdag", "tien": "120 g peer", "half_drie": "Baksel", "half_vijf": "120 g appel", "acht": "10 g pure chocolade" },
+    { "dag": "Donderdag", "tien": "150 g mandarijn", "half_drie": "Plattekaas", "half_vijf": "120 g peer", "acht": "Warme chocomelk" },
+    { "dag": "Vrijdag", "tien": "100 g druiven", "half_drie": "Plattekaas", "half_vijf": "120 g appel", "acht": "10 g pure chocolade" },
     { "dag": "Zaterdag", "tien": "2 kiwi’s", "half_drie": "Baksel", "half_vijf": "Snoepgroenten + hummus", "acht": "Thee of koffie" },
-    { "dag": "Zondag", "tien": "150 g mandarijn", "half_drie": "Plattekaas of walnoten", "half_vijf": "120 g peer", "acht": "15 g pure chocolade" }
+    { "dag": "Zondag", "tien": "150 g mandarijn", "half_drie": "Plattekaas", "half_vijf": "120 g peer", "acht": "10 g pure chocolade" }
   ],
-  "weekritme_noot": "Plattekaas (120 g halfvol) op broodontbijtdagen, walnoten (10 g, met extra 20 g) op yoghurt- en plattekaasdagen. Warme chocomelk: 150 ml halfvolle melk met 1 tl cacao en 1 tl suiker. Popcorn staat op de ruillijst: 15 g maïskorrels gepoft in 5 g olie.",
-  "ruillijst_intro": "Elk tussendoortje mag je ruilen met eentje uit deze lijst, telkens ca. 100 kcal. Geen koeken, wel genoeg keuze.",
+  "weekritme_noot": "Plattekaas: 120 g halfvol, met extra 150 g. Warme chocomelk: 150 ml melk met 1 tl cacao en 1 tl suiker. De basis neemt ongezoete amandelmelk, met extra is het halfvolle melk. Geen honger? Een tussendoortje overslaan mag, behalve de plattekaas om 14.30 u: die is er voor het eiwit.",
+  "ruillijst_intro": "Elk tussendoortje mag je ruilen met eentje uit deze lijst, telkens ca. 100 kcal. Kies liefst uit romig of hartig: daar zit het meeste eiwit in.",
   "ruillijst": [
     { "soort": "Fruitig", "keuzes": ["1 grote appel of peer (180 g)", "2 mandarijnen + 2 walnoten", "1 kleine banaan", "150 g druiven", "Gebakken appel met kaneel"] },
     { "soort": "Zoet", "keuzes": ["1 portie baksel van de week", "15 g pure chocolade 70 %", "1 dadel gevuld met 1 walnoot", "2 rijstwafels + 1 tl choco", "Popcorn (15 g maïs)"] },

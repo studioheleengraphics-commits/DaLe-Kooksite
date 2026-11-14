@@ -185,8 +185,8 @@ Derde deel in dezelfde repo, onder `docs/weekmenu/`. Gegenereerd door
   hoeveel er die dag gegeten wordt, haalt de site uit `personen` van het
   recept van die dag, want dat kan binnen één week wisselen.
 - Vanaf week 2 loopt het W-schema. Die letter mag er staan, de naam erachter
-  niet, en ook niets over wie wanneer wat neemt. `let_op` in `algemeen.json`
-  zegt dat het dagschema voorgaat op de oudere algemene afspraken.
+  niet, en ook niets over wie wanneer wat neemt. `algemeen.json` beschrijft
+  de afspraken van dat W-schema. Week 1 is nog van voor die afspraken.
 - De eetmomenten van een dag zijn afvinkbaar. Die vinkjes staan in
   `localStorage` onder `weekmenu-gegeten-v1`, alleen op dat ene toestel, en
   worden gewist zodra de dag voorbij is. De voorbereiding is bewust niet
