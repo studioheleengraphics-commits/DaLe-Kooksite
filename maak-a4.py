@@ -32,9 +32,16 @@ def zoek_skill() -> Path:
 
 
 def zoek_chromium() -> str | None:
-    """Playwright vindt zijn browser niet altijd zelf in deze omgeving."""
-    for pad in sorted(Path("/opt/pw-browsers").glob("chromium-*/chrome-linux/chrome")):
-        return str(pad)
+    """Playwright vindt zijn browser niet altijd zelf in deze omgeving.
+
+    De mapnaam verschilt per versie: oudere builds zetten hem in chrome-linux,
+    nieuwere in chrome-linux64. Vandaar de ster, anders staat het script hier
+    te klagen dat de browser ontbreekt terwijl hij er gewoon is.
+    """
+    for patroon in ("chromium-*/chrome-linux*/chrome",
+                    "chromium_headless_shell-*/chrome-headless-shell-*/chrome-headless-shell"):
+        for pad in sorted(Path("/opt/pw-browsers").glob(patroon)):
+            return str(pad)
     return None
 
 

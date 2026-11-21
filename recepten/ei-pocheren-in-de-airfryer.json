@@ -1,0 +1,77 @@
+{
+  "slug": "ei-pocheren-in-de-airfryer",
+  "titel": "Ei pocheren in de airfryer",
+  "kicker": "Basis · Uit de airfryer",
+  "categorie": "Basis",
+  "trefwoorden": [
+    "ei",
+    "pocheren",
+    "gepocheerd ei",
+    "airfryer",
+    "ontbijt",
+    "basis"
+  ],
+  "intro": "Twee ovenbestendige schaaltjes met een bodempje kokend water, in elk een ei, en de airfryer doet de rest. Geen draaikolk in een pan, geen scheut azijn, geen eiwitslierten die je achteraf uit het water staat te vissen. Het ei stolt rustig in zijn eigen schaaltje terwijl jij ondertussen de boterhammen roostert.",
+  "porties": 2,
+  "portie_eenheid": "ei|eieren",
+  "meta": [
+    {
+      "label": "In de airfryer",
+      "waarde": "7 min op 190 °C"
+    },
+    {
+      "label": "Voorverwarmen",
+      "waarde": "4 min op 190 °C"
+    },
+    {
+      "label": "Nodig",
+      "waarde": "2 schaaltjes van Ø 10 cm"
+    }
+  ],
+  "ingredienten": [
+    {
+      "hoeveelheid": "2",
+      "naam": "eieren"
+    },
+    {
+      "hoeveelheid": "6 el",
+      "naam": "kokend water, 3 el per schaaltje"
+    }
+  ],
+  "stappen": [
+    {
+      "kop": "Voorverwarmen",
+      "tekst": "Verwarm de airfryer 4 minuten voor op 190 °C, op de airfryerfunctie. Een koude mand kost je minuten die niet in de baktijd zitten, en bij een ei merk je dat meteen aan een eiwit dat blijft lopen."
+    },
+    {
+      "kop": "Schaaltjes vullen",
+      "tekst": "Zet de twee ovenbestendige schaaltjes in het mandje en giet in elk schaaltje 3 eetlepels kokend water. Kokend, niet koud: zo begint het ei meteen te garen in plaats van te wachten tot het water mee opgewarmd is."
+    },
+    {
+      "kop": "Ei erin laten glijden",
+      "tekst": "Breek een ei boven het schaaltje en laat het voorzichtig in het water glijden, van dicht bij het oppervlak. Van hoog laten vallen slaat het eiwit uit elkaar en dan krijg je slierten in plaats van een bolletje."
+    },
+    {
+      "kop": "Zeven minuten pocheren",
+      "tekst": "Zet de mand terug en laat de eieren 7 minuten op 190 °C staan. Het eiwit moet wit en vast zijn, de dooier mag nog bewegen als je het schaaltje licht schudt."
+    },
+    {
+      "kop": "Voorzichtig eruit",
+      "tekst": "Schep het ei met een lepel uit het schaaltje en laat het even uitlekken op keukenpapier. Dat water dat meekomt maakt je boterham anders zompig. Pas op met de schaaltjes zelf, die zijn gloeiend heet."
+    }
+  ],
+  "tip": "Zeven minuten klopt hier, maar de bron zegt het zelf: die tijd verschilt per toestel. Kijk na vijf minuten eens of het eiwit al wit en vast is en de dooier nog beweegt. Noteer wat het bij jou wordt, dan hoef je de volgende keer niet meer te gokken.",
+  "uit_de_praktijk": [
+    {
+      "kop": "Wat hier anders is dan bij de bron",
+      "tekst": "Eieiei giet 60 ml koud water per schaaltje en rekent op 5 à 6 minuten. Hier is dat 3 eetlepels kokend water en 7 minuten, met 4 minuten voorverwarmen erbij. Dat is wat op deze airfryer werkt."
+    },
+    {
+      "kop": "Uitlekken loont",
+      "tekst": "Een gepocheerd ei neemt altijd wat water mee. Een halve minuut op keukenpapier is het verschil tussen een krokante toast en een natte lap."
+    }
+  ],
+  "voet": "Meteen op de toast, met de dooier nog lopend.",
+  "bron": "Eieiei, met aangepaste tijden",
+  "pdf": "ei-pocheren-in-de-airfryer.pdf"
+}
