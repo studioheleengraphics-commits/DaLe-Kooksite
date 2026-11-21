@@ -1,0 +1,26 @@
+{
+  "categorie": "Ontbijt",
+  "volgorde": 8,
+  "intro": "Voor het half uur waarin niemand tijd heeft. De airfryer staat sneller op temperatuur dan een oven en je hoeft er niet bij te blijven staan.",
+  "items": [
+    {
+      "naam": "Gepocheerd ei",
+      "trefwoorden": [
+        "ei",
+        "pocheren",
+        "gepocheerd",
+        "ontbijt",
+        "eieren"
+      ],
+      "getest": true,
+      "graden": 190,
+      "minuten": [
+        7,
+        7
+      ],
+      "portie": "Twee ovenbestendige schaaltjes van Ø 10 cm",
+      "klaar": "Het eiwit is wit en vast, de dooier beweegt nog.",
+      "tip": "Eerst 4 minuten voorverwarmen op 190 °C. Dan 3 el kokend water per schaaltje, ei erin laten glijden en 7 minuten op de airfryerfunctie. Thuis uitgetest: zo blijft de dooier lopen. Het schaaltje wordt gloeiend heet."
+    }
+  ]
+}

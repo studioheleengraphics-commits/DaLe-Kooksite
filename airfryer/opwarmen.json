@@ -1,13 +1,19 @@
 {
   "categorie": "Opwarmen",
-  "volgorde": 8,
+  "volgorde": 9,
   "intro": "De microgolf maakt alles slap. Dit toestel maakt het weer krokant, en dat is precies waarvoor restjes vragen.",
   "items": [
     {
       "naam": "Frieten van gisteren",
-      "trefwoorden": ["restjes", "friet opwarmen"],
+      "trefwoorden": [
+        "restjes",
+        "friet opwarmen"
+      ],
       "graden": 180,
-      "minuten": [4, 6],
+      "minuten": [
+        4,
+        6
+      ],
       "schudden": 3,
       "voorverwarmen": false,
       "portie": "Een losse laag, zonder extra olie",
@@ -15,9 +21,15 @@
     },
     {
       "naam": "Pizzapunt",
-      "trefwoorden": ["pizza opwarmen", "restjes"],
+      "trefwoorden": [
+        "pizza opwarmen",
+        "restjes"
+      ],
       "graden": 160,
-      "minuten": [3, 5],
+      "minuten": [
+        3,
+        5
+      ],
       "schudden": 0,
       "voorverwarmen": false,
       "portie": "Twee punten naast elkaar",
@@ -25,9 +37,16 @@
     },
     {
       "naam": "Gebraden kip of vlees",
-      "trefwoorden": ["kip opwarmen", "restjes", "vlees"],
+      "trefwoorden": [
+        "kip opwarmen",
+        "restjes",
+        "vlees"
+      ],
       "graden": 160,
-      "minuten": [5, 8],
+      "minuten": [
+        5,
+        8
+      ],
       "schudden": 4,
       "voorverwarmen": false,
       "portie": "In stukken, niet gestapeld",
@@ -36,9 +55,15 @@
     },
     {
       "naam": "Brood of stokbrood",
-      "trefwoorden": ["brood opwarmen", "stokbrood"],
+      "trefwoorden": [
+        "brood opwarmen",
+        "stokbrood"
+      ],
       "graden": 160,
-      "minuten": [3, 4],
+      "minuten": [
+        3,
+        4
+      ],
       "schudden": 0,
       "voorverwarmen": false,
       "portie": "Een half stokbrood of twee broodjes",
@@ -46,9 +71,16 @@
     },
     {
       "naam": "Gepaneerde restjes",
-      "trefwoorden": ["schnitzel", "kroket opwarmen", "restjes"],
+      "trefwoorden": [
+        "schnitzel",
+        "kroket opwarmen",
+        "restjes"
+      ],
       "graden": 170,
-      "minuten": [5, 7],
+      "minuten": [
+        5,
+        7
+      ],
       "schudden": 3,
       "voorverwarmen": false,
       "portie": "In één laag",
