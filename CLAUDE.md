@@ -29,6 +29,9 @@ maar schrijft zelf niets.
   gelezen die op het aanrecht ligt.
 - Commit in het Nederlands, kort en concreet: "recept toegevoegd: gambas al ajillo".
 - Push naar `main`. GitHub Pages publiceert automatisch vanuit `/docs`.
+- Werk je op een eigen branch (zoals in Claude Code Web) en zegt Leen dat iets
+  afgerond is, of "plaats op main": voeg samen via een pull request, niet
+  rechtstreeks. GitHub verwijdert de branch daarna automatisch.
 
 ## Structuur van een recept
 
